@@ -1,0 +1,13 @@
+/original/
+/reference/
+/*.7z
+/analysis/*.obj
+/build/
+/.venv/
+__pycache__/
+/.tools/
+/analysis/ghidra-project/
+/analysis/ghidra-logs/
+/analysis/raw/
+/analysis/decompile.lock
+/analysis/decompile-run.json

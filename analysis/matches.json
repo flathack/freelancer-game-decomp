@@ -1,0 +1,37 @@
+{
+  "compiler": "clang version 23.1.1",
+  "command": [
+    "clang++",
+    "--target=i686-pc-windows-msvc",
+    "-O2",
+    "-c",
+    "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/src/csimple.cpp",
+    "-o",
+    "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/analysis/csimple.obj"
+  ],
+  "results": [
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/common.dll",
+      "sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
+      "symbol": "?get_id@CSimple@@QBEABIXZ",
+      "rva": 136608,
+      "code_size": 7,
+      "original_hex": "8d81b0000000c3",
+      "compiled_hex": "8d81b0000000c3",
+      "matched": true
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/common.dll",
+      "sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
+      "symbol": "?get_type@CSimple@@QBEIXZ",
+      "rva": 136624,
+      "code_size": 7,
+      "original_hex": "8b81e0000000c3",
+      "compiled_hex": "8b81e0000000c3",
+      "matched": true
+    }
+  ],
+  "matched_functions": 2,
+  "verified_code_bytes": 14,
+  "scope": "Only listed function bodies; excludes alignment, linking, complete class layout, and runtime behavior."
+}

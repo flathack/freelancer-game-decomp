@@ -1,0 +1,158 @@
+{
+  "code_modules": 34,
+  "raw_exported_modules": 1,
+  "raw_decompiled_functions": 7156,
+  "raw_failed_functions": 0,
+  "last_machine_code_check": {
+    "functions": 2,
+    "bytes": 14
+  },
+  "createid_behavior": {
+    "source_current": true,
+    "cases": 636,
+    "domain": "Null or zero-terminated ASCII strings of length 0..255; successful allocations."
+  },
+  "complete_game_verified": false,
+  "modules": [
+    {
+      "module": "original/_FL Fresh Install-deutsch/DLLS/BIN/content.dll",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/Freelancer.exe",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/alchemy.dll",
+      "status": "pending"
+    },
+    {
+      "module": "common.dll",
+      "status": "raw_exported",
+      "analyzed_functions": 7156,
+      "raw_decompiled": 7156,
+      "failed": 0,
+      "verified_reconstructions": 0
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/dacom.dll",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/dalib.dll",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/debuglib.dll",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/deformable2.dll",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/dw15.exe",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/ebueula.dll",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/engbase.dll",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/flmaterials.dll",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/flserver.exe",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/gundll.dll",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/imeui.dll",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/luaprofile.dll",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/movie.dll",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/readfile.dll",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/remoteclient.dll",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/remoteserver.dll",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/rendcomp.dll",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/resources.dll",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/rp8.dll",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/rpclocal.dll",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/server.dll",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/shading.dll",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/soundmanager.dll",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/soundstreamer.dll",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/system.dll",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/thorn.dll",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/unicows.dll",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/x86math.dll",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/ximage.dll",
+      "status": "pending"
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/zlib.dll",
+      "status": "pending"
+    }
+  ]
+}

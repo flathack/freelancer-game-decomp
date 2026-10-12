@@ -1,0 +1,278 @@
+[
+  {
+    "module": "original/_FL Fresh Install-deutsch/DLLS/BIN/content.dll",
+    "sha256": "b6d426c8fb215d6efe5d9af087fc808ba679c6c31f39dbae4f660f6a5d3a7c1c",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EBUEula.dll",
+    "sha256": "f2e9b19ae3fe6f178bbe104cfcacf6d859a7e9b9e83af2c5c25e8df837acbf68",
+    "category": "resource_or_installer",
+    "included": false
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/1031/dwintl.dll",
+    "sha256": "a1f7985906f7e6860bad66427855d050d144dc6179761f318ee6904024936590",
+    "category": "resource_or_installer",
+    "included": false
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/Freelancer.exe",
+    "sha256": "ea4cb797acb1a31a7841f67200fb022a056af4df7b2f7216f8ae6424cb6d1fe9",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/alchemy.dll",
+    "sha256": "9afdfdd54f3550fe499646e81cbd02519fa9cd9003e22a009c4b0a7eed042e79",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/common.dll",
+    "sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/dacom.dll",
+    "sha256": "1c2c809d8710a1cbedf37be750d03f1464475d7b790652b5a914b392bf297abb",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/dalib.dll",
+    "sha256": "499f47184c2c376cdfb5aafa976047f41a143c214c0ccf0af7ed3f95dce4ecf4",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/debuglib.dll",
+    "sha256": "aec36ec03289c1f4a23e646ac68a19047a39e82ff8bda20443e2c4a34ddd6d72",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/deformable2.dll",
+    "sha256": "5c88486ff351c93c5d6d063c08df853afdf74fece4679ef998a9524abf0ed596",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/dw15.exe",
+    "sha256": "56d34a47a98e9e66634120c1a0fcca9efb037dd1f43cfbac060d606ae18b8103",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/ebueula.dll",
+    "sha256": "096d52382eed8bc9c6d09562830ad6c8fadc72e8e28cf4b82cf81a68ae4abd39",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/engbase.dll",
+    "sha256": "a40b95eb0a9aad2df04386696bead71f0577ffb000a9ad389a7ddfdc5ba0e489",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/equipresources.dll",
+    "sha256": "a9359867dd204cb44b070e62efa25893bbbb15299a64e7013b447bcde524e632",
+    "category": "resource_or_installer",
+    "included": false
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/flmaterials.dll",
+    "sha256": "74c7a48539e65af324bb6f5d838a4272bd230d8e35bd206e5d62cae84a6bb62d",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/flserver.exe",
+    "sha256": "4a65cd77b74d5f3b410adade636ba5549f649cfb0e67bfe1507df3b2265eed8b",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/gundll.dll",
+    "sha256": "1e441bc27cf7779d893dc59d2cf52b39c28dee17172f0ae08edd183e481b2410",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/imeui.dll",
+    "sha256": "29f4f160a5ec1cdc9a7a98123b91c97924c5eecd6656937fb4c83ccb3978b67c",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/infocards.dll",
+    "sha256": "4951f1d92911afc5e731499e2dcf9c59464272cdb18aac069f7082087d2f52b5",
+    "category": "resource_or_installer",
+    "included": false
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/luaprofile.dll",
+    "sha256": "fc2e4e511db6986257e3b7ae8075bb4a71fdab636983bf0ca00540f1462d98f3",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/misctext.dll",
+    "sha256": "cf5ea2a2d282a19c0c59cde29196bc333d0a55ccecde6f65b6999d34643a1fce",
+    "category": "resource_or_installer",
+    "included": false
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/misctextinfo2.dll",
+    "sha256": "32c13d98b97cc9bf456f1bfda2c4497c120573e10f9385b3d10c1978b61f6e00",
+    "category": "resource_or_installer",
+    "included": false
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/movie.dll",
+    "sha256": "93e36f1b2e96d448a4280e16c7f1f451ed869dfa384c7dd964c5befbd9b9e2cc",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/nameresources.dll",
+    "sha256": "d5470121cd8da8baede830995fcd31d2370d2259d9da4f33e47be3a1d5f2789f",
+    "category": "resource_or_installer",
+    "included": false
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/offerbriberesources.dll",
+    "sha256": "926b3d2d3b42f41a6ed16075b4c6debf51460dc9905262b31c6ff7bf5d484ada",
+    "category": "resource_or_installer",
+    "included": false
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/readfile.dll",
+    "sha256": "57d2540bd9a9bc1a09b26c5c5c27116f9a4e6712d3feacd7c5a08a11e3a2f4a0",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/remoteclient.dll",
+    "sha256": "d35d7c4058dfe3c4b43f30a36f0d83dc6d45e8c3a4fb2d6b62aee03485c8bb23",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/remoteserver.dll",
+    "sha256": "ffc0f1025c18b99f7c5bb965d3a12da33ac4995d5276d7abcffc940b0cad5c3f",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/rendcomp.dll",
+    "sha256": "16ea0f6b9d16cd577909ed8d54406d2642687222aebe3d7cb30adf46d0b52852",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/resources.dll",
+    "sha256": "f3c5e53be89b8dbf681a8317fc208aa7454413d4f0c2aad9cc69e634b673729e",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/rp8.dll",
+    "sha256": "9a1ce14699f27aec5339b4fe7c786039fb83db76ab7280c78549ad822ad2328a",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/rpclocal.dll",
+    "sha256": "84299cce3144d6308739869a804ef5024022df086b8104f19754f48e15ea08cd",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/server.dll",
+    "sha256": "9f4c1ebdcdb4784cbe21e4dd419592e669653bde63835ada41bf9dec947abbd8",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/serverresources.dll",
+    "sha256": "a9ff755e7d23ff4736e2af101b72d9408160f9b7a45d5a1844959308a8791240",
+    "category": "resource_or_installer",
+    "included": false
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/shading.dll",
+    "sha256": "3c590a134b2f0bb4d6aecfbbca59dba58733017127705b25af535c2c7bfbc15d",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/soundmanager.dll",
+    "sha256": "fa3ac6ed980ba5b17235e8b7b61c78d55bbd6e387a7949d2451121c6999f202d",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/soundstreamer.dll",
+    "sha256": "ef23b1b9ce21f4446f52078d7b34817ab2dfe87a0706a40b223ad847ca73d4da",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/system.dll",
+    "sha256": "e5eb87db7222349a09ad2f44bfd1fd93b0c7a3c983c7cf8a059b1e6cff96c9e7",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/thorn.dll",
+    "sha256": "1773612b12bfd5e0bf28d0f9f02a30bd57e8f5dbdbb11991d049eaf76456a92c",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/unicows.dll",
+    "sha256": "f08fd038cfab2d26c0c687f17a4bc342a5403ff051c06ae1b17f810ef569021c",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/x86math.dll",
+    "sha256": "e4b616c12e2147fbf2400d8e022a2efa2cb282137fe3c943a49bde0d4f4f9197",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/ximage.dll",
+    "sha256": "fb6e5122549f4e0eab94637a2ce611758f2eda3c00f79d127e3668194d5d4b51",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/zlib.dll",
+    "sha256": "105280995cd5746078d67b8651dfe4ad2abcd532d7ad528d3100c535b0b538af",
+    "category": "code_module",
+    "included": true
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/SETUPENU.DLL",
+    "sha256": "61e25bc5bf6c4c8e9dea5a0b423564754ec86c9bc37fa89c1485e2e279caf9d4",
+    "category": "resource_or_installer",
+    "included": false
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/UNINSTAL.EXE",
+    "sha256": "d1a6f5ad910a7f8fdce5499883b99a5460eeaf7e66d813b3dd0f774bdb7142b9",
+    "category": "resource_or_installer",
+    "included": false
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/drvmgt.dll",
+    "sha256": "45b369f6fa4f94d3eb68384fbfd7147eb61748b7b938e90c33d35b04c7ae513b",
+    "category": "resource_or_installer",
+    "included": false
+  }
+]
