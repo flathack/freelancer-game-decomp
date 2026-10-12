@@ -63,6 +63,8 @@ def main():
     reader_memory=json.loads((A/'ini-open-memory-x86-behavior.json').read_text())
     reader_lifetime_current=all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in reader_lifetime['source_hashes'].items())
     reader_memory_current=all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in reader_memory['source_hashes'].items())
+    reader_line=json.loads((A/'ini-line-x86-behavior.json').read_text())
+    reader_line_current=all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in reader_line['source_hashes'].items())
     report=dict(code_modules=len(rows),raw_exported_modules=sum(r['status']=='raw_exported' for r in rows),
                 raw_decompiled_functions=sum(r.get('raw_decompiled',0) for r in rows),
                 raw_failed_functions=sum(r.get('failed',0) for r in rows),
@@ -85,6 +87,7 @@ def main():
                 parse_number_x86_behavior=dict(source_current=numbers_current,calls=numbers.get('differential_calls',0),temporary_x87_arithmetic_boundary=True,external_crt_modeled=True),
                 ini_reader_lifetime=dict(source_current=reader_lifetime_current,calls=reader_lifetime['differential_calls']),
                 ini_reader_open_memory=dict(source_current=reader_memory_current,calls=reader_memory['differential_calls'],external_crt_modeled=True),
+                ini_reader_line=dict(source_current=reader_line_current,calls=reader_line['line_calls'],integrated_calls=reader_line['differential_calls'],overflow_cases=reader_line['controlled_line_overflow_cases']),
                 complete_game_verified=False,modules=rows)
     (A/'coverage-summary.json').write_text(json.dumps({r['module']:r['coverage_audit'] for r in rows if 'coverage_audit' in r},indent=2)+'\n')
     (A/'progress.json').write_text(json.dumps(report,indent=2)+'\n')
@@ -107,6 +110,7 @@ def main():
            f"Text entries: {textvalues.get('differential_calls',0)} direct + {textvalues.get('integration_calls',0)} integrated calls; native runtime/lifecycle remain open.",
            f"ParseNumber: {numbers.get('differential_calls',0)} full-x87 comparisons; temporary arithmetic assembly boundary.",'',
            f"Reader close/metadata: {reader_lifetime['differential_calls']} calls; memory open: {reader_memory['differential_calls']} calls; native CRT/file open remains unverified.",
+           f"Reader line formatting: {reader_line['line_calls']} direct calls / {reader_line['differential_calls']} integrated comparisons; {reader_line['controlled_line_overflow_cases']} static-buffer overflow sequences.",
            'The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.',
            '', '| Module | Raw export status | Raw functions | Failed |','|---|---|---:|---:|']
     for row in rows: lines.append(f"| {pathlib.Path(row['module']).name} | {row['status']} | {row.get('raw_decompiled','—')} | {row.get('failed','—')} |")

@@ -1,5 +1,10 @@
 #include "ini_reader_strings.hpp"
-char INIValuesStringBuffer[256];
+// Original line output starts at 0x0658d800; numeric output at +0x100.
+extern "C" { char INIStringStorage[512]; }
+__asm__(".globl \"?INIBinaryLineBuffer@@3PADA\"\n"
+        ".set \"?INIBinaryLineBuffer@@3PADA\", _INIStringStorage\n"
+        ".globl \"?INIValuesStringBuffer@@3PADA\"\n"
+        ".set \"?INIValuesStringBuffer@@3PADA\", _INIStringStorage+256\n");
 extern "C" int ini_strings_sprintf(char*,const char*,...);
 static const char* binary_string(INI_Reader* reader,unsigned int index){
     if(!reader->current_value)return "";

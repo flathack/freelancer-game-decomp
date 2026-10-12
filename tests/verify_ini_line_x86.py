@@ -15,7 +15,7 @@ def main():
   out=build/(pathlib.Path(source).stem+'-lineptr.obj');objects.append(str(out));cmd=['clang++','--target=i686-pc-windows-msvc','-O2','-fno-exceptions','-fno-rtti','-fno-builtin','-mno-sse','-mno-sse2','-c',str(ROOT/source),'-o',str(out)];subprocess.run(cmd,check=True);commands.append(cmd)
  indexed='?get_value_string@INI_Reader@@QAEPBDI@Z';joined='?get_value_string@INI_Reader@@QAEPBDXZ';shared='?INIValuesStringBuffer@@3PADA';line='?get_line_ptr@INI_Reader@@QAEPBDXZ';textbuffer='?INITextLineBuffer@@3PADA';binarybuffer='?INIBinaryLineBuffer@@3PADA';dll=build/'ini_line.dll'
  cmd=['lld-link','/dll','/noentry','/nodefaultlib','/base:0x18000000',f'/out:{dll}']+objects+['/export:'+line,'/export:'+textbuffer+',DATA','/export:'+binarybuffer+',DATA','/export:'+indexed,'/export:'+joined,'/export:'+shared+',DATA','/export:?StringIndexBuffer@@3PADA,DATA'];subprocess.run(cmd,check=True);commands.append(cmd)
- h=X86Harness();orig=h.load(SOURCE);new=h.load(dll);uc=h.uc;uc.mem_map(0x23000000,0x10000)
+ h=X86Harness();orig=h.load(SOURCE);new=h.load(dll);assert new[shared]-new[binarybuffer]==256;uc=h.uc;uc.mem_map(0x23000000,0x10000)
  o=h.scratch;r=o+0x2000;block=0x23000000;entry=block+0x10;parameters=block+0x100;strings=block+0x2000;original_shared=0x658d900;rebuilt_shared=new[shared]
  uc.mem_write(strings,b'Header\0Value\0');uc.mem_write(block,struct.pack('<HH',0,1))
  sprintf=h.stop+0x200;message=h.stop+0x220;h.write_word(0x639931c,sprintf);h.write_word(0x6399378,message)
@@ -108,13 +108,23 @@ def main():
  for value in [b' a , b , ',b'"a,b",c',b',,',b'\x89x\xa0,y',b'\vx\f,y']:
   for obj in [o,r]:uc.mem_write(obj+0x1564,b'\0');uc.mem_write(obj+0x828,value+b'\0')
   for index in [0,1,2,0xffffffff]:pair(indexed,index);text_index_cases+=1
+ # Line writes into adjacent numeric storage. The next unknown tag observes it.
+ overflow_cases=0
+ uc.mem_write(strings+512,b'V'*100+b'\0')
+ for name_size in [140,150,240,250,255,256,270]:
+  uc.mem_write(strings+7,b'N'*name_size+b'\0')
+  for values in [[(3,512),(1,7)],[(1,123),(255,0)],[(3,512)]]:
+   setup(values);pair(line)
+   assert bytes(uc.mem_read(0x658d800,512))==bytes(uc.mem_read(new[binarybuffer],512)), 'Static-storage overflow state differs'
+   setup([(255,0)]);pair(indexed,0)
+   overflow_cases+=1
  for name,value in [(b'',b''),(b'entry',b'  a,b'),(b'A'*1023,b'B'*1000)]:
   for obj in [o,r]:uc.mem_write(obj+0x1564,b'\0');uc.mem_write(obj+0x428,name+b'\0');uc.mem_write(obj+0x828,value+b'\0')
   assert pair(line)==name+b' = '+value
  report=dict(status='passed_string_getters_under_formatter_model',original_sha256=HASH,compiled_dll_sha256=digest(dll),
              source_hashes={p:digest(ROOT/p) for p in sources+['tests/verify_ini_line_x86.py','src/string_index.hpp','src/ini_reader_strings.hpp','src/ini_reader_values.hpp','src/ini_reader.hpp','src/file_map.hpp']},
-             differential_calls=calls,line_calls=line_calls,text_index_cases=text_index_cases,reconstructed_string_index_used=True,indexed_parameter_cases=len(values),join_sequences=100,shared_buffer_and_unknown_tag_checks=True,controlled_join_overflow_checked=True,
+             differential_calls=calls,line_calls=line_calls,static_storage_adjacency=256,controlled_line_overflow_cases=overflow_cases,text_index_cases=text_index_cases,reconstructed_string_index_used=True,indexed_parameter_cases=len(values),join_sequences=100,shared_buffer_and_unknown_tag_checks=True,controlled_join_overflow_checked=True,
              rows=rows,commands=commands,mocks=['sprintf integer/general-float model with exact argument comparison','MessageBox diagnostic model'],
-             not_verified=['Original static buffer extents and overflow adjacency','Authentic CRT locale/float formatting','Arbitrary oversized/overlapping joins','Real OS/FPU execution','Exact instruction matching'])
+             not_verified=['Static extents beyond reconstructed 512-byte BINI region','Authentic CRT locale/float formatting','Arbitrary oversized/overlapping joins','Real OS/FPU execution','Exact instruction matching'])
  (ROOT/'analysis/ini-line-x86-behavior.json').write_text(json.dumps(report,indent=2)+'\n');print(f'PASS: {calls} string/line comparisons, shared-buffer reuse, joins, diagnostics, controlled overflow and text-buffer path')
 if __name__=='__main__':main()

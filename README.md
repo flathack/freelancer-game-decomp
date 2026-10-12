@@ -186,3 +186,8 @@ existing parameter converters. 2403 integrated string/line differential calls
 pass, including full output-buffer write footprints within tested ranges.
 Original static-buffer extents and oversized-line overflow adjacency remain to
 be reconstructed; see `analysis/ini-line-notes.md`.
+
+BINI line and numeric output now share the original observed +256-byte address
+relationship through COFF aliases. 2445 integrated comparisons pass, including
+21 overflow/reuse sequences and comparison of the complete 512-byte region.
+Static storage beyond that region and text-buffer allocation extents remain open.

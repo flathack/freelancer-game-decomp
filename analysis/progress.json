@@ -82,7 +82,7 @@
     "external_atof_modeled": true
   },
   "ini_strings_x86_behavior": {
-    "source_current": false,
+    "source_current": true,
     "calls": 1577,
     "indexed_cases": 722,
     "formatter_modeled": true,
@@ -126,6 +126,12 @@
     "source_current": false,
     "calls": 320,
     "external_crt_modeled": true
+  },
+  "ini_reader_line": {
+    "source_current": true,
+    "calls": 847,
+    "integrated_calls": 2445,
+    "overflow_cases": 21
   },
   "complete_game_verified": false,
   "modules": [

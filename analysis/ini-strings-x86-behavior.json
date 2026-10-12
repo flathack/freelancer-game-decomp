@@ -1,9 +1,9 @@
 {
   "status": "passed_string_getters_under_formatter_model",
   "original_sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
-  "compiled_dll_sha256": "97595e686918b89844898c7255e35afc6ccf8202dc29abec3753a20f29ba809a",
+  "compiled_dll_sha256": "b6f59f2df9565dc60e29673537fdc878a0d77a737849756fd34f7fd742881128",
   "source_hashes": {
-    "src/ini_reader_strings.cpp": "b5dd916a519b4be446dfac2a4e84b5a09f4b7c4a5876abb17a9ac48095fb69a8",
+    "src/ini_reader_strings.cpp": "f470d06a064dc6f5776e07d17e975374cfe798f91493e6083fe19219eae084d7",
     "src/ini_reader.cpp": "15e526e3c55e728ebc2d5b91790cd0f3eb8463e26624b8dd1809000d1e9909fd",
     "src/file_map.cpp": "5e6a162191a8e353a3eb563ba32f30c26559b97adc416496046cf5d830904624",
     "tests/fixtures/ini_strings_x86_runtime.cpp": "c3dc87d1a07a16755f3a75f6057a287d88b8902f14fa7f8dcdce511d7fe07ec0",
@@ -14,7 +14,7 @@
     "src/string_index.hpp": "27a5be7607020a3d0c9af8b89fe07315ad38e0e995210a8a3de39728996b87ed",
     "src/ini_reader_strings.hpp": "63dcd65fa609a37d8195254a9ee9173e890bd10a63a8b7bb04923584c4bdd54e",
     "src/ini_reader_values.hpp": "ed21890d062aef9bdbfcebecd181c36b7645f528304428d4039c2405652fec46",
-    "src/ini_reader.hpp": "807fd18b221664ac801a239a9b487523df0b2ea73aa7888521aa9a52543449e5",
+    "src/ini_reader.hpp": "0fec29d3e4453c29eeb99a8bbd673a4e44592f38cb991c8c62c07c86d3031a78",
     "src/file_map.hpp": "3b3fa5a652b47a0b744a438671bfbed9d711be65d6202457a025019758d406da"
   },
   "differential_calls": 1577,

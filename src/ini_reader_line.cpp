@@ -1,8 +1,9 @@
 #include "ini_reader_strings.hpp"
 extern "C" int ini_strings_sprintf(char*,const char*,...);
-// Separate original static destinations; extents beyond tested output need more audit.
+// Text storage extent beyond tested output needs more audit.
+// Binary storage aliases the preceding 256 bytes of the numeric output region.
 char INITextLineBuffer[2048];
-char INIBinaryLineBuffer[256];
+extern char INIBinaryLineBuffer[256];
 const char* INI_Reader::get_line_ptr() {
     if (!binary_mode) {
         ini_strings_sprintf(INITextLineBuffer,"%s = %s",text_name,text_value);

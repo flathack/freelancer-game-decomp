@@ -7,19 +7,23 @@ sprintf writes "%s = " into storage at 0x0658d800, the binary parameter
 join populates reader offset 0x1464, then a DWORD/tail copy appends that join.
 Numeric conversion uses the same shared storage at 0x0658d900 as string getters.
 
-The source reuses reconstructed binary joins and retains separate static line
-outputs. The provisional buffers are 2048 text bytes and 256 binary bytes.
-Original allocation extents have not been proven. Original binary output is
-adjacent to the numeric shared buffer; rebuilt overflow adjacency is not yet
-reconstructed. Arbitrarily oversized lines therefore remain unverified, and
-these provisional extents must not be mistaken for bounds in original code.
+The source reuses reconstructed binary joins. BINI output now occupies the first
+256 bytes of a contiguous 512-byte region, with numeric conversion at +256.
+COFF symbol aliases preserve both original exported/global identities and this
+observed address relationship. Overflow from line output into numeric output is
+therefore reproduced, including subsequent unknown-tag reuse of overwritten
+numeric contents. The text destination remains a provisional 2048-byte buffer.
+Original allocation extents beyond these reconstructed ranges have not been
+proven; these extents must not be mistaken for bounds in original code.
 
-2403 differential calls exercise line output and the integrated string getters,
+2445 differential calls exercise line output and the integrated string getters,
 including every byte boolean value, signed integers, float bit patterns,
 unknown tags/shared-buffer reuse, random multi-parameter sequences, empty and
 missing entries, and text lines up to 2026 output bytes. The test separately
 records line call count. Within the tested buffer ranges, complete output-buffer
 write footprints, joined reader state, returned storage categories, formatter
-arguments and diagnostics agree. Controlled joined-buffer overflow is exercised
-by the underlying getter, not by get_line_ptr. Authentic sprintf spelling/locale,
+arguments and diagnostics agree. 21 additional sequences exercise line/numeric adjacency: long names, numeric
+parameters that overwrite an existing line prefix, long string parameters, and
+subsequent unknown-tag retrieval. All 512 static bytes agree. Controlled
+joined-buffer overflow is also exercised by the underlying getter. Authentic sprintf spelling/locale,
 native Windows runtime and exact instruction matching remain unverified.
