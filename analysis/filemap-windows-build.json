@@ -1,0 +1,118 @@
+{
+  "status": "linked_and_imports_verified",
+  "dll": "build/filemap-windows/freelancer-filemap.dll",
+  "dll_sha256": "76e00fae5eb5d3ee3cff8588b9af0727d7bd07a7997b67af3bcab22ee61dc69e",
+  "export_count": 18,
+  "imports": {
+    "MSVCP60.dll": [
+      "?_C@?1??_Nullstr@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@CAPBDXZ@4DB",
+      "?_Grow@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAE_NI_N@Z",
+      "?_Split@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEXXZ",
+      "?_Tidy@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AAEX_N@Z",
+      "?assign@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@PBDI@Z"
+    ],
+    "MSVCRT.dll": [
+      "free",
+      "malloc"
+    ],
+    "KERNEL32.dll": [
+      "CloseHandle",
+      "CreateFileA",
+      "CreateFileMappingA",
+      "GetFileSize",
+      "MapViewOfFile",
+      "UnmapViewOfFile"
+    ]
+  },
+  "commands": [
+    [
+      "llvm-dlltool",
+      "-m",
+      "i386",
+      "-d",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/filemap-windows/MSVCP60.dll.def",
+      "-l",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/filemap-windows/MSVCP60.dll.lib"
+    ],
+    [
+      "llvm-dlltool",
+      "-m",
+      "i386",
+      "-d",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/filemap-windows/MSVCRT.dll.def",
+      "-l",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/filemap-windows/MSVCRT.dll.lib"
+    ],
+    [
+      "llvm-dlltool",
+      "-m",
+      "i386",
+      "-d",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/filemap-windows/KERNEL32.dll.def",
+      "-l",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/filemap-windows/KERNEL32.dll.lib"
+    ],
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-fno-builtin",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/src/file_map.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/filemap-windows/file_map.obj"
+    ],
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-fno-builtin",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/src/runtime/file_map_windows.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/filemap-windows/runtime.obj"
+    ],
+    [
+      "lld-link",
+      "/dll",
+      "/noentry",
+      "/nodefaultlib",
+      "/base:0x15000000",
+      "/out:/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/filemap-windows/freelancer-filemap.dll",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/filemap-windows/file_map.obj",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/filemap-windows/runtime.obj",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/filemap-windows/MSVCP60.dll.lib",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/filemap-windows/MSVCRT.dll.lib",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/filemap-windows/KERNEL32.dll.lib",
+      "/export:??0FileMap@@QAE@ABU0@@Z",
+      "/export:??0FileMap@@QAE@XZ",
+      "/export:??1FileMap@@QAE@XZ",
+      "/export:??4FileMap@@QAEAAU0@ABU0@@Z",
+      "/export:?close@FileMap@@QAEXXZ",
+      "/export:?eof@FileMap@@QBE_NXZ",
+      "/export:?get_file_length@FileMap@@QBEIXZ",
+      "/export:?get_file_name@FileMap@@QBEPBDXZ",
+      "/export:?handoff_to@FileMap@@QAEXAAU1@@Z",
+      "/export:?open@FileMap@@QAE_NPBD@Z",
+      "/export:?open_memory@FileMap@@QAE_NPBXI@Z",
+      "/export:?read@FileMap@@QAEIPAXI@Z",
+      "/export:?read_ptr@FileMap@@QAE_NAAPAUBINI_Block@@@Z",
+      "/export:?read_ptr@FileMap@@QAE_NAAPAUBINI_Header@@@Z",
+      "/export:?read_ptr@FileMap@@QAE_NAAPAUBINI_Value@@@Z",
+      "/export:?request_pointer@FileMap@@QAEPAXAAI@Z",
+      "/export:?seek@FileMap@@QAEXI@Z",
+      "/export:?tell@FileMap@@QBEIXZ"
+    ]
+  ],
+  "source_hashes": {
+    "src/file_map.cpp": "5e6a162191a8e353a3eb563ba32f30c26559b97adc416496046cf5d830904624",
+    "src/file_map.hpp": "751b999c170c3e2088bfcac7cf6ab32dbaf8768354c92b4c386adee5a06d157e",
+    "src/runtime/file_map_windows.cpp": "6b68cc912fc355c23f5c2c59c7e9efff2d5eed51661b29864eb3008a4ba2dcfb"
+  },
+  "runtime_execution_verified": false,
+  "scope": "FileMap component DLL; not common.dll or the complete game. Requires matching external CRT/Windows DLLs."
+}

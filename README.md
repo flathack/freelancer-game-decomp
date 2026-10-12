@@ -189,8 +189,8 @@ destruction and reinitialization have since passed differential checks. See `ana
 
 `src/file_map.cpp` reconstructs 12 memory-reader methods with 3,298 passing x86
 comparisons. Typed short reads consume the remaining tail before returning false.
-The MSVC6 COW filename implementation and OS-backed open/close/handoff are still
-open; this does not yet provide a full FileMap or INI parser.
+The remaining FileMap methods have since been implemented and tested under
+modeled imports; the full INI parser and native CRT/OS verification remain open.
 
 ```bash
 .venv/bin/python tests/verify_file_map_x86.py
@@ -198,3 +198,20 @@ open; this does not yet provide a full FileMap or INI parser.
 
 Scope and evidence are recorded in `analysis/filemap-notes.md` and
 `analysis/filemap-x86-behavior.json`.
+
+## FileMap resource methods and Windows component DLL
+
+All 18 FileMap exports now compile. The copy/ownership, OS acquisition/cleanup and
+COW paths pass 101 differential cases with explicit external-library models.
+The named-import Windows build passes the same wrapper-ABI checks and verifies
+all 18 exports / 13 CRT and Win32 imports, without fixed original-image addresses.
+
+```bash
+python3 tools/build_filemap_windows.py
+.venv/bin/python tests/verify_file_map_lifetime_x86.py --production-bindings
+```
+
+The result is `build/filemap-windows/freelancer-filemap.dll`, a component DLL rather
+than a common.dll replacement. Real Windows/CRT execution, SEH/allocation failure
+and exact compiler matching remain unverified. Details and scope are in
+`analysis/filemap-lifetime-notes.md`.

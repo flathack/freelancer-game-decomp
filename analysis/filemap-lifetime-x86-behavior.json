@@ -1,0 +1,99 @@
+{
+  "status": "passed_under_modeled_external_imports",
+  "original_sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
+  "compiled_dll_sha256": "bb3e357217a65b43f6a85c0e00cc8efe58433518091bd1da6f1211efcd9dacb0",
+  "source_hashes": {
+    "src/file_map.cpp": "5e6a162191a8e353a3eb563ba32f30c26559b97adc416496046cf5d830904624",
+    "src/file_map.hpp": "751b999c170c3e2088bfcac7cf6ab32dbaf8768354c92b4c386adee5a06d157e",
+    "tests/fixtures/file_map_x86_runtime.cpp": "312d9ad72f0a77fe03f462c07f16fcd42729b83c1742052527dc99825ed1288e"
+  },
+  "binding_mode": "fixture_fixed_image_addresses",
+  "lifetime_calls": 101,
+  "covered_methods": [
+    "??0FileMap@@QAE@ABU0@@Z",
+    "??0FileMap@@QAE@XZ",
+    "??1FileMap@@QAE@XZ",
+    "??4FileMap@@QAEAAU0@ABU0@@Z",
+    "?close@FileMap@@QAEXXZ",
+    "?handoff_to@FileMap@@QAEXAAU1@@Z",
+    "?open@FileMap@@QAE_NPBD@Z",
+    "?open_memory@FileMap@@QAE_NPBXI@Z"
+  ],
+  "compiled_exported_methods": 18,
+  "commands": [
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-fno-builtin",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/src/file_map.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/file_map_lifetime.obj"
+    ],
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-fno-builtin",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/tests/fixtures/file_map_x86_runtime.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/file_map_lifetime_runtime.obj"
+    ],
+    [
+      "lld-link",
+      "/dll",
+      "/noentry",
+      "/nodefaultlib",
+      "/base:0x14000000",
+      "/out:/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/file_map_lifetime.dll",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/file_map_lifetime.obj",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/file_map_lifetime_runtime.obj",
+      "/export:??0FileMap@@QAE@ABU0@@Z",
+      "/export:??0FileMap@@QAE@XZ",
+      "/export:??1FileMap@@QAE@XZ",
+      "/export:??4FileMap@@QAEAAU0@ABU0@@Z",
+      "/export:?close@FileMap@@QAEXXZ",
+      "/export:?eof@FileMap@@QBE_NXZ",
+      "/export:?get_file_length@FileMap@@QBEIXZ",
+      "/export:?get_file_name@FileMap@@QBEPBDXZ",
+      "/export:?handoff_to@FileMap@@QAEXAAU1@@Z",
+      "/export:?open@FileMap@@QAE_NPBD@Z",
+      "/export:?open_memory@FileMap@@QAE_NPBXI@Z",
+      "/export:?read@FileMap@@QAEIPAXI@Z",
+      "/export:?read_ptr@FileMap@@QAE_NAAPAUBINI_Block@@@Z",
+      "/export:?read_ptr@FileMap@@QAE_NAAPAUBINI_Header@@@Z",
+      "/export:?read_ptr@FileMap@@QAE_NAAPAUBINI_Value@@@Z",
+      "/export:?request_pointer@FileMap@@QAEPAXAAI@Z",
+      "/export:?seek@FileMap@@QAEXI@Z",
+      "/export:?tell@FileMap@@QBEIXZ"
+    ]
+  ],
+  "checks": [
+    "OS open success and three failure stages",
+    "Win32 argument and call-order comparison",
+    "close/destructor",
+    "copy/assignment/handoff",
+    "shared filename detach",
+    "self-assignment/self-handoff",
+    "refcount 253/254/255",
+    "overwriting receiver ownership without cleanup"
+  ],
+  "mocks": [
+    "MSVCP60 Grow/Split/Tidy/Assign/Copy semantics model (not real CRT)",
+    "successful allocator/free/memmove",
+    "controlled Win32 file/mapping APIs"
+  ],
+  "not_verified": [
+    "Real MSVCP60 allocation/capacity/SEH behavior",
+    "Real OS file mappings",
+    "Allocator failure",
+    "Invalid/null path strings",
+    "Exact instruction matching"
+  ]
+}

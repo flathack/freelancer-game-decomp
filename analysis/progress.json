@@ -44,6 +44,18 @@
     "calls": 3298,
     "methods": 12
   },
+  "filemap_lifetime_x86_behavior": {
+    "source_current": true,
+    "calls": 101,
+    "compiled_exports": 18,
+    "external_imports_modeled": true
+  },
+  "filemap_windows_build": {
+    "source_current": true,
+    "exports": 18,
+    "named_imports": 13,
+    "native_execution_verified": false
+  },
   "complete_game_verified": false,
   "modules": [
     {

@@ -2,8 +2,9 @@
 
 `src/file_map.cpp` reconstructs 12 exported methods: default constructor,
 open_memory, get_file_name, get_file_length, eof, tell, seek, request_pointer,
-read and three typed read_ptr overloads. Copy/assignment/destructor, COW filename
-operations and OS-backed open/close/handoff are still unimplemented.
+read and three typed read_ptr overloads. Copy/assignment/destructor and OS-backed open/close/handoff have now been
+implemented separately; see `filemap-lifetime-notes.md`. Original MSVCP60 COW
+operations remain imported external dependencies.
 
 The observed x86 object is 36 bytes: 16-byte MSVC6 string state followed by file
 handle, mapping handle, data pointer, length and cursor. Tests compare the defined
@@ -34,9 +35,10 @@ seeded random operations, 16 explicit truncated typed reads and reopening with
 existing handles. The allocator succeeds and the CRT empty string is controlled.
 No host OS file APIs or game processes are executed.
 
-This is a verified memory-reader subset of FileMap, not a complete FileMap or INI
-parser. Exact instruction matching, overlapping buffers, allocation failure,
-filename refcounting and actual file mappings remain open.
+This report covers only the memory-reader subset, not the full game or INI parser.
+Filename refcounting and resource methods now have separate modeled-import tests.
+Exact instruction matching, overlapping buffers, allocation failure and real
+CRT/OS runtime verification remain open.
 
 Run: `.venv/bin/python tests/verify_file_map_x86.py`.
 Report and build/source hashes: `analysis/filemap-x86-behavior.json`.
