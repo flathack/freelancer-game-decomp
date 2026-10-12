@@ -9,7 +9,8 @@ EquipDesc: 2406 ABI/state cases and 200 full-x87 cargo cases; temporary assembly
 String cache: 407 requests/tree shape checks and 8 capacity cases; source current: True.
 FileMap memory/BINI subset: 3298 calls across 12 methods; source current: True.
 FileMap lifetime: 101 modeled-import cases; Windows component: 18 exports, 13 imports; native runtime unverified.
-BINI navigation: 5140903 calls / 15 methods; real corpus 1241/1241; typed getters/text iteration unverified.
+BINI navigation: 5140903 calls / 15 methods; real corpus 1241/1241; typed getters/text iteration separately scoped.
+Binary bool/int: 2280 calls / 1136 cases; real CRT and text getters unverified.
 
 The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.
 

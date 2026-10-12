@@ -65,3 +65,18 @@ The complete BINI navigation run passed 5,140,903 calls over 70,330 sections and
 header-only files rejected by the original recognition helper, plus 40 synthetic
 files. This proves the tested navigation/state behavior; numeric/string value
 conversion, text-INI iteration and full reader lifecycle remain open.
+
+## Binary bool/int parameter conversion
+
+`src/ini_reader_values.cpp` adds the original ABI entries for get_value_bool and
+get_value_int. 2,280 comparisons pass over 1,136 synthetic parameter cases, including
+raw bool bytes, floating special values, missing-parameter diagnostics and unknown
+tags. CRT conversion/diagnostic operations are explicit models in this check.
+
+```bash
+.venv/bin/python tests/verify_ini_bool_int_x86.py
+```
+
+Production binding, actual CRT/FPU execution and text-mode getter behavior remain
+open. Numeric float/string/wstring/vector accessors are not completed by this step.
+See `analysis/ini-bool-int-notes.md` for the precise boundaries.

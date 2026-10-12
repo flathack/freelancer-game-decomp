@@ -65,6 +65,13 @@
     "typed_getters_verified": false,
     "text_iteration_verified": false
   },
+  "ini_bool_int_x86_behavior": {
+    "source_current": true,
+    "calls": 2280,
+    "parameter_cases": 1136,
+    "external_runtime_modeled": true,
+    "text_mode_verified": false
+  },
   "complete_game_verified": false,
   "modules": [
     {
