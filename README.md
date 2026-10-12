@@ -191,3 +191,8 @@ BINI line and numeric output now share the original observed +256-byte address
 relationship through COFF aliases. 2445 integrated comparisons pass, including
 21 overflow/reuse sequences and comparison of the complete 512-byte region.
 Static storage beyond that region and text-buffer allocation extents remain open.
+
+`INI_Reader::is_number` now reproduces the original lexical predicate, including
+permissive exponent, hex-prefix and character-literal cases. 10,716 differential
+calls pass with exact signed `tolower` arguments and unchanged reader state.
+This predicate is intentionally separate from the reconstructed ParseNumber.

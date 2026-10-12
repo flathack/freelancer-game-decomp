@@ -27,3 +27,13 @@ parameters that overwrite an existing line prefix, long string parameters, and
 subsequent unknown-tag retrieval. All 512 static bytes agree. Controlled
 joined-buffer overflow is also exercised by the underlying getter. Authentic sprintf spelling/locale,
 native Windows runtime and exact instruction matching remain unverified.
+
+## Additional text-storage evidence
+
+The next raw common.dll functions (0x06311240, 0x06311250, 0x06311260)
+write globals at 0x063fc2a0, 0x063fc29c, and 0x063fc298. The last address is
+exactly +0x100 from the text line destination at 0x063fc198. Thus the current
+2048-byte text array does not yet reconstruct the original neighboring global
+storage, despite passing output-buffer comparisons. Future integration must
+recover these neighboring globals and preserve their alias/overflow effects;
+long-line comparisons alone cannot establish fidelity for those consumers.

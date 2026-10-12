@@ -17,6 +17,7 @@ struct INI_Reader {
     bool binary_mode;
     unsigned char padding_1565[3];
     struct State { unsigned char bytes[0xc08]; };
+    bool is_number(const char*) const;
     bool open_memory(const char*,unsigned int);
     void close();
     const char* get_line_ptr();
