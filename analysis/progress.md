@@ -26,6 +26,7 @@ Reader construction: 72 complete object/ABI comparisons; native CRT remains unve
 Reader destruction: 50 full-state/ownership cases; native CRT remains unverified.
 Reader copying: 36 object/heap cases; arbitrary overlap and native CRT remain unverified.
 Reader file open: 768 cases / 40 supplied files; native OS/CRT remain unverified.
+Reader Vector: 1153 ABI/rounding cases; legacy value_num: 1178 x87 cases.
 The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.
 
 | Module | Raw export status | Raw functions | Failed |

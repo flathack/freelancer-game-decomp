@@ -1,0 +1,7112 @@
+{
+  "status": "passed_binary_float_cpp_abi_view",
+  "original_sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
+  "compiled_dll_sha256": "67621d17d65baf63d6b1d034d3592d2260d9decb496c5792ad74a102d61e444a",
+  "source_hashes": {
+    "src/ini_reader_vector.cpp": "d81d5660ca8376df3e51d9eb9eb41493d8adca4adfd2447b4823d69b7a636ff3",
+    "src/ini_text_float.cpp": "819ccf4078161232f2561278c1d578aeaa5ed582051e376d28caaf1cc86d8c48",
+    "src/parse_number.cpp": "99627542df167d8dab69daff0ff037098b763b51503ef583a32b41ffd364d964",
+    "src/parse_number_x87.cpp": "122c112f71a81a337fad161b70b841eb2be2b3310b58a2caea400674b3164da6",
+    "tests/fixtures/parse_number_runtime.cpp": "bebb2182f165c6da70c16ab0f5171136c27414dcc864f14f2d33b34d16fee667",
+    "src/ini_reader_float.cpp": "1c7add2f198d17e3de0956a91489cd70aec67a57d0387fbec44363c442314d62",
+    "tests/fixtures/ini_float_x86_runtime.cpp": "5d94a8723139b41561f8880a46d5383c6dd65ab256f8d2fb6344869a2b87be08",
+    "src/ini_reader_values.cpp": "ec8f71d5ff9baa27cb06d73fd7921c5893a72abbd7c0c0a36a351e36c47241cf",
+    "src/ini_reader.cpp": "15e526e3c55e728ebc2d5b91790cd0f3eb8463e26624b8dd1809000d1e9909fd",
+    "src/file_map.cpp": "5e6a162191a8e353a3eb563ba32f30c26559b97adc416496046cf5d830904624",
+    "tests/fixtures/ini_values_x86_runtime.cpp": "ea34dbf3aeba31f62cda529d3d07daae4f256a168e2ad512bdc27fa1b06d8897",
+    "tests/fixtures/ini_reconstructed_index_runtime.cpp": "4ac0439aeaea51b9d389c6de60400db00bc31c6362eee723a5bf5aa2a9a94080",
+    "src/string_index.cpp": "747e809ad3955e95aaa0d7936d44b889d51aa5fd6dbe9e295e4583a493f33305",
+    "tests/fixtures/file_map_x86_runtime.cpp": "312d9ad72f0a77fe03f462c07f16fcd42729b83c1742052527dc99825ed1288e",
+    "tests/verify_ini_vector_x86.py": "23cf7e1c44d27d9267475c062fe0c80b4a5c9d1a40b2266fecbba9b5d4ffa361",
+    "src/string_index.hpp": "27a5be7607020a3d0c9af8b89fe07315ad38e0e995210a8a3de39728996b87ed",
+    "src/parse_number.hpp": "2ad1192f46cce9f0dd47fd7d658b9a2b272fac7add5f1c684a1499ec7519cb9d",
+    "src/ini_reader_values.hpp": "ed21890d062aef9bdbfcebecd181c36b7645f528304428d4039c2405652fec46",
+    "src/ini_reader.hpp": "90d289be24ba163ecfeb2fa1d99f349d355ee906db04d0069c4cb071c6b2ab84",
+    "src/file_map.hpp": "3b3fa5a652b47a0b744a438671bfbed9d711be65d6202457a025019758d406da"
+  },
+  "differential_calls": 1178,
+  "vector_calls": 1153,
+  "parameter_cases": 1140,
+  "text_calls": 30,
+  "reconstructed_parse_number_used": true,
+  "complete_80bit_returns_compared": true,
+  "assembly_in_getter": false,
+  "abi_implementation_return_type": "double under original float member symbol",
+  "extended_atof_passthrough_cases": 4,
+  "rows": [
+    {
+      "tag": 0,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 0,
+      "bits": "0x1",
+      "string": null,
+      "return_x87": "0000000000000080ff3f"
+    },
+    {
+      "tag": 0,
+      "bits": "0x2",
+      "string": null,
+      "return_x87": "00000000000000800040"
+    },
+    {
+      "tag": 0,
+      "bits": "0x3",
+      "string": null,
+      "return_x87": "00000000000000c00040"
+    },
+    {
+      "tag": 0,
+      "bits": "0x4",
+      "string": null,
+      "return_x87": "00000000000000800140"
+    },
+    {
+      "tag": 0,
+      "bits": "0x5",
+      "string": null,
+      "return_x87": "00000000000000a00140"
+    },
+    {
+      "tag": 0,
+      "bits": "0x6",
+      "string": null,
+      "return_x87": "00000000000000c00140"
+    },
+    {
+      "tag": 0,
+      "bits": "0x7",
+      "string": null,
+      "return_x87": "00000000000000e00140"
+    },
+    {
+      "tag": 0,
+      "bits": "0x8",
+      "string": null,
+      "return_x87": "00000000000000800240"
+    },
+    {
+      "tag": 0,
+      "bits": "0x9",
+      "string": null,
+      "return_x87": "00000000000000900240"
+    },
+    {
+      "tag": 0,
+      "bits": "0xa",
+      "string": null,
+      "return_x87": "00000000000000a00240"
+    },
+    {
+      "tag": 0,
+      "bits": "0xb",
+      "string": null,
+      "return_x87": "00000000000000b00240"
+    },
+    {
+      "tag": 0,
+      "bits": "0xc",
+      "string": null,
+      "return_x87": "00000000000000c00240"
+    },
+    {
+      "tag": 0,
+      "bits": "0xd",
+      "string": null,
+      "return_x87": "00000000000000d00240"
+    },
+    {
+      "tag": 0,
+      "bits": "0xe",
+      "string": null,
+      "return_x87": "00000000000000e00240"
+    },
+    {
+      "tag": 0,
+      "bits": "0xf",
+      "string": null,
+      "return_x87": "00000000000000f00240"
+    },
+    {
+      "tag": 0,
+      "bits": "0x10",
+      "string": null,
+      "return_x87": "00000000000000800340"
+    },
+    {
+      "tag": 0,
+      "bits": "0x11",
+      "string": null,
+      "return_x87": "00000000000000880340"
+    },
+    {
+      "tag": 0,
+      "bits": "0x12",
+      "string": null,
+      "return_x87": "00000000000000900340"
+    },
+    {
+      "tag": 0,
+      "bits": "0x13",
+      "string": null,
+      "return_x87": "00000000000000980340"
+    },
+    {
+      "tag": 0,
+      "bits": "0x14",
+      "string": null,
+      "return_x87": "00000000000000a00340"
+    },
+    {
+      "tag": 0,
+      "bits": "0x15",
+      "string": null,
+      "return_x87": "00000000000000a80340"
+    },
+    {
+      "tag": 0,
+      "bits": "0x16",
+      "string": null,
+      "return_x87": "00000000000000b00340"
+    },
+    {
+      "tag": 0,
+      "bits": "0x17",
+      "string": null,
+      "return_x87": "00000000000000b80340"
+    },
+    {
+      "tag": 0,
+      "bits": "0x18",
+      "string": null,
+      "return_x87": "00000000000000c00340"
+    },
+    {
+      "tag": 0,
+      "bits": "0x19",
+      "string": null,
+      "return_x87": "00000000000000c80340"
+    },
+    {
+      "tag": 0,
+      "bits": "0x1a",
+      "string": null,
+      "return_x87": "00000000000000d00340"
+    },
+    {
+      "tag": 0,
+      "bits": "0x1b",
+      "string": null,
+      "return_x87": "00000000000000d80340"
+    },
+    {
+      "tag": 0,
+      "bits": "0x1c",
+      "string": null,
+      "return_x87": "00000000000000e00340"
+    },
+    {
+      "tag": 0,
+      "bits": "0x1d",
+      "string": null,
+      "return_x87": "00000000000000e80340"
+    },
+    {
+      "tag": 0,
+      "bits": "0x1e",
+      "string": null,
+      "return_x87": "00000000000000f00340"
+    },
+    {
+      "tag": 0,
+      "bits": "0x1f",
+      "string": null,
+      "return_x87": "00000000000000f80340"
+    },
+    {
+      "tag": 0,
+      "bits": "0x20",
+      "string": null,
+      "return_x87": "00000000000000800440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x21",
+      "string": null,
+      "return_x87": "00000000000000840440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x22",
+      "string": null,
+      "return_x87": "00000000000000880440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x23",
+      "string": null,
+      "return_x87": "000000000000008c0440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x24",
+      "string": null,
+      "return_x87": "00000000000000900440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x25",
+      "string": null,
+      "return_x87": "00000000000000940440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x26",
+      "string": null,
+      "return_x87": "00000000000000980440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x27",
+      "string": null,
+      "return_x87": "000000000000009c0440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x28",
+      "string": null,
+      "return_x87": "00000000000000a00440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x29",
+      "string": null,
+      "return_x87": "00000000000000a40440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x2a",
+      "string": null,
+      "return_x87": "00000000000000a80440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x2b",
+      "string": null,
+      "return_x87": "00000000000000ac0440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x2c",
+      "string": null,
+      "return_x87": "00000000000000b00440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x2d",
+      "string": null,
+      "return_x87": "00000000000000b40440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x2e",
+      "string": null,
+      "return_x87": "00000000000000b80440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x2f",
+      "string": null,
+      "return_x87": "00000000000000bc0440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x30",
+      "string": null,
+      "return_x87": "00000000000000c00440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x31",
+      "string": null,
+      "return_x87": "00000000000000c40440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x32",
+      "string": null,
+      "return_x87": "00000000000000c80440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x33",
+      "string": null,
+      "return_x87": "00000000000000cc0440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x34",
+      "string": null,
+      "return_x87": "00000000000000d00440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x35",
+      "string": null,
+      "return_x87": "00000000000000d40440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x36",
+      "string": null,
+      "return_x87": "00000000000000d80440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x37",
+      "string": null,
+      "return_x87": "00000000000000dc0440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x38",
+      "string": null,
+      "return_x87": "00000000000000e00440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x39",
+      "string": null,
+      "return_x87": "00000000000000e40440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x3a",
+      "string": null,
+      "return_x87": "00000000000000e80440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x3b",
+      "string": null,
+      "return_x87": "00000000000000ec0440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x3c",
+      "string": null,
+      "return_x87": "00000000000000f00440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x3d",
+      "string": null,
+      "return_x87": "00000000000000f40440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x3e",
+      "string": null,
+      "return_x87": "00000000000000f80440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x3f",
+      "string": null,
+      "return_x87": "00000000000000fc0440"
+    },
+    {
+      "tag": 0,
+      "bits": "0x40",
+      "string": null,
+      "return_x87": "00000000000000800540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x41",
+      "string": null,
+      "return_x87": "00000000000000820540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x42",
+      "string": null,
+      "return_x87": "00000000000000840540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x43",
+      "string": null,
+      "return_x87": "00000000000000860540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x44",
+      "string": null,
+      "return_x87": "00000000000000880540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x45",
+      "string": null,
+      "return_x87": "000000000000008a0540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x46",
+      "string": null,
+      "return_x87": "000000000000008c0540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x47",
+      "string": null,
+      "return_x87": "000000000000008e0540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x48",
+      "string": null,
+      "return_x87": "00000000000000900540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x49",
+      "string": null,
+      "return_x87": "00000000000000920540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x4a",
+      "string": null,
+      "return_x87": "00000000000000940540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x4b",
+      "string": null,
+      "return_x87": "00000000000000960540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x4c",
+      "string": null,
+      "return_x87": "00000000000000980540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x4d",
+      "string": null,
+      "return_x87": "000000000000009a0540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x4e",
+      "string": null,
+      "return_x87": "000000000000009c0540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x4f",
+      "string": null,
+      "return_x87": "000000000000009e0540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x50",
+      "string": null,
+      "return_x87": "00000000000000a00540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x51",
+      "string": null,
+      "return_x87": "00000000000000a20540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x52",
+      "string": null,
+      "return_x87": "00000000000000a40540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x53",
+      "string": null,
+      "return_x87": "00000000000000a60540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x54",
+      "string": null,
+      "return_x87": "00000000000000a80540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x55",
+      "string": null,
+      "return_x87": "00000000000000aa0540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x56",
+      "string": null,
+      "return_x87": "00000000000000ac0540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x57",
+      "string": null,
+      "return_x87": "00000000000000ae0540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x58",
+      "string": null,
+      "return_x87": "00000000000000b00540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x59",
+      "string": null,
+      "return_x87": "00000000000000b20540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x5a",
+      "string": null,
+      "return_x87": "00000000000000b40540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x5b",
+      "string": null,
+      "return_x87": "00000000000000b60540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x5c",
+      "string": null,
+      "return_x87": "00000000000000b80540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x5d",
+      "string": null,
+      "return_x87": "00000000000000ba0540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x5e",
+      "string": null,
+      "return_x87": "00000000000000bc0540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x5f",
+      "string": null,
+      "return_x87": "00000000000000be0540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x60",
+      "string": null,
+      "return_x87": "00000000000000c00540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x61",
+      "string": null,
+      "return_x87": "00000000000000c20540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x62",
+      "string": null,
+      "return_x87": "00000000000000c40540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x63",
+      "string": null,
+      "return_x87": "00000000000000c60540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x64",
+      "string": null,
+      "return_x87": "00000000000000c80540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x65",
+      "string": null,
+      "return_x87": "00000000000000ca0540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x66",
+      "string": null,
+      "return_x87": "00000000000000cc0540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x67",
+      "string": null,
+      "return_x87": "00000000000000ce0540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x68",
+      "string": null,
+      "return_x87": "00000000000000d00540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x69",
+      "string": null,
+      "return_x87": "00000000000000d20540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x6a",
+      "string": null,
+      "return_x87": "00000000000000d40540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x6b",
+      "string": null,
+      "return_x87": "00000000000000d60540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x6c",
+      "string": null,
+      "return_x87": "00000000000000d80540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x6d",
+      "string": null,
+      "return_x87": "00000000000000da0540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x6e",
+      "string": null,
+      "return_x87": "00000000000000dc0540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x6f",
+      "string": null,
+      "return_x87": "00000000000000de0540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x70",
+      "string": null,
+      "return_x87": "00000000000000e00540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x71",
+      "string": null,
+      "return_x87": "00000000000000e20540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x72",
+      "string": null,
+      "return_x87": "00000000000000e40540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x73",
+      "string": null,
+      "return_x87": "00000000000000e60540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x74",
+      "string": null,
+      "return_x87": "00000000000000e80540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x75",
+      "string": null,
+      "return_x87": "00000000000000ea0540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x76",
+      "string": null,
+      "return_x87": "00000000000000ec0540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x77",
+      "string": null,
+      "return_x87": "00000000000000ee0540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x78",
+      "string": null,
+      "return_x87": "00000000000000f00540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x79",
+      "string": null,
+      "return_x87": "00000000000000f20540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x7a",
+      "string": null,
+      "return_x87": "00000000000000f40540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x7b",
+      "string": null,
+      "return_x87": "00000000000000f60540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x7c",
+      "string": null,
+      "return_x87": "00000000000000f80540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x7d",
+      "string": null,
+      "return_x87": "00000000000000fa0540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x7e",
+      "string": null,
+      "return_x87": "00000000000000fc0540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x7f",
+      "string": null,
+      "return_x87": "00000000000000fe0540"
+    },
+    {
+      "tag": 0,
+      "bits": "0x80",
+      "string": null,
+      "return_x87": "00000000000000800640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x81",
+      "string": null,
+      "return_x87": "00000000000000810640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x82",
+      "string": null,
+      "return_x87": "00000000000000820640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x83",
+      "string": null,
+      "return_x87": "00000000000000830640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x84",
+      "string": null,
+      "return_x87": "00000000000000840640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x85",
+      "string": null,
+      "return_x87": "00000000000000850640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x86",
+      "string": null,
+      "return_x87": "00000000000000860640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x87",
+      "string": null,
+      "return_x87": "00000000000000870640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x88",
+      "string": null,
+      "return_x87": "00000000000000880640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x89",
+      "string": null,
+      "return_x87": "00000000000000890640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x8a",
+      "string": null,
+      "return_x87": "000000000000008a0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x8b",
+      "string": null,
+      "return_x87": "000000000000008b0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x8c",
+      "string": null,
+      "return_x87": "000000000000008c0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x8d",
+      "string": null,
+      "return_x87": "000000000000008d0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x8e",
+      "string": null,
+      "return_x87": "000000000000008e0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x8f",
+      "string": null,
+      "return_x87": "000000000000008f0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x90",
+      "string": null,
+      "return_x87": "00000000000000900640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x91",
+      "string": null,
+      "return_x87": "00000000000000910640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x92",
+      "string": null,
+      "return_x87": "00000000000000920640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x93",
+      "string": null,
+      "return_x87": "00000000000000930640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x94",
+      "string": null,
+      "return_x87": "00000000000000940640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x95",
+      "string": null,
+      "return_x87": "00000000000000950640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x96",
+      "string": null,
+      "return_x87": "00000000000000960640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x97",
+      "string": null,
+      "return_x87": "00000000000000970640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x98",
+      "string": null,
+      "return_x87": "00000000000000980640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x99",
+      "string": null,
+      "return_x87": "00000000000000990640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x9a",
+      "string": null,
+      "return_x87": "000000000000009a0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x9b",
+      "string": null,
+      "return_x87": "000000000000009b0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x9c",
+      "string": null,
+      "return_x87": "000000000000009c0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x9d",
+      "string": null,
+      "return_x87": "000000000000009d0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x9e",
+      "string": null,
+      "return_x87": "000000000000009e0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0x9f",
+      "string": null,
+      "return_x87": "000000000000009f0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xa0",
+      "string": null,
+      "return_x87": "00000000000000a00640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xa1",
+      "string": null,
+      "return_x87": "00000000000000a10640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xa2",
+      "string": null,
+      "return_x87": "00000000000000a20640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xa3",
+      "string": null,
+      "return_x87": "00000000000000a30640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xa4",
+      "string": null,
+      "return_x87": "00000000000000a40640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xa5",
+      "string": null,
+      "return_x87": "00000000000000a50640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xa6",
+      "string": null,
+      "return_x87": "00000000000000a60640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xa7",
+      "string": null,
+      "return_x87": "00000000000000a70640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xa8",
+      "string": null,
+      "return_x87": "00000000000000a80640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xa9",
+      "string": null,
+      "return_x87": "00000000000000a90640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xaa",
+      "string": null,
+      "return_x87": "00000000000000aa0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xab",
+      "string": null,
+      "return_x87": "00000000000000ab0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xac",
+      "string": null,
+      "return_x87": "00000000000000ac0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xad",
+      "string": null,
+      "return_x87": "00000000000000ad0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xae",
+      "string": null,
+      "return_x87": "00000000000000ae0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xaf",
+      "string": null,
+      "return_x87": "00000000000000af0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xb0",
+      "string": null,
+      "return_x87": "00000000000000b00640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xb1",
+      "string": null,
+      "return_x87": "00000000000000b10640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xb2",
+      "string": null,
+      "return_x87": "00000000000000b20640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xb3",
+      "string": null,
+      "return_x87": "00000000000000b30640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xb4",
+      "string": null,
+      "return_x87": "00000000000000b40640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xb5",
+      "string": null,
+      "return_x87": "00000000000000b50640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xb6",
+      "string": null,
+      "return_x87": "00000000000000b60640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xb7",
+      "string": null,
+      "return_x87": "00000000000000b70640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xb8",
+      "string": null,
+      "return_x87": "00000000000000b80640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xb9",
+      "string": null,
+      "return_x87": "00000000000000b90640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xba",
+      "string": null,
+      "return_x87": "00000000000000ba0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xbb",
+      "string": null,
+      "return_x87": "00000000000000bb0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xbc",
+      "string": null,
+      "return_x87": "00000000000000bc0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xbd",
+      "string": null,
+      "return_x87": "00000000000000bd0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xbe",
+      "string": null,
+      "return_x87": "00000000000000be0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xbf",
+      "string": null,
+      "return_x87": "00000000000000bf0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xc0",
+      "string": null,
+      "return_x87": "00000000000000c00640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xc1",
+      "string": null,
+      "return_x87": "00000000000000c10640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xc2",
+      "string": null,
+      "return_x87": "00000000000000c20640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xc3",
+      "string": null,
+      "return_x87": "00000000000000c30640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xc4",
+      "string": null,
+      "return_x87": "00000000000000c40640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xc5",
+      "string": null,
+      "return_x87": "00000000000000c50640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xc6",
+      "string": null,
+      "return_x87": "00000000000000c60640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xc7",
+      "string": null,
+      "return_x87": "00000000000000c70640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xc8",
+      "string": null,
+      "return_x87": "00000000000000c80640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xc9",
+      "string": null,
+      "return_x87": "00000000000000c90640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xca",
+      "string": null,
+      "return_x87": "00000000000000ca0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xcb",
+      "string": null,
+      "return_x87": "00000000000000cb0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xcc",
+      "string": null,
+      "return_x87": "00000000000000cc0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xcd",
+      "string": null,
+      "return_x87": "00000000000000cd0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xce",
+      "string": null,
+      "return_x87": "00000000000000ce0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xcf",
+      "string": null,
+      "return_x87": "00000000000000cf0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xd0",
+      "string": null,
+      "return_x87": "00000000000000d00640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xd1",
+      "string": null,
+      "return_x87": "00000000000000d10640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xd2",
+      "string": null,
+      "return_x87": "00000000000000d20640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xd3",
+      "string": null,
+      "return_x87": "00000000000000d30640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xd4",
+      "string": null,
+      "return_x87": "00000000000000d40640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xd5",
+      "string": null,
+      "return_x87": "00000000000000d50640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xd6",
+      "string": null,
+      "return_x87": "00000000000000d60640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xd7",
+      "string": null,
+      "return_x87": "00000000000000d70640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xd8",
+      "string": null,
+      "return_x87": "00000000000000d80640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xd9",
+      "string": null,
+      "return_x87": "00000000000000d90640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xda",
+      "string": null,
+      "return_x87": "00000000000000da0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xdb",
+      "string": null,
+      "return_x87": "00000000000000db0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xdc",
+      "string": null,
+      "return_x87": "00000000000000dc0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xdd",
+      "string": null,
+      "return_x87": "00000000000000dd0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xde",
+      "string": null,
+      "return_x87": "00000000000000de0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xdf",
+      "string": null,
+      "return_x87": "00000000000000df0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xe0",
+      "string": null,
+      "return_x87": "00000000000000e00640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xe1",
+      "string": null,
+      "return_x87": "00000000000000e10640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xe2",
+      "string": null,
+      "return_x87": "00000000000000e20640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xe3",
+      "string": null,
+      "return_x87": "00000000000000e30640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xe4",
+      "string": null,
+      "return_x87": "00000000000000e40640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xe5",
+      "string": null,
+      "return_x87": "00000000000000e50640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xe6",
+      "string": null,
+      "return_x87": "00000000000000e60640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xe7",
+      "string": null,
+      "return_x87": "00000000000000e70640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xe8",
+      "string": null,
+      "return_x87": "00000000000000e80640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xe9",
+      "string": null,
+      "return_x87": "00000000000000e90640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xea",
+      "string": null,
+      "return_x87": "00000000000000ea0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xeb",
+      "string": null,
+      "return_x87": "00000000000000eb0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xec",
+      "string": null,
+      "return_x87": "00000000000000ec0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xed",
+      "string": null,
+      "return_x87": "00000000000000ed0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xee",
+      "string": null,
+      "return_x87": "00000000000000ee0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xef",
+      "string": null,
+      "return_x87": "00000000000000ef0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xf0",
+      "string": null,
+      "return_x87": "00000000000000f00640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xf1",
+      "string": null,
+      "return_x87": "00000000000000f10640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xf2",
+      "string": null,
+      "return_x87": "00000000000000f20640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xf3",
+      "string": null,
+      "return_x87": "00000000000000f30640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xf4",
+      "string": null,
+      "return_x87": "00000000000000f40640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xf5",
+      "string": null,
+      "return_x87": "00000000000000f50640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xf6",
+      "string": null,
+      "return_x87": "00000000000000f60640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xf7",
+      "string": null,
+      "return_x87": "00000000000000f70640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xf8",
+      "string": null,
+      "return_x87": "00000000000000f80640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xf9",
+      "string": null,
+      "return_x87": "00000000000000f90640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xfa",
+      "string": null,
+      "return_x87": "00000000000000fa0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xfb",
+      "string": null,
+      "return_x87": "00000000000000fb0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xfc",
+      "string": null,
+      "return_x87": "00000000000000fc0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xfd",
+      "string": null,
+      "return_x87": "00000000000000fd0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xfe",
+      "string": null,
+      "return_x87": "00000000000000fe0640"
+    },
+    {
+      "tag": 0,
+      "bits": "0xff",
+      "string": null,
+      "return_x87": "00000000000000ff0640"
+    },
+    {
+      "tag": 1,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 1,
+      "bits": "0x1",
+      "string": null,
+      "return_x87": "0000000000000080ff3f"
+    },
+    {
+      "tag": 1,
+      "bits": "0xffffffff",
+      "string": null,
+      "return_x87": "0000000000000080ffbf"
+    },
+    {
+      "tag": 1,
+      "bits": "0x80000000",
+      "string": null,
+      "return_x87": "00000000000000801ec0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x7fffffff",
+      "string": null,
+      "return_x87": "00000000feffffff1d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xb17cbf9b",
+      "string": null,
+      "return_x87": "00000000ca80069d1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x48a78212",
+      "string": null,
+      "return_x87": "0000000024044f911d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xaafa601b",
+      "string": null,
+      "return_x87": "00000000ca3f0baa1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x2aae6eb4",
+      "string": null,
+      "return_x87": "00000000d0bab9aa1c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x4ad01494",
+      "string": null,
+      "return_x87": "000000002829a0951d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xc6d008cf",
+      "string": null,
+      "return_x87": "00000000c4dcbfe41cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x94393266",
+      "string": null,
+      "return_x87": "00000000349b8dd71dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x59730b89",
+      "string": null,
+      "return_x87": "000000001217e6b21d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x738d288",
+      "string": null,
+      "return_x87": "0000000000511ae71940"
+    },
+    {
+      "tag": 1,
+      "bits": "0xa75f9dc7",
+      "string": null,
+      "return_x87": "0000000072c440b11dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x928bbe5a",
+      "string": null,
+      "return_x87": "000000004c83e8da1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xd34fb6bf",
+      "string": null,
+      "return_x87": "000000000425c1b21cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xa32e8bb0",
+      "string": null,
+      "return_x87": "00000000a0e8a2b91dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x5204cdb3",
+      "string": null,
+      "return_x87": "00000000669b09a41d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x7c7af62d",
+      "string": null,
+      "return_x87": "000000005aecf5f81d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x4cfcc4e0",
+      "string": null,
+      "return_x87": "00000000c089f9991d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x8ce0446f",
+      "string": null,
+      "return_x87": "0000000022773fe61dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xa27be919",
+      "string": null,
+      "return_x87": "00000000ce2d08bb1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xa789f824",
+      "string": null,
+      "return_x87": "00000000b80fecb01dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xc087424c",
+      "string": null,
+      "return_x87": "00000000d0f6e2fd1cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xe8f2298f",
+      "string": null,
+      "return_x87": "0000000088b36eb81bc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x16d160f8",
+      "string": null,
+      "return_x87": "00000000c0078bb61b40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xa132a84e",
+      "string": null,
+      "return_x87": "0000000064af9abd1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x1689f744",
+      "string": null,
+      "return_x87": "0000000020ba4fb41b40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xa88862a2",
+      "string": null,
+      "return_x87": "00000000bc3aefae1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x25daaa48",
+      "string": null,
+      "return_x87": "0000000020a96a971c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xa5868e6e",
+      "string": null,
+      "return_x87": "0000000024e3f2b41dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xfba452d9",
+      "string": null,
+      "return_x87": "00000000e0a4758b19c0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xa522ba0d",
+      "string": null,
+      "return_x87": "00000000e68bbab51dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x269ef73a",
+      "string": null,
+      "return_x87": "00000000e8dc7b9a1c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xfa415b4c",
+      "string": null,
+      "return_x87": "000000008096d4b719c0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xbb69a30e",
+      "string": null,
+      "return_x87": "00000000e4b92c891dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x83df377a",
+      "string": null,
+      "return_x87": "000000000c9141f81dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x6cce7d76",
+      "string": null,
+      "return_x87": "00000000ecfa9cd91d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x5a90b466",
+      "string": null,
+      "return_x87": "00000000cc6821b51d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xf60d1610",
+      "string": null,
+      "return_x87": "00000000009f2e9f1ac0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x3319e081",
+      "string": null,
+      "return_x87": "00000000048267cc1c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x1c65ca70",
+      "string": null,
+      "return_x87": "0000000080532ee31b40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xc71a1674",
+      "string": null,
+      "return_x87": "0000000030a697e31cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xe3a6f8c9",
+      "string": null,
+      "return_x87": "00000000b839c8e21bc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x8e1c8f4b",
+      "string": null,
+      "return_x87": "000000006ae1c6e31dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x9057c871",
+      "string": null,
+      "return_x87": "000000001e6f50df1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xed30e5d7",
+      "string": null,
+      "return_x87": "0000000048d178961bc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xd5ee9cd2",
+      "string": null,
+      "return_x87": "00000000b88c45a81cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x3f2415a7",
+      "string": null,
+      "return_x87": "000000009c5690fc1c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xe753ee18",
+      "string": null,
+      "return_x87": "00000000408f60c51bc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x4e0d025b",
+      "string": null,
+      "return_x87": "00000000b6041a9c1d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x4c45b2",
+      "string": null,
+      "return_x87": "0000000000648b981540"
+    },
+    {
+      "tag": 1,
+      "bits": "0x82ec62e7",
+      "string": null,
+      "return_x87": "00000000323a27fa1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xc6971fdf",
+      "string": null,
+      "return_x87": "000000008480a3e51cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x205596ae",
+      "string": null,
+      "return_x87": "00000000b85a56811c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xe1160451",
+      "string": null,
+      "return_x87": "0000000078dd4ff71bc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x4a22bb7c",
+      "string": null,
+      "return_x87": "00000000f87645941d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xa719de90",
+      "string": null,
+      "return_x87": "00000000e042ccb11dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x2f5c256f",
+      "string": null,
+      "return_x87": "00000000bc9570bd1c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xd968cb6b",
+      "string": null,
+      "return_x87": "0000000054d25c9a1cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xb63210a1",
+      "string": null,
+      "return_x87": "00000000bede9b931dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xa561214e",
+      "string": null,
+      "return_x87": "0000000064bd3db51dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x724cfa6d",
+      "string": null,
+      "return_x87": "00000000daf499e41d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x98dba5f1",
+      "string": null,
+      "return_x87": "000000001eb448ce1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x520ec82d",
+      "string": null,
+      "return_x87": "000000005a901da41d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x848de740",
+      "string": null,
+      "return_x87": "000000008031e4f61dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x5e24863b",
+      "string": null,
+      "return_x87": "00000000760c49bc1d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xbd7d192c",
+      "string": null,
+      "return_x87": "00000000a8cd05851dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xef5a748a",
+      "string": null,
+      "return_x87": "00000000b05b2c851bc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x73d46e58",
+      "string": null,
+      "return_x87": "00000000b0dca8e71d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x6c90a8b1",
+      "string": null,
+      "return_x87": "00000000625121d91d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x397ee907",
+      "string": null,
+      "return_x87": "000000001ca4fbe51c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xbf153fc3",
+      "string": null,
+      "return_x87": "000000007a80d5811dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x399c8579",
+      "string": null,
+      "return_x87": "00000000e41572e61c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xe0f31250",
+      "string": null,
+      "return_x87": "00000000806d67f81bc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x8c6abbd6",
+      "string": null,
+      "return_x87": "0000000054882ae71dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x8f739158",
+      "string": null,
+      "return_x87": "0000000050dd18e11dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x1f12063",
+      "string": null,
+      "return_x87": "00000000803190f81740"
+    },
+    {
+      "tag": 1,
+      "bits": "0xb66ca757",
+      "string": null,
+      "return_x87": "0000000052b126931dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xc80f1049",
+      "string": null,
+      "return_x87": "00000000dcbec3df1cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xa1b87e87",
+      "string": null,
+      "return_x87": "00000000f2028fbc1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x6fe058bc",
+      "string": null,
+      "return_x87": "0000000078b1c0df1d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xad0da70a",
+      "string": null,
+      "return_x87": "00000000ecb1e4a51dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x934f87d4",
+      "string": null,
+      "return_x87": "0000000058f060d91dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x6a344394",
+      "string": null,
+      "return_x87": "00000000288768d41d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xfcb1a274",
+      "string": null,
+      "return_x87": "00000000006397d318c0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x8c25705c",
+      "string": null,
+      "return_x87": "00000000481fb5e71dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x9b9bec87",
+      "string": null,
+      "return_x87": "00000000f226c8c81dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x9c506234",
+      "string": null,
+      "return_x87": "00000000983b5fc71dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xca6e1c75",
+      "string": null,
+      "return_x87": "000000002c8e47d61cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x75c4e01b",
+      "string": null,
+      "return_x87": "0000000036c089eb1d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x638b4179",
+      "string": null,
+      "return_x87": "00000000f28216c71d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xce186428",
+      "string": null,
+      "return_x87": "00000000606f9ec71cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x4949dfbc",
+      "string": null,
+      "return_x87": "0000000078bf93921d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xabab5796",
+      "string": null,
+      "return_x87": "00000000d450a9a81dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x7cc51da7",
+      "string": null,
+      "return_x87": "000000004e3b8af91d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x82765c8c",
+      "string": null,
+      "return_x87": "00000000e84613fb1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x975bc54",
+      "string": null,
+      "return_x87": "0000000040c55b971a40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x9d69ed03",
+      "string": null,
+      "return_x87": "00000000fa252cc51dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xac35d0ac",
+      "string": null,
+      "return_x87": "00000000a85e94a71dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x7ef940e4",
+      "string": null,
+      "return_x87": "00000000c881f2fd1d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x6f082239",
+      "string": null,
+      "return_x87": "00000000724410de1d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x5d682208",
+      "string": null,
+      "return_x87": "000000001044d0ba1d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x3b39bb55",
+      "string": null,
+      "return_x87": "0000000054ede6ec1c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xdd3633ce",
+      "string": null,
+      "return_x87": "00000000c830278b1cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x8307e97e",
+      "string": null,
+      "return_x87": "00000000042df0f91dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x35de729e",
+      "string": null,
+      "return_x87": "0000000078ca79d71c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xb97581a4",
+      "string": null,
+      "return_x87": "00000000b8fc148d1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xba273dce",
+      "string": null,
+      "return_x87": "000000006484b18b1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x49a1a2dc",
+      "string": null,
+      "return_x87": "00000000b84543931d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x5c427992",
+      "string": null,
+      "return_x87": "0000000024f384b81d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x80ace3f8",
+      "string": null,
+      "return_x87": "000000001038a6fe1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x5e96d6d",
+      "string": null,
+      "return_x87": "00000000a0ad2dbd1940"
+    },
+    {
+      "tag": 1,
+      "bits": "0x852eaf28",
+      "string": null,
+      "return_x87": "00000000b0a1a2f51dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xa4665b43",
+      "string": null,
+      "return_x87": "000000007a4933b71dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x8c6cd95d",
+      "string": null,
+      "return_x87": "00000000464d26e71dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xa539d2e3",
+      "string": null,
+      "return_x87": "000000003a5a8cb51dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xd3d45cc8",
+      "string": null,
+      "return_x87": "00000000e08caeb01cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xb14bd88d",
+      "string": null,
+      "return_x87": "00000000e64e689d1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x6067ab31",
+      "string": null,
+      "return_x87": "000000006256cfc01d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x26ae42b0",
+      "string": null,
+      "return_x87": "00000000c00ab99a1c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x2aad2746",
+      "string": null,
+      "return_x87": "00000000189db4aa1c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xefb8b864",
+      "string": null,
+      "return_x87": "00000000e03c3a821bc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x85e267ef",
+      "string": null,
+      "return_x87": "0000000022303bf41dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x3b4edfb4",
+      "string": null,
+      "return_x87": "00000000d07e3bed1c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x4a1fb709",
+      "string": null,
+      "return_x87": "00000000126e3f941d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xa1b1f0f6",
+      "string": null,
+      "return_x87": "00000000141e9cbc1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x3f9a58f5",
+      "string": null,
+      "return_x87": "00000000d46369fe1c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xeefaa200",
+      "string": null,
+      "return_x87": "0000000000f02a881bc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x48c81c4c",
+      "string": null,
+      "return_x87": "00000000983890911d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x424b0365",
+      "string": null,
+      "return_x87": "00000000ca0696841d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x1d3cf3f0",
+      "string": null,
+      "return_x87": "00000000809fe7e91b40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xcf196e1e",
+      "string": null,
+      "return_x87": "0000000088479ac31cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xc7de9e7f",
+      "string": null,
+      "return_x87": "00000000048685e01cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xb068da06",
+      "string": null,
+      "return_x87": "00000000f44b2e9f1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x8aaffa68",
+      "string": null,
+      "return_x87": "00000000300ba0ea1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x57768277",
+      "string": null,
+      "return_x87": "00000000ee04edae1d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x5522f80a",
+      "string": null,
+      "return_x87": "0000000014f045aa1d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xc8675f77",
+      "string": null,
+      "return_x87": "00000000248262de1cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xf8673c39",
+      "string": null,
+      "return_x87": "00000000e07818f319c0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x48b1c571",
+      "string": null,
+      "return_x87": "00000000e28a63911d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xe7e4c26",
+      "string": null,
+      "return_x87": "0000000060c2e4e71a40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x1ff8e233",
+      "string": null,
+      "return_x87": "000000009811c7ff1b40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xd1bf988",
+      "string": null,
+      "return_x87": "000000008098bfd11a40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x5c256f0a",
+      "string": null,
+      "return_x87": "0000000014de4ab81d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x3c32e8b3",
+      "string": null,
+      "return_x87": "00000000cca2cbf01c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x5dee44df",
+      "string": null,
+      "return_x87": "00000000be89dcbb1d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x80978280",
+      "string": null,
+      "return_x87": "0000000000fbd0fe1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xc4e88a0c",
+      "string": null,
+      "return_x87": "00000000d0d75dec1cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x46e2c5ab",
+      "string": null,
+      "return_x87": "00000000568bc58d1d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xa28f3caa",
+      "string": null,
+      "return_x87": "00000000ac86e1ba1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xb7b286da",
+      "string": null,
+      "return_x87": "000000004cf29a901dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x42b43e6b",
+      "string": null,
+      "return_x87": "00000000d67c68851d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x5e618ea8",
+      "string": null,
+      "return_x87": "00000000501dc3bc1d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x63b850b5",
+      "string": null,
+      "return_x87": "000000006aa170c71d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x201ed061",
+      "string": null,
+      "return_x87": "0000000084417b801c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x5febd060",
+      "string": null,
+      "return_x87": "00000000c0a0d7bf1d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xd86cd95f",
+      "string": null,
+      "return_x87": "00000000849a4c9e1cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xeaf1152a",
+      "string": null,
+      "return_x87": "00000000b05677a81bc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x1b6f4bce",
+      "string": null,
+      "return_x87": "00000000705e7adb1b40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xc1065ff4",
+      "string": null,
+      "return_x87": "000000003080e6fb1cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x4f16603c",
+      "string": null,
+      "return_x87": "0000000078c02c9e1d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xcd3f91b3",
+      "string": null,
+      "return_x87": "0000000034b901cb1cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x56bb1513",
+      "string": null,
+      "return_x87": "00000000262a76ad1d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x77d2b874",
+      "string": null,
+      "return_x87": "00000000e870a5ef1d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x1eda3696",
+      "string": null,
+      "return_x87": "00000000b0b4d1f61b40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x90e162b6",
+      "string": null,
+      "return_x87": "00000000943a3dde1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x39e5af0f",
+      "string": null,
+      "return_x87": "000000003cbc96e71c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x69404239",
+      "string": null,
+      "return_x87": "00000000728480d21d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x888f6ba2",
+      "string": null,
+      "return_x87": "00000000bc28e1ee1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x681f6d21",
+      "string": null,
+      "return_x87": "0000000042da3ed01d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xf427e2a9",
+      "string": null,
+      "return_x87": "0000000070d581bd1ac0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x9533f83a",
+      "string": null,
+      "return_x87": "000000008c0f98d51dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xd6092884",
+      "string": null,
+      "return_x87": "00000000f05ddba71cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x734e9ed6",
+      "string": null,
+      "return_x87": "00000000ac3d9de61d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x4f4f5b1e",
+      "string": null,
+      "return_x87": "000000003cb69e9e1d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xca3137d9",
+      "string": null,
+      "return_x87": "000000009c203bd71cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x27a8ed27",
+      "string": null,
+      "return_x87": "000000009cb4a39e1c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x1906c83b",
+      "string": null,
+      "return_x87": "00000000d84136c81b40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x27a104df",
+      "string": null,
+      "return_x87": "000000007c13849e1c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xaeb33159",
+      "string": null,
+      "return_x87": "000000004e9d99a21dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x2b69fad8",
+      "string": null,
+      "return_x87": "0000000060eba7ad1c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x2509546",
+      "string": null,
+      "return_x87": "00000000805125941840"
+    },
+    {
+      "tag": 1,
+      "bits": "0xeb1f5913",
+      "string": null,
+      "return_x87": "00000000683705a71bc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xa881556b",
+      "string": null,
+      "return_x87": "000000002a55fdae1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x16e0e2d5",
+      "string": null,
+      "return_x87": "00000000a81607b71b40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x564c89f2",
+      "string": null,
+      "return_x87": "00000000e41399ac1d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x2289b4d1",
+      "string": null,
+      "return_x87": "0000000044d3268a1c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x357d094",
+      "string": null,
+      "return_x87": "000000000025f4d51840"
+    },
+    {
+      "tag": 1,
+      "bits": "0xde0ea70c",
+      "string": null,
+      "return_x87": "00000000d063c5871cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x46a478bf",
+      "string": null,
+      "return_x87": "000000007ef1488d1d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x8b3617c4",
+      "string": null,
+      "return_x87": "0000000078d093e91dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xb0524b82",
+      "string": null,
+      "return_x87": "00000000fc685b9f1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x632f51fc",
+      "string": null,
+      "return_x87": "00000000f8a35ec61d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x426618bf",
+      "string": null,
+      "return_x87": "000000007e31cc841d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x2a815815",
+      "string": null,
+      "return_x87": "00000000546005aa1c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x40837cf8",
+      "string": null,
+      "return_x87": "00000000f0f906811d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x145e3a32",
+      "string": null,
+      "return_x87": "0000000090d1f1a21b40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x2f58b04d",
+      "string": null,
+      "return_x87": "0000000034c162bd1c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xf68fffe2",
+      "string": null,
+      "return_x87": "00000000e00100971ac0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xa0879cfa",
+      "string": null,
+      "return_x87": "000000000cc6f0be1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xe9de539a",
+      "string": null,
+      "return_x87": "0000000030630db11bc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x5aaf0a97",
+      "string": null,
+      "return_x87": "000000002e155eb51d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x81714a1c",
+      "string": null,
+      "return_x87": "00000000c86b1dfd1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x3bcc487b",
+      "string": null,
+      "return_x87": "00000000ec2131ef1c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x85ddff9",
+      "string": null,
+      "return_x87": "0000000090ffdd851a40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x9fefefa",
+      "string": null,
+      "return_x87": "00000000a0efef9f1a40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xb4f17f07",
+      "string": null,
+      "return_x87": "00000000f2011d961dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xd031c854",
+      "string": null,
+      "return_x87": "00000000b0de38bf1cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x70bbee7",
+      "string": null,
+      "return_x87": "00000000e0dc77e11940"
+    },
+    {
+      "tag": 1,
+      "bits": "0x6da02528",
+      "string": null,
+      "return_x87": "00000000504a40db1d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x79c41ee",
+      "string": null,
+      "return_x87": "00000000c03d88f31940"
+    },
+    {
+      "tag": 1,
+      "bits": "0xe0424560",
+      "string": null,
+      "return_x87": "0000000000d5edfd1bc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x5842c445",
+      "string": null,
+      "return_x87": "000000008a8885b01d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x9b4786ba",
+      "string": null,
+      "return_x87": "000000008cf270c91dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x1804a7a0",
+      "string": null,
+      "return_x87": "00000000003d25c01b40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x2068882e",
+      "string": null,
+      "return_x87": "00000000b820a2811c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x3d1dc49e",
+      "string": null,
+      "return_x87": "00000000781277f41c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x67729ee3",
+      "string": null,
+      "return_x87": "00000000c63de5ce1d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xca1ea1f3",
+      "string": null,
+      "return_x87": "00000000347885d71cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x1d7ded06",
+      "string": null,
+      "return_x87": "000000003068efeb1b40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x435fba48",
+      "string": null,
+      "return_x87": "000000009074bf861d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x13574a14",
+      "string": null,
+      "return_x87": "00000000a050ba9a1b40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x53bebe1f",
+      "string": null,
+      "return_x87": "000000003e7c7da71d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xbc94111e",
+      "string": null,
+      "return_x87": "00000000c4ddd7861dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xf1853489",
+      "string": null,
+      "return_x87": "0000000070b7ace71ac0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x9522395d",
+      "string": null,
+      "return_x87": "00000000468dbbd51dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x1b66d6b0",
+      "string": null,
+      "return_x87": "0000000080b536db1b40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xb8d2e958",
+      "string": null,
+      "return_x87": "00000000502d5a8e1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x1ad50f51",
+      "string": null,
+      "return_x87": "00000000887aa8d61b40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x57f1f89",
+      "string": null,
+      "return_x87": "0000000020f1e3af1940"
+    },
+    {
+      "tag": 1,
+      "bits": "0xd90711ce",
+      "string": null,
+      "return_x87": "00000000c8b8e39b1cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x1b57d521",
+      "string": null,
+      "return_x87": "0000000008a9beda1b40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x5670fc06",
+      "string": null,
+      "return_x87": "000000000cf8e1ac1d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xe7410540",
+      "string": null,
+      "return_x87": "0000000000d6f7c51bc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xfa9efa46",
+      "string": null,
+      "return_x87": "0000000040b720ac19c0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x5e7c9d39",
+      "string": null,
+      "return_x87": "00000000723af9bc1d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xaef01269",
+      "string": null,
+      "return_x87": "000000002edb1fa21dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xc9588833",
+      "string": null,
+      "return_x87": "0000000034df9dda1cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x9305e768",
+      "string": null,
+      "return_x87": "000000003031f4d91dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x5a0f5232",
+      "string": null,
+      "return_x87": "0000000064a41eb41d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x2780753c",
+      "string": null,
+      "return_x87": "00000000f0d4019e1c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xa099bb23",
+      "string": null,
+      "return_x87": "00000000ba89ccbe1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x85492a39",
+      "string": null,
+      "return_x87": "000000008eab6df51dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x6fcbd741",
+      "string": null,
+      "return_x87": "0000000082ae97df1d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x1ac1b88a",
+      "string": null,
+      "return_x87": "0000000050c40dd61b40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x1a84f869",
+      "string": null,
+      "return_x87": "0000000048c327d41b40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xa9727570",
+      "string": null,
+      "return_x87": "0000000020151bad1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xec06bbba",
+      "string": null,
+      "return_x87": "000000003022ca9f1bc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xc0ccf49e",
+      "string": null,
+      "return_x87": "00000000882dccfc1cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xea6e4af9",
+      "string": null,
+      "return_x87": "0000000038a88dac1bc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x2c7fff1e",
+      "string": null,
+      "return_x87": "0000000078fcffb11c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x3651cf1e",
+      "string": null,
+      "return_x87": "00000000783c47d91c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x3fbfbe7e",
+      "string": null,
+      "return_x87": "00000000f8f9fefe1c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x8dadf24",
+      "string": null,
+      "return_x87": "0000000040f2ad8d1a40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x84ee2ea9",
+      "string": null,
+      "return_x87": "00000000aea223f61dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x8e8f9a27",
+      "string": null,
+      "return_x87": "00000000b2cbe0e21dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x7d43e623",
+      "string": null,
+      "return_x87": "0000000046cc87fa1d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xf2f2f786",
+      "string": null,
+      "return_x87": "00000000a087d0d01ac0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xb6b1a24",
+      "string": null,
+      "return_x87": "0000000040a2b1b61a40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xdb9d5f21",
+      "string": null,
+      "return_x87": "000000007c838a911cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xcb6a0a42",
+      "string": null,
+      "return_x87": "00000000f8d657d21cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xdd120c1",
+      "string": null,
+      "return_x87": "00000000100c12dd1a40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x8c9e16aa",
+      "string": null,
+      "return_x87": "00000000acd2c3e61dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xe8b0a140",
+      "string": null,
+      "return_x87": "0000000000f67aba1bc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xe78f57e6",
+      "string": null,
+      "return_x87": "00000000d04085c31bc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xbddc3f51",
+      "string": null,
+      "return_x87": "000000005e8147841dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xb3dee057",
+      "string": null,
+      "return_x87": "00000000523f42981dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x6a598425",
+      "string": null,
+      "return_x87": "000000004a08b3d41d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x82ddc052",
+      "string": null,
+      "return_x87": "000000005c7f44fa1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x84c46788",
+      "string": null,
+      "return_x87": "00000000f03077f61dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x12e46a75",
+      "string": null,
+      "return_x87": "00000000a85323971b40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xe27ff72d",
+      "string": null,
+      "return_x87": "00000000984600ec1bc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xf60da81f",
+      "string": null,
+      "return_x87": "00000000107e259f1ac0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x55dc54c6",
+      "string": null,
+      "return_x87": "000000008ca9b8ab1d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x8c85d657",
+      "string": null,
+      "return_x87": "000000005253f4e61dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xd7a704a7",
+      "string": null,
+      "return_x87": "0000000064ed63a11cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x34b94b70",
+      "string": null,
+      "return_x87": "00000000c02de5d21c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x3ba7d4a1",
+      "string": null,
+      "return_x87": "0000000084529fee1c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xbac8ae08",
+      "string": null,
+      "return_x87": "00000000f0a36e8a1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xbceef4ee",
+      "string": null,
+      "return_x87": "00000000241622861dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x25499d46",
+      "string": null,
+      "return_x87": "00000000187526951c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x59ab7012",
+      "string": null,
+      "return_x87": "0000000024e056b31d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x6908370a",
+      "string": null,
+      "return_x87": "00000000146e10d21d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x6cf22275",
+      "string": null,
+      "return_x87": "00000000ea44e4d91d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x2d676f98",
+      "string": null,
+      "return_x87": "0000000060be9db51c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x8361245a",
+      "string": null,
+      "return_x87": "000000004cb73df91dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xfca013dd",
+      "string": null,
+      "return_x87": "00000000c008fbd718c0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xf0f648c9",
+      "string": null,
+      "return_x87": "0000000070739bf01ac0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xf63f37e0",
+      "string": null,
+      "return_x87": "0000000000820c9c1ac0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xc8e2b3a3",
+      "string": null,
+      "return_x87": "00000000743175dc1cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x7485bf20",
+      "string": null,
+      "return_x87": "00000000407e0be91d40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x30562379",
+      "string": null,
+      "return_x87": "00000000e48d58c11c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xbad1a71b",
+      "string": null,
+      "return_x87": "00000000cab15c8a1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x2e8cae46",
+      "string": null,
+      "return_x87": "0000000018b932ba1c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x16e707ee",
+      "string": null,
+      "return_x87": "00000000703f38b71b40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xdfa88f1c",
+      "string": null,
+      "return_x87": "0000000090c35d811cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x985f0cb1",
+      "string": null,
+      "return_x87": "000000009ee641cf1dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x8b6f12d0",
+      "string": null,
+      "return_x87": "0000000060da21e91dc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0xcbf98082",
+      "string": null,
+      "return_x87": "00000000f8fd19d01cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x1cbe25da",
+      "string": null,
+      "return_x87": "00000000d02ef1e51b40"
+    },
+    {
+      "tag": 1,
+      "bits": "0xc8e094ae",
+      "string": null,
+      "return_x87": "0000000048ad7ddc1cc0"
+    },
+    {
+      "tag": 1,
+      "bits": "0x3892618d",
+      "string": null,
+      "return_x87": "00000000348649e21c40"
+    },
+    {
+      "tag": 1,
+      "bits": "0x9139f484",
+      "string": null,
+      "return_x87": "00000000f8168cdd1dc0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 2,
+      "bits": "0x80000000",
+      "string": null,
+      "return_x87": "00000000000000000080"
+    },
+    {
+      "tag": 2,
+      "bits": "0x1",
+      "string": null,
+      "return_x87": "00000000000000806a3f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x80000001",
+      "string": null,
+      "return_x87": "00000000000000806abf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x3f800000",
+      "string": null,
+      "return_x87": "0000000000000080ff3f"
+    },
+    {
+      "tag": 2,
+      "bits": "0xbf800000",
+      "string": null,
+      "return_x87": "0000000000000080ffbf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x4f000000",
+      "string": null,
+      "return_x87": "00000000000000801e40"
+    },
+    {
+      "tag": 2,
+      "bits": "0x4f800000",
+      "string": null,
+      "return_x87": "00000000000000801f40"
+    },
+    {
+      "tag": 2,
+      "bits": "0x7f800000",
+      "string": null,
+      "return_x87": "0000000000000080ff7f"
+    },
+    {
+      "tag": 2,
+      "bits": "0xff800000",
+      "string": null,
+      "return_x87": "0000000000000080ffff"
+    },
+    {
+      "tag": 2,
+      "bits": "0x7fc00000",
+      "string": null,
+      "return_x87": "00000000000000c0ff7f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x7f800001",
+      "string": null,
+      "return_x87": "0000000000010080ff7f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x1aafa221",
+      "string": null,
+      "return_x87": "000000000021a2afb53f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x5a6792db",
+      "string": null,
+      "return_x87": "0000000000db92e73440"
+    },
+    {
+      "tag": 2,
+      "bits": "0xa846e156",
+      "string": null,
+      "return_x87": "000000000056e1c6d0bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xdd80adba",
+      "string": null,
+      "return_x87": "0000000000baad803bc0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xbaeedc68",
+      "string": null,
+      "return_x87": "000000000068dceef5bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xa9405e5f",
+      "string": null,
+      "return_x87": "00000000005f5ec0d2bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xc70357e5",
+      "string": null,
+      "return_x87": "0000000000e557830ec0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x616d89",
+      "string": null,
+      "return_x87": "000000000012dbc2803f"
+    },
+    {
+      "tag": 2,
+      "bits": "0xa49485d1",
+      "string": null,
+      "return_x87": "0000000000d18594c9bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x33730a20",
+      "string": null,
+      "return_x87": "0000000000200af3e63f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x1197930b",
+      "string": null,
+      "return_x87": "00000000000b9397a33f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x90ad4f",
+      "string": null,
+      "return_x87": "00000000004fad90813f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x3312886c",
+      "string": null,
+      "return_x87": "00000000006c8892e63f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x29cc6151",
+      "string": null,
+      "return_x87": "00000000005161ccd33f"
+    },
+    {
+      "tag": 2,
+      "bits": "0xb96b48a4",
+      "string": null,
+      "return_x87": "0000000000a448ebf2bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x3b540db5",
+      "string": null,
+      "return_x87": "0000000000b50dd4f63f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x19c4992d",
+      "string": null,
+      "return_x87": "00000000002d99c4b33f"
+    },
+    {
+      "tag": 2,
+      "bits": "0xe80e89e1",
+      "string": null,
+      "return_x87": "0000000000e1898e50c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xc059da46",
+      "string": null,
+      "return_x87": "000000000046dad900c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x935078c2",
+      "string": null,
+      "return_x87": "0000000000c278d0a6bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xf4288432",
+      "string": null,
+      "return_x87": "00000000003284a868c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x9353d793",
+      "string": null,
+      "return_x87": "000000000093d7d3a6bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x777b4d1f",
+      "string": null,
+      "return_x87": "00000000001f4dfb6e40"
+    },
+    {
+      "tag": 2,
+      "bits": "0x8310dc4e",
+      "string": null,
+      "return_x87": "00000000004edc9086bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x25fe1fc7",
+      "string": null,
+      "return_x87": "0000000000c71ffecb3f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x5d984b85",
+      "string": null,
+      "return_x87": "0000000000854b983b40"
+    },
+    {
+      "tag": 2,
+      "bits": "0x6276040c",
+      "string": null,
+      "return_x87": "00000000000c04f64440"
+    },
+    {
+      "tag": 2,
+      "bits": "0xc3beff32",
+      "string": null,
+      "return_x87": "000000000032ffbe07c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x1335cb1b",
+      "string": null,
+      "return_x87": "00000000001bcbb5a63f"
+    },
+    {
+      "tag": 2,
+      "bits": "0xc7344684",
+      "string": null,
+      "return_x87": "00000000008446b40ec0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x822183cb",
+      "string": null,
+      "return_x87": "0000000000cb83a184bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xad02a312",
+      "string": null,
+      "return_x87": "000000000012a382dabf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xd05aee0a",
+      "string": null,
+      "return_x87": "00000000000aeeda20c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x284c0daa",
+      "string": null,
+      "return_x87": "0000000000aa0dccd03f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x22d2049d",
+      "string": null,
+      "return_x87": "00000000009d04d2c53f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x4a51a039",
+      "string": null,
+      "return_x87": "000000000039a0d11440"
+    },
+    {
+      "tag": 2,
+      "bits": "0x4f1115",
+      "string": null,
+      "return_x87": "00000000002a229e803f"
+    },
+    {
+      "tag": 2,
+      "bits": "0xdf1efe21",
+      "string": null,
+      "return_x87": "000000000021fe9e3ec0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x21edb826",
+      "string": null,
+      "return_x87": "000000000026b8edc33f"
+    },
+    {
+      "tag": 2,
+      "bits": "0xeed10734",
+      "string": null,
+      "return_x87": "00000000003407d15dc0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xca3de9a0",
+      "string": null,
+      "return_x87": "0000000000a0e9bd14c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x9f5c0f7e",
+      "string": null,
+      "return_x87": "00000000007e0fdcbebf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xd8657c46",
+      "string": null,
+      "return_x87": "0000000000467ce530c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xd428d0e2",
+      "string": null,
+      "return_x87": "0000000000e2d0a828c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x75cb8776",
+      "string": null,
+      "return_x87": "00000000007687cb6b40"
+    },
+    {
+      "tag": 2,
+      "bits": "0x66e79a6c",
+      "string": null,
+      "return_x87": "00000000006c9ae74d40"
+    },
+    {
+      "tag": 2,
+      "bits": "0x947eb58a",
+      "string": null,
+      "return_x87": "00000000008ab5fea8bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x8bb4baa4",
+      "string": null,
+      "return_x87": "0000000000a4bab497bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x4d2ed7d2",
+      "string": null,
+      "return_x87": "0000000000d2d7ae1a40"
+    },
+    {
+      "tag": 2,
+      "bits": "0x3b9b96ac",
+      "string": null,
+      "return_x87": "0000000000ac969bf73f"
+    },
+    {
+      "tag": 2,
+      "bits": "0xcf58c0fa",
+      "string": null,
+      "return_x87": "0000000000fac0d81ec0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xc5b21da0",
+      "string": null,
+      "return_x87": "0000000000a01db20bc0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x539d42a7",
+      "string": null,
+      "return_x87": "0000000000a7429d2740"
+    },
+    {
+      "tag": 2,
+      "bits": "0xbbdf8214",
+      "string": null,
+      "return_x87": "00000000001482dff7bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x271ca8a2",
+      "string": null,
+      "return_x87": "0000000000a2a89cce3f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x4ec42fa1",
+      "string": null,
+      "return_x87": "0000000000a12fc41d40"
+    },
+    {
+      "tag": 2,
+      "bits": "0xbe2d0c66",
+      "string": null,
+      "return_x87": "0000000000660cadfcbf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x761c0e58",
+      "string": null,
+      "return_x87": "0000000000580e9c6c40"
+    },
+    {
+      "tag": 2,
+      "bits": "0x8aa8b1b5",
+      "string": null,
+      "return_x87": "0000000000b5b1a895bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xbeda7c4b",
+      "string": null,
+      "return_x87": "00000000004b7cdafdbf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xa85e21cd",
+      "string": null,
+      "return_x87": "0000000000cd21ded0bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x8d38e60e",
+      "string": null,
+      "return_x87": "00000000000ee6b89abf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xa25f6102",
+      "string": null,
+      "return_x87": "00000000000261dfc4bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x1e74dfcd",
+      "string": null,
+      "return_x87": "0000000000cddff4bc3f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x31a96f04",
+      "string": null,
+      "return_x87": "0000000000046fa9e33f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x4f42635a",
+      "string": null,
+      "return_x87": "00000000005a63c21e40"
+    },
+    {
+      "tag": 2,
+      "bits": "0xc6b34799",
+      "string": null,
+      "return_x87": "00000000009947b30dc0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x79695aaa",
+      "string": null,
+      "return_x87": "0000000000aa5ae97240"
+    },
+    {
+      "tag": 2,
+      "bits": "0x1f5148ef",
+      "string": null,
+      "return_x87": "0000000000ef48d1be3f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x73053f1c",
+      "string": null,
+      "return_x87": "00000000001c3f856640"
+    },
+    {
+      "tag": 2,
+      "bits": "0x186a90be",
+      "string": null,
+      "return_x87": "0000000000be90eab03f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x9bbfbde8",
+      "string": null,
+      "return_x87": "0000000000e8bdbfb7bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xe8f111fe",
+      "string": null,
+      "return_x87": "0000000000fe11f151c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xf52a7ac",
+      "string": null,
+      "return_x87": "0000000000aca7d29e3f"
+    },
+    {
+      "tag": 2,
+      "bits": "0xe720dd6b",
+      "string": null,
+      "return_x87": "00000000006bdda04ec0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x5fb9e8d",
+      "string": null,
+      "return_x87": "00000000008d9efb8b3f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x64f9a92",
+      "string": null,
+      "return_x87": "0000000000929acf8c3f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x6e2975ee",
+      "string": null,
+      "return_x87": "0000000000ee75a95c40"
+    },
+    {
+      "tag": 2,
+      "bits": "0xa2c712c7",
+      "string": null,
+      "return_x87": "0000000000c712c7c5bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xe8bd204d",
+      "string": null,
+      "return_x87": "00000000004d20bd51c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xba049f31",
+      "string": null,
+      "return_x87": "0000000000319f84f4bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xa962b8ea",
+      "string": null,
+      "return_x87": "0000000000eab8e2d2bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x8c8762f8",
+      "string": null,
+      "return_x87": "0000000000f8628799bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x8bc638c",
+      "string": null,
+      "return_x87": "00000000008c63bc913f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x8456bc82",
+      "string": null,
+      "return_x87": "000000000082bcd688bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xebe45ee3",
+      "string": null,
+      "return_x87": "0000000000e35ee457c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x9362ad4d",
+      "string": null,
+      "return_x87": "00000000004dade2a6bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xa7a0192e",
+      "string": null,
+      "return_x87": "00000000002e19a0cfbf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xd95a831c",
+      "string": null,
+      "return_x87": "00000000001c83da32c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xd3e1c86b",
+      "string": null,
+      "return_x87": "00000000006bc8e127c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x853cf673",
+      "string": null,
+      "return_x87": "000000000073f6bc8abf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xbb211d85",
+      "string": null,
+      "return_x87": "0000000000851da1f6bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xc5348a56",
+      "string": null,
+      "return_x87": "0000000000568ab40ac0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xc568fcd1",
+      "string": null,
+      "return_x87": "0000000000d1fce80ac0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x521d1928",
+      "string": null,
+      "return_x87": "000000000028199d2440"
+    },
+    {
+      "tag": 2,
+      "bits": "0x8850a23d",
+      "string": null,
+      "return_x87": "00000000003da2d090bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xf7716aac",
+      "string": null,
+      "return_x87": "0000000000ac6af16ec0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xd6efdbeb",
+      "string": null,
+      "return_x87": "0000000000ebdbef2dc0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x49574f49",
+      "string": null,
+      "return_x87": "0000000000494fd71240"
+    },
+    {
+      "tag": 2,
+      "bits": "0x8f3110ef",
+      "string": null,
+      "return_x87": "0000000000ef10b19ebf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x541fd3e9",
+      "string": null,
+      "return_x87": "0000000000e9d39f2840"
+    },
+    {
+      "tag": 2,
+      "bits": "0xa82019ff",
+      "string": null,
+      "return_x87": "0000000000ff19a0d0bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xfeb11fe4",
+      "string": null,
+      "return_x87": "0000000000e41fb17dc0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x71e064bd",
+      "string": null,
+      "return_x87": "0000000000bd64e06340"
+    },
+    {
+      "tag": 2,
+      "bits": "0x97db429",
+      "string": null,
+      "return_x87": "000000000029b4fd923f"
+    },
+    {
+      "tag": 2,
+      "bits": "0xd53e41b8",
+      "string": null,
+      "return_x87": "0000000000b841be2ac0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xe527b36b",
+      "string": null,
+      "return_x87": "00000000006bb3a74ac0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xed89ee47",
+      "string": null,
+      "return_x87": "000000000047ee895bc0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x9eae797",
+      "string": null,
+      "return_x87": "000000000097e7ea933f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x87e6d41c",
+      "string": null,
+      "return_x87": "00000000001cd4e68fbf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xc0855134",
+      "string": null,
+      "return_x87": "000000000034518501c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x558e4fb6",
+      "string": null,
+      "return_x87": "0000000000b64f8e2b40"
+    },
+    {
+      "tag": 2,
+      "bits": "0xded27669",
+      "string": null,
+      "return_x87": "00000000006976d23dc0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x3ceb9ee7",
+      "string": null,
+      "return_x87": "0000000000e79eebf93f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x7403f31e",
+      "string": null,
+      "return_x87": "00000000001ef3836840"
+    },
+    {
+      "tag": 2,
+      "bits": "0x550493f4",
+      "string": null,
+      "return_x87": "0000000000f493842a40"
+    },
+    {
+      "tag": 2,
+      "bits": "0xdf311d37",
+      "string": null,
+      "return_x87": "0000000000371db13ec0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xef22332b",
+      "string": null,
+      "return_x87": "00000000002b33a25ec0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x11c4faba",
+      "string": null,
+      "return_x87": "0000000000bafac4a33f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x2c35c8db",
+      "string": null,
+      "return_x87": "0000000000dbc8b5d83f"
+    },
+    {
+      "tag": 2,
+      "bits": "0xc879923b",
+      "string": null,
+      "return_x87": "00000000003b92f910c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x78212f74",
+      "string": null,
+      "return_x87": "0000000000742fa17040"
+    },
+    {
+      "tag": 2,
+      "bits": "0x65a29b1",
+      "string": null,
+      "return_x87": "0000000000b129da8c3f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x226f1af1",
+      "string": null,
+      "return_x87": "0000000000f11aefc43f"
+    },
+    {
+      "tag": 2,
+      "bits": "0xebed9b8a",
+      "string": null,
+      "return_x87": "00000000008a9bed57c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x574c8e9a",
+      "string": null,
+      "return_x87": "00000000009a8ecc2e40"
+    },
+    {
+      "tag": 2,
+      "bits": "0xf84e7958",
+      "string": null,
+      "return_x87": "00000000005879ce70c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xdc79aa75",
+      "string": null,
+      "return_x87": "000000000075aaf938c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x1ef57c9e",
+      "string": null,
+      "return_x87": "00000000009e7cf5bd3f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x6e4fdeb2",
+      "string": null,
+      "return_x87": "0000000000b2decf5c40"
+    },
+    {
+      "tag": 2,
+      "bits": "0x308d0eec",
+      "string": null,
+      "return_x87": "0000000000ec0e8de13f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x8edf77f4",
+      "string": null,
+      "return_x87": "0000000000f477df9dbf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x8510e2f5",
+      "string": null,
+      "return_x87": "0000000000f5e2908abf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x169866a9",
+      "string": null,
+      "return_x87": "0000000000a96698ad3f"
+    },
+    {
+      "tag": 2,
+      "bits": "0xeb66bc7d",
+      "string": null,
+      "return_x87": "00000000007dbce656c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x967e770f",
+      "string": null,
+      "return_x87": "00000000000f77feacbf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x2074b0e1",
+      "string": null,
+      "return_x87": "0000000000e1b0f4c03f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x3962d30",
+      "string": null,
+      "return_x87": "0000000000302d96873f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x2809e79f",
+      "string": null,
+      "return_x87": "00000000009fe789d03f"
+    },
+    {
+      "tag": 2,
+      "bits": "0xa5d4c935",
+      "string": null,
+      "return_x87": "000000000035c9d4cbbf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x6d491325",
+      "string": null,
+      "return_x87": "00000000002513c95a40"
+    },
+    {
+      "tag": 2,
+      "bits": "0x1f339264",
+      "string": null,
+      "return_x87": "00000000006492b3be3f"
+    },
+    {
+      "tag": 2,
+      "bits": "0xc81482ce",
+      "string": null,
+      "return_x87": "0000000000ce829410c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x6230220b",
+      "string": null,
+      "return_x87": "00000000000b22b04440"
+    },
+    {
+      "tag": 2,
+      "bits": "0xae086d0d",
+      "string": null,
+      "return_x87": "00000000000d6d88dcbf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x11dcf137",
+      "string": null,
+      "return_x87": "000000000037f1dca33f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x325aecb6",
+      "string": null,
+      "return_x87": "0000000000b6ecdae43f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x7b1764dc",
+      "string": null,
+      "return_x87": "0000000000dc64977640"
+    },
+    {
+      "tag": 2,
+      "bits": "0x3a23d389",
+      "string": null,
+      "return_x87": "000000000089d3a3f43f"
+    },
+    {
+      "tag": 2,
+      "bits": "0xf8ed1fc1",
+      "string": null,
+      "return_x87": "0000000000c11fed71c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x156eb2f1",
+      "string": null,
+      "return_x87": "0000000000f1b2eeaa3f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x5c2b4ca6",
+      "string": null,
+      "return_x87": "0000000000a64cab3840"
+    },
+    {
+      "tag": 2,
+      "bits": "0x6a96f01d",
+      "string": null,
+      "return_x87": "00000000001df0965540"
+    },
+    {
+      "tag": 2,
+      "bits": "0x869ef326",
+      "string": null,
+      "return_x87": "000000000026f39e8dbf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x54a07247",
+      "string": null,
+      "return_x87": "00000000004772a02940"
+    },
+    {
+      "tag": 2,
+      "bits": "0x8d47212f",
+      "string": null,
+      "return_x87": "00000000002f21c79abf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x7cf96997",
+      "string": null,
+      "return_x87": "00000000009769f97940"
+    },
+    {
+      "tag": 2,
+      "bits": "0x9b140b11",
+      "string": null,
+      "return_x87": "0000000000110b94b6bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xa8c58fdd",
+      "string": null,
+      "return_x87": "0000000000dd8fc5d1bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xef45ebea",
+      "string": null,
+      "return_x87": "0000000000eaebc55ec0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xfbedeff5",
+      "string": null,
+      "return_x87": "0000000000f5efed77c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x2b83d5d8",
+      "string": null,
+      "return_x87": "0000000000d8d583d73f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x9cd8149a",
+      "string": null,
+      "return_x87": "00000000009a14d8b9bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x332443",
+      "string": null,
+      "return_x87": "00000000000c91cc7f3f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x8df662fa",
+      "string": null,
+      "return_x87": "0000000000fa62f69bbf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x49bea9b4",
+      "string": null,
+      "return_x87": "0000000000b4a9be1340"
+    },
+    {
+      "tag": 2,
+      "bits": "0x185c6ded",
+      "string": null,
+      "return_x87": "0000000000ed6ddcb03f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x26f4a206",
+      "string": null,
+      "return_x87": "000000000006a2f4cd3f"
+    },
+    {
+      "tag": 2,
+      "bits": "0xa21165cc",
+      "string": null,
+      "return_x87": "0000000000cc6591c4bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xdc37ebaf",
+      "string": null,
+      "return_x87": "0000000000afebb738c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xcf63d4b",
+      "string": null,
+      "return_x87": "00000000004b3df6993f"
+    },
+    {
+      "tag": 2,
+      "bits": "0xc8dff1f3",
+      "string": null,
+      "return_x87": "0000000000f3f1df11c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x1effe0dc",
+      "string": null,
+      "return_x87": "0000000000dce0ffbd3f"
+    },
+    {
+      "tag": 2,
+      "bits": "0xd916d224",
+      "string": null,
+      "return_x87": "000000000024d29632c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xaacb852d",
+      "string": null,
+      "return_x87": "00000000002d85cbd5bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x3216241d",
+      "string": null,
+      "return_x87": "00000000001d2496e43f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x45cd6b00",
+      "string": null,
+      "return_x87": "0000000000006bcd0b40"
+    },
+    {
+      "tag": 2,
+      "bits": "0xb72fba27",
+      "string": null,
+      "return_x87": "000000000027baafeebf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x182556ca",
+      "string": null,
+      "return_x87": "0000000000ca56a5b03f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x41e07e00",
+      "string": null,
+      "return_x87": "0000000000007ee00340"
+    },
+    {
+      "tag": 2,
+      "bits": "0x305912b6",
+      "string": null,
+      "return_x87": "0000000000b612d9e03f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x8693465e",
+      "string": null,
+      "return_x87": "00000000005e46938dbf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x13825906",
+      "string": null,
+      "return_x87": "0000000000065982a73f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x981960d8",
+      "string": null,
+      "return_x87": "0000000000d86099b0bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x28fe9421",
+      "string": null,
+      "return_x87": "00000000002194fed13f"
+    },
+    {
+      "tag": 2,
+      "bits": "0xfb996fb4",
+      "string": null,
+      "return_x87": "0000000000b46f9977c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x9d794951",
+      "string": null,
+      "return_x87": "00000000005149f9babf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xd95917d2",
+      "string": null,
+      "return_x87": "0000000000d217d932c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xf1f2ddcd",
+      "string": null,
+      "return_x87": "0000000000cdddf263c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xdfbe9145",
+      "string": null,
+      "return_x87": "00000000004591be3fc0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xccb6af1a",
+      "string": null,
+      "return_x87": "00000000001aafb619c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xc588b803",
+      "string": null,
+      "return_x87": "000000000003b8880bc0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x4d29f250",
+      "string": null,
+      "return_x87": "000000000050f2a91a40"
+    },
+    {
+      "tag": 2,
+      "bits": "0xd0da678d",
+      "string": null,
+      "return_x87": "00000000008d67da21c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xff438f11",
+      "string": null,
+      "return_x87": "0000000000118fc37ec0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x755f9fae",
+      "string": null,
+      "return_x87": "0000000000ae9fdf6a40"
+    },
+    {
+      "tag": 2,
+      "bits": "0xf87bd012",
+      "string": null,
+      "return_x87": "000000000012d0fb70c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x285765ab",
+      "string": null,
+      "return_x87": "0000000000ab65d7d03f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x99842748",
+      "string": null,
+      "return_x87": "0000000000482784b3bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xa438778e",
+      "string": null,
+      "return_x87": "00000000008e77b8c8bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x896821fd",
+      "string": null,
+      "return_x87": "0000000000fd21e892bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xed605022",
+      "string": null,
+      "return_x87": "00000000002250e05ac0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xe2b83bd2",
+      "string": null,
+      "return_x87": "0000000000d23bb845c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xa701706b",
+      "string": null,
+      "return_x87": "00000000006b7081cebf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x53df4cea",
+      "string": null,
+      "return_x87": "0000000000ea4cdf2740"
+    },
+    {
+      "tag": 2,
+      "bits": "0xf7287810",
+      "string": null,
+      "return_x87": "00000000001078a86ec0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x72f03c45",
+      "string": null,
+      "return_x87": "0000000000453cf06540"
+    },
+    {
+      "tag": 2,
+      "bits": "0x40abb17b",
+      "string": null,
+      "return_x87": "00000000007bb1ab0140"
+    },
+    {
+      "tag": 2,
+      "bits": "0x178e51e6",
+      "string": null,
+      "return_x87": "0000000000e6518eaf3f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x248a7386",
+      "string": null,
+      "return_x87": "000000000086738ac93f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x1691c203",
+      "string": null,
+      "return_x87": "000000000003c291ad3f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x823f945c",
+      "string": null,
+      "return_x87": "00000000005c94bf84bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xeb43469e",
+      "string": null,
+      "return_x87": "00000000009e46c356c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xc34a883",
+      "string": null,
+      "return_x87": "000000000083a8b4983f"
+    },
+    {
+      "tag": 2,
+      "bits": "0xf741410",
+      "string": null,
+      "return_x87": "00000000001014f49e3f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x380ffb90",
+      "string": null,
+      "return_x87": "000000000090fb8ff03f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x81262d48",
+      "string": null,
+      "return_x87": "0000000000482da682bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x5c0950cf",
+      "string": null,
+      "return_x87": "0000000000cf50893840"
+    },
+    {
+      "tag": 2,
+      "bits": "0x3926ece9",
+      "string": null,
+      "return_x87": "0000000000e9eca6f23f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x6aa3ffc7",
+      "string": null,
+      "return_x87": "0000000000c7ffa35540"
+    },
+    {
+      "tag": 2,
+      "bits": "0xf4b0cccb",
+      "string": null,
+      "return_x87": "0000000000cbccb069c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x91f501bc",
+      "string": null,
+      "return_x87": "0000000000bc01f5a3bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x23c313b6",
+      "string": null,
+      "return_x87": "0000000000b613c3c73f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x1dc75df5",
+      "string": null,
+      "return_x87": "0000000000f55dc7bb3f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x49da272a",
+      "string": null,
+      "return_x87": "00000000002a27da1340"
+    },
+    {
+      "tag": 2,
+      "bits": "0xba325bad",
+      "string": null,
+      "return_x87": "0000000000ad5bb2f4bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x5d9dae0c",
+      "string": null,
+      "return_x87": "00000000000cae9d3b40"
+    },
+    {
+      "tag": 2,
+      "bits": "0xf3af1d2f",
+      "string": null,
+      "return_x87": "00000000002f1daf67c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xda51e993",
+      "string": null,
+      "return_x87": "000000000093e9d134c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xe959a115",
+      "string": null,
+      "return_x87": "000000000015a1d952c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x9b4c156f",
+      "string": null,
+      "return_x87": "00000000006f15ccb6bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xb20b8f6c",
+      "string": null,
+      "return_x87": "00000000006c8f8be4bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x95020a14",
+      "string": null,
+      "return_x87": "0000000000140a82aabf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x8ea9937",
+      "string": null,
+      "return_x87": "00000000003799ea913f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x82dd346e",
+      "string": null,
+      "return_x87": "00000000006e34dd85bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xa246a05a",
+      "string": null,
+      "return_x87": "00000000005aa0c6c4bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x43b78f14",
+      "string": null,
+      "return_x87": "0000000000148fb70740"
+    },
+    {
+      "tag": 2,
+      "bits": "0x57e0c483",
+      "string": null,
+      "return_x87": "000000000083c4e02f40"
+    },
+    {
+      "tag": 2,
+      "bits": "0x72498f92",
+      "string": null,
+      "return_x87": "0000000000928fc96440"
+    },
+    {
+      "tag": 2,
+      "bits": "0xe6de465b",
+      "string": null,
+      "return_x87": "00000000005b46de4dc0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x392cd6c3",
+      "string": null,
+      "return_x87": "0000000000c3d6acf23f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x36797ba9",
+      "string": null,
+      "return_x87": "0000000000a97bf9ec3f"
+    },
+    {
+      "tag": 2,
+      "bits": "0xb183db97",
+      "string": null,
+      "return_x87": "000000000097db83e3bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x2540e118",
+      "string": null,
+      "return_x87": "000000000018e1c0ca3f"
+    },
+    {
+      "tag": 2,
+      "bits": "0xa4cf3d41",
+      "string": null,
+      "return_x87": "0000000000413dcfc9bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x8332e994",
+      "string": null,
+      "return_x87": "000000000094e9b286bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x3bc1b70f",
+      "string": null,
+      "return_x87": "00000000000fb7c1f73f"
+    },
+    {
+      "tag": 2,
+      "bits": "0xfb7f8be9",
+      "string": null,
+      "return_x87": "0000000000e98bff76c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x3af47c0a",
+      "string": null,
+      "return_x87": "00000000000a7cf4f53f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x5254dc98",
+      "string": null,
+      "return_x87": "000000000098dcd42440"
+    },
+    {
+      "tag": 2,
+      "bits": "0xdd75e31d",
+      "string": null,
+      "return_x87": "00000000001de3f53ac0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x830c2c75",
+      "string": null,
+      "return_x87": "0000000000752c8c86bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x50d647bb",
+      "string": null,
+      "return_x87": "0000000000bb47d62140"
+    },
+    {
+      "tag": 2,
+      "bits": "0x131eb2e4",
+      "string": null,
+      "return_x87": "0000000000e4b29ea63f"
+    },
+    {
+      "tag": 2,
+      "bits": "0xf12038e3",
+      "string": null,
+      "return_x87": "0000000000e338a062c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x3c7c97ba",
+      "string": null,
+      "return_x87": "0000000000ba97fcf83f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x8441cc0a",
+      "string": null,
+      "return_x87": "00000000000accc188bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x79fc56fc",
+      "string": null,
+      "return_x87": "0000000000fc56fc7340"
+    },
+    {
+      "tag": 2,
+      "bits": "0xc65e80c1",
+      "string": null,
+      "return_x87": "0000000000c180de0cc0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x918b4038",
+      "string": null,
+      "return_x87": "000000000038408ba3bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xaf9c5c00",
+      "string": null,
+      "return_x87": "0000000000005c9cdfbf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xfbc61340",
+      "string": null,
+      "return_x87": "00000000004013c677c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x3936487",
+      "string": null,
+      "return_x87": "0000000000876493873f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x7b0aa6a9",
+      "string": null,
+      "return_x87": "0000000000a9a68a7640"
+    },
+    {
+      "tag": 2,
+      "bits": "0xafded914",
+      "string": null,
+      "return_x87": "000000000014d9dedfbf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xff64d7e2",
+      "string": null,
+      "return_x87": "0000000000e2d7e47ec0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xa95e73cf",
+      "string": null,
+      "return_x87": "0000000000cf73ded2bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xdc4ceb09",
+      "string": null,
+      "return_x87": "000000000009ebcc38c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x4a4e28a4",
+      "string": null,
+      "return_x87": "0000000000a428ce1440"
+    },
+    {
+      "tag": 2,
+      "bits": "0x7e8663f8",
+      "string": null,
+      "return_x87": "0000000000f863867d40"
+    },
+    {
+      "tag": 2,
+      "bits": "0x1f473c93",
+      "string": null,
+      "return_x87": "0000000000933cc7be3f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x2c21594d",
+      "string": null,
+      "return_x87": "00000000004d59a1d83f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x6cc0d200",
+      "string": null,
+      "return_x87": "000000000000d2c05940"
+    },
+    {
+      "tag": 2,
+      "bits": "0x85e5bd37",
+      "string": null,
+      "return_x87": "000000000037bde58bbf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x1b30d2b",
+      "string": null,
+      "return_x87": "00000000002b0db3833f"
+    },
+    {
+      "tag": 2,
+      "bits": "0xb8caee94",
+      "string": null,
+      "return_x87": "000000000094eecaf1bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x579358fb",
+      "string": null,
+      "return_x87": "0000000000fb58932f40"
+    },
+    {
+      "tag": 2,
+      "bits": "0xa212df2e",
+      "string": null,
+      "return_x87": "00000000002edf92c4bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xfd140451",
+      "string": null,
+      "return_x87": "00000000005104947ac0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xbf5e9909",
+      "string": null,
+      "return_x87": "00000000000999defebf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x581079e6",
+      "string": null,
+      "return_x87": "0000000000e679903040"
+    },
+    {
+      "tag": 2,
+      "bits": "0x2a7d1ef6",
+      "string": null,
+      "return_x87": "0000000000f61efdd43f"
+    },
+    {
+      "tag": 2,
+      "bits": "0xa211bc58",
+      "string": null,
+      "return_x87": "000000000058bc91c4bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x23c31d89",
+      "string": null,
+      "return_x87": "0000000000891dc3c73f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x7b819a2a",
+      "string": null,
+      "return_x87": "00000000002a9a817740"
+    },
+    {
+      "tag": 2,
+      "bits": "0xd8a3ffd4",
+      "string": null,
+      "return_x87": "0000000000d4ffa331c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x78b68bac",
+      "string": null,
+      "return_x87": "0000000000ac8bb67140"
+    },
+    {
+      "tag": 2,
+      "bits": "0x91a869d",
+      "string": null,
+      "return_x87": "00000000009d869a923f"
+    },
+    {
+      "tag": 2,
+      "bits": "0x8d87c497",
+      "string": null,
+      "return_x87": "000000000097c4879bbf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xd28334aa",
+      "string": null,
+      "return_x87": "0000000000aa348325c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xbf5cd8d5",
+      "string": null,
+      "return_x87": "0000000000d5d8dcfebf"
+    },
+    {
+      "tag": 2,
+      "bits": "0xdeb18506",
+      "string": null,
+      "return_x87": "00000000000685b13dc0"
+    },
+    {
+      "tag": 2,
+      "bits": "0xfe564b92",
+      "string": null,
+      "return_x87": "0000000000924bd67cc0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x93d60d0d",
+      "string": null,
+      "return_x87": "00000000000d0dd6a7bf"
+    },
+    {
+      "tag": 2,
+      "bits": "0x6d1c48b2",
+      "string": null,
+      "return_x87": "0000000000b2489c5a40"
+    },
+    {
+      "tag": 2,
+      "bits": "0x71d43620",
+      "string": null,
+      "return_x87": "00000000002036d46340"
+    },
+    {
+      "tag": 2,
+      "bits": "0xf4dc024b",
+      "string": null,
+      "return_x87": "00000000004b02dc69c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x68521105",
+      "string": null,
+      "return_x87": "00000000000511d25040"
+    },
+    {
+      "tag": 2,
+      "bits": "0xcb2077b2",
+      "string": null,
+      "return_x87": "0000000000b277a016c0"
+    },
+    {
+      "tag": 2,
+      "bits": "0x32098053",
+      "string": null,
+      "return_x87": "0000000000538089e43f"
+    },
+    {
+      "tag": 3,
+      "bits": "0x20",
+      "string": "true",
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 3,
+      "bits": "0x20",
+      "string": "TRUE",
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 3,
+      "bits": "0x20",
+      "string": "false",
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 3,
+      "bits": "0x20",
+      "string": "FALSE",
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 3,
+      "bits": "0x20",
+      "string": "1",
+      "return_x87": "0000000000000080ff3f"
+    },
+    {
+      "tag": 3,
+      "bits": "0x20",
+      "string": "0",
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 3,
+      "bits": "0x20",
+      "string": "-42",
+      "return_x87": "00000000000000a804c0"
+    },
+    {
+      "tag": 3,
+      "bits": "0x20",
+      "string": " 12.5",
+      "return_x87": "00000000000000c80240"
+    },
+    {
+      "tag": 3,
+      "bits": "0x20",
+      "string": "garbage",
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 3,
+      "bits": "0x20",
+      "string": "2147483647",
+      "return_x87": "00000000feffffff1d40"
+    },
+    {
+      "tag": 3,
+      "bits": "0x20",
+      "string": "-2147483648",
+      "return_x87": "00000000000000801ec0"
+    },
+    {
+      "tag": 3,
+      "bits": "0x20",
+      "string": "0.1",
+      "return_x87": "00d0ccccccccccccfb3f"
+    },
+    {
+      "tag": 3,
+      "bits": "0x20",
+      "string": "1e40",
+      "return_x87": "0028e51a8e4f19eb8340"
+    },
+    {
+      "tag": 3,
+      "bits": "0x20",
+      "string": "-1e-300",
+      "return_x87": "00c89ac717fe70ab1abc"
+    },
+    {
+      "tag": 3,
+      "bits": "0x20",
+      "string": "1.0000000000000002",
+      "return_x87": "0008000000000080ff3f"
+    },
+    {
+      "tag": 4,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 5,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 6,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 7,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 8,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 9,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 10,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 11,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 12,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 13,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 14,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 15,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 16,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 17,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 18,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 19,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 20,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 21,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 22,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 23,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 24,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 25,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 26,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 27,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 28,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 29,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 30,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 31,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 32,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 33,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 34,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 35,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 36,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 37,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 38,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 39,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 40,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 41,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 42,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 43,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 44,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 45,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 46,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 47,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 48,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 49,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 50,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 51,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 52,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 53,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 54,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 55,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 56,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 57,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 58,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 59,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 60,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 61,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 62,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 63,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 64,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 65,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 66,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 67,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 68,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 69,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 70,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 71,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 72,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 73,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 74,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 75,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 76,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 77,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 78,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 79,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 80,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 81,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 82,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 83,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 84,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 85,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 86,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 87,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 88,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 89,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 90,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 91,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 92,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 93,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 94,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 95,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 96,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 97,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 98,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 99,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 100,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 101,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 102,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 103,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 104,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 105,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 106,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 107,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 108,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 109,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 110,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 111,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 112,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 113,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 114,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 115,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 116,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 117,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 118,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 119,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 120,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 121,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 122,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 123,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 124,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 125,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 126,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 127,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 128,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 129,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 130,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 131,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 132,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 133,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 134,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 135,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 136,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 137,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 138,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 139,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 140,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 141,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 142,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 143,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 144,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 145,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 146,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 147,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 148,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 149,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 150,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 151,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 152,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 153,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 154,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 155,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 156,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 157,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 158,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 159,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 160,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 161,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 162,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 163,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 164,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 165,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 166,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 167,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 168,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 169,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 170,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 171,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 172,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 173,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 174,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 175,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 176,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 177,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 178,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 179,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 180,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 181,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 182,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 183,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 184,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 185,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 186,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 187,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 188,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 189,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 190,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 191,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 192,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 193,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 194,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 195,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 196,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 197,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 198,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 199,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 200,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 201,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 202,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 203,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 204,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 205,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 206,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 207,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 208,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 209,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 210,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 211,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 212,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 213,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 214,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 215,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 216,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 217,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 218,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 219,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 220,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 221,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 222,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 223,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 224,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 225,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 226,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 227,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 228,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 229,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 230,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 231,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 232,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 233,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 234,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 235,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 236,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 237,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 238,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 239,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 240,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 241,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 242,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 243,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 244,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 245,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 246,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 247,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 248,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 249,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 250,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 251,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 252,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 253,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 254,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    },
+    {
+      "tag": 255,
+      "bits": "0x0",
+      "string": null,
+      "return_x87": "00000000000000000000"
+    }
+  ],
+  "commands": [
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-fno-builtin",
+      "-mno-sse",
+      "-mno-sse2",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/src/ini_reader_vector.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/ini_reader_vector-vector.obj"
+    ],
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-fno-builtin",
+      "-mno-sse",
+      "-mno-sse2",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/src/ini_text_float.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/ini_text_float-vector.obj"
+    ],
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-fno-builtin",
+      "-mno-sse",
+      "-mno-sse2",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/src/parse_number.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/parse_number-vector.obj"
+    ],
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-fno-builtin",
+      "-mno-sse",
+      "-mno-sse2",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/src/parse_number_x87.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/parse_number_x87-vector.obj"
+    ],
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-fno-builtin",
+      "-mno-sse",
+      "-mno-sse2",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/tests/fixtures/parse_number_runtime.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/parse_number_runtime-vector.obj"
+    ],
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-fno-builtin",
+      "-mno-sse",
+      "-mno-sse2",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/src/ini_reader_float.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/ini_reader_float-vector.obj"
+    ],
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-fno-builtin",
+      "-mno-sse",
+      "-mno-sse2",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/tests/fixtures/ini_float_x86_runtime.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/ini_float_x86_runtime-vector.obj"
+    ],
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-fno-builtin",
+      "-mno-sse",
+      "-mno-sse2",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/src/ini_reader_values.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/ini_reader_values-vector.obj"
+    ],
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-fno-builtin",
+      "-mno-sse",
+      "-mno-sse2",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/src/ini_reader.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/ini_reader-vector.obj"
+    ],
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-fno-builtin",
+      "-mno-sse",
+      "-mno-sse2",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/src/file_map.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/file_map-vector.obj"
+    ],
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-fno-builtin",
+      "-mno-sse",
+      "-mno-sse2",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/tests/fixtures/ini_values_x86_runtime.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/ini_values_x86_runtime-vector.obj"
+    ],
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-fno-builtin",
+      "-mno-sse",
+      "-mno-sse2",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/tests/fixtures/ini_reconstructed_index_runtime.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/ini_reconstructed_index_runtime-vector.obj"
+    ],
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-fno-builtin",
+      "-mno-sse",
+      "-mno-sse2",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/src/string_index.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/string_index-vector.obj"
+    ],
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-fno-builtin",
+      "-mno-sse",
+      "-mno-sse2",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/tests/fixtures/file_map_x86_runtime.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/file_map_x86_runtime-vector.obj"
+    ],
+    [
+      "lld-link",
+      "/dll",
+      "/noentry",
+      "/nodefaultlib",
+      "/base:0x17000000",
+      "/out:/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/ini_vector.dll",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/ini_reader_vector-vector.obj",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/ini_text_float-vector.obj",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/parse_number-vector.obj",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/parse_number_x87-vector.obj",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/parse_number_runtime-vector.obj",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/ini_reader_float-vector.obj",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/ini_float_x86_runtime-vector.obj",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/ini_reader_values-vector.obj",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/ini_reader-vector.obj",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/file_map-vector.obj",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/ini_values_x86_runtime-vector.obj",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/ini_reconstructed_index_runtime-vector.obj",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/string_index-vector.obj",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/file_map_x86_runtime-vector.obj",
+      "/export:?get_value_float@INI_Reader@@QAEMI@Z",
+      "/export:?get_vector@INI_Reader@@QAE?AVVector@@XZ",
+      "/export:?value_num@INI_Reader@@QAENI@Z"
+    ]
+  ],
+  "mocks": [
+    "atof decimal-prefix model returning binary64 in ST0",
+    "sprintf/MessageBox diagnostic model"
+  ],
+  "not_verified": [
+    "Real CRT/Win32 execution",
+    "FPU exception/control-word fidelity",
+    "Malformed parameter memory access",
+    "Other typed getters",
+    "Exact instruction matching"
+  ]
+}

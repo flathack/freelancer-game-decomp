@@ -77,6 +77,8 @@ def main():
     reader_copy_current=all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in reader_copy['source_hashes'].items())
     reader_open=json.loads((A/'ini-open-x86-behavior.json').read_text())
     reader_open_current=all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in reader_open['source_hashes'].items())
+    reader_vector=json.loads((A/'ini-vector-x86-behavior.json').read_text())
+    reader_vector_current=all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in reader_vector['source_hashes'].items())
     report=dict(code_modules=len(rows),raw_exported_modules=sum(r['status']=='raw_exported' for r in rows),
                 raw_decompiled_functions=sum(r.get('raw_decompiled',0) for r in rows),
                 raw_failed_functions=sum(r.get('failed',0) for r in rows),
@@ -106,6 +108,7 @@ def main():
                 ini_reader_destructor=dict(source_current=reader_dtor_current,calls=reader_dtor['differential_calls'],crt_modeled=True),
                 ini_reader_copy=dict(source_current=reader_copy_current,calls=reader_copy['differential_calls'],crt_modeled=True),
                 ini_reader_open=dict(source_current=reader_open_current,calls=reader_open['differential_calls'],real_files=len(reader_open['real_files']),os_crt_modeled=True),
+                ini_reader_vector=dict(source_current=reader_vector_current,vector_calls=reader_vector['vector_calls'],value_num_calls=reader_vector['differential_calls'],crt_modeled=True),
                 complete_game_verified=False,modules=rows)
     (A/'coverage-summary.json').write_text(json.dumps({r['module']:r['coverage_audit'] for r in rows if 'coverage_audit' in r},indent=2)+'\n')
     (A/'progress.json').write_text(json.dumps(report,indent=2)+'\n')
@@ -135,6 +138,7 @@ def main():
            f"Reader destruction: {reader_dtor['differential_calls']} full-state/ownership cases; native CRT remains unverified.",
            f"Reader copying: {reader_copy['differential_calls']} object/heap cases; arbitrary overlap and native CRT remain unverified.",
            f"Reader file open: {reader_open['differential_calls']} cases / {len(reader_open['real_files'])} supplied files; native OS/CRT remain unverified.",
+           f"Reader Vector: {reader_vector['vector_calls']} ABI/rounding cases; legacy value_num: {reader_vector['differential_calls']} x87 cases.",
            'The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.',
            '', '| Module | Raw export status | Raw functions | Failed |','|---|---|---:|---:|']
     for row in rows: lines.append(f"| {pathlib.Path(row['module']).name} | {row['status']} | {row.get('raw_decompiled','—')} | {row.get('failed','—')} |")

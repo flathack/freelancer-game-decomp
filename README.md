@@ -222,3 +222,8 @@ recognition, ownership transfer, progress notification and fatal-open callback.
 768 differential calls pass over eight synthetic and 40 supplied INI inputs with
 both prior modes and modeled file/mapping failure stages. Native OS/CRT remains
 unverified.
+
+Legacy `value_num` and `get_vector` accessors are reconstructed. 1178 complete
+x87 numeric comparisons and 1153 Vector comparisons pass, including hidden output
+pointer ABI, missing-parameter diagnostics and binary32 rounding boundaries.
+Native CRT and alias-heavy inputs remain unverified.
