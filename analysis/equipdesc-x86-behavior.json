@@ -1,15 +1,15 @@
 {
   "status": "passed_with_x87_abi_shim",
   "original_sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
-  "compiled_dll_sha256": "c8598d179bf28d03cbd2edcbfbc1ca55db2ca09b1738d48032798ebe8b3760d2",
+  "compiled_dll_sha256": "fd630153f2f1f8d78c61e1f8e78b5f39831848cca5f3848db532ee3aef59abca",
   "source_hashes": {
     "src/equip_desc.cpp": "37e3eec608704efc9777353b03ebbf2563877a37005413ee7f1721308bfa30c7",
     "src/equip_desc.hpp": "a9153f187c54fea42820ea159ccaaf2b7ee9860ed904d686b2abc699e4c22edc",
-    "src/string_cache.cpp": "64171575ee760afcb0991844f1dcd5c73bcda43f0d11159478af575abc662f35",
-    "src/string_cache.hpp": "3f5fe1ce524b5eda01147f9f9917f7ab6c55d13c38f76d700e4b5ba8cfdea563",
+    "src/string_cache.cpp": "d31c13d0aefa4be5332b6d47d0e8f945a9fd3d29dddeb28bd204f1b59b2e3ced",
+    "src/string_cache.hpp": "b2eeb86ceaf8971587041d7a7fe68ed4547ebe8a4dbdaeb98803e3177cfde85b",
     "src/common_constants.cpp": "6044db1e0552e4b1aa12e83430ae6b4c2ba7325a2ecb98a67317e5cbf56971eb",
     "tests/fixtures/equip_desc_x86_runtime.cpp": "ad0d2044ccd66435bb54495e695ac50b9286a31e55869e870d686aedd72fa527",
-    "tests/fixtures/string_cache_x86_runtime.cpp": "9aa971b9ebe43a5920824606f92c648da9b6941dd33e5fb78bebd75889fb0444"
+    "tests/fixtures/string_cache_x86_runtime.cpp": "fe90bfece8324e9499978a29bc94651b62666a4b5f1ed153906438cecd6be3b7"
   },
   "passing_calls": 2406,
   "covered_method_symbols": [

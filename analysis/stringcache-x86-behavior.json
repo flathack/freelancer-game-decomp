@@ -1,16 +1,25 @@
 {
   "status": "passed",
   "original_sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
-  "compiled_dll_sha256": "2b03925abebefa737b49857b7f787f4bf1dcc72c16fdc7e9f2279d76d9edfc5d",
+  "compiled_dll_sha256": "c942f58ab597bbb6777f19a5889fc8043a4514d2b3828c299232c8c9f6395248",
   "source_hashes": {
-    "src/string_cache.cpp": "64171575ee760afcb0991844f1dcd5c73bcda43f0d11159478af575abc662f35",
-    "src/string_cache.hpp": "3f5fe1ce524b5eda01147f9f9917f7ab6c55d13c38f76d700e4b5ba8cfdea563",
-    "tests/fixtures/string_cache_x86_runtime.cpp": "9aa971b9ebe43a5920824606f92c648da9b6941dd33e5fb78bebd75889fb0444"
+    "src/string_cache.cpp": "d31c13d0aefa4be5332b6d47d0e8f945a9fd3d29dddeb28bd204f1b59b2e3ced",
+    "src/string_cache.hpp": "b2eeb86ceaf8971587041d7a7fe68ed4547ebe8a4dbdaeb98803e3177cfde85b",
+    "tests/fixtures/string_cache_x86_runtime.cpp": "fe90bfece8324e9499978a29bc94651b62666a4b5f1ed153906438cecd6be3b7"
   },
   "sequence_cases": 407,
   "capacity_boundary_cases": 8,
   "tree_shape_checks": 407,
   "clear_checked": true,
+  "shutdown_checks": [
+    "exact node/head/nil/tree free order",
+    "idempotent shutdown",
+    "arena/counters preserved",
+    "reinitialization at existing front cursor",
+    "freed tree fields nulled"
+  ],
+  "first_shutdown_allocations_freed": 157,
+  "second_shutdown_allocations_freed": 4,
   "commands": [
     [
       "clang++",
@@ -52,7 +61,8 @@
       "/export:?StringCacheBack@@3IA,DATA",
       "/export:?StringCacheInternedCount@@3IA,DATA",
       "/export:?StringCachePrivateCount@@3IA,DATA",
-      "/export:?StringCacheIndex@@3PAUStringCacheTree@@A,DATA"
+      "/export:?StringCacheIndex@@3PAUStringCacheTree@@A,DATA",
+      "/export:?StringShutdown@@YAXXZ"
     ]
   ],
   "mocks": [
@@ -64,7 +74,6 @@
     "Exact instruction matching",
     "CRT locale/non-ASCII comparison",
     "Allocation failure/SEH",
-    "Tree shutdown",
     "Thread safety"
   ]
 }

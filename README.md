@@ -182,5 +182,19 @@ with full tree/cursor/count comparisons, eight capacity boundaries and clear().
 EquipDesc now initializes its actual BAY handle through this reconstruction.
 Its test executes the original initializer and reconstructed CRT callback;
 the previous fake handle has been removed. Production runtime bindings,
-non-ASCII/locale comparison, allocation failure/SEH and cache destruction are
-still open. See `analysis/stringcache-notes.md` for exact test scope.
+non-ASCII/locale comparison and allocation failure/SEH are still open. Cache
+destruction and reinitialization have since passed differential checks. See `analysis/stringcache-notes.md` for exact test scope.
+
+## FileMap memory and BINI read paths
+
+`src/file_map.cpp` reconstructs 12 memory-reader methods with 3,298 passing x86
+comparisons. Typed short reads consume the remaining tail before returning false.
+The MSVC6 COW filename implementation and OS-backed open/close/handoff are still
+open; this does not yet provide a full FileMap or INI parser.
+
+```bash
+.venv/bin/python tests/verify_file_map_x86.py
+```
+
+Scope and evidence are recorded in `analysis/filemap-notes.md` and
+`analysis/filemap-x86-behavior.json`.

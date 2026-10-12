@@ -34,9 +34,14 @@ in the equipment test; the string content and field identity are checked.
 The previous fake BAY pointer and constant-provider fixture have been removed.
 SUBOBJ_ID_NONE is defined from the original readonly exported value (zero).
 
+StringShutdown is now reconstructed: node freeing follows the original right-
+subtree/current/left-chain order, followed by head, nil, and tree object. The
+exact free order, nulled fields, repeated shutdown and reinitialization at the
+existing arena front pass differential checks. Shutdown does not rewind the
+arena or reset its counters.
+
 Remaining work: production allocator/CRT/logging bindings, locale/non-ASCII
-comparison, allocation-failure/SEH semantics, index destruction and broader
-CacheString APIs. Exact instruction matching and a full game rebuild remain open.
+comparison, allocation-failure/SEH semantics and broader CacheString APIs. Exact instruction matching and a full game rebuild remain open.
 
 Run: `.venv/bin/python tests/verify_string_cache_x86.py`.
 Commands, hashes and counts are in `analysis/stringcache-x86-behavior.json`.

@@ -1,0 +1,89 @@
+{
+  "status": "passed",
+  "original_sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
+  "compiled_dll_sha256": "fd2f2cb779c2e570593b65767f2489d9f5c49b9ea227e2cfe6e666f2a7424333",
+  "source_hashes": {
+    "src/file_map.cpp": "cfdaf478647caf8d032e6db53c08e9823516f2812275873a97214f1665abe8db",
+    "src/file_map.hpp": "367520a4ef2aaf16cce28f24f9b6b232b91a2a9acc5c57e2c3a7181eb3004239",
+    "tests/fixtures/file_map_x86_runtime.cpp": "08216e1fff3bcdefcada105725971ec4520f5eda2cc32cc4734d974209977de7"
+  },
+  "differential_calls": 3298,
+  "methods": [
+    "??0FileMap@@QAE@XZ",
+    "?eof@FileMap@@QBE_NXZ",
+    "?get_file_length@FileMap@@QBEIXZ",
+    "?get_file_name@FileMap@@QBEPBDXZ",
+    "?open_memory@FileMap@@QAE_NPBXI@Z",
+    "?read@FileMap@@QAEIPAXI@Z",
+    "?read_ptr@FileMap@@QAE_NAAPAUBINI_Block@@@Z",
+    "?read_ptr@FileMap@@QAE_NAAPAUBINI_Header@@@Z",
+    "?read_ptr@FileMap@@QAE_NAAPAUBINI_Value@@@Z",
+    "?request_pointer@FileMap@@QAEPAXAAI@Z",
+    "?seek@FileMap@@QAEXI@Z",
+    "?tell@FileMap@@QBEIXZ"
+  ],
+  "typed_short_read_cases": 16,
+  "reopen_preserves_handles_and_old_allocation": true,
+  "invalid_open_preserves_state": true,
+  "random_truncated_reads": 332,
+  "commands": [
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-fno-builtin",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/src/file_map.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/file_map.obj"
+    ],
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-fno-builtin",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/tests/fixtures/file_map_x86_runtime.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/file_map_runtime.obj"
+    ],
+    [
+      "lld-link",
+      "/dll",
+      "/noentry",
+      "/nodefaultlib",
+      "/base:0x13000000",
+      "/out:/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/file_map.dll",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/file_map.obj",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/file_map_runtime.obj",
+      "/export:??0FileMap@@QAE@XZ",
+      "/export:?open_memory@FileMap@@QAE_NPBXI@Z",
+      "/export:?get_file_name@FileMap@@QBEPBDXZ",
+      "/export:?get_file_length@FileMap@@QBEIXZ",
+      "/export:?eof@FileMap@@QBE_NXZ",
+      "/export:?tell@FileMap@@QBEIXZ",
+      "/export:?seek@FileMap@@QAEXI@Z",
+      "/export:?request_pointer@FileMap@@QAEPAXAAI@Z",
+      "/export:?read@FileMap@@QAEIPAXI@Z",
+      "/export:?read_ptr@FileMap@@QAE_NAAPAUBINI_Header@@@Z",
+      "/export:?read_ptr@FileMap@@QAE_NAAPAUBINI_Block@@@Z",
+      "/export:?read_ptr@FileMap@@QAE_NAAPAUBINI_Value@@@Z"
+    ]
+  ],
+  "mocks": [
+    "malloc succeeds",
+    "CRT empty string"
+  ],
+  "not_verified": [
+    "Filename MSVC6 COW string operations",
+    "OS-backed open/close/handoff",
+    "Copy constructor/assignment/destructor",
+    "Malloc failure",
+    "Overlapping copy buffers",
+    "Exact instruction matching"
+  ]
+}

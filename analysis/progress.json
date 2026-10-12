@@ -30,7 +30,19 @@
     "source_current": true,
     "sequence_cases": 407,
     "capacity_cases": 8,
-    "tree_shape_checks": 407
+    "tree_shape_checks": 407,
+    "shutdown_checks": [
+      "exact node/head/nil/tree free order",
+      "idempotent shutdown",
+      "arena/counters preserved",
+      "reinitialization at existing front cursor",
+      "freed tree fields nulled"
+    ]
+  },
+  "filemap_memory_x86_behavior": {
+    "source_current": true,
+    "calls": 3298,
+    "methods": 12
   },
   "complete_game_verified": false,
   "modules": [

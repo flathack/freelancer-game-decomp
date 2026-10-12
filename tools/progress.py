@@ -35,6 +35,8 @@ def main():
     equip_current=bool(equip) and all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in equip.get('source_hashes',{}).items())
     cache=json.loads((A/'stringcache-x86-behavior.json').read_text()) if (A/'stringcache-x86-behavior.json').exists() else {}
     cache_current=bool(cache) and all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in cache.get('source_hashes',{}).items())
+    fm=json.loads((A/'filemap-x86-behavior.json').read_text()) if (A/'filemap-x86-behavior.json').exists() else {}
+    fm_current=bool(fm) and all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in fm.get('source_hashes',{}).items())
     report=dict(code_modules=len(rows),raw_exported_modules=sum(r['status']=='raw_exported' for r in rows),
                 raw_decompiled_functions=sum(r.get('raw_decompiled',0) for r in rows),
                 raw_failed_functions=sum(r.get('failed',0) for r in rows),
@@ -42,7 +44,8 @@ def main():
                 createid_behavior=dict(source_current=current_source,cases=behavior.get('cases',0),domain=behavior.get('domain')),
                 flid_x86_behavior=dict(source_current=x86_current,hash_state_cases=x86.get('hash_and_full_crc_state_cases',0),counter_cases=x86.get('object_counter_cases',0),byte_update_cases=x86.get('byte_update_cases',0)),
                 equipdesc_x86_behavior=dict(source_current=equip_current,passing_calls=equip.get('passing_calls',0),method_count=len(equip.get('covered_method_symbols',[])),cargo_cases=equip.get('cargo_cases',0),cargo_precision_differences=equip.get('cargo_extended_precision_differences'),temporary_x87_assembly_shim=True),
-                stringcache_x86_behavior=dict(source_current=cache_current,sequence_cases=cache.get('sequence_cases',0),capacity_cases=cache.get('capacity_boundary_cases',0),tree_shape_checks=cache.get('tree_shape_checks',0)),
+                stringcache_x86_behavior=dict(source_current=cache_current,sequence_cases=cache.get('sequence_cases',0),capacity_cases=cache.get('capacity_boundary_cases',0),tree_shape_checks=cache.get('tree_shape_checks',0),shutdown_checks=cache.get('shutdown_checks',[])),
+                filemap_memory_x86_behavior=dict(source_current=fm_current,calls=fm.get('differential_calls',0),methods=len(fm.get('methods',[]))),
                 complete_game_verified=False,modules=rows)
     (A/'coverage-summary.json').write_text(json.dumps({r['module']:r['coverage_audit'] for r in rows if 'coverage_audit' in r},indent=2)+'\n')
     (A/'progress.json').write_text(json.dumps(report,indent=2)+'\n')
@@ -53,7 +56,8 @@ def main():
            f"CreateID: {behavior.get('cases',0)} differential cases; source current: {current_source}.",
            f"Compiled x86 CFLIDMaker: {x86.get('hash_and_full_crc_state_cases',0)} hash/state, {x86.get('object_counter_cases',0)} counter and {x86.get('byte_update_cases',0)} update cases; source current: {x86_current}.",
            f"EquipDesc: {equip.get('passing_calls',0)} ABI/state cases and {equip.get('cargo_cases',0)} full-x87 cargo cases; temporary assembly ABI shim; source current: {equip_current}.",
-           f"String cache: {cache.get('sequence_cases',0)} requests/tree shape checks and {cache.get('capacity_boundary_cases',0)} capacity cases; source current: {cache_current}.",'',
+           f"String cache: {cache.get('sequence_cases',0)} requests/tree shape checks and {cache.get('capacity_boundary_cases',0)} capacity cases; source current: {cache_current}.",
+           f"FileMap memory/BINI subset: {fm.get('differential_calls',0)} calls across {len(fm.get('methods',[]))} methods; source current: {fm_current}.",'',
            'The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.',
            '', '| Module | Raw export status | Raw functions | Failed |','|---|---|---:|---:|']
     for row in rows: lines.append(f"| {pathlib.Path(row['module']).name} | {row['status']} | {row.get('raw_decompiled','—')} | {row.get('failed','—')} |")

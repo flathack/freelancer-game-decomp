@@ -23,3 +23,5 @@ extern "C" void stringcache_runtime_overflow(unsigned int);
 static_assert(sizeof(StringCacheNode)==24,"Original map node size");
 static_assert(sizeof(StringCacheTree)==20,"Original tree object size");
 #endif
+void StringShutdown();
+extern "C" void stringcache_runtime_free(void*);

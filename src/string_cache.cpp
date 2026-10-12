@@ -77,3 +77,31 @@ char* StringAlloc(const char* text,bool private_copy) {
     return destination;
 }
 void CacheString::clear(){value=StringCacheArena;}
+static void erase_subtree(StringCacheNode* node) {
+    StringCacheNode* nil=StringCacheIndex->nil;
+    while(node!=nil) {
+        erase_subtree(node->right);
+        StringCacheNode* left=node->left;
+        stringcache_runtime_free(node);
+        node=left;
+    }
+}
+void StringShutdown() {
+    StringCacheTree* tree=StringCacheIndex;
+    if(!tree)return;
+    // Match the observed right-subtree, current-node, then left-chain order.
+    if(tree->size) {
+        erase_subtree(tree->head->parent);
+        tree->head->parent=tree->nil;
+        tree->size=0;
+        tree->head->left=tree->head;
+        tree->head->right=tree->head;
+    }
+    stringcache_runtime_free(tree->head);
+    tree->head=nullptr;tree->size=0;
+    stringcache_runtime_free(tree->nil);
+    tree->nil=nullptr;
+    stringcache_runtime_free(tree);
+    StringCacheIndex=nullptr;
+    // The original does not rewind the arena or reset allocation counters.
+}
