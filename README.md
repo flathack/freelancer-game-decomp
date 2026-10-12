@@ -68,7 +68,8 @@ Commit steht in `analysis/baseline.json`. Im eigenen `src/` wurde kein Liberty-C
 übernommen. Eine spätere Übernahme muss dessen GPL-3.0-Lizenz berücksichtigen.
 
 Spieldaten, Originalbinärdateien, das Archiv und lokale Referenz-Checkouts sind
-von Git ausgeschlossen. Es wurde kein Spielprogramm ausgeführt.
+von Git ausgeschlossen. Kein Spielprogramm wurde als nativer Prozess gestartet;
+Originalinstruktionen werden für Vergleiche im Emulator ausgeführt.
 
 ## Roh-Decompilation aller Module
 
@@ -164,6 +165,22 @@ verglichenen 80-Bit-x87-Rückgabewerten.
 
 Für die originale erweiterte x87-Rückgabe ist im Clang-x86-Build derzeit ein kleiner
 Assembly-ABI-Übergang erforderlich. Dieser zählt als vorläufige Rekonstruktion,
-nicht als vollständiger C++- oder Maschinencode-Match. CacheString-Interning und die
-Equipment-Datenbank sind im Test kontrollierte Abhängigkeiten und noch offen.
+nicht als vollständiger C++- oder Maschinencode-Match. Die Equipment-Datenbank bleibt eine kontrollierte Testabhängigkeit.
+CacheString-Interning ist inzwischen rekonstruiert und im Initialisierungstest integriert.
 Details: `analysis/equipdesc-notes.md` und `analysis/equipdesc-x86-behavior.json`.
+
+## String cache and integrated equipment initialization
+
+`src/string_cache.cpp` reconstructs StringAlloc, its two-ended 1.5-MiB arena and
+original-layout red-black index. The x86 differential check passes 407 sequences
+with full tree/cursor/count comparisons, eight capacity boundaries and clear().
+
+```bash
+.venv/bin/python tests/verify_string_cache_x86.py
+```
+
+EquipDesc now initializes its actual BAY handle through this reconstruction.
+Its test executes the original initializer and reconstructed CRT callback;
+the previous fake handle has been removed. Production runtime bindings,
+non-ASCII/locale comparison, allocation failure/SEH and cache destruction are
+still open. See `analysis/stringcache-notes.md` for exact test scope.

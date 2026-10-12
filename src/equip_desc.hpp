@@ -1,6 +1,5 @@
 #pragma once
-// Pointer-sized CacheString layout only; interning methods remain to be reconstructed.
-struct CacheString { const char* value; };
+#include "string_cache.hpp"
 extern const unsigned short SUBOBJ_ID_NONE;
 namespace Archetype { struct Equipment; Equipment* GetEquipment(unsigned int); }
 

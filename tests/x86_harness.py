@@ -30,3 +30,15 @@ class X86Harness:
  def return_stub(self,value):
   sp=self.uc.reg_read(UC_X86_REG_ESP)
   self.uc.reg_write(UC_X86_REG_EAX,value);self.uc.reg_write(UC_X86_REG_EIP,self.word(sp));self.uc.reg_write(UC_X86_REG_ESP,sp+4)
+
+ def initialize_crt(self,path):
+  p=pefile.PE(str(path));count=0
+  for section in p.sections:
+   if section.Name.rstrip(b'\0')==b'.CRT':
+    data=section.get_data()
+    for offset in range(0,len(data)-3,4):
+     callback=struct.unpack_from('<I',data,offset)[0]
+     if callback:
+      assert p.OPTIONAL_HEADER.ImageBase<=callback<p.OPTIONAL_HEADER.ImageBase+p.OPTIONAL_HEADER.SizeOfImage
+      self.invoke(callback);count+=1
+  return count

@@ -1,4 +1,5 @@
 #include "equip_desc.hpp"
+const CacheString EquipDesc::CARGO_BAY_HP_NAME={StringAlloc("BAY",false)};
 EquipDesc::EquipDesc() : unknown_00(0),id(SUBOBJ_ID_NONE),arch_id(0),hardpoint(CARGO_BAY_HP_NAME),equipped(false),status(1.0f),count(1),temporary(false),owner(0) {}
 EquipDesc::EquipDesc(const EquipDesc& o) : unknown_00(o.unknown_00),id(o.id),arch_id(o.arch_id),hardpoint(o.hardpoint),equipped(o.equipped),count(o.count),temporary(o.temporary),owner(o.owner) {
     // Preserve raw float bits as the original integer MOV instructions do.

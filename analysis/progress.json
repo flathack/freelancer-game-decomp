@@ -26,6 +26,12 @@
     "cargo_precision_differences": 0,
     "temporary_x87_assembly_shim": true
   },
+  "stringcache_x86_behavior": {
+    "source_current": true,
+    "sequence_cases": 407,
+    "capacity_cases": 8,
+    "tree_shape_checks": 407
+  },
   "complete_game_verified": false,
   "modules": [
     {

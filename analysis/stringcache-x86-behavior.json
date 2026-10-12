@@ -1,0 +1,70 @@
+{
+  "status": "passed",
+  "original_sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
+  "compiled_dll_sha256": "2b03925abebefa737b49857b7f787f4bf1dcc72c16fdc7e9f2279d76d9edfc5d",
+  "source_hashes": {
+    "src/string_cache.cpp": "64171575ee760afcb0991844f1dcd5c73bcda43f0d11159478af575abc662f35",
+    "src/string_cache.hpp": "3f5fe1ce524b5eda01147f9f9917f7ab6c55d13c38f76d700e4b5ba8cfdea563",
+    "tests/fixtures/string_cache_x86_runtime.cpp": "9aa971b9ebe43a5920824606f92c648da9b6941dd33e5fb78bebd75889fb0444"
+  },
+  "sequence_cases": 407,
+  "capacity_boundary_cases": 8,
+  "tree_shape_checks": 407,
+  "clear_checked": true,
+  "commands": [
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-fno-builtin",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/src/string_cache.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/string_cache.obj"
+    ],
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-fno-builtin",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/tests/fixtures/string_cache_x86_runtime.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/string_cache_runtime.obj"
+    ],
+    [
+      "lld-link",
+      "/dll",
+      "/noentry",
+      "/nodefaultlib",
+      "/base:0x12000000",
+      "/out:/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/string_cache.dll",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/string_cache.obj",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/string_cache_runtime.obj",
+      "/export:?StringAlloc@@YAPADPBD_N@Z",
+      "/export:?clear@CacheString@@QAEXXZ",
+      "/export:?StringCacheArena@@3PADA,DATA",
+      "/export:?StringCacheFront@@3IA,DATA",
+      "/export:?StringCacheBack@@3IA,DATA",
+      "/export:?StringCacheInternedCount@@3IA,DATA",
+      "/export:?StringCachePrivateCount@@3IA,DATA",
+      "/export:?StringCacheIndex@@3PAUStringCacheTree@@A,DATA"
+    ]
+  ],
+  "mocks": [
+    "operator new succeeds",
+    "ASCII case-insensitive stricmp",
+    "overflow logger records line"
+  ],
+  "not_verified": [
+    "Exact instruction matching",
+    "CRT locale/non-ASCII comparison",
+    "Allocation failure/SEH",
+    "Tree shutdown",
+    "Thread safety"
+  ]
+}

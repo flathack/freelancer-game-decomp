@@ -1,7 +1,7 @@
 # EquipDesc reconstruction
 
 Original: SHA-pinned common.dll. All 26 exported member methods of EquipDesc are
-implemented (the additional static-data export is supplied by a test fixture).
+implemented (the static-data export is initialized by the reconstructed StringAlloc).
 This does not cover EquipDescList, EquipDescVector, their template containers,
 CacheString interning, or the complete Archetype::Equipment implementation.
 
@@ -13,8 +13,8 @@ status float at 16, signed count at 20, temporary byte at 24, signed owner at 28
 Padding remains untouched by construction and field-wise copy construction;
 assignment copies every byte, including padding. Comparison operators use only
 the unsigned 16-bit ID, not the full object. Internality compares interned pointer
-identity against CARGO_BAY_HP_NAME. Default hardpoint initialization depends on
-the runtime-interned string `BAY`; that runtime initialization remains open.
+identity against CARGO_BAY_HP_NAME. Default hardpoint initialization now runs through the reconstructed StringAlloc
+with `BAY`; original and rebuilt global initializers are both executed in the test.
 
 Cargo occupancy calls Archetype::GetEquipment only for an internal hardpoint
 and a nonzero archetype ID, then multiplies signed count by the float at offset
@@ -31,9 +31,9 @@ The harness respects defined return-value widths and ignores undefined EAX
 contents for void methods. It verifies callee stack cleanup and pointer results.
 
 200 cargo tests cover branch-dependent equipment lookup and signed count/volume
-inputs. Exact 80-bit x87 return bytes are compared, not just host floats. The
-Archetype lookup and interned BAY handle are controlled test dependencies.
-Real interning and the actual equipment database remain unverified.
+inputs. Exact 80-bit x87 return bytes are compared, not just host floats. The Archetype lookup remains a controlled test dependency. BAY interning is
+reconstructed and independently checked against the original; the actual
+equipment database and production runtime bindings remain unverified.
 
 ## Compiler precision issue and temporary shim
 

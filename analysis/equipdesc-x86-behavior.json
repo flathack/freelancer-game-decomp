@@ -1,11 +1,15 @@
 {
   "status": "passed_with_x87_abi_shim",
   "original_sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
-  "compiled_dll_sha256": "95975cd8a4968e6b705390477e5998adbff439f80533c66d8a8e2468b9472ea8",
+  "compiled_dll_sha256": "c8598d179bf28d03cbd2edcbfbc1ca55db2ca09b1738d48032798ebe8b3760d2",
   "source_hashes": {
-    "src/equip_desc.cpp": "9d4fbad712874b4b6e8338a2b3529fc0934c8c810b9ea7ab6e7b3a208686c29d",
-    "src/equip_desc.hpp": "5faaa90c43213314e8844cc118601d6b6e68fc552ecfb67d0590095269ac387a",
-    "tests/fixtures/equip_desc_x86_runtime.cpp": "7366f3106435a6de2e66d2155ffb835b621552eb4daa694d1c282e6103ad27e5"
+    "src/equip_desc.cpp": "37e3eec608704efc9777353b03ebbf2563877a37005413ee7f1721308bfa30c7",
+    "src/equip_desc.hpp": "a9153f187c54fea42820ea159ccaaf2b7ee9860ed904d686b2abc699e4c22edc",
+    "src/string_cache.cpp": "64171575ee760afcb0991844f1dcd5c73bcda43f0d11159478af575abc662f35",
+    "src/string_cache.hpp": "3f5fe1ce524b5eda01147f9f9917f7ab6c55d13c38f76d700e4b5ba8cfdea563",
+    "src/common_constants.cpp": "6044db1e0552e4b1aa12e83430ae6b4c2ba7325a2ecb98a67317e5cbf56971eb",
+    "tests/fixtures/equip_desc_x86_runtime.cpp": "ad0d2044ccd66435bb54495e695ac50b9286a31e55869e870d686aedd72fa527",
+    "tests/fixtures/string_cache_x86_runtime.cpp": "9aa971b9ebe43a5920824606f92c648da9b6941dd33e5fb78bebd75889fb0444"
   },
   "passing_calls": 2406,
   "covered_method_symbols": [
@@ -48,6 +52,7 @@
       "-fno-rtti",
       "-mno-sse",
       "-mno-sse2",
+      "-fno-builtin",
       "-c",
       "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/src/equip_desc.cpp",
       "-o",
@@ -61,10 +66,53 @@
       "-fno-rtti",
       "-mno-sse",
       "-mno-sse2",
+      "-fno-builtin",
       "-c",
       "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/tests/fixtures/equip_desc_x86_runtime.cpp",
       "-o",
       "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/equip_desc_runtime.obj"
+    ],
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-mno-sse",
+      "-mno-sse2",
+      "-fno-builtin",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/src/string_cache.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/equip_desc_string_cache.obj"
+    ],
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-mno-sse",
+      "-mno-sse2",
+      "-fno-builtin",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/src/common_constants.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/common_constants.obj"
+    ],
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-mno-sse",
+      "-mno-sse2",
+      "-fno-builtin",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/tests/fixtures/string_cache_x86_runtime.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/equip_desc_string_runtime.obj"
     ],
     [
       "lld-link",
@@ -75,6 +123,9 @@
       "/out:/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/equip_desc.dll",
       "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/equip_desc.obj",
       "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/equip_desc_runtime.obj",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/equip_desc_string_cache.obj",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/common_constants.obj",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/equip_desc_string_runtime.obj",
       "/export:??0EquipDesc@@QAE@ABU0@@Z",
       "/export:??0EquipDesc@@QAE@XZ",
       "/export:??4EquipDesc@@QAEAAU0@ABU0@@Z",
@@ -104,13 +155,14 @@
       "/export:?set_temporary@EquipDesc@@QAEX_N@Z"
     ]
   ],
+  "crt_initializers_executed": 1,
   "mocks": [
-    "BAY interned handle",
+    "operator new succeeds",
+    "ASCII stricmp",
     "Archetype::GetEquipment returns controlled equipment"
   ],
   "not_verified": [
     "Exact code matching",
-    "Real CacheString interning",
     "Real archetype database",
     "Production interning and lookup bindings"
   ]
