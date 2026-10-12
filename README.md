@@ -169,3 +169,9 @@ passes 1,178 cases including 30 text lookups.
 
 Native CRT/locale/FPU effects and removal of the arithmetic boundary remain open.
 See `analysis/parse-number-notes.md`.
+
+Reader lifecycle: `src/ini_reader_lifetime.cpp` reconstructs active-mode close,
+filename lookup, and line-number lookup, including the binary-mode warning.
+`tests/verify_ini_lifetime_x86.py` compares 144 calls against original x86
+instructions (complete object state, metadata and resource/diagnostic effects).
+This is behavioral reconstruction; complete game reconstruction remains unfinished.

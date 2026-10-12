@@ -17,6 +17,9 @@ struct INI_Reader {
     bool binary_mode;
     unsigned char padding_1565[3];
     struct State { unsigned char bytes[0xc08]; };
+    void close();
+    const char* get_file_name() const;
+    int get_line_num() const;
     bool initialize_binary(); // Internal helper at common.dll VA 0x0630fc60.
     bool read_header();
     bool read_value();
@@ -40,7 +43,7 @@ static_assert(__builtin_offsetof(INI_Reader,current_value)==0x145c,"Observed ent
 static_assert(__builtin_offsetof(INI_Reader,binary_mode)==0x1564,"Observed mode offset");
 static_assert(sizeof(INI_Reader)==0x1568,"Observed field extent/alignment");
 #endif
-// Text iteration is still an unresolved game-code dependency, not an implementation.
+// Text iteration providers are reconstructed in ini_text_header/value.cpp.
 extern "C" bool ini_pending_read_text_header(INI_Reader*);
 extern "C" bool ini_pending_read_text_value(INI_Reader*);
 extern "C" int ini_runtime_compare(const char*,const char*);
