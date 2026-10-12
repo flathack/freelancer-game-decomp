@@ -18,6 +18,10 @@ def main():
                 row.update(json.loads((out/'summary.json').read_text()))
                 row['status']='raw_exported'
             else: row['status']='stale'
+        if (out/'coverage-audit.json').exists():
+            audit=json.loads((out/'coverage-audit.json').read_text())
+            if audit['original_sha256']==module['sha256']:
+                row['coverage_audit']={k:v for k,v in audit.items() if k not in ['gaps','orphan_run_starts']}
         rows.append(row)
     matches=json.loads((A/'matches.json').read_text())
     current_source=(A/'createid-behavior.json').exists()
@@ -29,6 +33,7 @@ def main():
                 last_machine_code_check=dict(functions=matches['matched_functions'],bytes=matches['verified_code_bytes']),
                 createid_behavior=dict(source_current=current_source,cases=behavior.get('cases',0),domain=behavior.get('domain')),
                 complete_game_verified=False,modules=rows)
+    (A/'coverage-summary.json').write_text(json.dumps({r['module']:r['coverage_audit'] for r in rows if 'coverage_audit' in r},indent=2)+'\n')
     (A/'progress.json').write_text(json.dumps(report,indent=2)+'\n')
     lines=['# Decompilation progress','',
            f"Raw exports: {report['raw_exported_modules']} of {len(rows)} code-bearing installation modules.",

@@ -1,0 +1,20 @@
+{
+  "content.dll": {
+    "original_sha256": "b6d426c8fb215d6efe5d9af087fc808ba679c6c31f39dbae4f660f6a5d3a7c1c",
+    "instruction_rows_verified": 349507,
+    "instruction_bytes_outside_functions": 1615,
+    "unclassified_bytes": 45885,
+    "padding_candidate_bytes": 43844,
+    "other_unclassified_bytes": 2041,
+    "full_function_discovery_proven": false
+  },
+  "common.dll": {
+    "original_sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
+    "instruction_rows_verified": 400579,
+    "instruction_bytes_outside_functions": 1359,
+    "unclassified_bytes": 55016,
+    "padding_candidate_bytes": 53812,
+    "other_unclassified_bytes": 1204,
+    "full_function_discovery_proven": false
+  }
+}

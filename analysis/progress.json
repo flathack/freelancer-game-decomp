@@ -1,7 +1,7 @@
 {
   "code_modules": 34,
-  "raw_exported_modules": 1,
-  "raw_decompiled_functions": 7156,
+  "raw_exported_modules": 25,
+  "raw_decompiled_functions": 39543,
   "raw_failed_functions": 0,
   "last_machine_code_check": {
     "functions": 2,
@@ -15,108 +15,222 @@
   "complete_game_verified": false,
   "modules": [
     {
-      "module": "original/_FL Fresh Install-deutsch/DLLS/BIN/content.dll",
-      "status": "pending"
-    },
-    {
-      "module": "original/_FL Fresh Install-deutsch/EXE/Freelancer.exe",
-      "status": "pending"
-    },
-    {
-      "module": "original/_FL Fresh Install-deutsch/EXE/alchemy.dll",
-      "status": "pending"
-    },
-    {
-      "module": "common.dll",
+      "module": "content.dll",
       "status": "raw_exported",
-      "analyzed_functions": 7156,
-      "raw_decompiled": 7156,
+      "analyzed_functions": 7461,
+      "raw_decompiled": 7461,
+      "failed": 0,
+      "verified_reconstructions": 0,
+      "coverage_audit": {
+        "original_sha256": "b6d426c8fb215d6efe5d9af087fc808ba679c6c31f39dbae4f660f6a5d3a7c1c",
+        "instruction_rows_verified": 349507,
+        "instruction_bytes_outside_functions": 1615,
+        "unclassified_bytes": 45885,
+        "padding_candidate_bytes": 43844,
+        "other_unclassified_bytes": 2041,
+        "full_function_discovery_proven": false
+      }
+    },
+    {
+      "module": "Freelancer.exe",
+      "status": "raw_exported",
+      "analyzed_functions": 8269,
+      "raw_decompiled": 8269,
       "failed": 0,
       "verified_reconstructions": 0
     },
     {
-      "module": "original/_FL Fresh Install-deutsch/EXE/dacom.dll",
-      "status": "pending"
+      "module": "alchemy.dll",
+      "status": "raw_exported",
+      "analyzed_functions": 2360,
+      "raw_decompiled": 2360,
+      "failed": 0,
+      "verified_reconstructions": 0
     },
     {
-      "module": "original/_FL Fresh Install-deutsch/EXE/dalib.dll",
-      "status": "pending"
+      "module": "common.dll",
+      "status": "raw_exported",
+      "analyzed_functions": 8568,
+      "raw_decompiled": 8568,
+      "failed": 0,
+      "verified_reconstructions": 0,
+      "coverage_audit": {
+        "original_sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
+        "instruction_rows_verified": 400579,
+        "instruction_bytes_outside_functions": 1359,
+        "unclassified_bytes": 55016,
+        "padding_candidate_bytes": 53812,
+        "other_unclassified_bytes": 1204,
+        "full_function_discovery_proven": false
+      }
     },
     {
-      "module": "original/_FL Fresh Install-deutsch/EXE/debuglib.dll",
-      "status": "pending"
+      "module": "dacom.dll",
+      "status": "raw_exported",
+      "analyzed_functions": 128,
+      "raw_decompiled": 128,
+      "failed": 0,
+      "verified_reconstructions": 0
     },
     {
-      "module": "original/_FL Fresh Install-deutsch/EXE/deformable2.dll",
-      "status": "pending"
+      "module": "dalib.dll",
+      "status": "raw_exported",
+      "analyzed_functions": 191,
+      "raw_decompiled": 191,
+      "failed": 0,
+      "verified_reconstructions": 0
     },
     {
-      "module": "original/_FL Fresh Install-deutsch/EXE/dw15.exe",
-      "status": "pending"
+      "module": "debuglib.dll",
+      "status": "raw_exported",
+      "analyzed_functions": 406,
+      "raw_decompiled": 406,
+      "failed": 0,
+      "verified_reconstructions": 0
     },
     {
-      "module": "original/_FL Fresh Install-deutsch/EXE/ebueula.dll",
-      "status": "pending"
+      "module": "deformable2.dll",
+      "status": "raw_exported",
+      "analyzed_functions": 200,
+      "raw_decompiled": 200,
+      "failed": 0,
+      "verified_reconstructions": 0
     },
     {
-      "module": "original/_FL Fresh Install-deutsch/EXE/engbase.dll",
-      "status": "pending"
+      "module": "dw15.exe",
+      "status": "raw_exported",
+      "analyzed_functions": 572,
+      "raw_decompiled": 572,
+      "failed": 0,
+      "verified_reconstructions": 0
     },
     {
-      "module": "original/_FL Fresh Install-deutsch/EXE/flmaterials.dll",
-      "status": "pending"
+      "module": "ebueula.dll",
+      "status": "raw_exported",
+      "analyzed_functions": 159,
+      "raw_decompiled": 159,
+      "failed": 0,
+      "verified_reconstructions": 0
     },
     {
-      "module": "original/_FL Fresh Install-deutsch/EXE/flserver.exe",
-      "status": "pending"
+      "module": "engbase.dll",
+      "status": "raw_exported",
+      "analyzed_functions": 319,
+      "raw_decompiled": 319,
+      "failed": 0,
+      "verified_reconstructions": 0
     },
     {
-      "module": "original/_FL Fresh Install-deutsch/EXE/gundll.dll",
-      "status": "pending"
+      "module": "flmaterials.dll",
+      "status": "raw_exported",
+      "analyzed_functions": 205,
+      "raw_decompiled": 205,
+      "failed": 0,
+      "verified_reconstructions": 0
     },
     {
-      "module": "original/_FL Fresh Install-deutsch/EXE/imeui.dll",
-      "status": "pending"
+      "module": "flserver.exe",
+      "status": "raw_exported",
+      "analyzed_functions": 819,
+      "raw_decompiled": 819,
+      "failed": 0,
+      "verified_reconstructions": 0
     },
     {
-      "module": "original/_FL Fresh Install-deutsch/EXE/luaprofile.dll",
-      "status": "pending"
+      "module": "gundll.dll",
+      "status": "raw_exported",
+      "analyzed_functions": 1904,
+      "raw_decompiled": 1904,
+      "failed": 0,
+      "verified_reconstructions": 0
     },
     {
-      "module": "original/_FL Fresh Install-deutsch/EXE/movie.dll",
-      "status": "pending"
+      "module": "imeui.dll",
+      "status": "raw_exported",
+      "analyzed_functions": 183,
+      "raw_decompiled": 183,
+      "failed": 0,
+      "verified_reconstructions": 0
     },
     {
-      "module": "original/_FL Fresh Install-deutsch/EXE/readfile.dll",
-      "status": "pending"
+      "module": "luaprofile.dll",
+      "status": "raw_exported",
+      "analyzed_functions": 318,
+      "raw_decompiled": 318,
+      "failed": 0,
+      "verified_reconstructions": 0
     },
     {
-      "module": "original/_FL Fresh Install-deutsch/EXE/remoteclient.dll",
-      "status": "pending"
+      "module": "movie.dll",
+      "status": "raw_exported",
+      "analyzed_functions": 443,
+      "raw_decompiled": 443,
+      "failed": 0,
+      "verified_reconstructions": 0
     },
     {
-      "module": "original/_FL Fresh Install-deutsch/EXE/remoteserver.dll",
-      "status": "pending"
+      "module": "readfile.dll",
+      "status": "raw_exported",
+      "analyzed_functions": 87,
+      "raw_decompiled": 87,
+      "failed": 0,
+      "verified_reconstructions": 0
     },
     {
-      "module": "original/_FL Fresh Install-deutsch/EXE/rendcomp.dll",
-      "status": "pending"
+      "module": "remoteclient.dll",
+      "status": "raw_exported",
+      "analyzed_functions": 1015,
+      "raw_decompiled": 1015,
+      "failed": 0,
+      "verified_reconstructions": 0
     },
     {
-      "module": "original/_FL Fresh Install-deutsch/EXE/resources.dll",
-      "status": "pending"
+      "module": "remoteserver.dll",
+      "status": "raw_exported",
+      "analyzed_functions": 1149,
+      "raw_decompiled": 1149,
+      "failed": 0,
+      "verified_reconstructions": 0
     },
     {
-      "module": "original/_FL Fresh Install-deutsch/EXE/rp8.dll",
-      "status": "pending"
+      "module": "rendcomp.dll",
+      "status": "raw_exported",
+      "analyzed_functions": 273,
+      "raw_decompiled": 273,
+      "failed": 0,
+      "verified_reconstructions": 0
     },
     {
-      "module": "original/_FL Fresh Install-deutsch/EXE/rpclocal.dll",
-      "status": "pending"
+      "module": "resources.dll",
+      "status": "raw_exported",
+      "analyzed_functions": 1,
+      "raw_decompiled": 1,
+      "failed": 0,
+      "verified_reconstructions": 0
     },
     {
-      "module": "original/_FL Fresh Install-deutsch/EXE/server.dll",
-      "status": "pending"
+      "module": "rp8.dll",
+      "status": "raw_exported",
+      "analyzed_functions": 1062,
+      "raw_decompiled": 1062,
+      "failed": 0,
+      "verified_reconstructions": 0
+    },
+    {
+      "module": "rpclocal.dll",
+      "status": "raw_exported",
+      "analyzed_functions": 893,
+      "raw_decompiled": 893,
+      "failed": 0,
+      "verified_reconstructions": 0
+    },
+    {
+      "module": "server.dll",
+      "status": "raw_exported",
+      "analyzed_functions": 2558,
+      "raw_decompiled": 2558,
+      "failed": 0,
+      "verified_reconstructions": 0
     },
     {
       "module": "original/_FL Fresh Install-deutsch/EXE/shading.dll",

@@ -95,3 +95,29 @@ Roh-C kann falsche Typen, unerkannte Funktionen, fehlerhafte Kontrollflüsse und
 Decompiler-Platzhalter enthalten. Der Bericht `analysis/progress.md` unterscheidet
 Roh-Analyse, Verhaltenstests und genaue Maschinencode-Matches. Ein vollständiger
 kompilierbarer Build und dessen breite Verifikation bleiben erforderlich.
+
+## Vollständigkeit der Funktionsanalyse
+
+Die Standardanalyse erkennt nicht alle Funktionen. Für `common.dll` lagen anfangs
+118.738 bereits disassemblierte Bytes außerhalb jeder erkannten Funktion.
+`RecoverOrphanFunctions.java` legt zusätzliche Funktionen nur an, wenn der Beginn
+eines solchen Instruktionsbereichs durch einen Aufruf oder Datenzeiger referenziert
+wird. Diese Grenzen sind zunächst **abgeleitet**, keine verifizierten Funktionen.
+Nach dieser Ergänzung gibt es 8.568 rohe Funktionsausgaben in `common.dll`.
+
+```bash
+python3 tools/enrich_analysis.py
+python3 tools/audit_context.py common.dll
+python3 tools/progress.py
+```
+
+Die Ergänzung verarbeitet nur Module mit abgeschlossenem Roh-Export und kann
+nach weiteren Batch-Ergebnissen wiederholt werden. Sie exportiert außerdem
+`recovered-types.h`, `instructions.tsv`, `defined-data.tsv` und
+`unclassified-executable.tsv`. Der Byte-Audit vergleicht jede exportierte
+Instruktion mit der Originaldatei. `coverage-summary.json` hält die kompakten
+Ergebnisse fest. Padding-Kandidaten sind noch kein Beweis für ungenutzte Bytes.
+
+Ein Export ohne Decompiler-Abbruch kann weiterhin Warnungen, falsche Typen und
+fehlende Funktionen enthalten. Insbesondere stellen weder erfolgreiche Roh-
+Exports noch hohe Instruktionsabdeckung einen vollständigen Spiel-Build dar.

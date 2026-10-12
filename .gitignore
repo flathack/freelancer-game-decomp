@@ -11,3 +11,4 @@ __pycache__/
 /analysis/raw/
 /analysis/decompile.lock
 /analysis/decompile-run.json
+/analysis/enrich.lock
