@@ -28,6 +28,7 @@ Reader copying: 36 object/heap cases; arbitrary overlap and native CRT remain un
 Reader file open: 768 cases / 40 supplied files; native OS/CRT remain unverified.
 Reader Vector: 1153 ABI/rounding cases; legacy value_num: 1178 x87 cases.
 Legacy INI aliases: 1170 bool, 1577 string, 48 filename calls; existing logic forwarding, not unique logic coverage.
+Shared INI DLL: 17 differential suites passed; native runtime remains unverified.
 The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.
 
 | Module | Raw export status | Raw functions | Failed |

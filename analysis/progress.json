@@ -181,6 +181,11 @@
     "name_calls": 48,
     "unique_logic": false
   },
+  "ini_shared_dll_integration": {
+    "suites": 17,
+    "status": "passed",
+    "native_runtime_verified": false
+  },
   "complete_game_verified": false,
   "modules": [
     {

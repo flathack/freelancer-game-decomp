@@ -42,6 +42,13 @@
     "?tell@INI_Reader@@QBEIXZ",
     "?value_num@INI_Reader@@QAENI@Z"
   ],
+  "test_data_exports": [
+    "?INIValuesStringBuffer@@3PADA",
+    "?StringIndexBuffer@@3PADA",
+    "?INIWideValueBuffer@@3PAGA",
+    "?INITextLineBuffer@@3PADA",
+    "?INIBinaryLineBuffer@@3PADA"
+  ],
   "source_hashes": {
     "src/ini_legacy_bool.cpp": "b05019702b9f646376059aa0e0c3e97e0143b4a4aeb905f3e63ca8cc77062ea6",
     "src/ini_legacy_strings.cpp": "ccf8e7695968386d5fd6c5ccb52f736f82a0ffeab2242ff44a9ccba30b41c415",
@@ -78,9 +85,9 @@
     "tests/fixtures/ini_wstring_runtime.cpp": "ec9e7f14a231ddeab6db2b65392776627cbb484ddbb3a9ba1eda86533e98e925",
     "tests/fixtures/parse_number_runtime.cpp": "bebb2182f165c6da70c16ab0f5171136c27414dcc864f14f2d33b34d16fee667",
     "src/ini_reader.hpp": "b8365008a3e20e0a37d2805d236b4139cde4d388a1cb90dc7be38a3d424a364a",
-    "tools/build_ini_fixture.py": "64b19308a50c4e68b4287c79e382df21db07b8c34f1519ba18f9dcac3d3abd24"
+    "tools/build_ini_fixture.py": "ce2302bc0f7aa018d33f92746d092519be11e2b3927ba7cff7f71ff482473920"
   },
-  "dll_sha256": "1fa67c0e178ba00885972227268c0fb187c69899ff73925cec0fed952ab0b4b0",
+  "dll_sha256": "d2b22089de4e52f3c74e9d9bfeeed5a0364e422f6183e4ef77686e8dbb0dcf84",
   "commands": [
     [
       "clang++",
@@ -637,7 +644,12 @@
       "/export:?seek@INI_Reader@@QAEXI@Z",
       "/export:?set_state@INI_Reader@@QAEXABUState@1@@Z",
       "/export:?tell@INI_Reader@@QBEIXZ",
-      "/export:?value_num@INI_Reader@@QAENI@Z"
+      "/export:?value_num@INI_Reader@@QAENI@Z",
+      "/export:?INIValuesStringBuffer@@3PADA,DATA",
+      "/export:?StringIndexBuffer@@3PADA,DATA",
+      "/export:?INIWideValueBuffer@@3PAGA,DATA",
+      "/export:?INITextLineBuffer@@3PADA,DATA",
+      "/export:?INIBinaryLineBuffer@@3PADA,DATA"
     ]
   ],
   "log_link_abi_cases": 16,

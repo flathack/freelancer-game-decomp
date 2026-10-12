@@ -18,9 +18,10 @@ def main():
  for source in sources:
   obj=build/(pathlib.Path(source).stem+'.obj');objects.append(str(obj))
   cmd=['clang++','--target=i686-pc-windows-msvc','-O2','-fno-exceptions','-fno-rtti','-fno-builtin','-mno-sse','-mno-sse2','-c',str(ROOT/source),'-o',str(obj)];subprocess.run(cmd,check=True);commands.append(cmd)
- dll=build/'freelancer-ini-fixture.dll';cmd=['lld-link','/dll','/noentry','/nodefaultlib','/base:0x19000000',f'/out:{dll}']+objects+['/export:'+n for n in exports];subprocess.run(cmd,check=True);commands.append(cmd)
+ data_exports=['?INIValuesStringBuffer@@3PADA','?StringIndexBuffer@@3PADA','?INIWideValueBuffer@@3PAGA','?INITextLineBuffer@@3PADA','?INIBinaryLineBuffer@@3PADA']
+ dll=build/'freelancer-ini-fixture.dll';cmd=['lld-link','/dll','/noentry','/nodefaultlib','/base:0x19000000',f'/out:{dll}']+objects+['/export:'+n for n in exports]+['/export:'+n+',DATA' for n in data_exports];subprocess.run(cmd,check=True);commands.append(cmd)
  pe=pefile.PE(str(dll));actual=sorted(s.name.decode() for s in pe.DIRECTORY_ENTRY_EXPORT.symbols if s.name)
- assert actual==sorted(exports)
+ assert actual==sorted(exports+data_exports)
  from verify_matches import coff_symbols
  symbol='?log_link@INI_Reader@@QBEXPBD@Z';code=coff_symbols(build/'ini_reader_log.obj')[symbol][:3];expected=pefile.PE(str(original)).get_data(0xec430,3);assert code==expected==b'\xc2\x04\x00'
  import sys
@@ -31,6 +32,6 @@ def main():
   for text in [0,1,0xffffffff,h.scratch+0x100]:
    h.invoke(original_exports[symbol],(text,),obj)
    h.invoke(fixture_exports[symbol],(text,),obj)
- report=dict(status='all_ini_reader_exports_linked',export_count=len(exports),exports=actual,source_hashes={p:digest(ROOT/p) for p in sources+['src/ini_reader.hpp','tools/build_ini_fixture.py']},dll_sha256=digest(dll),commands=commands,log_link_abi_cases=16,log_link_code_match=dict(original_va='0x0634c430',bytes_hex=code.hex()),runtime_binding='test adapters use original image addresses; not standalone Windows runtime',complete_reader_runtime_verified=False,complete_game_verified=False)
+ report=dict(status='all_ini_reader_exports_linked',export_count=len(exports),exports=sorted(exports),test_data_exports=data_exports,source_hashes={p:digest(ROOT/p) for p in sources+['src/ini_reader.hpp','tools/build_ini_fixture.py']},dll_sha256=digest(dll),commands=commands,log_link_abi_cases=16,log_link_code_match=dict(original_va='0x0634c430',bytes_hex=code.hex()),runtime_binding='test adapters use original image addresses; not standalone Windows runtime',complete_reader_runtime_verified=False,complete_game_verified=False)
  (ROOT/'analysis/ini-fixture-build.json').write_text(json.dumps(report,indent=2)+'\n');print(f'PASS: all {len(exports)} original INI_Reader exports linked; log_link matches 3 original bytes')
 if __name__=='__main__':main()

@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "original_sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
+  "compiled_dll_sha256": "d2b22089de4e52f3c74e9d9bfeeed5a0364e422f6183e4ef77686e8dbb0dcf84",
+  "differential_calls": 36,
+  "methods": [
+    "??0INI_Reader@@QAE@ABV0@@Z",
+    "??4INI_Reader@@QAEAAV0@ABV0@@Z"
+  ],
+  "source_hashes": {
+    "src/ini_reader_copy.cpp": "b17eabeb9f5776413aa930c0c313dfbdf92f37eb8420c1afaa93e2ecfed9bf1c",
+    "src/ini_reader.hpp": "b8365008a3e20e0a37d2805d236b4139cde4d388a1cb90dc7be38a3d424a364a",
+    "src/file_map.cpp": "5e6a162191a8e353a3eb563ba32f30c26559b97adc416496046cf5d830904624",
+    "tests/verify_ini_copy_x86.py": "e0febb26fd6787ca2fbc2b45de45f3a89050af7fa2756dc3727ec26273614ad3"
+  },
+  "external_dependencies": "MSVCP60 COW and MSVCRT heap modeled",
+  "not_verified": [
+    "Arbitrarily overlapping objects",
+    "Native CRT and exception unwinding",
+    "External string helper call counts",
+    "Exact instruction matching"
+  ],
+  "integration_fixture_sha256": "d2b22089de4e52f3c74e9d9bfeeed5a0364e422f6183e4ef77686e8dbb0dcf84",
+  "integration_fixture": "build/ini-fixture/freelancer-ini-fixture.dll",
+  "suite": "verify_ini_copy_x86.py"
+}

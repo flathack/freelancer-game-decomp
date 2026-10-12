@@ -81,6 +81,7 @@ def main():
     reader_vector_current=all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in reader_vector['source_hashes'].items())
     legacy_reports={name:json.loads((A/f'ini-legacy-{name}-x86-behavior.json').read_text()) for name in ['bool','strings','name']}
     legacy_current={name:all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in report['source_hashes'].items()) for name,report in legacy_reports.items()}
+    ini_integrated=json.loads((A/'ini-integrated.json').read_text())
     report=dict(code_modules=len(rows),raw_exported_modules=sum(r['status']=='raw_exported' for r in rows),
                 raw_decompiled_functions=sum(r.get('raw_decompiled',0) for r in rows),
                 raw_failed_functions=sum(r.get('failed',0) for r in rows),
@@ -112,6 +113,7 @@ def main():
                 ini_reader_open=dict(source_current=reader_open_current,calls=reader_open['differential_calls'],real_files=len(reader_open['real_files']),os_crt_modeled=True),
                 ini_reader_vector=dict(source_current=reader_vector_current,vector_calls=reader_vector['vector_calls'],value_num_calls=reader_vector['differential_calls'],crt_modeled=True),
                 ini_legacy_aliases=dict(source_current=legacy_current,bool_calls=1170,string_calls=1577,name_calls=48,unique_logic=False),
+                ini_shared_dll_integration=dict(suites=len(ini_integrated['suites']),status=ini_integrated['status'],native_runtime_verified=False),
                 complete_game_verified=False,modules=rows)
     (A/'coverage-summary.json').write_text(json.dumps({r['module']:r['coverage_audit'] for r in rows if 'coverage_audit' in r},indent=2)+'\n')
     (A/'progress.json').write_text(json.dumps(report,indent=2)+'\n')
@@ -143,6 +145,7 @@ def main():
            f"Reader file open: {reader_open['differential_calls']} cases / {len(reader_open['real_files'])} supplied files; native OS/CRT remain unverified.",
            f"Reader Vector: {reader_vector['vector_calls']} ABI/rounding cases; legacy value_num: {reader_vector['differential_calls']} x87 cases.",
            'Legacy INI aliases: 1170 bool, 1577 string, 48 filename calls; existing logic forwarding, not unique logic coverage.',
+           f"Shared INI DLL: {len(ini_integrated['suites'])} differential suites passed; native runtime remains unverified.",
            'The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.',
            '', '| Module | Raw export status | Raw functions | Failed |','|---|---|---:|---:|']
     for row in rows: lines.append(f"| {pathlib.Path(row['module']).name} | {row['status']} | {row.get('raw_decompiled','—')} | {row.get('failed','—')} |")

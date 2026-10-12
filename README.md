@@ -240,3 +240,8 @@ and no reader symbols remain unresolved. Runtime adapters still require the
 original image/test environment; this is not a standalone replacement DLL.
 The remaining `log_link` export is an original no-op: its entire three-byte body
 matches, with 16 ABI comparisons. See `analysis/ini-fixture-notes.md`.
+
+`tools/verify_ini_integrated.py` now runs 17 differential suites against the same
+complete reader DLL. All pass; separate reports are saved in
+`analysis/ini-integrated/`. Five extra data exports allow buffer inspection.
+Native runtime and full game execution remain unverified.

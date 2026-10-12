@@ -17,3 +17,22 @@ The existing narrow machine-code report still covers its two CSimple functions;
 the independent log_link match is recorded in this fixture report. Full reader
 runtime paths, authentic CRT/OS behavior, neighboring static storage overflow,
 exception unwinding and instruction matching for other methods remain incomplete.
+
+## Shared-DLL differential integration
+
+`tools/verify_ini_integrated.py` builds the complete fixture once, then redirects
+reconstructed-image loads in 17 existing differential suites to that same DLL.
+The original pinned common.dll still supplies every baseline. Narrow suites still
+compile their historical DLLs, but those DLLs are not executed in integrated
+mode. This explicit loader substitution is scoped to the runner and restored
+when it exits. Detailed JSON reports are redirected to analysis/ini-integrated;
+their compiled-DLL hashes identify the actual shared fixture. Original narrow
+reports are preserved. Commands in detailed reports describe the historical
+suite builds; the shared build commands/source hashes are in ini-fixture-build.
+
+All 17 suites pass: lifecycle, ownership, file open, text iteration, modern and
+legacy numeric/string/vector accesses, line formatting and wide conversion.
+Five data exports expose reconstructed buffers for test inspection, in addition
+to the 39 original reader methods. This is integration evidence under existing
+external dependency models, not full corpus navigation coverage, native runtime
+validation or full game completion.

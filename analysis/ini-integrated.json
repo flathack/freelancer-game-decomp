@@ -1,0 +1,146 @@
+{
+  "status": "passed",
+  "fixture_sha256": "d2b22089de4e52f3c74e9d9bfeeed5a0364e422f6183e4ef77686e8dbb0dcf84",
+  "fixture_build_report_sha256": "29c9c0e43162e98d7b24c12c4d6970035a30bbb552ffb60c475af4c7df0c119e",
+  "suites": [
+    {
+      "suite": "verify_ini_constructor_x86.py",
+      "report": "analysis/ini-integrated/ini-constructor-x86-behavior.json",
+      "calls": 72,
+      "integration_calls": 0,
+      "vector_calls": 0,
+      "wide_calls": 0
+    },
+    {
+      "suite": "verify_ini_destructor_x86.py",
+      "report": "analysis/ini-integrated/ini-destructor-x86-behavior.json",
+      "calls": 50,
+      "integration_calls": 0,
+      "vector_calls": 0,
+      "wide_calls": 0
+    },
+    {
+      "suite": "verify_ini_copy_x86.py",
+      "report": "analysis/ini-integrated/ini-copy-x86-behavior.json",
+      "calls": 36,
+      "integration_calls": 0,
+      "vector_calls": 0,
+      "wide_calls": 0
+    },
+    {
+      "suite": "verify_ini_open_memory_x86.py",
+      "report": "analysis/ini-integrated/ini-open-memory-x86-behavior.json",
+      "calls": 320,
+      "integration_calls": 0,
+      "vector_calls": 0,
+      "wide_calls": 0
+    },
+    {
+      "suite": "verify_ini_open_x86.py",
+      "report": "analysis/ini-integrated/ini-open-x86-behavior.json",
+      "calls": 768,
+      "integration_calls": 0,
+      "vector_calls": 0,
+      "wide_calls": 0
+    },
+    {
+      "suite": "verify_ini_lifetime_x86.py",
+      "report": "analysis/ini-integrated/ini-lifetime-x86-behavior.json",
+      "calls": 144,
+      "integration_calls": 0,
+      "vector_calls": 0,
+      "wide_calls": 0
+    },
+    {
+      "suite": "verify_ini_text_value_x86.py",
+      "report": "analysis/ini-integrated/ini-text-value-x86-behavior.json",
+      "calls": 3957,
+      "integration_calls": 1559,
+      "vector_calls": 0,
+      "wide_calls": 0
+    },
+    {
+      "suite": "verify_ini_float_x86.py",
+      "report": "analysis/ini-integrated/ini-float-x86-behavior.json",
+      "calls": 1178,
+      "integration_calls": 0,
+      "vector_calls": 0,
+      "wide_calls": 0
+    },
+    {
+      "suite": "verify_ini_vector_x86.py",
+      "report": "analysis/ini-integrated/ini-vector-x86-behavior.json",
+      "calls": 1178,
+      "integration_calls": 0,
+      "vector_calls": 1153,
+      "wide_calls": 0
+    },
+    {
+      "suite": "verify_ini_number_x86.py",
+      "report": "analysis/ini-integrated/ini-number-x86-behavior.json",
+      "calls": 10716,
+      "integration_calls": 0,
+      "vector_calls": 0,
+      "wide_calls": 0
+    },
+    {
+      "suite": "verify_ini_bool_int_x86.py",
+      "report": "analysis/ini-integrated/ini-bool-int-x86-behavior.json",
+      "calls": 2340,
+      "integration_calls": 0,
+      "vector_calls": 0,
+      "wide_calls": 0
+    },
+    {
+      "suite": "verify_ini_strings_x86.py",
+      "report": "analysis/ini-integrated/ini-strings-x86-behavior.json",
+      "calls": 1577,
+      "integration_calls": 0,
+      "vector_calls": 0,
+      "wide_calls": 0
+    },
+    {
+      "suite": "verify_ini_wstring_x86.py",
+      "report": "analysis/ini-integrated/ini-wstring-x86-behavior.json",
+      "calls": 1577,
+      "integration_calls": 0,
+      "vector_calls": 0,
+      "wide_calls": 840
+    },
+    {
+      "suite": "verify_ini_line_x86.py",
+      "report": "analysis/ini-integrated/ini-line-x86-behavior.json",
+      "calls": 2445,
+      "integration_calls": 0,
+      "vector_calls": 0,
+      "wide_calls": 0
+    },
+    {
+      "suite": "verify_ini_legacy_bool_x86.py",
+      "report": "analysis/ini-integrated/ini-legacy-bool-x86-behavior.json",
+      "calls": 2340,
+      "integration_calls": 0,
+      "vector_calls": 0,
+      "wide_calls": 0
+    },
+    {
+      "suite": "verify_ini_legacy_strings_x86.py",
+      "report": "analysis/ini-integrated/ini-legacy-strings-x86-behavior.json",
+      "calls": 1577,
+      "integration_calls": 0,
+      "vector_calls": 0,
+      "wide_calls": 0
+    },
+    {
+      "suite": "verify_ini_legacy_name_x86.py",
+      "report": "analysis/ini-integrated/ini-legacy-name-x86-behavior.json",
+      "calls": 144,
+      "integration_calls": 0,
+      "vector_calls": 0,
+      "wide_calls": 0
+    }
+  ],
+  "all_tests_use_same_reader_dll": true,
+  "native_runtime_verified": false,
+  "complete_game_verified": false
+}

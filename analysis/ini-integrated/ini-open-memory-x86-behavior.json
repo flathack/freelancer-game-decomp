@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "original_sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
+  "compiled_dll_sha256": "d2b22089de4e52f3c74e9d9bfeeed5a0364e422f6183e4ef77686e8dbb0dcf84",
+  "differential_calls": 320,
+  "input_cases": 16,
+  "method": "?open_memory@INI_Reader@@QAE_NPBDI@Z",
+  "source_hashes": {
+    "src/ini_reader_lifetime.cpp": "c91e9ac16b506f1e1da7109263e3a6fd8f45852160cc15b6a41b0b195ca5056e",
+    "src/ini_reader.hpp": "b8365008a3e20e0a37d2805d236b4139cde4d388a1cb90dc7be38a3d424a364a",
+    "src/file_map.cpp": "5e6a162191a8e353a3eb563ba32f30c26559b97adc416496046cf5d830904624",
+    "tests/verify_ini_open_memory_x86.py": "91ac7e079b703fe0f60a6fed471deab0636075bcfaad67b4748a7ad7c1caac34"
+  },
+  "external_dependencies": "MSVCP60 COW and MSVCRT heap modeled; no native Windows execution",
+  "not_verified": [
+    "Allocation failure exception/access fault",
+    "Exact instruction matching"
+  ],
+  "integration_fixture_sha256": "d2b22089de4e52f3c74e9d9bfeeed5a0364e422f6183e4ef77686e8dbb0dcf84",
+  "integration_fixture": "build/ini-fixture/freelancer-ini-fixture.dll",
+  "suite": "verify_ini_open_memory_x86.py"
+}

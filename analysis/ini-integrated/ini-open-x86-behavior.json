@@ -1,0 +1,229 @@
+{
+  "status": "passed",
+  "original_sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
+  "compiled_dll_sha256": "d2b22089de4e52f3c74e9d9bfeeed5a0364e422f6183e4ef77686e8dbb0dcf84",
+  "differential_calls": 768,
+  "real_files": [
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/AUDIO/ambience_sounds.ini",
+      "sha256": "be1b79ec1053ebd51d57994ce293db246649d0e3da2d4660d7fc399a08ba7d6f",
+      "bytes": 2575
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/AUDIO/engine_sounds.ini",
+      "sha256": "66886c8550ddd32585fd74a815e2e1a6b09822bbc241d17872ef88709b9d5b82",
+      "bytes": 12972
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/AUDIO/interface_sounds.ini",
+      "sha256": "9dc45a78bcde9959a5b008bede300a7add7a3d4b40a80eb793ef4583f2dbf905",
+      "bytes": 5003
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/AUDIO/music.ini",
+      "sha256": "e01ace5b4008e8cba0e2c706eadb63e0c8de218f49ace2875571a8aeee2ed36b",
+      "bytes": 14589
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/AUDIO/soundcfg.ini",
+      "sha256": "6983781655b5dd1d30d81ef7872b767b0a262680f11f6c99ef1d89c140ffae11",
+      "bytes": 792
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/AUDIO/voices_mission01.ini",
+      "sha256": "e37fcd1ccfdc6310fead99e7c7a22f915e112d452f0c9c4f3c7bad6f0d7fe680",
+      "bytes": 7976
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/AUDIO/voices_mission02.ini",
+      "sha256": "2eabf7d1392cc3d847394593384dfc3c84b5962b391889a85fa2073a8aaaff25",
+      "bytes": 5317
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/AUDIO/voices_mission03.ini",
+      "sha256": "7e669f56b7a8e6d3c3bc0206c2a8b0e4494865826e21e9aeadd7d76e0f063af8",
+      "bytes": 5521
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/AUDIO/voices_mission04.ini",
+      "sha256": "0abc4878ebaea6d8fb8bb2d0937036cfcf11b3fc015b73f304a83ce34d05a1a4",
+      "bytes": 4951
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/AUDIO/voices_mission05.ini",
+      "sha256": "69bb8797630694625afb08ad6575e84bf3ce5b2092f2b3305914a51191fb3bb7",
+      "bytes": 3902
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/AUDIO/voices_mission06.ini",
+      "sha256": "48a28c3dfd3b1ed157ca71169b758ba97ea1bdc902e6f81cbd01dc8c57508989",
+      "bytes": 6995
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/AUDIO/voices_mission07.ini",
+      "sha256": "33f99964398dd496494ec97134642c16ee7f08c1541d13d9c91286c882e2ba0c",
+      "bytes": 7742
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/AUDIO/voices_mission08.ini",
+      "sha256": "c9510dd410853a10339672c58c8b487ae9bdeb426c1f3107eb58537414e450a9",
+      "bytes": 2743
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/AUDIO/voices_mission09.ini",
+      "sha256": "8406eb5d20332083e17a163a167f8a8e97ae5aaa07aad83f14c9e6614731d921",
+      "bytes": 3232
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/AUDIO/voices_mission10.ini",
+      "sha256": "87ad2e6b204542c5e77f28e13b35c6709bfbcc11799086192fe7a17428bb572e",
+      "bytes": 4698
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/AUDIO/voices_mission11.ini",
+      "sha256": "0ece431cdebc1151bed92b46ad89a206181b46640781f268d20f1500ed9a4585",
+      "bytes": 4311
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/AUDIO/voices_mission12.ini",
+      "sha256": "b942d7e8e6f498112f75bdd7a90404429a0b523fd9873a107f946d36262587fb",
+      "bytes": 2778
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/AUDIO/voices_mission13.ini",
+      "sha256": "69078ad9ccf5789f26541c9e72a57da93f8a7ef106a44dc2ce9927e67aa9aa39",
+      "bytes": 4457
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/CHARACTERS/costumes.ini",
+      "sha256": "e4b42535de04dace0441039918f4d1379933046b3881c6932cc210fe8ac03885",
+      "bytes": 11503
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/CHARACTERS/newcharacter.ini",
+      "sha256": "b6cf6ebfb443553a75f4da5e2ad41028868fc56878cabe9f3503c24994531523",
+      "bytes": 493
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/COCKPITS/BRETONIA/b_elite.ini",
+      "sha256": "fb812871c40bee61a6306d4f82b0392d35f927de59c11432d2c6b18cfea83797",
+      "bytes": 261
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/COCKPITS/BRETONIA/b_fighter.ini",
+      "sha256": "e0078459889d320962943539cf280675c05ea88ded25cd4ed8d7a71f093ee0da",
+      "bytes": 263
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/COCKPITS/BRETONIA/b_freighter.ini",
+      "sha256": "189567eda5a80f2ab52e16ed032ff54fbc742f3feafa00351716eefdcfe2ef83",
+      "bytes": 270
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/COCKPITS/CIVILIAN/civilian.ini",
+      "sha256": "87f651c72bc5cdbda2b1b033dd0e4375c194f268d3ed286e6550e3ce08e62399",
+      "bytes": 255
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/COCKPITS/CIVILIAN/civilian2.ini",
+      "sha256": "4d657fcf685116a3353114fa8a39ded499453227de6343c479252ec5b251f0d1",
+      "bytes": 255
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/COCKPITS/CIVILIAN/civilian3.ini",
+      "sha256": "4d657fcf685116a3353114fa8a39ded499453227de6343c479252ec5b251f0d1",
+      "bytes": 255
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/COCKPITS/CIVILIAN/civilian_elite.ini",
+      "sha256": "913a10b3e6f7424d8d45653650dd8afaba76994f5af2ed762837362b07f93f6b",
+      "bytes": 255
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/COCKPITS/CIVILIAN/civilian_fighter.ini",
+      "sha256": "913a10b3e6f7424d8d45653650dd8afaba76994f5af2ed762837362b07f93f6b",
+      "bytes": 255
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/COCKPITS/CIVILIAN/civilian_vheavy.ini",
+      "sha256": "913a10b3e6f7424d8d45653650dd8afaba76994f5af2ed762837362b07f93f6b",
+      "bytes": 255
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/COCKPITS/CORSAIR/bw_elite.ini",
+      "sha256": "ec4d8eca45a759816706ddf5eee8bea34b1c64464cd215b38b7a589ec9673943",
+      "bytes": 254
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/COCKPITS/CORSAIR/bw_elite2.ini",
+      "sha256": "ec4d8eca45a759816706ddf5eee8bea34b1c64464cd215b38b7a589ec9673943",
+      "bytes": 254
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/COCKPITS/CORSAIR/bw_fighter.ini",
+      "sha256": "87c21f0e7149d7b5822c61e07bc5be1c2daecf9f28464e41bfb7324588e55781",
+      "bytes": 259
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/COCKPITS/CORSAIR/bw_freighter.ini",
+      "sha256": "0f368c50d0602da4b48ab10a27ddd3ef64c8c2243bcfa1be2a24a1b84ac28530",
+      "bytes": 254
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/COCKPITS/CORSAIR/corsair.ini",
+      "sha256": "c6b63b2dd14cff4d1e4fad3a1ca164d27eb7e200f591814a73bfa0e5af674561",
+      "bytes": 254
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/COCKPITS/CORSAIR/corsair_elite.ini",
+      "sha256": "daabfb63ad51f4e325d362a9948da0d1555e2ac40ece8ef099f2ee2b5d69af06",
+      "bytes": 254
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/COCKPITS/CORSAIR/corsair_fighter.ini",
+      "sha256": "afad6ecb1319b6325fb119c6005b072e0bb4580380a1226fe716abb79453eace",
+      "bytes": 254
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/COCKPITS/CORSAIR/corsair_freighter.ini",
+      "sha256": "da5eb04f7c1f4fce92f6de22470cb7f38b1afe8cd61fa2014e19976ae8b9c963",
+      "bytes": 264
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/COCKPITS/KUSARI/k_elite.ini",
+      "sha256": "e8ce303a6b160e2dcb4b643412f1b17202d8b19cacbbbadfb631a3d291bf5891",
+      "bytes": 324
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/COCKPITS/KUSARI/k_fighter.ini",
+      "sha256": "d2deff2e253052a04547be9b5a7ab71ac02721e4cb4fca6f81f181bc1e4550e2",
+      "bytes": 261
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/COCKPITS/KUSARI/k_freighter.ini",
+      "sha256": "5a4da3b3faa7b5a8cf2222b461a14f5cc865d7cc717170dc629e59c0d133bc1e",
+      "bytes": 277
+    }
+  ],
+  "methods": [
+    "?open@INI_Reader@@QAE_NPBD_N@Z"
+  ],
+  "source_hashes": {
+    "src/ini_reader_open.cpp": "99defb835b560e3b9728ef8cf8f6fba11225186a2bac6df9d9b5a47cae85b4c8",
+    "src/ini_reader.hpp": "b8365008a3e20e0a37d2805d236b4139cde4d388a1cb90dc7be38a3d424a364a",
+    "src/file_map.cpp": "5e6a162191a8e353a3eb563ba32f30c26559b97adc416496046cf5d830904624",
+    "src/ini_reader.cpp": "15e526e3c55e728ebc2d5b91790cd0f3eb8463e26624b8dd1809000d1e9909fd",
+    "tests/fixtures/ini_open_runtime.cpp": "d98509d122921901a836e940c2593e475411134ceb0820d8756428239daf792d",
+    "tests/verify_ini_open_x86.py": "169751cd4a63433d5ad2f9c82cb205a83f523f7ea3e034a21ffb433443a68aac"
+  },
+  "external_dependencies": "MSVCP60 COW, Win32 mapping, fatal handler and progress callback modeled",
+  "not_verified": [
+    "Native OS/CRT",
+    "Non-returning fatal handler",
+    "Allocation or exception failure",
+    "Exact instruction matching"
+  ],
+  "integration_fixture_sha256": "d2b22089de4e52f3c74e9d9bfeeed5a0364e422f6183e4ef77686e8dbb0dcf84",
+  "integration_fixture": "build/ini-fixture/freelancer-ini-fixture.dll",
+  "suite": "verify_ini_open_x86.py"
+}
