@@ -80,3 +80,18 @@ tags. CRT conversion/diagnostic operations are explicit models in this check.
 Production binding, actual CRT/FPU execution and text-mode getter behavior remain
 open. Numeric float/string/wstring/vector accessors are not completed by this step.
 See `analysis/ini-bool-int-notes.md` for the precise boundaries.
+
+## Binary float parameters
+
+`src/ini_reader_float.cpp` implements get_value_float with a C++ double-return ABI
+view under the original float member symbol. This preserves its unrounded x87
+return without assembly in the getter. 1,148 full 80-bit return comparisons pass,
+including integer/float special values, diagnostics and injected atof precision
+beyond binary64.
+
+```bash
+.venv/bin/python tests/verify_ini_float_x86.py
+```
+
+Real CRT/FPU execution and the text-mode float path remain unverified. Scope and
+ABI details are in `analysis/ini-float-notes.md`.
