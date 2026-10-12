@@ -28,6 +28,7 @@ public:
     void close();
     const unsigned short* get_value_wstring();
     const char* get_line_ptr();
+    const char* get_name() const;
     const char* get_file_name() const;
     int get_line_num() const;
     bool initialize_binary(); // Internal helper at common.dll VA 0x0630fc60.

@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "differential_calls": 144,
+  "methods": [
+    "?close@INI_Reader@@QAEXXZ",
+    "?get_name@INI_Reader@@QBEPBDXZ",
+    "?get_line_num@INI_Reader@@QBEHXZ"
+  ],
+  "source_hashes": {
+    "src/ini_reader_lifetime.cpp": "c91e9ac16b506f1e1da7109263e3a6fd8f45852160cc15b6a41b0b195ca5056e",
+    "src/file_map.cpp": "5e6a162191a8e353a3eb563ba32f30c26559b97adc416496046cf5d830904624",
+    "tests/fixtures/file_map_x86_runtime.cpp": "312d9ad72f0a77fe03f462c07f16fcd42729b83c1742052527dc99825ed1288e",
+    "tests/fixtures/ini_lifetime_runtime.cpp": "2ce47bf5cf41640fd17fc18567caa1764c3ac4a24cf6113fb574d4a9e78490ac"
+  },
+  "not_verified": [
+    "Shared COW names: covered by underlying FileMap tests, not this reader test",
+    "Native Windows CRT/OS",
+    "Exact instruction matching"
+  ]
+}

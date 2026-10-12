@@ -119,7 +119,7 @@
     "external_crt_modeled": true
   },
   "ini_reader_lifetime": {
-    "source_current": true,
+    "source_current": false,
     "calls": 144
   },
   "ini_reader_open_memory": {
@@ -159,16 +159,27 @@
     "crt_modeled": true
   },
   "ini_reader_open": {
-    "source_current": true,
+    "source_current": false,
     "calls": 768,
     "real_files": 40,
     "os_crt_modeled": true
   },
   "ini_reader_vector": {
-    "source_current": true,
+    "source_current": false,
     "vector_calls": 1153,
     "value_num_calls": 1178,
     "crt_modeled": true
+  },
+  "ini_legacy_aliases": {
+    "source_current": {
+      "bool": true,
+      "strings": true,
+      "name": true
+    },
+    "bool_calls": 1170,
+    "string_calls": 1577,
+    "name_calls": 48,
+    "unique_logic": false
   },
   "complete_game_verified": false,
   "modules": [

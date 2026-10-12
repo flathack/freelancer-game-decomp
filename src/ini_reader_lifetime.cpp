@@ -16,3 +16,5 @@ bool INI_Reader::open_memory(const char* source,unsigned int size) {
     text_header[0]=0;
     return true;
 }
+
+const char* INI_Reader::get_name() const {return get_file_name();}
