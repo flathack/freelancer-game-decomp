@@ -74,11 +74,11 @@
   },
   "ini_float_x86_behavior": {
     "source_current": true,
-    "calls": 1148,
+    "calls": 1178,
     "parameter_cases": 1140,
     "full_80bit_returns_compared": true,
     "assembly_in_getter": false,
-    "text_mode_verified": false,
+    "text_lookup_cases": 30,
     "external_atof_modeled": true
   },
   "ini_strings_x86_behavior": {
@@ -111,6 +111,12 @@
     "real_files": 13,
     "sections": 47,
     "entries": 1358
+  },
+  "parse_number_x86_behavior": {
+    "source_current": true,
+    "calls": 1533,
+    "temporary_x87_arithmetic_boundary": true,
+    "external_crt_modeled": true
   },
   "complete_game_verified": false,
   "modules": [

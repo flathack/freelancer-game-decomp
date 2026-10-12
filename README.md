@@ -154,3 +154,18 @@ entries). Input paths/hashes and selection limits are recorded in the report.
 
 Text ParseNumber/float and full reader lifecycle/native runtime remain open.
 See `analysis/ini-text-value-notes.md`.
+
+## ParseNumber and text float values
+
+`src/parse_number.cpp` reconstructs numeric syntax selection and baseline tables.
+Its x87 accumulation remains an explicit temporary assembly boundary. 1,533
+comparisons pass for full 80-bit returns, decimal dispatch and warning arguments.
+The text float getter now uses reconstructed StringIndex/ParseNumber; its suite
+passes 1,178 cases including 30 text lookups.
+
+```bash
+.venv/bin/python tests/verify_parse_number_x86.py
+```
+
+Native CRT/locale/FPU effects and removal of the arithmetic boundary remain open.
+See `analysis/parse-number-notes.md`.

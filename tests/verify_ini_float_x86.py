@@ -10,7 +10,7 @@ def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def main():
  assert digest(SOURCE)==HASH
  build=ROOT/'build';objects=[];commands=[]
- sources=['src/ini_reader_float.cpp','tests/fixtures/ini_float_x86_runtime.cpp','src/ini_reader_values.cpp','src/ini_reader.cpp','src/file_map.cpp','tests/fixtures/ini_values_x86_runtime.cpp','tests/fixtures/ini_reconstructed_index_runtime.cpp','src/string_index.cpp','tests/fixtures/file_map_x86_runtime.cpp']
+ sources=['src/ini_text_float.cpp','src/parse_number.cpp','src/parse_number_x87.cpp','tests/fixtures/parse_number_runtime.cpp','src/ini_reader_float.cpp','tests/fixtures/ini_float_x86_runtime.cpp','src/ini_reader_values.cpp','src/ini_reader.cpp','src/file_map.cpp','tests/fixtures/ini_values_x86_runtime.cpp','tests/fixtures/ini_reconstructed_index_runtime.cpp','src/string_index.cpp','tests/fixtures/file_map_x86_runtime.cpp']
  for source in sources:
   out=build/(pathlib.Path(source).stem+'-values.obj');objects.append(str(out));cmd=['clang++','--target=i686-pc-windows-msvc','-O2','-fno-exceptions','-fno-rtti','-fno-builtin','-mno-sse','-mno-sse2','-c',str(ROOT/source),'-o',str(out)];subprocess.run(cmd,check=True);commands.append(cmd)
  float_symbol='?get_value_float@INI_Reader@@QAEMI@Z';dll=build/'ini_float.dll'
@@ -25,6 +25,8 @@ def main():
  atof=h.stop+0x300;fp64=fp+16
  h.write_word(0x63992f0,atof);uc.mem_write(atof,b'\xdb\x2d'+struct.pack('<I',fp64)+b'\xc3')
  override_fp80=None
+ lower=h.stop+0x340;log=h.stop+0x360;search=h.stop+0x380;slot=h.stop+0x500
+ h.write_word(0x63992f4,lower);h.write_word(0x6399300,search);h.write_word(0x6399028,slot);h.write_word(slot,log)
  logs=[]
  def text(ptr):
   out=bytearray()
@@ -35,7 +37,19 @@ def main():
   raise AssertionError('Long test string')
  def hook(uc,address,size,user):
   sp=uc.reg_read(UC_X86_REG_ESP)
-  if address==atof:
+  if address==lower:
+   c=h.word(sp+4);c=c-2**32 if c>=2**31 else c;h.return_stub((c+32 if 65<=c<=90 else c)&0xffffffff)
+  elif address==search:
+   ptr=h.word(sp+4);ch=h.word(sp+8)&255;result=0
+   for i in range(1024):
+    b=uc.mem_read(ptr+i,1)[0]
+    if b==ch:result=ptr+i;break
+    if not b:break
+   h.return_stub(result)
+  elif address==log:
+   assert h.word(sp+4)==0x100002 and h.word(sp+16)==0x14e
+   logs.append(('bad_base_digit',text(h.word(sp+20))));h.return_stub(0)
+  elif address==atof:
    value=text(h.word(sp+4));m=re.match(rb'\s*([+-]?(?:\d+\.?\d*|\.\d+)(?:[eE][+-]?\d+)?)',value)
    number=float(m.group(1)) if m else 0.0
    word=struct.unpack('<Q',struct.pack('<d',number))[0];sign=(word>>63)<<15;exponent=(word>>52)&2047;fraction=word&((1<<52)-1)
@@ -80,10 +94,14 @@ def main():
  for index in [1,255,0xffffffff]:pair(float_symbol,index)
  for obj in [o,r]:h.write_word(obj+0x145c,0)
  pair(float_symbol,0)
+ text_calls=0
+ for value in [b'0xFF, -0xA.F, 101b, 102b',b'1h,1H,12h,ABh',b"'A',-'A',+--3",b'0.1,1e-3,1e40',b' 00123 , garbage , ',b'0x123456789ABCDEF.12345']:
+  for obj in [o,r]:uc.mem_write(obj+0x1564,b'\0');uc.mem_write(obj+0x828,value+b'\0')
+  for index in [0,1,2,3,0xffffffff]:pair(float_symbol,index);text_calls+=1
  report=dict(status='passed_binary_float_cpp_abi_view',original_sha256=HASH,compiled_dll_sha256=digest(dll),
-             source_hashes={p:digest(ROOT/p) for p in sources+['src/string_index.hpp','src/ini_reader_values.hpp','src/ini_reader.hpp','src/file_map.hpp']},
-             differential_calls=calls,parameter_cases=len(cases),complete_80bit_returns_compared=True,assembly_in_getter=False,abi_implementation_return_type='double under original float member symbol',extended_atof_passthrough_cases=extended_cases,rows=rows,commands=commands,
+             source_hashes={p:digest(ROOT/p) for p in sources+['src/string_index.hpp','src/parse_number.hpp','src/ini_reader_values.hpp','src/ini_reader.hpp','src/file_map.hpp']},
+             differential_calls=calls,parameter_cases=len(cases),text_calls=text_calls,reconstructed_parse_number_used=True,complete_80bit_returns_compared=True,assembly_in_getter=False,abi_implementation_return_type='double under original float member symbol',extended_atof_passthrough_cases=extended_cases,rows=rows,commands=commands,
              mocks=['atof decimal-prefix model returning binary64 in ST0','sprintf/MessageBox diagnostic model'],
-             not_verified=['Real CRT/Win32 execution','Text get_value_float path','FPU exception/control-word fidelity','Malformed parameter memory access','Other typed getters','Exact instruction matching'])
+             not_verified=['Real CRT/Win32 execution','FPU exception/control-word fidelity','Malformed parameter memory access','Other typed getters','Exact instruction matching'])
  (ROOT/'analysis/ini-float-x86-behavior.json').write_text(json.dumps(report,indent=2)+'\n');print(f'PASS: {calls} float calls, {len(cases)} parameter cases, full x87 return bytes and diagnostics')
 if __name__=='__main__':main()
