@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "differential_calls": 618,
+  "text_inputs": 9,
+  "binary_inputs": 300,
+  "source_hashes": {
+    "tests/verify_loadout_reader_x86.py": "524c4314e126328711a21c541d18dbc2c6f6cdd63dd869207193cd355b185aab",
+    "src/loadout_lines.cpp": "1e5f6075ba6aea381979b4f027444f78f6b65836c078e6e15a417b15cc5a70a0",
+    "tests/fixtures/loadout_reader_runtime.cpp": "896de99edbc0c29ddf84a8d99d6916395d7ad56f8d64f9a769dc5ddc67e5a0ae"
+  },
+  "fixture_sha256": "0349766af49db114e3e9e17a5a60e3fb4efea62eda36f70264c7a06ee34a5d37",
+  "fixture_build_sha256": "3b64d1a71aabaa50f85976168e89891714f4bbe88e789f9a21169c4e5f36f8a5",
+  "reader_reconstructed": true,
+  "hash_and_interning_modeled": true,
+  "not_verified": [
+    "Actual reconstructed hash/cache integration",
+    "Native CRT/OS",
+    "Exact instruction matching"
+  ]
+}

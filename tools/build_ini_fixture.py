@@ -4,7 +4,7 @@ import hashlib,json,pathlib,subprocess
 import pefile
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-def main():
+def main(include_loadout=False):
  original=ROOT/'original/_FL Fresh Install-deutsch/EXE/common.dll';assert digest(original)=='e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483'
  exports=[]
  for s in pefile.PE(str(original)).DIRECTORY_ENTRY_EXPORT.symbols:
@@ -14,7 +14,10 @@ def main():
  sources=sorted(p.relative_to(ROOT).as_posix() for p in (ROOT/'src').glob('ini*.cpp'))
  sources+=['src/file_map.cpp','src/string_index.cpp','src/text_file.cpp','src/parse_number.cpp','src/parse_number_x87.cpp']
  sources+=['tests/fixtures/'+p for p in ['file_map_x86_runtime.cpp','ini_text_runtime.cpp','ini_values_x86_runtime.cpp','ini_float_x86_runtime.cpp','ini_strings_x86_runtime.cpp','ini_lifetime_runtime.cpp','ini_number_runtime.cpp','ini_open_runtime.cpp','ini_wstring_runtime.cpp','parse_number_runtime.cpp']]
- build=ROOT/'build/ini-fixture';build.mkdir(parents=True,exist_ok=True);objects=[];commands=[]
+ if include_loadout:
+  sources+=['src/loadout_lines.cpp','tests/fixtures/loadout_reader_runtime.cpp']
+  exports+=['?ReadEquipLine@Loadout@@YA_NAAVINI_Reader@@AAUEquipDesc@@@Z','?ReadCargoLine@Loadout@@YA_NAAVINI_Reader@@AAUEquipDesc@@@Z']
+ build=ROOT/('build/loadout-reader-fixture' if include_loadout else 'build/ini-fixture');build.mkdir(parents=True,exist_ok=True);objects=[];commands=[]
  for source in sources:
   obj=build/(pathlib.Path(source).stem+'.obj');objects.append(str(obj))
   cmd=['clang++','--target=i686-pc-windows-msvc','-O2','-fno-exceptions','-fno-rtti','-fno-builtin','-mno-sse','-mno-sse2','-c',str(ROOT/source),'-o',str(obj)];subprocess.run(cmd,check=True);commands.append(cmd)
@@ -33,5 +36,5 @@ def main():
    h.invoke(original_exports[symbol],(text,),obj)
    h.invoke(fixture_exports[symbol],(text,),obj)
  report=dict(status='all_ini_reader_exports_linked',export_count=len(exports),exports=sorted(exports),test_data_exports=data_exports,source_hashes={p:digest(ROOT/p) for p in sources+['src/ini_reader.hpp','tools/build_ini_fixture.py']},dll_sha256=digest(dll),commands=commands,log_link_abi_cases=16,log_link_code_match=dict(original_va='0x0634c430',bytes_hex=code.hex()),runtime_binding='test adapters use original image addresses; not standalone Windows runtime',complete_reader_runtime_verified=False,complete_game_verified=False)
- (ROOT/'analysis/ini-fixture-build.json').write_text(json.dumps(report,indent=2)+'\n');print(f'PASS: all {len(exports)} original INI_Reader exports linked; log_link matches 3 original bytes')
+ (ROOT/('analysis/loadout-reader-fixture-build.json' if include_loadout else 'analysis/ini-fixture-build.json')).write_text(json.dumps(report,indent=2)+'\n');print(f'PASS: {len(exports)} original exports linked (39 INI_Reader methods); log_link matches 3 original bytes')
 if __name__=='__main__':main()

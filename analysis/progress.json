@@ -191,6 +191,11 @@
     "calls": 960,
     "reader_dependency_modeled": true
   },
+  "loadout_reader_integration": {
+    "calls": 618,
+    "reader_reconstructed": true,
+    "hash_cache_modeled": true
+  },
   "complete_game_verified": false,
   "modules": [
     {

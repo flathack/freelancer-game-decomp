@@ -250,3 +250,8 @@ Loadout equipment/cargo line parsers are now reconstructed. 960 differential
 calls compare full EquipDesc state and external call order, including Cargo's
 early return for numeric/nonzero parameter2. Reader/CreateID/StringAlloc are
 controlled dependencies in this test; full reconstructed integration remains open.
+
+Loadout parsers now also pass 618 integration comparisons through the actual
+reconstructed reader: nine text lists and 300 BINI parameter lists. The shared
+fixture links 39 reader methods and both Loadout exports. Hash/cache and CRT are
+still controlled dependencies; real loadout-file corpus testing remains open.
