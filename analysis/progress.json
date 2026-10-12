@@ -56,6 +56,15 @@
     "named_imports": 13,
     "native_execution_verified": false
   },
+  "bini_navigation_x86_behavior": {
+    "source_current": true,
+    "calls": 5140903,
+    "methods": 15,
+    "tested_real_files": 1241,
+    "supplied_bini_files": 1241,
+    "typed_getters_verified": false,
+    "text_iteration_verified": false
+  },
   "complete_game_verified": false,
   "modules": [
     {

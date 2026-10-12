@@ -1,0 +1,13 @@
+CORPUS 100/1241 files; 9143 differential calls
+CORPUS 200/1241 files; 17533 differential calls
+CORPUS 300/1241 files; 28290 differential calls
+CORPUS 400/1241 files; 46216 differential calls
+CORPUS 500/1241 files; 76156 differential calls
+CORPUS 600/1241 files; 109853 differential calls
+CORPUS 700/1241 files; 149665 differential calls
+CORPUS 800/1241 files; 203466 differential calls
+CORPUS 900/1241 files; 249170 differential calls
+CORPUS 1000/1241 files; 309626 differential calls
+CORPUS 1100/1241 files; 504224 differential calls
+CORPUS 1200/1241 files; 1966230 differential calls
+PASS BINI: 5140903 calls / 15 methods; 70330 sections and 515921 entries across 1281 synthetic/real files

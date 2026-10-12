@@ -41,6 +41,8 @@ def main():
     lifetime_current=bool(lifetime) and all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in lifetime.get('source_hashes',{}).items())
     windows=json.loads((A/'filemap-windows-build.json').read_text()) if (A/'filemap-windows-build.json').exists() else {}
     windows_current=bool(windows) and all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in windows.get('source_hashes',{}).items())
+    bini=json.loads((A/'bini-reader-x86-behavior.json').read_text()) if (A/'bini-reader-x86-behavior.json').exists() else {}
+    bini_current=bool(bini) and all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in bini.get('source_hashes',{}).items())
     report=dict(code_modules=len(rows),raw_exported_modules=sum(r['status']=='raw_exported' for r in rows),
                 raw_decompiled_functions=sum(r.get('raw_decompiled',0) for r in rows),
                 raw_failed_functions=sum(r.get('failed',0) for r in rows),
@@ -52,6 +54,7 @@ def main():
                 filemap_memory_x86_behavior=dict(source_current=fm_current,calls=fm.get('differential_calls',0),methods=len(fm.get('methods',[]))),
                 filemap_lifetime_x86_behavior=dict(source_current=lifetime_current,calls=lifetime.get('lifetime_calls',0),compiled_exports=lifetime.get('compiled_exported_methods',0),external_imports_modeled=True),
                 filemap_windows_build=dict(source_current=windows_current,exports=windows.get('export_count',0),named_imports=sum(len(v) for v in windows.get('imports',{}).values()),native_execution_verified=False),
+                bini_navigation_x86_behavior=dict(source_current=bini_current,calls=bini.get('differential_calls',0),methods=len(bini.get('covered_original_methods',[])),tested_real_files=bini.get('selected_real_files'),supplied_bini_files=bini.get('total_real_bini_files'),typed_getters_verified=False,text_iteration_verified=False),
                 complete_game_verified=False,modules=rows)
     (A/'coverage-summary.json').write_text(json.dumps({r['module']:r['coverage_audit'] for r in rows if 'coverage_audit' in r},indent=2)+'\n')
     (A/'progress.json').write_text(json.dumps(report,indent=2)+'\n')
@@ -64,7 +67,8 @@ def main():
            f"EquipDesc: {equip.get('passing_calls',0)} ABI/state cases and {equip.get('cargo_cases',0)} full-x87 cargo cases; temporary assembly ABI shim; source current: {equip_current}.",
            f"String cache: {cache.get('sequence_cases',0)} requests/tree shape checks and {cache.get('capacity_boundary_cases',0)} capacity cases; source current: {cache_current}.",
            f"FileMap memory/BINI subset: {fm.get('differential_calls',0)} calls across {len(fm.get('methods',[]))} methods; source current: {fm_current}.",
-           f"FileMap lifetime: {lifetime.get('lifetime_calls',0)} modeled-import cases; Windows component: {windows.get('export_count',0)} exports, {sum(len(v) for v in windows.get('imports',{}).values())} imports; native runtime unverified.",'',
+           f"FileMap lifetime: {lifetime.get('lifetime_calls',0)} modeled-import cases; Windows component: {windows.get('export_count',0)} exports, {sum(len(v) for v in windows.get('imports',{}).values())} imports; native runtime unverified.",
+           f"BINI navigation: {bini.get('differential_calls',0)} calls / {len(bini.get('covered_original_methods',[]))} methods; real corpus {bini.get('selected_real_files','sample')}/{bini.get('total_real_bini_files','unknown')}; typed getters/text iteration unverified.",'',
            'The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.',
            '', '| Module | Raw export status | Raw functions | Failed |','|---|---|---:|---:|']
     for row in rows: lines.append(f"| {pathlib.Path(row['module']).name} | {row['status']} | {row.get('raw_decompiled','—')} | {row.get('failed','—')} |")

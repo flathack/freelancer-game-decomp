@@ -23,8 +23,9 @@ at EOF or without data it clears the requested length and returns null. Reads
 advance by the clamped available length and copy data forward in 4-byte chunks
 plus trailing bytes as observed in the original.
 
-BINI_Header, BINI_Block and BINI_Value are currently opaque views sized 12, 4 and
-3 bytes. Their field meanings are not guessed. Failed typed reads consume a short
+BINI_Header, BINI_Block and BINI_Value retain sizes 12, 4 and 3 bytes. Their
+fields have since been reconstructed from the INI_Reader instructions; see
+`bini-reader-notes.md`. Failed typed reads consume a short
 remaining tail, then null the output pointer; there is no automatic rollback.
 
 `tests/verify_file_map_x86.py` builds a Windows x86 DLL and compares it with original

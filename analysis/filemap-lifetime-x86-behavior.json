@@ -1,10 +1,10 @@
 {
   "status": "passed_under_modeled_external_imports",
   "original_sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
-  "compiled_dll_sha256": "bb3e357217a65b43f6a85c0e00cc8efe58433518091bd1da6f1211efcd9dacb0",
+  "compiled_dll_sha256": "81173cd75860ff0687ff0ab67004a8b5da998b2e61431737c5971b4a6720c710",
   "source_hashes": {
     "src/file_map.cpp": "5e6a162191a8e353a3eb563ba32f30c26559b97adc416496046cf5d830904624",
-    "src/file_map.hpp": "751b999c170c3e2088bfcac7cf6ab32dbaf8768354c92b4c386adee5a06d157e",
+    "src/file_map.hpp": "3b3fa5a652b47a0b744a438671bfbed9d711be65d6202457a025019758d406da",
     "tests/fixtures/file_map_x86_runtime.cpp": "312d9ad72f0a77fe03f462c07f16fcd42729b83c1742052527dc99825ed1288e"
   },
   "binding_mode": "fixture_fixed_image_addresses",

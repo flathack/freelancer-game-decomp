@@ -15,10 +15,10 @@ class X86Harness:
   return {s.name.decode():base+s.address for s in p.DIRECTORY_ENTRY_EXPORT.symbols if s.name}
  def write_word(self,address,value):self.uc.mem_write(address,struct.pack('<I',value&0xffffffff))
  def word(self,address):return struct.unpack('<I',self.uc.mem_read(address,4))[0]
- def invoke(self,address,args=(),this=None,float_result=False):
+ def invoke(self,address,args=(),this=None,float_result=False,max_instructions=1000000):
   sp=self.stack+0x8000;self.uc.mem_write(sp,struct.pack('<'+'I'*(len(args)+1),self.stop,*args));self.uc.reg_write(UC_X86_REG_ESP,sp)
   if this is not None:self.uc.reg_write(UC_X86_REG_ECX,this)
-  self.uc.emu_start(address,self.stop,count=1000000)
+  self.uc.emu_start(address,self.stop,count=max_instructions)
   assert self.uc.reg_read(UC_X86_REG_EIP)==self.stop,'Missing return'
   assert self.uc.reg_read(UC_X86_REG_ESP)==sp+4+(4*len(args) if this is not None else 0),'ABI stack mismatch'
   result=self.uc.reg_read(UC_X86_REG_EAX)

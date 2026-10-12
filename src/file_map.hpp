@@ -1,8 +1,11 @@
 #pragma once
-// Packed-size views only; field meanings are reserved for the BINI parser reconstruction.
-struct BINI_Header { unsigned char bytes[12]; };
-struct BINI_Block { unsigned char bytes[4]; };
-struct BINI_Value { unsigned char bytes[3]; };
+#pragma pack(push,1)
+struct BINI_Header { unsigned int magic,version,string_table_offset; };
+struct BINI_Block { unsigned short name_offset,value_count; };
+struct BINI_Value { unsigned short name_offset;unsigned char parameter_count; };
+struct BINI_Parameter { unsigned char type;unsigned int bits; };
+#pragma pack(pop)
+static_assert(sizeof(BINI_Header)==12 && sizeof(BINI_Block)==4 && sizeof(BINI_Value)==3 && sizeof(BINI_Parameter)==5,"Observed BINI record sizes");
 struct FileMap {
     // Observed MSVC6 std::string layout; imported COW operations remain in MSVCP60.
     unsigned char allocator_opaque[4];
