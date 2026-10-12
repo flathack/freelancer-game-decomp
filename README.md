@@ -233,3 +233,10 @@ The four remaining legacy INI access aliases (`get_name`, `get_bool`,
 export comparisons cover 1170 bool calls, 1577 indexed/joined string calls and
 48 filename calls, alongside existing integer/lifecycle checks. These are alias
 coverage, not additional unique logic or exact machine-code matches.
+
+`tools/build_ini_fixture.py` now builds one integration DLL containing all 39
+original INI_Reader exports from reconstructed code. Export names match exactly
+and no reader symbols remain unresolved. Runtime adapters still require the
+original image/test environment; this is not a standalone replacement DLL.
+The remaining `log_link` export is an original no-op: its entire three-byte body
+matches, with 16 ABI comparisons. See `analysis/ini-fixture-notes.md`.

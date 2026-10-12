@@ -22,6 +22,7 @@ public:
     bool binary_mode;
     unsigned char padding_1565[3];
     struct State { unsigned char bytes[0xc08]; };
+    void log_link(const char*) const;
     bool is_number(const char*) const;
     bool open(const char*,bool);
     bool open_memory(const char*,unsigned int);

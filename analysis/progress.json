@@ -172,8 +172,8 @@
   },
   "ini_legacy_aliases": {
     "source_current": {
-      "bool": true,
-      "strings": true,
+      "bool": false,
+      "strings": false,
       "name": true
     },
     "bool_calls": 1170,
