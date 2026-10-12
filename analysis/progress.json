@@ -94,6 +94,16 @@
     "inputs": 762,
     "max_input_bytes": 1023
   },
+  "text_line_x86_behavior": {
+    "source_current": true,
+    "calls": 41919,
+    "inputs": 214
+  },
+  "text_header_x86_behavior": {
+    "source_current": true,
+    "calls": 2966,
+    "inputs": 311
+  },
   "complete_game_verified": false,
   "modules": [
     {

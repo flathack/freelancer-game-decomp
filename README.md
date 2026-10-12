@@ -125,3 +125,18 @@ are also compared under explicit logging models.
 
 Text line/header/value iteration and text floating-number parsing remain open.
 See `analysis/string-index-notes.md` for exact scope.
+
+## Text line/header reading
+
+`src/text_file.cpp` reconstructs the original 1023-byte line chunking, CR/LF pair
+handling and line counter behavior. 41,919 line-read comparisons pass. The text
+INI header helper is implemented in `src/ini_text_header.cpp`; 2,966 header-search
+comparisons pass with full state and buffer-footprint checks.
+
+```bash
+.venv/bin/python tests/verify_text_file_x86.py
+.venv/bin/python tests/verify_ini_text_header_x86.py
+```
+
+Text value/token iteration and text floating-number parsing remain open. Details
+and intentionally retained legacy edge cases are in `analysis/text-reading-notes.md`.

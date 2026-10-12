@@ -51,6 +51,10 @@ def main():
     strings_current=bool(strings) and all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in strings.get('source_hashes',{}).items())
     index=json.loads((A/'string-index-x86-behavior.json').read_text()) if (A/'string-index-x86-behavior.json').exists() else {}
     index_current=bool(index) and all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in index.get('source_hashes',{}).items())
+    lines=json.loads((A/'text-file-x86-behavior.json').read_text()) if (A/'text-file-x86-behavior.json').exists() else {}
+    headers=json.loads((A/'ini-text-header-x86-behavior.json').read_text()) if (A/'ini-text-header-x86-behavior.json').exists() else {}
+    lines_current=bool(lines) and all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in lines.get('source_hashes',{}).items())
+    headers_current=bool(headers) and all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in headers.get('source_hashes',{}).items())
     report=dict(code_modules=len(rows),raw_exported_modules=sum(r['status']=='raw_exported' for r in rows),
                 raw_decompiled_functions=sum(r.get('raw_decompiled',0) for r in rows),
                 raw_failed_functions=sum(r.get('failed',0) for r in rows),
@@ -67,6 +71,8 @@ def main():
                 ini_float_x86_behavior=dict(source_current=floats_current,calls=floats.get('differential_calls',0),parameter_cases=floats.get('parameter_cases',0),full_80bit_returns_compared=True,assembly_in_getter=False,text_mode_verified=False,external_atof_modeled=True),
                 ini_strings_x86_behavior=dict(source_current=strings_current,calls=strings.get('differential_calls',0),indexed_cases=strings.get('indexed_parameter_cases',0),formatter_modeled=True,text_index_cases=strings.get('text_index_cases',0)),
                 string_index_x86_behavior=dict(source_current=index_current,calls=index.get('differential_calls',0),inputs=index.get('input_cases',0),max_input_bytes=index.get('maximum_input_length',0)),
+                text_line_x86_behavior=dict(source_current=lines_current,calls=lines.get('differential_calls',0),inputs=lines.get('input_cases',0)),
+                text_header_x86_behavior=dict(source_current=headers_current,calls=headers.get('differential_calls',0),inputs=headers.get('input_cases',0)),
                 complete_game_verified=False,modules=rows)
     (A/'coverage-summary.json').write_text(json.dumps({r['module']:r['coverage_audit'] for r in rows if 'coverage_audit' in r},indent=2)+'\n')
     (A/'progress.json').write_text(json.dumps(report,indent=2)+'\n')
@@ -84,7 +90,8 @@ def main():
            f"Binary bool/int: {values.get('differential_calls',0)} calls / {values.get('parameter_cases',0)} cases; real CRT/full text iteration unverified.",
            f"Binary float: {floats.get('differential_calls',0)} full-x87 comparisons; C++ double ABI view; real CRT/text path unverified.",
            f"String getters: {strings.get('differential_calls',0)} comparisons; shared/joined buffers; authentic CRT/full text iteration unverified.",
-           f"StringIndex: {index.get('differential_calls',0)} comparisons / {index.get('input_cases',0)} inputs; reconstructed helper integrated.",'',
+           f"StringIndex: {index.get('differential_calls',0)} comparisons / {index.get('input_cases',0)} inputs; reconstructed helper integrated.",
+           f"Text lines/headers: {lines.get('differential_calls',0)} / {headers.get('differential_calls',0)} comparisons; text values/lifecycle remain open.",'',
            'The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.',
            '', '| Module | Raw export status | Raw functions | Failed |','|---|---|---:|---:|']
     for row in rows: lines.append(f"| {pathlib.Path(row['module']).name} | {row['status']} | {row.get('raw_decompiled','—')} | {row.get('failed','—')} |")
