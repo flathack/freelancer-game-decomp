@@ -81,6 +81,13 @@
     "text_mode_verified": false,
     "external_atof_modeled": true
   },
+  "ini_strings_x86_behavior": {
+    "source_current": true,
+    "calls": 1557,
+    "indexed_cases": 722,
+    "formatter_modeled": true,
+    "indexed_text_verified": false
+  },
   "complete_game_verified": false,
   "modules": [
     {

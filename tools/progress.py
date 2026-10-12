@@ -47,6 +47,8 @@ def main():
     values_current=bool(values) and all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in values.get('source_hashes',{}).items())
     floats=json.loads((A/'ini-float-x86-behavior.json').read_text()) if (A/'ini-float-x86-behavior.json').exists() else {}
     floats_current=bool(floats) and all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in floats.get('source_hashes',{}).items())
+    strings=json.loads((A/'ini-strings-x86-behavior.json').read_text()) if (A/'ini-strings-x86-behavior.json').exists() else {}
+    strings_current=bool(strings) and all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in strings.get('source_hashes',{}).items())
     report=dict(code_modules=len(rows),raw_exported_modules=sum(r['status']=='raw_exported' for r in rows),
                 raw_decompiled_functions=sum(r.get('raw_decompiled',0) for r in rows),
                 raw_failed_functions=sum(r.get('failed',0) for r in rows),
@@ -61,6 +63,7 @@ def main():
                 bini_navigation_x86_behavior=dict(source_current=bini_current,calls=bini.get('differential_calls',0),methods=len(bini.get('covered_original_methods',[])),tested_real_files=bini.get('selected_real_files'),supplied_bini_files=bini.get('total_real_bini_files'),typed_getters_verified=False,text_iteration_verified=False),
                 ini_bool_int_x86_behavior=dict(source_current=values_current,calls=values.get('differential_calls',0),parameter_cases=values.get('parameter_cases',0),external_runtime_modeled=True,text_mode_verified=False),
                 ini_float_x86_behavior=dict(source_current=floats_current,calls=floats.get('differential_calls',0),parameter_cases=floats.get('parameter_cases',0),full_80bit_returns_compared=True,assembly_in_getter=False,text_mode_verified=False,external_atof_modeled=True),
+                ini_strings_x86_behavior=dict(source_current=strings_current,calls=strings.get('differential_calls',0),indexed_cases=strings.get('indexed_parameter_cases',0),formatter_modeled=True,indexed_text_verified=False),
                 complete_game_verified=False,modules=rows)
     (A/'coverage-summary.json').write_text(json.dumps({r['module']:r['coverage_audit'] for r in rows if 'coverage_audit' in r},indent=2)+'\n')
     (A/'progress.json').write_text(json.dumps(report,indent=2)+'\n')
@@ -76,7 +79,8 @@ def main():
            f"FileMap lifetime: {lifetime.get('lifetime_calls',0)} modeled-import cases; Windows component: {windows.get('export_count',0)} exports, {sum(len(v) for v in windows.get('imports',{}).values())} imports; native runtime unverified.",
            f"BINI navigation: {bini.get('differential_calls',0)} calls / {len(bini.get('covered_original_methods',[]))} methods; real corpus {bini.get('selected_real_files','sample')}/{bini.get('total_real_bini_files','unknown')}; typed getters/text iteration separately scoped.",
            f"Binary bool/int: {values.get('differential_calls',0)} calls / {values.get('parameter_cases',0)} cases; real CRT and text getters unverified.",
-           f"Binary float: {floats.get('differential_calls',0)} full-x87 comparisons; C++ double ABI view; real CRT/text path unverified.",'',
+           f"Binary float: {floats.get('differential_calls',0)} full-x87 comparisons; C++ double ABI view; real CRT/text path unverified.",
+           f"String getters: {strings.get('differential_calls',0)} comparisons; shared/joined buffers; authentic CRT/indexed text unverified.",'',
            'The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.',
            '', '| Module | Raw export status | Raw functions | Failed |','|---|---|---:|---:|']
     for row in rows: lines.append(f"| {pathlib.Path(row['module']).name} | {row['status']} | {row.get('raw_decompiled','—')} | {row.get('failed','—')} |")

@@ -95,3 +95,17 @@ beyond binary64.
 
 Real CRT/FPU execution and the text-mode float path remain unverified. Scope and
 ABI details are in `analysis/ini-float-notes.md`.
+
+## String parameter getters
+
+Both get_value_string ABI entries are reconstructed. 1,557 comparisons pass for
+indexed formatting, shared-buffer lifetime, parameter joins, diagnostics, the
+direct text-buffer path and one controlled reproduction of the original join
+buffer overflow. Formatter/MessageBox dependencies remain explicit test models.
+
+```bash
+.venv/bin/python tests/verify_ini_strings_x86.py
+```
+
+Authentic CRT formatting, indexed text parsing and arbitrary malformed/overlapping
+buffers remain unverified. See `analysis/ini-strings-notes.md` for scope.
