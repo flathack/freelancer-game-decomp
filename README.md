@@ -180,3 +180,9 @@ This is behavioral reconstruction; complete game reconstruction remains unfinish
 reconstructed FileMap. Its original unconditional text-mode selection and limited
 parser reset are preserved. 320 differential calls pass, including BINI-looking
 input, existing resources, shared COW names, invalid arguments and copy boundaries.
+
+`INI_Reader::get_line_ptr` reconstructs text and BINI line formatting using the
+existing parameter converters. 2403 integrated string/line differential calls
+pass, including full output-buffer write footprints within tested ranges.
+Original static-buffer extents and oversized-line overflow adjacency remain to
+be reconstructed; see `analysis/ini-line-notes.md`.

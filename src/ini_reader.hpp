@@ -19,6 +19,7 @@ struct INI_Reader {
     struct State { unsigned char bytes[0xc08]; };
     bool open_memory(const char*,unsigned int);
     void close();
+    const char* get_line_ptr();
     const char* get_file_name() const;
     int get_line_num() const;
     bool initialize_binary(); // Internal helper at common.dll VA 0x0630fc60.
