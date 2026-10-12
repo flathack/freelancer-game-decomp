@@ -196,6 +196,12 @@
     "reader_reconstructed": true,
     "hash_cache_modeled": true
   },
+  "loadout_corpus": {
+    "files": 4,
+    "line_calls": 17130,
+    "navigation_calls": 38544,
+    "hash_cache_modeled": true
+  },
   "complete_game_verified": false,
   "modules": [
     {

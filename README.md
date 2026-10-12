@@ -255,3 +255,9 @@ Loadout parsers now also pass 618 integration comparisons through the actual
 reconstructed reader: nine text lists and 300 BINI parameter lists. The shared
 fixture links 39 reader methods and both Loadout exports. Hash/cache and CRT are
 still controlled dependencies; real loadout-file corpus testing remains open.
+
+All four supplied Loadout INIs now pass through reconstructed reader navigation
+and line handlers: 803 sections, 18467 entries, 17130 equipment/cargo handler
+comparisons and 38544 navigation/name comparisons. Per-file hashes/counts are
+recorded in `analysis/loadout-corpus-x86-behavior.json`. Hash/cache and CRT remain
+controlled models; native file acquisition and complete list loading are open.
