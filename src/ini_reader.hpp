@@ -2,6 +2,7 @@
 #include "file_map.hpp"
 struct INI_Reader {
     INI_Reader();
+    ~INI_Reader();
     FileMap text_file;
     unsigned int line_number;
     char text_header[1024],text_name[1024],text_value[1024];

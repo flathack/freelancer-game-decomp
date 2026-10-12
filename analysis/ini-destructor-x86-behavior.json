@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "original_sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
+  "compiled_dll_sha256": "4ff82c8b221a63daf95202f67761baf959936fdc0403b22f3b1ecbd1397d47cb",
+  "differential_calls": 50,
+  "method": "??1INI_Reader@@QAE@XZ",
+  "source_hashes": {
+    "src/ini_reader_destructor.cpp": "323bc9ec413342e322ba66031bd6b8f59cc21a024b713c124330583d0ff1fe34",
+    "src/ini_reader.hpp": "ad889ea8c0da44cce2bd2ca3d943502ff4598f6ba8b17d4dbeb804225cf51656",
+    "src/file_map.cpp": "5e6a162191a8e353a3eb563ba32f30c26559b97adc416496046cf5d830904624",
+    "tests/verify_ini_destructor_x86.py": "a79338e3c833cef0dcd74ec49431200bacf257503de435c4eb1dcc0605839f57"
+  },
+  "external_dependencies": "MSVCP60 COW and MSVCRT heap modeled",
+  "not_verified": [
+    "Native CRT and exception unwinding",
+    "External string helper call counts",
+    "Exact instruction matching"
+  ]
+}

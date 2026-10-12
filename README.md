@@ -207,3 +207,7 @@ The default INI reader constructor is reconstructed with its selective field
 initialization and address-derived opaque allocator bytes. 72 differential calls
 verify the complete object footprint and constructor return ABI across address,
 alignment and prior-memory variations.
+
+The INI reader destructor now releases both file subobjects in the original
+binary-then-text order, independently of mode. 50 differential cases compare
+complete object state, COW ownership and release events under CRT/OS models.

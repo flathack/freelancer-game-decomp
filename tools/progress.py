@@ -71,6 +71,8 @@ def main():
     reader_wide_current=all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in reader_wide['source_hashes'].items())
     reader_ctor=json.loads((A/'ini-constructor-x86-behavior.json').read_text())
     reader_ctor_current=all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in reader_ctor['source_hashes'].items())
+    reader_dtor=json.loads((A/'ini-destructor-x86-behavior.json').read_text())
+    reader_dtor_current=all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in reader_dtor['source_hashes'].items())
     report=dict(code_modules=len(rows),raw_exported_modules=sum(r['status']=='raw_exported' for r in rows),
                 raw_decompiled_functions=sum(r.get('raw_decompiled',0) for r in rows),
                 raw_failed_functions=sum(r.get('failed',0) for r in rows),
@@ -97,6 +99,7 @@ def main():
                 ini_reader_is_number=dict(source_current=reader_number_current,calls=reader_number['differential_calls'],native_tolower_verified=False),
                 ini_reader_wstring=dict(source_current=reader_wide_current,calls=reader_wide['wide_calls'],conversion_modeled=True),
                 ini_reader_constructor=dict(source_current=reader_ctor_current,calls=reader_ctor['differential_calls'],crt_modeled=True),
+                ini_reader_destructor=dict(source_current=reader_dtor_current,calls=reader_dtor['differential_calls'],crt_modeled=True),
                 complete_game_verified=False,modules=rows)
     (A/'coverage-summary.json').write_text(json.dumps({r['module']:r['coverage_audit'] for r in rows if 'coverage_audit' in r},indent=2)+'\n')
     (A/'progress.json').write_text(json.dumps(report,indent=2)+'\n')
@@ -123,6 +126,7 @@ def main():
            f"Reader number predicate: {reader_number['differential_calls']} calls; native locale remains unverified.",
            f"Reader wide strings: {reader_wide['wide_calls']} conversions; native CRT locale remains unverified.",
            f"Reader construction: {reader_ctor['differential_calls']} complete object/ABI comparisons; native CRT remains unverified.",
+           f"Reader destruction: {reader_dtor['differential_calls']} full-state/ownership cases; native CRT remains unverified.",
            'The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.',
            '', '| Module | Raw export status | Raw functions | Failed |','|---|---|---:|---:|']
     for row in rows: lines.append(f"| {pathlib.Path(row['module']).name} | {row['status']} | {row.get('raw_decompiled','—')} | {row.get('failed','—')} |")
