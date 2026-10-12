@@ -65,7 +65,7 @@ def main():
         return uc.reg_read(UC_X86_REG_EAX)
     libpath=ROOT/'build/create_id.so'
     libpath.parent.mkdir(exist_ok=True)
-    subprocess.run(['clang++','-O2','-shared','-fPIC',str(ROOT/'src/create_id.cpp'),'-o',str(libpath)],check=True)
+    subprocess.run(['clang++','-O2','-shared','-fPIC','-DFLID_TESTING',str(ROOT/'src/create_id.cpp'),str(ROOT/'tests/flid_native_runtime.cpp'),'-o',str(libpath)],check=True)
     lib=ctypes.CDLL(str(libpath))
     reconstructed=lib.create_id_reconstructed
     reconstructed.argtypes=[ctypes.c_char_p]
@@ -79,14 +79,27 @@ def main():
         expected=original(value)
         actual=reconstructed(value)
         if expected != actual: raise AssertionError((value,hex(expected),hex(actual)))
+        lib.flid_test_state_ptr.restype=ctypes.c_void_p
+        native_state=lib.flid_test_state_ptr()
+        original_maker=word(0x63fbf68)
+        original_state=word(original_maker)
+        expected_state=bytes(uc.mem_read(original_state,0x41c))
+        actual_state=ctypes.string_at(native_state,0x41c)
+        # The original leaves bytes 0x416..0x417 (alignment padding) unwritten.
+        if expected_state[:0x416]!=actual_state[:0x416] or expected_state[0x418:]!=actual_state[0x418:]:
+            raise AssertionError('CRC table/configuration/remainder mismatch')
         rows.append(dict(input_hex=value.hex() if value is not None else None,result=hex(actual)))
     assert allocations==[8,0x41c],allocations
     report=dict(status='passed',cases=len(rows),original_sha256=HASH,
                 source_sha256=hashlib.sha256((ROOT/'src/create_id.cpp').read_bytes()).hexdigest(),
+                header_sha256=hashlib.sha256((ROOT/'src/cfl_id_maker.hpp').read_bytes()).hexdigest(),
+                crc_state_checks=len(rows),
                 domain='Null or zero-terminated ASCII strings of length 0..255; successful allocations.',
-                mocks=['malloc at VA 0x06391abc','ASCII _strlwr via IAT VA 0x06399350'],
+                mocks=['operator new at VA 0x06391abc','ASCII _strlwr via IAT VA 0x06399350'],
                 not_verified=['Machine-code matching','CRT non-ASCII/locale behavior','Allocation failure/logging'],
                 vectors=rows)
     (ROOT/'analysis/createid-behavior.json').write_text(json.dumps(report,indent=2)+'\n')
+    lib.flid_shutdown_reconstructed()
+    assert not lib.flid_test_state_ptr()
     print(f'PASS: {len(rows)} cases against original x86 instructions, allocation sizes {allocations}')
 if __name__=='__main__': main()

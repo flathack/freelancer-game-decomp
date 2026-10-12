@@ -8,6 +8,24 @@
     "other_unclassified_bytes": 2041,
     "full_function_discovery_proven": false
   },
+  "Freelancer.exe": {
+    "original_sha256": "ea4cb797acb1a31a7841f67200fb022a056af4df7b2f7216f8ae6424cb6d1fe9",
+    "instruction_rows_verified": 543933,
+    "instruction_bytes_outside_functions": 8726,
+    "unclassified_bytes": 68720,
+    "padding_candidate_bytes": 58989,
+    "other_unclassified_bytes": 9731,
+    "full_function_discovery_proven": false
+  },
+  "alchemy.dll": {
+    "original_sha256": "9afdfdd54f3550fe499646e81cbd02519fa9cd9003e22a009c4b0a7eed042e79",
+    "instruction_rows_verified": 80664,
+    "instruction_bytes_outside_functions": 4777,
+    "unclassified_bytes": 49086,
+    "padding_candidate_bytes": 26122,
+    "other_unclassified_bytes": 22964,
+    "full_function_discovery_proven": false
+  },
   "common.dll": {
     "original_sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
     "instruction_rows_verified": 400579,
@@ -15,6 +33,276 @@
     "unclassified_bytes": 55016,
     "padding_candidate_bytes": 53812,
     "other_unclassified_bytes": 1204,
+    "full_function_discovery_proven": false
+  },
+  "dacom.dll": {
+    "original_sha256": "1c2c809d8710a1cbedf37be750d03f1464475d7b790652b5a914b392bf297abb",
+    "instruction_rows_verified": 7143,
+    "instruction_bytes_outside_functions": 26,
+    "unclassified_bytes": 1211,
+    "padding_candidate_bytes": 1149,
+    "other_unclassified_bytes": 62,
+    "full_function_discovery_proven": false
+  },
+  "dalib.dll": {
+    "original_sha256": "499f47184c2c376cdfb5aafa976047f41a143c214c0ccf0af7ed3f95dce4ecf4",
+    "instruction_rows_verified": 8048,
+    "instruction_bytes_outside_functions": 3,
+    "unclassified_bytes": 1464,
+    "padding_candidate_bytes": 1454,
+    "other_unclassified_bytes": 10,
+    "full_function_discovery_proven": false
+  },
+  "debuglib.dll": {
+    "original_sha256": "aec36ec03289c1f4a23e646ac68a19047a39e82ff8bda20443e2c4a34ddd6d72",
+    "instruction_rows_verified": 21722,
+    "instruction_bytes_outside_functions": 509,
+    "unclassified_bytes": 5591,
+    "padding_candidate_bytes": 5019,
+    "other_unclassified_bytes": 572,
+    "full_function_discovery_proven": false
+  },
+  "deformable2.dll": {
+    "original_sha256": "5c88486ff351c93c5d6d063c08df853afdf74fece4679ef998a9524abf0ed596",
+    "instruction_rows_verified": 20549,
+    "instruction_bytes_outside_functions": 662,
+    "unclassified_bytes": 3884,
+    "padding_candidate_bytes": 2653,
+    "other_unclassified_bytes": 1231,
+    "full_function_discovery_proven": false
+  },
+  "dw15.exe": {
+    "original_sha256": "56d34a47a98e9e66634120c1a0fcca9efb037dd1f43cfbac060d606ae18b8103",
+    "instruction_rows_verified": 39224,
+    "instruction_bytes_outside_functions": 314,
+    "unclassified_bytes": 17735,
+    "padding_candidate_bytes": 616,
+    "other_unclassified_bytes": 17119,
+    "full_function_discovery_proven": false
+  },
+  "ebueula.dll": {
+    "original_sha256": "096d52382eed8bc9c6d09562830ad6c8fadc72e8e28cf4b82cf81a68ae4abd39",
+    "instruction_rows_verified": 9765,
+    "instruction_bytes_outside_functions": 24,
+    "unclassified_bytes": 1543,
+    "padding_candidate_bytes": 898,
+    "other_unclassified_bytes": 645,
+    "full_function_discovery_proven": false
+  },
+  "engbase.dll": {
+    "original_sha256": "a40b95eb0a9aad2df04386696bead71f0577ffb000a9ad389a7ddfdc5ba0e489",
+    "instruction_rows_verified": 32392,
+    "instruction_bytes_outside_functions": 1003,
+    "unclassified_bytes": 7077,
+    "padding_candidate_bytes": 6966,
+    "other_unclassified_bytes": 111,
+    "full_function_discovery_proven": false
+  },
+  "flmaterials.dll": {
+    "original_sha256": "74c7a48539e65af324bb6f5d838a4272bd230d8e35bd206e5d62cae84a6bb62d",
+    "instruction_rows_verified": 18919,
+    "instruction_bytes_outside_functions": 807,
+    "unclassified_bytes": 10817,
+    "padding_candidate_bytes": 2527,
+    "other_unclassified_bytes": 8290,
+    "full_function_discovery_proven": false
+  },
+  "flserver.exe": {
+    "original_sha256": "4a65cd77b74d5f3b410adade636ba5549f649cfb0e67bfe1507df3b2265eed8b",
+    "instruction_rows_verified": 27687,
+    "instruction_bytes_outside_functions": 2004,
+    "unclassified_bytes": 19725,
+    "padding_candidate_bytes": 6666,
+    "other_unclassified_bytes": 13059,
+    "full_function_discovery_proven": false
+  },
+  "gundll.dll": {
+    "original_sha256": "1e441bc27cf7779d893dc59d2cf52b39c28dee17172f0ae08edd183e481b2410",
+    "instruction_rows_verified": 87614,
+    "instruction_bytes_outside_functions": 367,
+    "unclassified_bytes": 42583,
+    "padding_candidate_bytes": 11843,
+    "other_unclassified_bytes": 30740,
+    "full_function_discovery_proven": false
+  },
+  "imeui.dll": {
+    "original_sha256": "29f4f160a5ec1cdc9a7a98123b91c97924c5eecd6656937fb4c83ccb3978b67c",
+    "instruction_rows_verified": 7152,
+    "instruction_bytes_outside_functions": 236,
+    "unclassified_bytes": 2107,
+    "padding_candidate_bytes": 2081,
+    "other_unclassified_bytes": 26,
+    "full_function_discovery_proven": false
+  },
+  "luaprofile.dll": {
+    "original_sha256": "fc2e4e511db6986257e3b7ae8075bb4a71fdab636983bf0ca00540f1462d98f3",
+    "instruction_rows_verified": 14741,
+    "instruction_bytes_outside_functions": 155,
+    "unclassified_bytes": 3371,
+    "padding_candidate_bytes": 3338,
+    "other_unclassified_bytes": 33,
+    "full_function_discovery_proven": false
+  },
+  "movie.dll": {
+    "original_sha256": "93e36f1b2e96d448a4280e16c7f1f451ed869dfa384c7dd964c5befbd9b9e2cc",
+    "instruction_rows_verified": 33155,
+    "instruction_bytes_outside_functions": 160,
+    "unclassified_bytes": 10620,
+    "padding_candidate_bytes": 2044,
+    "other_unclassified_bytes": 8576,
+    "full_function_discovery_proven": false
+  },
+  "readfile.dll": {
+    "original_sha256": "57d2540bd9a9bc1a09b26c5c5c27116f9a4e6712d3feacd7c5a08a11e3a2f4a0",
+    "instruction_rows_verified": 10156,
+    "instruction_bytes_outside_functions": 1577,
+    "unclassified_bytes": 1914,
+    "padding_candidate_bytes": 1914,
+    "other_unclassified_bytes": 0,
+    "full_function_discovery_proven": false
+  },
+  "remoteclient.dll": {
+    "original_sha256": "d35d7c4058dfe3c4b43f30a36f0d83dc6d45e8c3a4fb2d6b62aee03485c8bb23",
+    "instruction_rows_verified": 78452,
+    "instruction_bytes_outside_functions": 4628,
+    "unclassified_bytes": 23814,
+    "padding_candidate_bytes": 16368,
+    "other_unclassified_bytes": 7446,
+    "full_function_discovery_proven": false
+  },
+  "remoteserver.dll": {
+    "original_sha256": "ffc0f1025c18b99f7c5bb965d3a12da33ac4995d5276d7abcffc940b0cad5c3f",
+    "instruction_rows_verified": 77985,
+    "instruction_bytes_outside_functions": 3571,
+    "unclassified_bytes": 23492,
+    "padding_candidate_bytes": 15269,
+    "other_unclassified_bytes": 8223,
+    "full_function_discovery_proven": false
+  },
+  "rendcomp.dll": {
+    "original_sha256": "16ea0f6b9d16cd577909ed8d54406d2642687222aebe3d7cb30adf46d0b52852",
+    "instruction_rows_verified": 26666,
+    "instruction_bytes_outside_functions": 1124,
+    "unclassified_bytes": 7577,
+    "padding_candidate_bytes": 7140,
+    "other_unclassified_bytes": 437,
+    "full_function_discovery_proven": false
+  },
+  "resources.dll": {
+    "original_sha256": "f3c5e53be89b8dbf681a8317fc208aa7454413d4f0c2aad9cc69e634b673729e",
+    "instruction_rows_verified": 8,
+    "instruction_bytes_outside_functions": 0,
+    "unclassified_bytes": 4073,
+    "padding_candidate_bytes": 4073,
+    "other_unclassified_bytes": 0,
+    "full_function_discovery_proven": false
+  },
+  "rp8.dll": {
+    "original_sha256": "9a1ce14699f27aec5339b4fe7c786039fb83db76ab7280c78549ad822ad2328a",
+    "instruction_rows_verified": 113844,
+    "instruction_bytes_outside_functions": 9091,
+    "unclassified_bytes": 10805,
+    "padding_candidate_bytes": 4655,
+    "other_unclassified_bytes": 6150,
+    "full_function_discovery_proven": false
+  },
+  "rpclocal.dll": {
+    "original_sha256": "84299cce3144d6308739869a804ef5024022df086b8104f19754f48e15ea08cd",
+    "instruction_rows_verified": 66874,
+    "instruction_bytes_outside_functions": 2593,
+    "unclassified_bytes": 13690,
+    "padding_candidate_bytes": 13526,
+    "other_unclassified_bytes": 164,
+    "full_function_discovery_proven": false
+  },
+  "server.dll": {
+    "original_sha256": "9f4c1ebdcdb4784cbe21e4dd419592e669653bde63835ada41bf9dec947abbd8",
+    "instruction_rows_verified": 166503,
+    "instruction_bytes_outside_functions": 1171,
+    "unclassified_bytes": 22096,
+    "padding_candidate_bytes": 19951,
+    "other_unclassified_bytes": 2145,
+    "full_function_discovery_proven": false
+  },
+  "shading.dll": {
+    "original_sha256": "3c590a134b2f0bb4d6aecfbbca59dba58733017127705b25af535c2c7bfbc15d",
+    "instruction_rows_verified": 43671,
+    "instruction_bytes_outside_functions": 1360,
+    "unclassified_bytes": 8176,
+    "padding_candidate_bytes": 4746,
+    "other_unclassified_bytes": 3430,
+    "full_function_discovery_proven": false
+  },
+  "soundmanager.dll": {
+    "original_sha256": "fa3ac6ed980ba5b17235e8b7b61c78d55bbd6e387a7949d2451121c6999f202d",
+    "instruction_rows_verified": 10174,
+    "instruction_bytes_outside_functions": 239,
+    "unclassified_bytes": 1728,
+    "padding_candidate_bytes": 1231,
+    "other_unclassified_bytes": 497,
+    "full_function_discovery_proven": false
+  },
+  "soundstreamer.dll": {
+    "original_sha256": "ef23b1b9ce21f4446f52078d7b34817ab2dfe87a0706a40b223ad847ca73d4da",
+    "instruction_rows_verified": 15226,
+    "instruction_bytes_outside_functions": 191,
+    "unclassified_bytes": 1907,
+    "padding_candidate_bytes": 1549,
+    "other_unclassified_bytes": 358,
+    "full_function_discovery_proven": false
+  },
+  "system.dll": {
+    "original_sha256": "e5eb87db7222349a09ad2f44bfd1fd93b0c7a3c983c7cf8a059b1e6cff96c9e7",
+    "instruction_rows_verified": 1079,
+    "instruction_bytes_outside_functions": 60,
+    "unclassified_bytes": 268,
+    "padding_candidate_bytes": 268,
+    "other_unclassified_bytes": 0,
+    "full_function_discovery_proven": false
+  },
+  "thorn.dll": {
+    "original_sha256": "1773612b12bfd5e0bf28d0f9f02a30bd57e8f5dbdbb11991d049eaf76456a92c",
+    "instruction_rows_verified": 71732,
+    "instruction_bytes_outside_functions": 2208,
+    "unclassified_bytes": 22954,
+    "padding_candidate_bytes": 13055,
+    "other_unclassified_bytes": 9899,
+    "full_function_discovery_proven": false
+  },
+  "unicows.dll": {
+    "original_sha256": "f08fd038cfab2d26c0c687f17a4bc342a5403ff051c06ae1b17f810ef569021c",
+    "instruction_rows_verified": 58068,
+    "instruction_bytes_outside_functions": 279,
+    "unclassified_bytes": 9612,
+    "padding_candidate_bytes": 1194,
+    "other_unclassified_bytes": 8418,
+    "full_function_discovery_proven": false
+  },
+  "x86math.dll": {
+    "original_sha256": "e4b616c12e2147fbf2400d8e022a2efa2cb282137fe3c943a49bde0d4f4f9197",
+    "instruction_rows_verified": 2200,
+    "instruction_bytes_outside_functions": 121,
+    "unclassified_bytes": 646,
+    "padding_candidate_bytes": 646,
+    "other_unclassified_bytes": 0,
+    "full_function_discovery_proven": false
+  },
+  "ximage.dll": {
+    "original_sha256": "fb6e5122549f4e0eab94637a2ce611758f2eda3c00f79d127e3668194d5d4b51",
+    "instruction_rows_verified": 2297,
+    "instruction_bytes_outside_functions": 16,
+    "unclassified_bytes": 510,
+    "padding_candidate_bytes": 510,
+    "other_unclassified_bytes": 0,
+    "full_function_discovery_proven": false
+  },
+  "zlib.dll": {
+    "original_sha256": "105280995cd5746078d67b8651dfe4ad2abcd532d7ad528d3100c535b0b538af",
+    "instruction_rows_verified": 12234,
+    "instruction_bytes_outside_functions": 74,
+    "unclassified_bytes": 2869,
+    "padding_candidate_bytes": 1509,
+    "other_unclassified_bytes": 1360,
     "full_function_discovery_proven": false
   }
 }

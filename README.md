@@ -121,3 +121,32 @@ Ergebnisse fest. Padding-Kandidaten sind noch kein Beweis für ungenutzte Bytes.
 Ein Export ohne Decompiler-Abbruch kann weiterhin Warnungen, falsche Typen und
 fehlende Funktionen enthalten. Insbesondere stellen weder erfolgreiche Roh-
 Exports noch hohe Instruktionsabdeckung einen vollständigen Spiel-Build dar.
+
+## Kompilierte CFLIDMaker-Klasse
+
+`src/cfl_id_maker.hpp` und `src/create_id.cpp` enthalten jetzt den vollständigen
+hier untersuchten Klassenbereich einschließlich Singleton, CRC-Zustand und
+Lebenszyklus. `tests/verify_flid_x86.py` baut eine x86-Windows-Test-DLL und prüft
+ihre Methoden gegen die Originalmethoden im Emulator. Die produktiven CRT- und
+Logging-Bindungen sind noch offen; die Test-DLL ersetzt nicht `common.dll`.
+
+```bash
+.venv/bin/python tests/verify_flid_x86.py
+```
+
+505 Hash/Zustandsfälle, 28 Zählerfälle, 400 Byte-Update-Fälle und Lebenszyklus- sowie
+Allokationsfehlerprüfungen bestehen. Details stehen in `analysis/createid-notes.md`
+und `analysis/flid-x86-behavior.json`. Das wird als Verhaltens- und ABI-Prüfung
+gezählt, nicht als exaktes Maschinencode-Matching.
+
+Der Roh-Export und die Ergänzungsanalyse sind für alle 34 Module abgeschlossen.
+Es gibt momentan 54.832 rohe Funktionsausgaben und keinen Decompiler-Abbruch.
+13.450 Funktionen enthalten jedoch explizite Decompiler-Warnungen; diese sind
+in `analysis/reconstruction-backlog.json` verzeichnet. `tools/reconstruction_backlog.py`
+priorisiert substanzielle Funktionen vor Import-/Sprungthunks und berücksichtigt
+die Zahl ihrer Aufrufer. Das sind Review-Signale, keine vollständige Fehlerliste.
+
+Eine falsche Ghidra-Funktionsgrenze bei VA `0x004b6425` in Freelancer.exe wurde
+anhand der Originalbytes korrigiert: Die tatsächliche Instruktion beginnt bei
+`0x004b6420`, und `0x004b6425` liegt in deren Adressoperand. Das baselinegebundene
+Reparaturskript und die Roh-Export-Metadaten halten diese Änderung fest.

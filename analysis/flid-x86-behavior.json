@@ -1,0 +1,78 @@
+{
+  "status": "passed",
+  "original_sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
+  "compiled_dll_sha256": "81097a48c3517b20ffb4163903587174a2f803c59013e2231fea973322cbaf13",
+  "source_hashes": {
+    "src/create_id.cpp": "2e8f11d2cbcc06d45c8784c21c750250431b7c52c15c4e372063e9897baec426",
+    "src/cfl_id_maker.hpp": "292eb15b62827ec6e14f2c3209cb2c2bd613ea9630a75fac912438cabf94a192",
+    "tests/fixtures/flid_x86_runtime.cpp": "80b7f9d7d13b908ca60044ac1ae331cb1e28f7ee2e0830feba5f356d3e7d0f63"
+  },
+  "hash_and_full_crc_state_cases": 505,
+  "object_counter_cases": 28,
+  "byte_update_cases": 400,
+  "lifetime_checks": [
+    "constructor",
+    "shallow assignment",
+    "cached Initialize",
+    "Initialize allocation failure and retry",
+    "destructor",
+    "Shutdown free order",
+    "idempotent Shutdown",
+    "GetInstance allocation failure and retry"
+  ],
+  "commands": [
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/src/create_id.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/cfl_id_maker.obj"
+    ],
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/tests/fixtures/flid_x86_runtime.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/flid_x86_runtime.obj"
+    ],
+    [
+      "lld-link",
+      "/dll",
+      "/noentry",
+      "/nodefaultlib",
+      "/base:0x10000000",
+      "/out:/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/cfl_id_maker.dll",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/cfl_id_maker.obj",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/flid_x86_runtime.obj",
+      "/export:?CreateID@@YAIPBD@Z",
+      "/export:?Initialize@CFLIDMaker@@QAEHXZ",
+      "/export:?CreateStaticID@CFLIDMaker@@QAEIPBD@Z",
+      "/export:?GetInstance@CFLIDMaker@@SAPAV1@XZ",
+      "/export:?Shutdown@CFLIDMaker@@SAXXZ",
+      "/export:?AllocateObjectID@CFLIDMaker@@QAEIXZ",
+      "/export:?m_pTheMaker@CFLIDMaker@@2PAV1@A,DATA",
+      "/export:??4CFLIDMaker@@QAEAAV0@ABV0@@Z",
+      "/export:??0CFLIDMaker@@IAE@XZ",
+      "/export:??1CFLIDMaker@@IAE@XZ",
+      "/export:?Update@FLIDCRCState@@QAEXE@Z"
+    ]
+  ],
+  "mocks": [
+    "Allocator/deallocator",
+    "ASCII _strlwr"
+  ],
+  "not_verified": [
+    "Exact instruction matching",
+    "CRT non-ASCII/locale behavior",
+    "CreateID allocation-failure logging",
+    "Complete game linking/runtime"
+  ]
+}

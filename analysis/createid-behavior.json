@@ -2,10 +2,12 @@
   "status": "passed",
   "cases": 636,
   "original_sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
-  "source_sha256": "1a797ba29b3b2913798fce6b3f24d52740016868a535efc2ad9e18f5e4e13127",
+  "source_sha256": "2e8f11d2cbcc06d45c8784c21c750250431b7c52c15c4e372063e9897baec426",
+  "header_sha256": "292eb15b62827ec6e14f2c3209cb2c2bd613ea9630a75fac912438cabf94a192",
+  "crc_state_checks": 636,
   "domain": "Null or zero-terminated ASCII strings of length 0..255; successful allocations.",
   "mocks": [
-    "malloc at VA 0x06391abc",
+    "operator new at VA 0x06391abc",
     "ASCII _strlwr via IAT VA 0x06399350"
   ],
   "not_verified": [

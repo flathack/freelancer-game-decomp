@@ -27,11 +27,16 @@ def main():
     current_source=(A/'createid-behavior.json').exists()
     behavior=json.loads((A/'createid-behavior.json').read_text()) if current_source else {}
     current_source=current_source and behavior.get('source_sha256')==hashlib.sha256((ROOT/'src/create_id.cpp').read_bytes()).hexdigest()
+    if current_source and behavior.get('header_sha256'):
+        current_source=behavior['header_sha256']==hashlib.sha256((ROOT/'src/cfl_id_maker.hpp').read_bytes()).hexdigest()
+    x86=json.loads((A/'flid-x86-behavior.json').read_text()) if (A/'flid-x86-behavior.json').exists() else {}
+    x86_current=bool(x86) and all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in x86.get('source_hashes',{}).items())
     report=dict(code_modules=len(rows),raw_exported_modules=sum(r['status']=='raw_exported' for r in rows),
                 raw_decompiled_functions=sum(r.get('raw_decompiled',0) for r in rows),
                 raw_failed_functions=sum(r.get('failed',0) for r in rows),
                 last_machine_code_check=dict(functions=matches['matched_functions'],bytes=matches['verified_code_bytes']),
                 createid_behavior=dict(source_current=current_source,cases=behavior.get('cases',0),domain=behavior.get('domain')),
+                flid_x86_behavior=dict(source_current=x86_current,hash_state_cases=x86.get('hash_and_full_crc_state_cases',0),counter_cases=x86.get('object_counter_cases',0),byte_update_cases=x86.get('byte_update_cases',0)),
                 complete_game_verified=False,modules=rows)
     (A/'coverage-summary.json').write_text(json.dumps({r['module']:r['coverage_audit'] for r in rows if 'coverage_audit' in r},indent=2)+'\n')
     (A/'progress.json').write_text(json.dumps(report,indent=2)+'\n')
@@ -39,7 +44,8 @@ def main():
            f"Raw exports: {report['raw_exported_modules']} of {len(rows)} code-bearing installation modules.",
            f"Raw function outputs: {report['raw_decompiled_functions']}; failed decompilations: {report['raw_failed_functions']}.",
            f"Last exact machine-code check: {matches['matched_functions']} functions / {matches['verified_code_bytes']} bytes.",
-           f"CreateID: {behavior.get('cases',0)} differential cases; source current: {current_source}.",'',
+           f"CreateID: {behavior.get('cases',0)} differential cases; source current: {current_source}.",
+           f"Compiled x86 CFLIDMaker: {x86.get('hash_and_full_crc_state_cases',0)} hash/state, {x86.get('object_counter_cases',0)} counter and {x86.get('byte_update_cases',0)} update cases; source current: {x86_current}.",'',
            'The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.',
            '', '| Module | Raw export status | Raw functions | Failed |','|---|---|---:|---:|']
     for row in rows: lines.append(f"| {pathlib.Path(row['module']).name} | {row['status']} | {row.get('raw_decompiled','—')} | {row.get('failed','—')} |")
