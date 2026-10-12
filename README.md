@@ -175,3 +175,8 @@ filename lookup, and line-number lookup, including the binary-mode warning.
 `tests/verify_ini_lifetime_x86.py` compares 144 calls against original x86
 instructions (complete object state, metadata and resource/diagnostic effects).
 This is behavioral reconstruction; complete game reconstruction remains unfinished.
+
+`INI_Reader::open_memory` now copies and takes ownership of the input through the
+reconstructed FileMap. Its original unconditional text-mode selection and limited
+parser reset are preserved. 320 differential calls pass, including BINI-looking
+input, existing resources, shared COW names, invalid arguments and copy boundaries.

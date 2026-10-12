@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "original_sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
+  "compiled_dll_sha256": "f20315b8e843bdff927cacae60d1252351ad2cc416445d5c61e3913113033da1",
+  "differential_calls": 320,
+  "input_cases": 16,
+  "method": "?open_memory@INI_Reader@@QAE_NPBDI@Z",
+  "source_hashes": {
+    "src/ini_reader_lifetime.cpp": "9e5dd4463dd327f0b9ad08bf43ecf8f6bf807da417670e3eeed1197f68cab63a",
+    "src/ini_reader.hpp": "365c6dbe053cb34b29b04fe2d00b67edb5544538109799d20e12860a549e4b98",
+    "src/file_map.cpp": "5e6a162191a8e353a3eb563ba32f30c26559b97adc416496046cf5d830904624",
+    "tests/verify_ini_open_memory_x86.py": "91ac7e079b703fe0f60a6fed471deab0636075bcfaad67b4748a7ad7c1caac34"
+  },
+  "external_dependencies": "MSVCP60 COW and MSVCRT heap modeled; no native Windows execution",
+  "not_verified": [
+    "Allocation failure exception/access fault",
+    "Exact instruction matching"
+  ]
+}

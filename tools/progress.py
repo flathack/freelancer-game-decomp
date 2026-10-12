@@ -59,6 +59,10 @@ def main():
     textvalues_current=bool(textvalues) and all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in textvalues.get('source_hashes',{}).items())
     numbers=json.loads((A/'parse-number-x86-behavior.json').read_text()) if (A/'parse-number-x86-behavior.json').exists() else {}
     numbers_current=bool(numbers) and all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in numbers.get('source_hashes',{}).items())
+    reader_lifetime=json.loads((A/'ini-lifetime-x86-behavior.json').read_text())
+    reader_memory=json.loads((A/'ini-open-memory-x86-behavior.json').read_text())
+    reader_lifetime_current=all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in reader_lifetime['source_hashes'].items())
+    reader_memory_current=all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in reader_memory['source_hashes'].items())
     report=dict(code_modules=len(rows),raw_exported_modules=sum(r['status']=='raw_exported' for r in rows),
                 raw_decompiled_functions=sum(r.get('raw_decompiled',0) for r in rows),
                 raw_failed_functions=sum(r.get('failed',0) for r in rows),
@@ -79,6 +83,8 @@ def main():
                 text_header_x86_behavior=dict(source_current=headers_current,calls=headers.get('differential_calls',0),inputs=headers.get('input_cases',0)),
                 text_value_x86_behavior=dict(source_current=textvalues_current,calls=textvalues.get('differential_calls',0),integration_calls=textvalues.get('integration_calls',0),real_files=len(textvalues.get('real_text_files',[])),sections=textvalues.get('real_sections',0),entries=textvalues.get('real_entries',0)),
                 parse_number_x86_behavior=dict(source_current=numbers_current,calls=numbers.get('differential_calls',0),temporary_x87_arithmetic_boundary=True,external_crt_modeled=True),
+                ini_reader_lifetime=dict(source_current=reader_lifetime_current,calls=reader_lifetime['differential_calls']),
+                ini_reader_open_memory=dict(source_current=reader_memory_current,calls=reader_memory['differential_calls'],external_crt_modeled=True),
                 complete_game_verified=False,modules=rows)
     (A/'coverage-summary.json').write_text(json.dumps({r['module']:r['coverage_audit'] for r in rows if 'coverage_audit' in r},indent=2)+'\n')
     (A/'progress.json').write_text(json.dumps(report,indent=2)+'\n')
@@ -100,6 +106,7 @@ def main():
            f"Text lines/headers: {lines.get('differential_calls',0)} / {headers.get('differential_calls',0)} comparisons; text lifecycle remains open.",
            f"Text entries: {textvalues.get('differential_calls',0)} direct + {textvalues.get('integration_calls',0)} integrated calls; native runtime/lifecycle remain open.",
            f"ParseNumber: {numbers.get('differential_calls',0)} full-x87 comparisons; temporary arithmetic assembly boundary.",'',
+           f"Reader close/metadata: {reader_lifetime['differential_calls']} calls; memory open: {reader_memory['differential_calls']} calls; native CRT/file open remains unverified.",
            'The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.',
            '', '| Module | Raw export status | Raw functions | Failed |','|---|---|---:|---:|']
     for row in rows: lines.append(f"| {pathlib.Path(row['module']).name} | {row['status']} | {row.get('raw_decompiled','—')} | {row.get('failed','—')} |")

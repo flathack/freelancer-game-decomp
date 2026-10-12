@@ -17,3 +17,20 @@ resource release order/arguments, and diagnostic content. String growth and
 memmove are controlled dependency models; their invocation counts are not
 compared. Reader-specific shared COW name paths and native CRT/Win32 execution
 remain unverified. No byte-identical matching claim is made.
+
+## Memory open
+
+The export at 0x0630fce0 is reconstructed as well. A temporary FileMap copies
+input bytes, then its data ownership transfers into the text FileMap. Successful
+calls always switch to text mode, reset line_number and text_header[0], and
+preserve all other parser fields, including the binary FileMap. Previously owned
+text handles/data are overwritten without release, as in the original. Null input
+or zero length returns false without modifying the reader. An allocation failure
+fault/exception remains outside the successful-path comparison.
+
+320 differential calls cover both prior modes, five COW filename states, sixteen
+payloads (including BINI, embedded NULs, every byte, word-copy boundaries and
+4097 bytes), and null input. Full object bytes, copied payload, filenames,
+allocation ownership, reference-count mutations, and release events agree under
+the controlled CRT models. This does not establish native CRT fidelity or byte
+matching.
