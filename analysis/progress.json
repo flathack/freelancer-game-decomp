@@ -18,6 +18,14 @@
     "counter_cases": 28,
     "byte_update_cases": 400
   },
+  "equipdesc_x86_behavior": {
+    "source_current": true,
+    "passing_calls": 2406,
+    "method_count": 26,
+    "cargo_cases": 200,
+    "cargo_precision_differences": 0,
+    "temporary_x87_assembly_shim": true
+  },
   "complete_game_verified": false,
   "modules": [
     {

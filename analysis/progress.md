@@ -5,6 +5,7 @@ Raw function outputs: 54832; failed decompilations: 0.
 Last exact machine-code check: 2 functions / 14 bytes.
 CreateID: 636 differential cases; source current: True.
 Compiled x86 CFLIDMaker: 505 hash/state, 28 counter and 400 update cases; source current: True.
+EquipDesc: 2406 ABI/state cases and 200 full-x87 cargo cases; temporary assembly ABI shim; source current: True.
 
 The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.
 

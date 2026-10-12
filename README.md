@@ -150,3 +150,20 @@ Eine falsche Ghidra-Funktionsgrenze bei VA `0x004b6425` in Freelancer.exe wurde
 anhand der Originalbytes korrigiert: Die tatsächliche Instruktion beginnt bei
 `0x004b6420`, und `0x004b6425` liegt in deren Adressoperand. Das baselinegebundene
 Reparaturskript und die Roh-Export-Metadaten halten diese Änderung fest.
+
+## Equipment descriptor
+
+`src/equip_desc.hpp` und `src/equip_desc.cpp` rekonstruieren die 26 exportierten
+Methoden von EquipDesc und dessen 32-Byte-x86-Layout. Der Emulatorvergleich besteht
+für 2.406 ABI-/Speicheränderungsfälle und 200 Frachtraumfälle mit vollständig
+verglichenen 80-Bit-x87-Rückgabewerten.
+
+```bash
+.venv/bin/python tests/verify_equip_desc_x86.py
+```
+
+Für die originale erweiterte x87-Rückgabe ist im Clang-x86-Build derzeit ein kleiner
+Assembly-ABI-Übergang erforderlich. Dieser zählt als vorläufige Rekonstruktion,
+nicht als vollständiger C++- oder Maschinencode-Match. CacheString-Interning und die
+Equipment-Datenbank sind im Test kontrollierte Abhängigkeiten und noch offen.
+Details: `analysis/equipdesc-notes.md` und `analysis/equipdesc-x86-behavior.json`.
