@@ -134,9 +134,14 @@
     "overflow_cases": 21
   },
   "ini_reader_is_number": {
-    "source_current": true,
+    "source_current": false,
     "calls": 10716,
     "native_tolower_verified": false
+  },
+  "ini_reader_wstring": {
+    "source_current": true,
+    "calls": 840,
+    "conversion_modeled": true
   },
   "complete_game_verified": false,
   "modules": [

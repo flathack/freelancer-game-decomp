@@ -21,6 +21,7 @@ ParseNumber: 1533 full-x87 comparisons; temporary arithmetic assembly boundary.
 Reader close/metadata: 144 calls; memory open: 320 calls; native CRT/file open remains unverified.
 Reader line formatting: 847 direct calls / 2445 integrated comparisons; 21 static-buffer overflow sequences.
 Reader number predicate: 10716 calls; native locale remains unverified.
+Reader wide strings: 840 conversions; native CRT locale remains unverified.
 The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.
 
 | Module | Raw export status | Raw functions | Failed |

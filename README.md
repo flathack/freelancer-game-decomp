@@ -196,3 +196,9 @@ Static storage beyond that region and text-buffer allocation extents remain open
 permissive exponent, hex-prefix and character-literal cases. 10,716 differential
 calls pass with exact signed `tolower` arguments and unchanged reader state.
 This predicate is intentionally separate from the reconstructed ParseNumber.
+
+`INI_Reader::get_value_wstring` now reconstructs text and binary wide output,
+including the original 1024/256 character limits, shared binary destination and
+ignored conversion return value. 840 wide calls plus 1577 integrated string
+checks pass under a controlled mbstowcs model; native CRT locale behavior remains
+unverified.

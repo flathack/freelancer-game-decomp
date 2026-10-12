@@ -20,6 +20,7 @@ struct INI_Reader {
     bool is_number(const char*) const;
     bool open_memory(const char*,unsigned int);
     void close();
+    const unsigned short* get_value_wstring();
     const char* get_line_ptr();
     const char* get_file_name() const;
     int get_line_num() const;
