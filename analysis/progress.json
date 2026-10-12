@@ -123,7 +123,7 @@
     "calls": 144
   },
   "ini_reader_open_memory": {
-    "source_current": true,
+    "source_current": false,
     "calls": 320,
     "external_crt_modeled": true
   },
@@ -144,19 +144,25 @@
     "conversion_modeled": true
   },
   "ini_reader_constructor": {
-    "source_current": true,
+    "source_current": false,
     "calls": 72,
     "crt_modeled": true
   },
   "ini_reader_destructor": {
-    "source_current": true,
+    "source_current": false,
     "calls": 50,
     "crt_modeled": true
   },
   "ini_reader_copy": {
-    "source_current": true,
+    "source_current": false,
     "calls": 36,
     "crt_modeled": true
+  },
+  "ini_reader_open": {
+    "source_current": true,
+    "calls": 768,
+    "real_files": 40,
+    "os_crt_modeled": true
   },
   "complete_game_verified": false,
   "modules": [

@@ -23,6 +23,7 @@ public:
     unsigned char padding_1565[3];
     struct State { unsigned char bytes[0xc08]; };
     bool is_number(const char*) const;
+    bool open(const char*,bool);
     bool open_memory(const char*,unsigned int);
     void close();
     const unsigned short* get_value_wstring();

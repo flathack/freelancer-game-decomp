@@ -216,3 +216,9 @@ INI reader copy construction and assignment now preserve original shallow file/
 BINI-pointer copying and filename COW semantics. 36 complete object/heap cases
 pass, including self-assignment. Constructor, destructor and memory-opening
 regressions also pass. Arbitrary partial overlap and native CRT remain unverified.
+
+`INI_Reader::open` now reconstructs temporary file acquisition, BINI/text
+recognition, ownership transfer, progress notification and fatal-open callback.
+768 differential calls pass over eight synthetic and 40 supplied INI inputs with
+both prior modes and modeled file/mapping failure stages. Native OS/CRT remains
+unverified.
