@@ -10,5 +10,9 @@ extern "C" void ini_values_missing_parameter(const char* header,const char* valu
     using Message=int(__stdcall*)(void*,const char*,const char*,unsigned int);
     (*reinterpret_cast<Message*>(0x6399378))(nullptr,buffer,"ERROR",0);
 }
-extern "C" void ini_values_invalid_text_bool(const char*,const char*){__builtin_trap();}
+extern "C" void ini_values_invalid_text_bool(const char* value,const char* file){
+    using Log=void(__cdecl*)(unsigned int,const char*,...);
+    Log fn=**reinterpret_cast<Log**>(0x6399028);
+    fn(0x100001,"%s(%d) : *** ERROR: Invalid bool value %s in .ini file %s\n","E:\\FL\\Scratch\\Source\\Common\\Ini.cpp",0x126,value,file);
+}
 extern "C" {int _fltused=0;}

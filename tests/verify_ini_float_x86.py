@@ -10,7 +10,7 @@ def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def main():
  assert digest(SOURCE)==HASH
  build=ROOT/'build';objects=[];commands=[]
- sources=['src/ini_reader_float.cpp','tests/fixtures/ini_float_x86_runtime.cpp','src/ini_reader_values.cpp','src/ini_reader.cpp','src/file_map.cpp','tests/fixtures/ini_values_x86_runtime.cpp','tests/fixtures/ini_reader_x86_runtime.cpp','tests/fixtures/file_map_x86_runtime.cpp']
+ sources=['src/ini_reader_float.cpp','tests/fixtures/ini_float_x86_runtime.cpp','src/ini_reader_values.cpp','src/ini_reader.cpp','src/file_map.cpp','tests/fixtures/ini_values_x86_runtime.cpp','tests/fixtures/ini_reconstructed_index_runtime.cpp','src/string_index.cpp','tests/fixtures/file_map_x86_runtime.cpp']
  for source in sources:
   out=build/(pathlib.Path(source).stem+'-values.obj');objects.append(str(out));cmd=['clang++','--target=i686-pc-windows-msvc','-O2','-fno-exceptions','-fno-rtti','-fno-builtin','-mno-sse','-mno-sse2','-c',str(ROOT/source),'-o',str(out)];subprocess.run(cmd,check=True);commands.append(cmd)
  float_symbol='?get_value_float@INI_Reader@@QAEMI@Z';dll=build/'ini_float.dll'
@@ -81,7 +81,7 @@ def main():
  for obj in [o,r]:h.write_word(obj+0x145c,0)
  pair(float_symbol,0)
  report=dict(status='passed_binary_float_cpp_abi_view',original_sha256=HASH,compiled_dll_sha256=digest(dll),
-             source_hashes={p:digest(ROOT/p) for p in sources+['src/ini_reader_values.hpp','src/ini_reader.hpp','src/file_map.hpp']},
+             source_hashes={p:digest(ROOT/p) for p in sources+['src/string_index.hpp','src/ini_reader_values.hpp','src/ini_reader.hpp','src/file_map.hpp']},
              differential_calls=calls,parameter_cases=len(cases),complete_80bit_returns_compared=True,assembly_in_getter=False,abi_implementation_return_type='double under original float member symbol',extended_atof_passthrough_cases=extended_cases,rows=rows,commands=commands,
              mocks=['atof decimal-prefix model returning binary64 in ST0','sprintf/MessageBox diagnostic model'],
              not_verified=['Real CRT/Win32 execution','Text get_value_float path','FPU exception/control-word fidelity','Malformed parameter memory access','Other typed getters','Exact instruction matching'])

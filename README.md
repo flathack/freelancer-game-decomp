@@ -109,3 +109,19 @@ buffer overflow. Formatter/MessageBox dependencies remain explicit test models.
 
 Authentic CRT formatting, indexed text parsing and arbitrary malformed/overlapping
 buffers remain unverified. See `analysis/ini-strings-notes.md` for scope.
+
+## Text parameter indexing
+
+`src/string_index.cpp` reconstructs comma selection, the original seven-bit
+whitespace classification and shared scratch-buffer writes. 3,812 comparisons
+pass, including all byte-edge cases and full buffer footprints. Text bool/int
+getters and indexed string getters now use this source implementation; their
+suites pass 2,340 and 1,577 calls respectively. Invalid text-bool logging arguments
+are also compared under explicit logging models.
+
+```bash
+.venv/bin/python tests/verify_string_index_x86.py
+```
+
+Text line/header/value iteration and text floating-number parsing remain open.
+See `analysis/string-index-notes.md` for exact scope.

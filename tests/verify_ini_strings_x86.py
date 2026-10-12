@@ -9,12 +9,12 @@ HASH='e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483'
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def main():
  assert digest(SOURCE)==HASH
- sources=['src/ini_reader_strings.cpp','src/ini_reader.cpp','src/file_map.cpp','tests/fixtures/ini_strings_x86_runtime.cpp','tests/fixtures/ini_values_x86_runtime.cpp','tests/fixtures/ini_reader_x86_runtime.cpp','tests/fixtures/file_map_x86_runtime.cpp']
+ sources=['src/ini_reader_strings.cpp','src/ini_reader.cpp','src/file_map.cpp','tests/fixtures/ini_strings_x86_runtime.cpp','tests/fixtures/ini_values_x86_runtime.cpp','tests/fixtures/ini_reconstructed_index_runtime.cpp','src/string_index.cpp','tests/fixtures/file_map_x86_runtime.cpp']
  build=ROOT/'build';objects=[];commands=[]
  for source in sources:
   out=build/(pathlib.Path(source).stem+'-strings.obj');objects.append(str(out));cmd=['clang++','--target=i686-pc-windows-msvc','-O2','-fno-exceptions','-fno-rtti','-fno-builtin','-mno-sse','-mno-sse2','-c',str(ROOT/source),'-o',str(out)];subprocess.run(cmd,check=True);commands.append(cmd)
  indexed='?get_value_string@INI_Reader@@QAEPBDI@Z';joined='?get_value_string@INI_Reader@@QAEPBDXZ';shared='?INIValuesStringBuffer@@3PADA';dll=build/'ini_strings.dll'
- cmd=['lld-link','/dll','/noentry','/nodefaultlib','/base:0x18000000',f'/out:{dll}']+objects+['/export:'+indexed,'/export:'+joined,'/export:'+shared+',DATA'];subprocess.run(cmd,check=True);commands.append(cmd)
+ cmd=['lld-link','/dll','/noentry','/nodefaultlib','/base:0x18000000',f'/out:{dll}']+objects+['/export:'+indexed,'/export:'+joined,'/export:'+shared+',DATA','/export:?StringIndexBuffer@@3PADA,DATA'];subprocess.run(cmd,check=True);commands.append(cmd)
  h=X86Harness();orig=h.load(SOURCE);new=h.load(dll);uc=h.uc;uc.mem_map(0x23000000,0x10000)
  o=h.scratch;r=o+0x2000;block=0x23000000;entry=block+0x10;parameters=block+0x100;strings=block+0x2000;original_shared=0x658d900;rebuilt_shared=new[shared]
  uc.mem_write(strings,b'Header\0Value\0');uc.mem_write(block,struct.pack('<HH',0,1))
@@ -26,10 +26,18 @@ def main():
    if not b:return bytes(out)
    out.append(b)
   raise AssertionError('Unterminated output')
+ search=h.stop+0x240;h.write_word(0x6399300,search)
  events=[]
  def hook(uc,address,size,user):
   sp=uc.reg_read(UC_X86_REG_ESP)
-  if address==sprintf:
+  if address==search:
+   ptr=h.word(sp+4);ch=h.word(sp+8)&255;result=0
+   for i in range(1024):
+    byte=uc.mem_read(ptr+i,1)[0]
+    if byte==ch:result=ptr+i;break
+    if not byte:break
+   h.return_stub(result)
+  elif address==sprintf:
    target=h.word(sp+4);fmt=text(h.word(sp+8))
    if fmt==b'%d':
     raw=h.word(sp+12);value=raw if raw<2**31 else raw-2**32;output=str(value).encode();events.append(('integer',raw))
@@ -49,6 +57,7 @@ def main():
   for i,(tag,bits) in enumerate(values):uc.mem_write(parameters+5*i,struct.pack('<BI',tag,bits))
  def category(pointer,obj,buffer):
   if pointer==buffer:return 'shared'
+  if pointer in [0x6400350,new['?StringIndexBuffer@@3PADA']]:return 'index'
   if pointer==obj+0x1464:return 'joined'
   if strings<=pointer<strings+0x1000:return ('table',pointer-strings)
   if pointer==obj+0x828:return 'text'
@@ -86,10 +95,14 @@ def main():
  # Non-indexed text mode is a direct buffer reference and does not touch join storage.
  for obj in [o,r]:uc.mem_write(obj+0x1564,b'\0');uc.mem_write(obj+0x828,b'text, value\0')
  assert pair(joined)==b'text, value'
+ text_index_cases=0
+ for value in [b' a , b , ',b'"a,b",c',b',,',b'\x89x\xa0,y',b'\vx\f,y']:
+  for obj in [o,r]:uc.mem_write(obj+0x1564,b'\0');uc.mem_write(obj+0x828,value+b'\0')
+  for index in [0,1,2,0xffffffff]:pair(indexed,index);text_index_cases+=1
  report=dict(status='passed_string_getters_under_formatter_model',original_sha256=HASH,compiled_dll_sha256=digest(dll),
-             source_hashes={p:digest(ROOT/p) for p in sources+['src/ini_reader_strings.hpp','src/ini_reader_values.hpp','src/ini_reader.hpp','src/file_map.hpp']},
-             differential_calls=calls,indexed_parameter_cases=len(values),join_sequences=100,shared_buffer_and_unknown_tag_checks=True,controlled_join_overflow_checked=True,
+             source_hashes={p:digest(ROOT/p) for p in sources+['src/string_index.hpp','src/ini_reader_strings.hpp','src/ini_reader_values.hpp','src/ini_reader.hpp','src/file_map.hpp']},
+             differential_calls=calls,text_index_cases=text_index_cases,reconstructed_string_index_used=True,indexed_parameter_cases=len(values),join_sequences=100,shared_buffer_and_unknown_tag_checks=True,controlled_join_overflow_checked=True,
              rows=rows,commands=commands,mocks=['sprintf integer/general-float model with exact argument comparison','MessageBox diagnostic model'],
-             not_verified=['Authentic CRT locale/float formatting','Indexed text StringIndex path','Arbitrary oversized/overlapping joins','Real OS/FPU execution','Exact instruction matching'])
+             not_verified=['Authentic CRT locale/float formatting','Arbitrary oversized/overlapping joins','Real OS/FPU execution','Exact instruction matching'])
  (ROOT/'analysis/ini-strings-x86-behavior.json').write_text(json.dumps(report,indent=2)+'\n');print(f'PASS: {calls} string getter comparisons, shared-buffer reuse, joins, diagnostics, controlled overflow and text-buffer path')
 if __name__=='__main__':main()

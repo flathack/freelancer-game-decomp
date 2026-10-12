@@ -1,20 +1,24 @@
 {
-  "status": "passed_binary_bool_int",
+  "status": "passed_binary_and_text_bool_int",
   "original_sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
-  "compiled_dll_sha256": "cab5ebf59d7f689505ef7a601a35ffb11adb2425c4b55df215fcfd91ce0c783e",
+  "compiled_dll_sha256": "4ff0422cf127bc531b68420170b4dec3f9e8f2c0e6d8c76ab4da710851339601",
   "source_hashes": {
     "src/ini_reader_values.cpp": "ec8f71d5ff9baa27cb06d73fd7921c5893a72abbd7c0c0a36a351e36c47241cf",
     "src/ini_reader.cpp": "15e526e3c55e728ebc2d5b91790cd0f3eb8463e26624b8dd1809000d1e9909fd",
     "src/file_map.cpp": "5e6a162191a8e353a3eb563ba32f30c26559b97adc416496046cf5d830904624",
-    "tests/fixtures/ini_values_x86_runtime.cpp": "7090149fde36cb25c2f9b2dd80c44e5ad08ffc798e2dd631c9bb37aa2f2ec6c2",
-    "tests/fixtures/ini_reader_x86_runtime.cpp": "a662e77dd0bbff58d5df45ae033c68842e3fab4f85aea45d2a675ab3a9939784",
+    "tests/fixtures/ini_values_x86_runtime.cpp": "ea34dbf3aeba31f62cda529d3d07daae4f256a168e2ad512bdc27fa1b06d8897",
+    "tests/fixtures/ini_reconstructed_index_runtime.cpp": "4ac0439aeaea51b9d389c6de60400db00bc31c6362eee723a5bf5aa2a9a94080",
+    "src/string_index.cpp": "747e809ad3955e95aaa0d7936d44b889d51aa5fd6dbe9e295e4583a493f33305",
     "tests/fixtures/file_map_x86_runtime.cpp": "312d9ad72f0a77fe03f462c07f16fcd42729b83c1742052527dc99825ed1288e",
-    "src/ini_reader_values.hpp": "38c3fc6109836fc67d24e73e5d542ad800de1d21865e4a26374816a22a5323fd",
+    "src/string_index.hpp": "27a5be7607020a3d0c9af8b89fe07315ad38e0e995210a8a3de39728996b87ed",
+    "src/ini_reader_values.hpp": "ed21890d062aef9bdbfcebecd181c36b7645f528304428d4039c2405652fec46",
     "src/ini_reader.hpp": "807fd18b221664ac801a239a9b487523df0b2ea73aa7888521aa9a52543449e5",
     "src/file_map.hpp": "3b3fa5a652b47a0b744a438671bfbed9d711be65d6202457a025019758d406da"
   },
-  "differential_calls": 2280,
+  "differential_calls": 2340,
   "parameter_cases": 1136,
+  "text_index_cases": 30,
+  "reconstructed_string_index_used": true,
   "raw_boolean_bytes_checked": 256,
   "rows": [
     {
@@ -8037,9 +8041,23 @@
       "-mno-sse",
       "-mno-sse2",
       "-c",
-      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/tests/fixtures/ini_reader_x86_runtime.cpp",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/tests/fixtures/ini_reconstructed_index_runtime.cpp",
       "-o",
-      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/ini_reader_x86_runtime-values.obj"
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/ini_reconstructed_index_runtime-values.obj"
+    ],
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-fno-builtin",
+      "-mno-sse",
+      "-mno-sse2",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/src/string_index.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/string_index-values.obj"
     ],
     [
       "clang++",
@@ -8066,7 +8084,8 @@
       "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/ini_reader-values.obj",
       "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/file_map-values.obj",
       "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/ini_values_x86_runtime-values.obj",
-      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/ini_reader_x86_runtime-values.obj",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/ini_reconstructed_index_runtime-values.obj",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/string_index-values.obj",
       "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/file_map_x86_runtime-values.obj",
       "/export:?get_value_bool@INI_Reader@@QAE_NI@Z",
       "/export:?get_value_int@INI_Reader@@QAEHI@Z"
@@ -8080,7 +8099,6 @@
   ],
   "not_verified": [
     "Real CRT/Win32 execution",
-    "Text get_value_bool/get_value_int paths",
     "FPU exception/control-word fidelity",
     "Malformed parameter memory access",
     "Other typed getters",

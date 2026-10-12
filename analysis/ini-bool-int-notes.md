@@ -43,3 +43,8 @@ adapter traps rather than pretending that path is complete.
 Build/source hashes, complete parameter/result vectors and scope are recorded in
 `analysis/ini-bool-int-x86-behavior.json`. Float/string/wstring/vector getters and
 full text INI parsing still remain part of the full Freelancer objective.
+
+Update: the getter check now links reconstructed StringIndex and passes 2,340
+calls including 30 text index cases. Invalid text-bool FDUMP diagnostics are now
+modeled and compared; the earlier trapping adapter has been replaced. Full text
+iteration, real logging/CRT execution and text float conversion remain open.

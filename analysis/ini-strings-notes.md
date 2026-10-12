@@ -40,3 +40,7 @@ joins, real CRT/OS/FPU effects and exact instruction matching remain unverified.
 Commands, source/DLL hashes and indexed vectors are in
 `analysis/ini-strings-x86-behavior.json`. This does not complete text INI processing,
 wide strings, vector access or the full reader/game lifecycle.
+
+Update: reconstructed StringIndex is now used by the indexed text getter. Twenty
+additional text index cases pass, bringing this suite to 1,577 comparisons.
+Authentic CRT formatting and full text-INI iteration remain unverified.

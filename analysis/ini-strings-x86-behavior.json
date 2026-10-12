@@ -1,21 +1,25 @@
 {
   "status": "passed_string_getters_under_formatter_model",
   "original_sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
-  "compiled_dll_sha256": "e5f2afad60b97102290f67040ea2b647de0b9714ae9a641a4ea7fd7b78c94352",
+  "compiled_dll_sha256": "97595e686918b89844898c7255e35afc6ccf8202dc29abec3753a20f29ba809a",
   "source_hashes": {
     "src/ini_reader_strings.cpp": "b5dd916a519b4be446dfac2a4e84b5a09f4b7c4a5876abb17a9ac48095fb69a8",
     "src/ini_reader.cpp": "15e526e3c55e728ebc2d5b91790cd0f3eb8463e26624b8dd1809000d1e9909fd",
     "src/file_map.cpp": "5e6a162191a8e353a3eb563ba32f30c26559b97adc416496046cf5d830904624",
     "tests/fixtures/ini_strings_x86_runtime.cpp": "c3dc87d1a07a16755f3a75f6057a287d88b8902f14fa7f8dcdce511d7fe07ec0",
-    "tests/fixtures/ini_values_x86_runtime.cpp": "7090149fde36cb25c2f9b2dd80c44e5ad08ffc798e2dd631c9bb37aa2f2ec6c2",
-    "tests/fixtures/ini_reader_x86_runtime.cpp": "a662e77dd0bbff58d5df45ae033c68842e3fab4f85aea45d2a675ab3a9939784",
+    "tests/fixtures/ini_values_x86_runtime.cpp": "ea34dbf3aeba31f62cda529d3d07daae4f256a168e2ad512bdc27fa1b06d8897",
+    "tests/fixtures/ini_reconstructed_index_runtime.cpp": "4ac0439aeaea51b9d389c6de60400db00bc31c6362eee723a5bf5aa2a9a94080",
+    "src/string_index.cpp": "747e809ad3955e95aaa0d7936d44b889d51aa5fd6dbe9e295e4583a493f33305",
     "tests/fixtures/file_map_x86_runtime.cpp": "312d9ad72f0a77fe03f462c07f16fcd42729b83c1742052527dc99825ed1288e",
+    "src/string_index.hpp": "27a5be7607020a3d0c9af8b89fe07315ad38e0e995210a8a3de39728996b87ed",
     "src/ini_reader_strings.hpp": "63dcd65fa609a37d8195254a9ee9173e890bd10a63a8b7bb04923584c4bdd54e",
     "src/ini_reader_values.hpp": "ed21890d062aef9bdbfcebecd181c36b7645f528304428d4039c2405652fec46",
     "src/ini_reader.hpp": "807fd18b221664ac801a239a9b487523df0b2ea73aa7888521aa9a52543449e5",
     "src/file_map.hpp": "3b3fa5a652b47a0b744a438671bfbed9d711be65d6202457a025019758d406da"
   },
-  "differential_calls": 1557,
+  "differential_calls": 1577,
+  "text_index_cases": 20,
+  "reconstructed_string_index_used": true,
   "indexed_parameter_cases": 722,
   "join_sequences": 100,
   "shared_buffer_and_unknown_tag_checks": true,
@@ -3713,9 +3717,23 @@
       "-mno-sse",
       "-mno-sse2",
       "-c",
-      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/tests/fixtures/ini_reader_x86_runtime.cpp",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/tests/fixtures/ini_reconstructed_index_runtime.cpp",
       "-o",
-      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/ini_reader_x86_runtime-strings.obj"
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/ini_reconstructed_index_runtime-strings.obj"
+    ],
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-fno-exceptions",
+      "-fno-rtti",
+      "-fno-builtin",
+      "-mno-sse",
+      "-mno-sse2",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/src/string_index.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/string_index-strings.obj"
     ],
     [
       "clang++",
@@ -3743,11 +3761,13 @@
       "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/file_map-strings.obj",
       "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/ini_strings_x86_runtime-strings.obj",
       "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/ini_values_x86_runtime-strings.obj",
-      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/ini_reader_x86_runtime-strings.obj",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/ini_reconstructed_index_runtime-strings.obj",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/string_index-strings.obj",
       "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/file_map_x86_runtime-strings.obj",
       "/export:?get_value_string@INI_Reader@@QAEPBDI@Z",
       "/export:?get_value_string@INI_Reader@@QAEPBDXZ",
-      "/export:?INIValuesStringBuffer@@3PADA,DATA"
+      "/export:?INIValuesStringBuffer@@3PADA,DATA",
+      "/export:?StringIndexBuffer@@3PADA,DATA"
     ]
   ],
   "mocks": [
@@ -3756,7 +3776,6 @@
   ],
   "not_verified": [
     "Authentic CRT locale/float formatting",
-    "Indexed text StringIndex path",
     "Arbitrary oversized/overlapping joins",
     "Real OS/FPU execution",
     "Exact instruction matching"
