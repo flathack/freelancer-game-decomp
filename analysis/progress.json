@@ -139,9 +139,14 @@
     "native_tolower_verified": false
   },
   "ini_reader_wstring": {
-    "source_current": true,
+    "source_current": false,
     "calls": 840,
     "conversion_modeled": true
+  },
+  "ini_reader_constructor": {
+    "source_current": true,
+    "calls": 72,
+    "crt_modeled": true
   },
   "complete_game_verified": false,
   "modules": [

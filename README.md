@@ -202,3 +202,8 @@ including the original 1024/256 character limits, shared binary destination and
 ignored conversion return value. 840 wide calls plus 1577 integrated string
 checks pass under a controlled mbstowcs model; native CRT locale behavior remains
 unverified.
+
+The default INI reader constructor is reconstructed with its selective field
+initialization and address-derived opaque allocator bytes. 72 differential calls
+verify the complete object footprint and constructor return ABI across address,
+alignment and prior-memory variations.
