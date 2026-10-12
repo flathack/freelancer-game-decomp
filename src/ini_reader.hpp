@@ -1,7 +1,10 @@
 #pragma once
 #include "file_map.hpp"
-struct INI_Reader {
+class INI_Reader {
+public:
     INI_Reader();
+    INI_Reader(const INI_Reader&);
+    INI_Reader& operator=(const INI_Reader&);
     ~INI_Reader();
     FileMap text_file;
     unsigned int line_number;

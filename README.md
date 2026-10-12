@@ -211,3 +211,8 @@ alignment and prior-memory variations.
 The INI reader destructor now releases both file subobjects in the original
 binary-then-text order, independently of mode. 50 differential cases compare
 complete object state, COW ownership and release events under CRT/OS models.
+
+INI reader copy construction and assignment now preserve original shallow file/
+BINI-pointer copying and filename COW semantics. 36 complete object/heap cases
+pass, including self-assignment. Constructor, destructor and memory-opening
+regressions also pass. Arbitrary partial overlap and native CRT remain unverified.

@@ -5,12 +5,12 @@
     "src/ini_reader_constructor.cpp": "7426a1e1db993dc0098af52f814a1c26561c25cff9931e38c8b8bc9283222d16",
     "src/file_map.cpp": "5e6a162191a8e353a3eb563ba32f30c26559b97adc416496046cf5d830904624",
     "tests/fixtures/file_map_x86_runtime.cpp": "312d9ad72f0a77fe03f462c07f16fcd42729b83c1742052527dc99825ed1288e",
-    "src/ini_reader.hpp": "ad889ea8c0da44cce2bd2ca3d943502ff4598f6ba8b17d4dbeb804225cf51656",
+    "src/ini_reader.hpp": "07cc5b4156eb8f0493e6fc66bedfe0b271d387efc806c27443fa52f9e6880f17",
     "src/file_map.hpp": "3b3fa5a652b47a0b744a438671bfbed9d711be65d6202457a025019758d406da",
     "tests/verify_ini_constructor_x86.py": "75c3332e72a4c739dadce11f99672dd55431e97f13e753301b9a719b0afd4d9f"
   },
   "original_sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
-  "compiled_dll_sha256": "7c1f2e26a514a650616ba44a8aec38a041d35fbb1ae21ae867d1faefae5b6123",
+  "compiled_dll_sha256": "a8aeeefcb53842c6c97ed7c79eb843d88226a0b36c7a57b8d34266e108683d61",
   "full_object_write_footprint": true,
   "allocator_byte_from_this_high_byte": true,
   "not_verified": [

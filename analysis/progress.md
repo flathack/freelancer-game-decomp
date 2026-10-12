@@ -24,6 +24,7 @@ Reader number predicate: 10716 calls; native locale remains unverified.
 Reader wide strings: 840 conversions; native CRT locale remains unverified.
 Reader construction: 72 complete object/ABI comparisons; native CRT remains unverified.
 Reader destruction: 50 full-state/ownership cases; native CRT remains unverified.
+Reader copying: 36 object/heap cases; arbitrary overlap and native CRT remain unverified.
 The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.
 
 | Module | Raw export status | Raw functions | Failed |
