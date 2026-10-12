@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "differential_calls": 960,
+  "source_hashes": {
+    "src/loadout_lines.cpp": "1e5f6075ba6aea381979b4f027444f78f6b65836c078e6e15a417b15cc5a70a0",
+    "tests/fixtures/loadout_lines_runtime.cpp": "aa2c19959c73e8c622cafcdca330f7f1c30cc83f961f32ac0ac34b0b4582cebb",
+    "tests/verify_loadout_lines_x86.py": "bee9320beb30c596d6be22eda33acd0c57df4250b11d6d0ca2d3be90e2d42103"
+  },
+  "reader_dependency": "Controlled API return values; reconstructed reader integration pending",
+  "not_verified": [
+    "Actual CreateID and StringAlloc integration",
+    "Native CRT and reader execution",
+    "Exact instruction matching"
+  ]
+}

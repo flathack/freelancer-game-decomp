@@ -245,3 +245,8 @@ matches, with 16 ABI comparisons. See `analysis/ini-fixture-notes.md`.
 complete reader DLL. All pass; separate reports are saved in
 `analysis/ini-integrated/`. Five extra data exports allow buffer inspection.
 Native runtime and full game execution remain unverified.
+
+Loadout equipment/cargo line parsers are now reconstructed. 960 differential
+calls compare full EquipDesc state and external call order, including Cargo's
+early return for numeric/nonzero parameter2. Reader/CreateID/StringAlloc are
+controlled dependencies in this test; full reconstructed integration remains open.

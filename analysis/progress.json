@@ -186,6 +186,11 @@
     "status": "passed",
     "native_runtime_verified": false
   },
+  "loadout_lines": {
+    "source_current": true,
+    "calls": 960,
+    "reader_dependency_modeled": true
+  },
   "complete_game_verified": false,
   "modules": [
     {
