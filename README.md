@@ -140,3 +140,17 @@ comparisons pass with full state and buffer-footprint checks.
 
 Text value/token iteration and text floating-number parsing remain open. Details
 and intentionally retained legacy edge cases are in `analysis/text-reading-notes.md`.
+
+## Text entry navigation
+
+`src/ini_text_value.cpp` reconstructs names/values and the section-boundary rewind.
+3,957 direct comparisons pass. Alternating header/value and State APIs additionally
+pass 1,559 integrated calls over 13 supplied text INI files (47 sections, 1,358
+entries). Input paths/hashes and selection limits are recorded in the report.
+
+```bash
+.venv/bin/python tests/verify_ini_text_value_x86.py
+```
+
+Text ParseNumber/float and full reader lifecycle/native runtime remain open.
+See `analysis/ini-text-value-notes.md`.

@@ -104,6 +104,14 @@
     "calls": 2966,
     "inputs": 311
   },
+  "text_value_x86_behavior": {
+    "source_current": true,
+    "calls": 3957,
+    "integration_calls": 1559,
+    "real_files": 13,
+    "sections": 47,
+    "entries": 1358
+  },
   "complete_game_verified": false,
   "modules": [
     {
