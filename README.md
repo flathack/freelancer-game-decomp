@@ -80,3 +80,8 @@ tags. CRT conversion/diagnostic operations are explicit models in this check.
 Production binding, actual CRT/FPU execution and text-mode getter behavior remain
 open. Numeric float/string/wstring/vector accessors are not completed by this step.
 See `analysis/ini-bool-int-notes.md` for the precise boundaries.
+
+## Progress dashboard
+
+GitHub Actions publishes conservative binary-match coverage for decomp.dev.
+See [integration and metric scope](docs/decomp-dev.md).
