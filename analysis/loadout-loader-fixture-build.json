@@ -129,7 +129,7 @@
     "src/ini_reader.hpp": "b8365008a3e20e0a37d2805d236b4139cde4d388a1cb90dc7be38a3d424a364a",
     "tools/build_ini_fixture.py": "202af9f0c3416c86397734b2ccc4bfa08a87dc7a4fdd405766e390557d739eb2"
   },
-  "dll_sha256": "dd534785da22665cab807b87d532d422783534d1a2b0dcbc56995732179debbe",
+  "dll_sha256": "50fa7ce34029010ce498e0a1e7a357003682e856ca4e50e5a5293e8047691513",
   "commands": [
     [
       "clang++",

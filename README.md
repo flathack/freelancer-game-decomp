@@ -11,7 +11,7 @@ Stand: **13.10.2026**. Ziel ist rekonstruierter, überprüfter Quellcode des vol
 
 Die Roh-Ausgaben sind kein fertiger Quellcode. Für die gesamte verhaltensgeprüfte Rekonstruktion gibt es noch keinen belastbaren Prozentwert. Zusätzlich ist der 3-Byte-No-op `INI_Reader::log_link` separat byteidentisch bestätigt.
 
-Zuletzt: Der vollständige Loadout-Dateilader besteht Vergleiche für **alle vier mitgelieferten Dateien: 803 Maps und 17.130 Equipment-/Cargo-Einträge**. Goods-gesteuerte Cargo-Kombination und native Windows-Ausführung bleiben offen.
+Zuletzt: Der vollständige Loadout-Dateilader besteht Vergleiche für **alle vier mitgelieferten Dateien: 803 Maps und 17.130 Equipment-/Cargo-Einträge**. Goods-gesteuerte Cargo-Kombination besteht zusätzlich **72 synthetische Loader-Vergleiche**. Aufbau der echten Goods-Datenbank und native Windows-Ausführung bleiben offen.
 
 - [Detaillierter Fortschritt](analysis/progress.md)
 - [Rekonstruktionsnotizen](docs/reconstruction-notes.md)

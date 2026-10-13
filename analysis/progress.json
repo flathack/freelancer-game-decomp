@@ -314,6 +314,11 @@
     "goods_database_empty": true,
     "native_runtime_verified": false
   },
+  "loadout_goods_combining": {
+    "calls": 72,
+    "goods_records_manually_seeded": true,
+    "native_runtime_verified": false
+  },
   "complete_game_verified": false,
   "modules": [
     {
