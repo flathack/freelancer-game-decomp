@@ -11,7 +11,7 @@ Stand: **13.10.2026**. Ziel ist rekonstruierter, überprüfter Quellcode des vol
 
 Die Roh-Ausgaben sind kein fertiger Quellcode. Für die gesamte verhaltensgeprüfte Rekonstruktion gibt es noch keinen belastbaren Prozentwert. Zusätzlich ist der 3-Byte-No-op `INI_Reader::log_link` separat byteidentisch bestätigt.
 
-Zuletzt: Fünf Equipment-Suchexporte mit **97.416 Vergleichen** geprüft, einschließlich Fortsetzungszeigern und doppelten IDs. Reader, Loadout-Parser, ID-Erzeugung und String-Cache gemeinsam geprüft: **17.130 echte Loadout-Einträge**, 38.544 Reader-Aufrufe und 618 synthetische Fälle bestanden. Auch die Cargo-Bay-Initialisierung läuft jetzt über den Cache. Native Windows-Ausführung und vollständige Listenverwaltung bleiben offen.
+Zuletzt: Equipment-Anhängen und Cargo-Zusammenfassung mit **908 Vergleichen** geprüft, einschließlich Speicherwachstum und originaler Sonderfälle. Reader, Loadout-Parser, ID-Erzeugung und String-Cache gemeinsam geprüft: **17.130 echte Loadout-Einträge**, 38.544 Reader-Aufrufe und 618 synthetische Fälle bestanden. Auch die Cargo-Bay-Initialisierung läuft jetzt über den Cache. Native Windows-Ausführung und vollständige Listenverwaltung bleiben offen.
 
 - [Detaillierter Fortschritt](analysis/progress.md)
 - [Rekonstruktionsnotizen](docs/reconstruction-notes.md)

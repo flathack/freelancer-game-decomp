@@ -101,6 +101,7 @@ def main():
     loadout_tree_init=json.loads((A/'loadout-tree-initialize-x86-behavior.json').read_text())
     loadout_tree_integrated=json.loads((A/'loadout-tree-integrated-x86-behavior.json').read_text())
     equip_search=json.loads((A/'equip-collection-search-x86-behavior.json').read_text())
+    equip_add=json.loads((A/'equip-vector-add-x86-behavior.json').read_text())
     report=dict(code_modules=len(rows),raw_exported_modules=sum(r['status']=='raw_exported' for r in rows),
                 raw_decompiled_functions=sum(r.get('raw_decompiled',0) for r in rows),
                 raw_failed_functions=sum(r.get('failed',0) for r in rows),
@@ -150,6 +151,7 @@ def main():
                 loadout_tree_initialization=dict(calls=loadout_tree_init['differential_calls'],opaque_byte_pairs=65536,native_heap_verified=False),
                 loadout_tree_integration=dict(calls=loadout_tree_integrated['differential_calls'],sequences=60,native_heap_verified=False,full_loadout_loading_verified=False),
                 equip_collection_search=dict(calls=equip_search['differential_calls'],exports=5,collection_mutation_verified=False),
+                equip_vector_add=dict(calls=equip_add['differential_calls'],instruction_limit_cases=equip_add['nonreturning_cases'],full_loader_integration_verified=False),
                 complete_game_verified=False,modules=rows)
     (A/'coverage-summary.json').write_text(json.dumps({r['module']:r['coverage_audit'] for r in rows if 'coverage_audit' in r},indent=2)+'\n')
     (A/'progress.json').write_text(json.dumps(report,indent=2)+'\n')
@@ -199,6 +201,7 @@ def main():
            f"Loadout tree initialization: {loadout_tree_init['differential_calls']} guarded object/sentinel comparisons; startup/native heap integration open.",
            f"Loadout tree integration: {loadout_tree_integrated['differential_calls']} calls across 60 construction/insertion/lookup/erase/free sequences; full file loading open.",
            f"Equipment collection searches: {equip_search['differential_calls']} pointer/ID comparisons across 5 exports; cargo merge/mutation open.",
+           f"Equipment vector append/merge: {equip_add['differential_calls']} cases, including 3 original mismatch nonreturning paths; loader/native runtime open.",
            'The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.',
            '', '| Module | Raw export status | Raw functions | Failed |','|---|---|---:|---:|']
     for row in rows: lines.append(f"| {pathlib.Path(row['module']).name} | {row['status']} | {row.get('raw_decompiled','—')} | {row.get('failed','—')} |")

@@ -280,6 +280,11 @@
     "exports": 5,
     "collection_mutation_verified": false
   },
+  "equip_vector_add": {
+    "calls": 908,
+    "instruction_limit_cases": 3,
+    "full_loader_integration_verified": false
+  },
   "complete_game_verified": false,
   "modules": [
     {

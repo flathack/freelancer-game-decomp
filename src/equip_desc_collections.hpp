@@ -2,6 +2,7 @@
 #include "equip_desc.hpp"
 struct EquipDescVector {
  unsigned char allocator[4];EquipDesc *begin,*end,*capacity;
+ int add_equipment_item(const EquipDesc&,bool);
  EquipDesc* traverse_equipment_type(unsigned int,const EquipDesc*);
 };
 class EquipDescList {
