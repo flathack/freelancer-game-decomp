@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "differential_calls": 768,
+  "opaque_values": 256,
+  "storage_extent": 52,
+  "source_hashes": {
+    "src/good_info_list_initialize.cpp": "20bcf487817e6eae29974ae335b7b2a2a01ea70eb72e832329dc1ffb5ee9bd9b",
+    "tests/fixtures/good_info_list_initialize_runtime.cpp": "2f71dfe12b245cf17ab2dc50b0e055ea957bc937cf040e48d3f70dfea8f87b46",
+    "tests/verify_good_info_list_initialize_x86.py": "2d6dd76ff17ac31f04620777d7b79af4e908e16c18dd22c8e312833095f35c6a"
+  },
+  "not_verified": [
+    "Full Goods database loading/index population",
+    "Allocation/exception failure",
+    "Storage/stack aliasing",
+    "Native CRT",
+    "Exact instruction matching"
+  ]
+}

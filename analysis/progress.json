@@ -348,6 +348,11 @@
     "destructor_calls": 1000,
     "native_runtime_verified": false
   },
+  "good_info_list_initialization": {
+    "calls": 768,
+    "database_loading_verified": false,
+    "native_runtime_verified": false
+  },
   "complete_game_verified": false,
   "modules": [
     {
