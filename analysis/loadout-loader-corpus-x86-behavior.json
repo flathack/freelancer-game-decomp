@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "original_sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
+  "compiled_dll_sha256": "dd534785da22665cab807b87d532d422783534d1a2b0dcbc56995732179debbe",
+  "fixture_build_sha256": "0fa52008220cd0dc72e8a339ec2b5d7f1559ea1253d767c6498a958ebb92b443",
+  "differential_calls": 4,
+  "real_files": [
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/SHIPS/loadouts.ini",
+      "sha256": "d4ac7b254294f3da3f4659dcfc10299953c456c030d67b06ddef752a304ee505",
+      "bytes": 120663,
+      "maps": 358,
+      "equipment": 7980,
+      "return_delta": 358
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/SHIPS/loadouts_special.ini",
+      "sha256": "d7f41c9aa87ddbd191144acc38aa44869c2c88a25731acb5bf0fca610843cffb",
+      "bytes": 25951,
+      "maps": 75,
+      "equipment": 1552,
+      "return_delta": 75
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/SHIPS/loadouts_utility.ini",
+      "sha256": "1f927b141bf919f71532cd543d91a59d41ef5b625d302bb9fd1bd6212b2b9131",
+      "bytes": 18289,
+      "maps": 61,
+      "equipment": 1095,
+      "return_delta": 61
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/SOLAR/loadouts.ini",
+      "sha256": "783a78a6395b4ecf704861f1e4b08bbc891419df47785e40bb551ffc6cd4d5bf",
+      "bytes": 99300,
+      "maps": 309,
+      "equipment": 6503,
+      "return_delta": 309
+    }
+  ],
+  "methods": [
+    "?Load@Loadout@@YAHPBD_N@Z"
+  ],
+  "source_hashes": {
+    "src/loadout_load.cpp": "23b779e21c7a9941f67c6c1b6500c75122bca6a980189a3cd8444b83ef9f2850",
+    "tests/fixtures/loadout_loader_runtime.cpp": "10e8593530223a178e1871c3328173adc2a612e54880b6a75ee068d00cde6ccd",
+    "tools/build_ini_fixture.py": "202af9f0c3416c86397734b2ccc4bfa08a87dc7a4fdd405766e390557d739eb2",
+    "tests/verify_loadout_loader_corpus_x86.py": "a1c0a5c692ea068f2e5649facaa5ebb62b33523dfbf7deb81a77e5c2607aa7a2"
+  },
+  "external_dependencies": "MSVCP60 COW, Win32 mapping, fatal handler and progress callback modeled",
+  "comparison_scope": "Semantic Map/Equipment fields, not raw heap/padding or allocation trace",
+  "supplied_files": 4,
+  "goods_database": "Controlled empty tree",
+  "not_verified": [
+    "Goods-driven Cargo combining",
+    "Raw heap/padding/allocation trace",
+    "Native OS/CRT",
+    "Non-returning fatal handler",
+    "Allocation or exception failure",
+    "Exact instruction matching"
+  ]
+}

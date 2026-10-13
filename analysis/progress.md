@@ -51,6 +51,7 @@ Equipment vector append: 435 cases including 3 bounded self-append paths; full l
 Goods archetype/Cargo flag: 57012 pointer/raw-AL comparisons; database creation and loader integration open.
 Loadout Load entry: 64 empty/other-header/error comparisons; populated loader flow remains provisional.
 Populated Loadout Load: 16 synthetic semantic Map comparisons; full corpus/raw heap/Goods combining open.
+Full Loadout Load corpus: 4 supplied file comparisons, 803 Maps / 17130 entries; empty Goods database, native runtime open.
 The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.
 
 | Module | Raw export status | Raw functions | Failed |

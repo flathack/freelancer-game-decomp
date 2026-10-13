@@ -27,3 +27,8 @@ parse/cleanup behavior, not populated Loadout handling. Populated file compariso
 Goods/startup integration, opaque stack allocator bytes, native CRT/OS, exception
 paths and exact instruction matching remain open. The newly implemented populated
 control flow is provisional until differential tests establish it.
+
+Full-file semantic comparisons have since passed for all four supplied Loadout
+INIs (803 Maps / 17130 Equipment entries); see loadout-loader-corpus-notes.md.
+Those runs retain a controlled empty Goods database and do not compare raw heap
+layout or native runtime. Goods-driven combining remains pending.
