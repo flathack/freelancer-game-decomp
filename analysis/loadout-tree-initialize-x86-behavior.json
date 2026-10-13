@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "differential_calls": 65536,
+  "opaque_input_combinations": 65536,
+  "source_hashes": {
+    "src/loadout_tree_initialize.cpp": "a3570c886146f774956c5f5207ee8c0df7f08402ddfd409858f3214b1f4d8b4a",
+    "tests/fixtures/loadout_map_runtime.cpp": "61bb39fb673e337faa64e44336ead413b5486ce05dd698defac7a11d4b252820",
+    "src/loadout_tree.hpp": "54416b8810881277b934696f68738a089a20828948d314548a9bbf3b79963cf2",
+    "tests/verify_loadout_tree_initialize_x86.py": "62ae3bb7dd10cf7af0a42c9a23658d9ddf758591f7eab3d26303ec2484575e45"
+  },
+  "not_verified": [
+    "Allocation failure/exception path",
+    "Aliased input/object storage",
+    "Native heap",
+    "Global startup and full Loadout loading",
+    "Exact instruction matching"
+  ]
+}

@@ -264,6 +264,11 @@
     "unique_multi_modes_verified": true,
     "native_heap_verified": false
   },
+  "loadout_tree_initialization": {
+    "calls": 65536,
+    "opaque_byte_pairs": 65536,
+    "native_heap_verified": false
+  },
   "complete_game_verified": false,
   "modules": [
     {
