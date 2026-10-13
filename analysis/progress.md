@@ -38,8 +38,9 @@ SubObjectID counters: 66414 calls / 12 exports, all 65536 equipment counter stat
 Loadout/reader/hash/cache: 17130 real lines passed; cargo-bay initialization reconstructed, native runtime open.
 Loadout Map ownership: 512 copy/assignment/destruction comparisons; default construction and full list loading remain open.
 Loadout Map default construction: 1024 complete guarded-object comparisons; temporary stack-byte ABI boundary.
-Loadout bulk Free: 300 complete state/free-order comparisons; inconsistent zero-size recovery open.
+Loadout bulk Free: 300 complete state/free-order comparisons; zero-size recovery separately verified.
 Loadout iterator: 11693 successor comparisons; erase/rebalancing integration open.
+Loadout RB erase: 3600 calls; Free zero-size recovery: 180 complete-state comparisons.
 The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.
 
 | Module | Raw export status | Raw functions | Failed |

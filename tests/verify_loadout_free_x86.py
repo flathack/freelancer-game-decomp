@@ -7,7 +7,7 @@ from x86_harness import X86Harness
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 def main():
  original=ROOT/'original/_FL Fresh Install-deutsch/EXE/common.dll';assert hashlib.sha256(original.read_bytes()).hexdigest()=='e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483'
- files=['src/loadout_lookup.cpp','src/loadout_free.cpp','src/loadout_map.cpp','src/subobject_id.cpp','tests/fixtures/loadout_map_runtime.cpp'];objects=[];dll=ROOT/'build/loadout_free.dll';symbol='?Free@Loadout@@YAXXZ'
+ files=['src/loadout_erase.cpp','src/loadout_iterator.cpp','src/loadout_lookup.cpp','src/loadout_free.cpp','src/loadout_map.cpp','src/subobject_id.cpp','tests/fixtures/loadout_map_runtime.cpp'];objects=[];dll=ROOT/'build/loadout_free.dll';symbol='?Free@Loadout@@YAXXZ'
  for f in files:
   obj=ROOT/'build'/(pathlib.Path(f).stem+'-free.obj');objects.append(str(obj));subprocess.run(['clang++','--target=i686-pc-windows-msvc','-O2','-fno-exceptions','-fno-rtti','-fno-builtin','-c',str(ROOT/f),'-o',str(obj)],check=True)
  subprocess.run(['lld-link','/dll','/noentry','/nodefaultlib','/base:0x1b000000',f'/out:{dll}']+objects+['/export:'+symbol,'/export:LoadoutLookupTree,DATA'],check=True)

@@ -8,11 +8,18 @@ static void release_subtree(Loadout::LookupNode* node) {
   loadout_map_free(node);node=left;
  }
 }
+extern "C" void __fastcall loadout_tree_next(Loadout::LookupNode**);
+extern "C" void __thiscall loadout_tree_erase(Loadout::LookupTree*,Loadout::LookupNode**,Loadout::LookupNode*);
 namespace Loadout {
 void Free() {
- // Valid empty trees have head.left==head. The original has an iterator-erase
- // fallback for inconsistent zero-size/nonempty trees; that recovery remains open.
- if(!LoadoutLookupTree.size)return;
+ if(!LoadoutLookupTree.size){
+  LookupNode* current=LoadoutLookupTree.head->left;
+  while(current!=LoadoutLookupTree.head){
+   LookupNode* node=current;loadout_tree_next(&current);
+   LookupNode* ignored;loadout_tree_erase(&LoadoutLookupTree,&ignored,node);
+  }
+  return;
+ }
  release_subtree(LoadoutLookupTree.head->parent);
  LoadoutLookupTree.head->parent=LoadoutLookupTree.nil;
  LoadoutLookupTree.size=0;

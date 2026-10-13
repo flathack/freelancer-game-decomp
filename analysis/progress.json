@@ -241,12 +241,17 @@
   "loadout_free": {
     "calls": 300,
     "valid_tree_release_verified": true,
-    "inconsistent_size_recovery_verified": false
+    "inconsistent_size_recovery_verified": true
   },
   "loadout_iterator": {
     "calls": 11693,
     "trees": 300,
     "erase_integration_verified": false
+  },
+  "loadout_erase": {
+    "calls": 3600,
+    "recovery_calls": 180,
+    "native_heap_verified": false
   },
   "complete_game_verified": false,
   "modules": [

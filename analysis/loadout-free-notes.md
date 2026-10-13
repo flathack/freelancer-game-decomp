@@ -14,8 +14,7 @@ sequence agree; the allocator free operation is modeled without poisoning memory
 The refactored lookup still passes 28,354 comparisons. Tree insertion/balancing,
 native heap and exact matching remain open.
 
-This is partial Free reconstruction: the original also has iterator-erase logic
-for an inconsistent tree with size zero but nonempty head.left. The reconstructed
-routine currently returns on size zero, so that recovery path does not match and
-must be recovered before claiming full Free fidelity. Tests cover well-formed
-size counts only; no whole-Loadout or whole-game completion claim is made.
+The zero-size/nonempty iterator-erase fallback has since been reconstructed and
+verified separately in 180 comparisons; see loadout-erase-notes.md. This regular
+suite retains its 300 well-formed-tree scope. Full Loadout creation/insertion,
+native runtime and whole-game reconstruction remain incomplete.
