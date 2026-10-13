@@ -4,7 +4,7 @@ Project directory: `/opt/data/projects/Freelancer-Decomp`. Paperclip company FLA
 
 ```sh
 cd /opt/data/projects/Freelancer-Decomp
-export PATH="$PWD/.tools/bin:$PATH"
+source tools/paperclip-env.sh
 .venv/bin/python tools/verify_matches.py
 .venv/bin/python tests/verify_good_index_lookup_x86.py
 ```
@@ -17,3 +17,5 @@ Workflow: choose next concrete milestone → original-code reconstruction → di
 
 Paperclip project: https://hermes-srv.tail2b5c2.ts.net:3101/FLA/projects/freelancer-2003-decompilation
 Routine: https://hermes-srv.tail2b5c2.ts.net:3101/FLA/routines/34df3d50-f7c7-4964-9aba-7fcded82076b
+
+OpenJDK 25 is extracted alongside the compiler. Source tools/paperclip-env.sh before running builds or Ghidra. Source/original files and raw outputs passed rsync checksum comparison; server git status was clean before the first Paperclip run.
