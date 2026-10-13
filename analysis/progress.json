@@ -243,6 +243,11 @@
     "valid_tree_release_verified": true,
     "inconsistent_size_recovery_verified": false
   },
+  "loadout_iterator": {
+    "calls": 11693,
+    "trees": 300,
+    "erase_integration_verified": false
+  },
   "complete_game_verified": false,
   "modules": [
     {

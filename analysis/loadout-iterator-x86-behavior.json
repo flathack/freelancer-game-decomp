@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "differential_calls": 11693,
+  "trees": 300,
+  "source_hashes": {
+    "src/loadout_iterator.cpp": "f1d123ac904c02734254a17be7c5056aefc19747415d761091a4b57337ccaf2c",
+    "src/loadout_tree.hpp": "54416b8810881277b934696f68738a089a20828948d314548a9bbf3b79963cf2",
+    "tests/verify_loadout_iterator_x86.py": "0b329d12c1e7892d2063faa675eb64da3030cc76f569f2fda47829784d4f9dc8"
+  },
+  "not_verified": [
+    "Integration into iterator erase",
+    "Incrementing end/invalid iterators",
+    "Native runtime",
+    "Exact instruction matching"
+  ]
+}
