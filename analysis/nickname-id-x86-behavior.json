@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "differential_calls": 1017,
+  "names": 507,
+  "source_hashes": {
+    "src/nickname_id_access.cpp": "220e47aca174492f6aa408148b1b4ed11e9e6f1b96110902b4402ed0ecd2e12c",
+    "src/good_id_lookup.cpp": "e202c84d0b5ec41bb39b9edfbdabf3eb974f33f0074e7d15f871e03572d4792e",
+    "src/good_archetype_lookup.cpp": "add84d0a16df4a5b3170df0ba7c5129e985a1a62997267cd49294977f9b03371",
+    "src/create_id.cpp": "2e8f11d2cbcc06d45c8784c21c750250431b7c52c15c4e372063e9897baec426",
+    "tests/fixtures/flid_x86_runtime.cpp": "80b7f9d7d13b908ca60044ac1ae331cb1e28f7ee2e0830feba5f356d3e7d0f63",
+    "src/cfl_id_maker.hpp": "292eb15b62827ec6e14f2c3209cb2c2bd613ea9630a75fac912438cabf94a192",
+    "src/loadout_tree.hpp": "54416b8810881277b934696f68738a089a20828948d314548a9bbf3b79963cf2",
+    "tests/verify_nickname_id_access_x86.py": "8c3b2f06b6c050aade5ebe7f859edcc5e9e9ec964d1478de1407fd9b86bc6dd0"
+  },
+  "hash_and_lookup_reconstructed": true,
+  "not_verified": [
+    "Real Goods database loading",
+    "Allocation failure logging",
+    "Native CRT non-ASCII locale",
+    "Exact instruction matching"
+  ]
+}

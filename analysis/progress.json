@@ -324,6 +324,11 @@
     "trees": 300,
     "database_creation_verified": false
   },
+  "nickname_id_access": {
+    "calls": 1017,
+    "hash_and_lookup_reconstructed": true,
+    "native_runtime_verified": false
+  },
   "complete_game_verified": false,
   "modules": [
     {

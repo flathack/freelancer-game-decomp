@@ -54,6 +54,7 @@ Populated Loadout Load: 16 synthetic semantic Map comparisons; full corpus/raw h
 Full Loadout Load corpus: 4 supplied file comparisons, 803 Maps / 17130 entries; empty Goods database, native runtime open.
 Goods-driven Loadout Cargo: 72 semantic loader comparisons; real Goods database creation/native runtime open.
 Goods ID/conversion plus lookup/flag: 138051 combined comparisons; real database/index population open.
+Goods nickname/Loadout ID: 1017 actual hash/pointer comparisons; real database/native locale open.
 The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.
 
 | Module | Raw export status | Raw functions | Failed |
