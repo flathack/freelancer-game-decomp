@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "differential_calls": 1024,
+  "export_count": 1,
+  "source_hashes": {
+    "src/loadout_map_constructor.cpp": "b925cd02d82d83ccf6c8839179e24d34d47761c5d368ee3e05f1b3d021cfc0cf",
+    "src/loadout_map.cpp": "cb29ca6114ba6460d16c9936f4d989a9b12eb83b343317b57197be6e84ac0c49",
+    "src/subobject_id.cpp": "5438d756b815818659e44184b457fd6dcf8e5b7238830ebc9919a7599ce1db53",
+    "tests/fixtures/loadout_map_runtime.cpp": "61bb39fb673e337faa64e44336ead413b5486ce05dd698defac7a11d4b252820",
+    "src/loadout_map.hpp": "df57f8656e668d9e90300b0a06f00c465c92ebcb42e2a690e532ec3411298c3c",
+    "tests/verify_loadout_map_constructor_x86.py": "974b6d5975eba424478be636c7f7a4688cc98c967b5b0eae09542795ad2ec348"
+  },
+  "not_verified": [
+    "Temporary assembly allocator-byte boundary",
+    "Object/stack aliasing",
+    "Allocation failure/exception unwinding",
+    "Partial object overlap",
+    "Native heap",
+    "Exact instruction matching"
+  ]
+}

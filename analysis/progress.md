@@ -37,6 +37,7 @@ Loadout lookup: 28354 calls over 300 tree shapes; tree lifecycle remains open.
 SubObjectID counters: 66414 calls / 12 exports, all 65536 equipment counter states; world/Loadout integration open.
 Loadout/reader/hash/cache: 17130 real lines passed; cargo-bay initialization reconstructed, native runtime open.
 Loadout Map ownership: 512 copy/assignment/destruction comparisons; default construction and full list loading remain open.
+Loadout Map default construction: 1024 complete guarded-object comparisons; temporary stack-byte ABI boundary.
 The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.
 
 | Module | Raw export status | Raw functions | Failed |

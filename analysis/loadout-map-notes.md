@@ -3,8 +3,8 @@
 Observed x86 Map extent: 24 bytes. ID word at 0, vector allocator bytes at 4,
 begin/end/capacity at 8/12/16, EquipIdMaker word at 20, final padding at 22.
 Reconstructed exports: copy constructor (0x0626c510), assignment (0x0626c5c0),
-destructor (0x06273100). Default construction remains open because the original
-writes an indeterminate vector allocator byte from stack storage.
+destructor (0x06273100). Default construction is now reconstructed separately with an explicit temporary
+stack-byte ABI boundary; see loadout-map-constructor-notes.md.
 
 Copy construction allocates exactly size*32, including a zero-size allocation,
 and field-copies EquipDesc without its padding bytes. Assignment retains the

@@ -8,6 +8,7 @@ struct Map {
  EquipDesc *begin,*end,*capacity;
  SubObjectID::EquipIdMaker ids;
  unsigned char padding_16[2];
+ Map();
  Map(const Map&);
  Map& operator=(const Map&);
  ~Map();

@@ -233,6 +233,11 @@
     "default_constructor_verified": false,
     "native_heap_verified": false
   },
+  "loadout_map_constructor": {
+    "calls": 1024,
+    "temporary_assembly_boundary": true,
+    "native_runtime_verified": false
+  },
   "complete_game_verified": false,
   "modules": [
     {
