@@ -34,3 +34,21 @@ extern "C" GoodInfoStorage* __thiscall good_info_assign(GoodInfoStorage* d,GoodI
     assign_list(d,s,148);assign_list(d,s,160);assign_list(d,s,172);
     word(d,184)=word(s,184);word(d,188)=word(s,188);return d;
 }
+extern "C" u32 good_info_runtime_vtable(bool);
+extern "C" GoodInfoStorage* __thiscall good_info_copy(GoodInfoStorage*,GoodInfoStorage*) asm("??0GoodInfo@@QAE@ABU0@@Z");
+extern "C" GoodInfoStorage* __thiscall good_info_copy(GoodInfoStorage* d,GoodInfoStorage* s) {
+    copy(d->bytes+4,s->bytes+4,68);
+    word(d,0)=good_info_runtime_vtable(false);
+    for(unsigned o=72;o<=108;o+=4)word(d,o)=word(s,o);
+    d->bytes[112]=s->bytes[112];
+    for(unsigned o=116;o<=144;o+=4)word(d,o)=word(s,o);
+    for(unsigned o=148;o<=172;o+=12) {
+        d->bytes[o]=s->bytes[o];
+        auto* head=static_cast<u32*>(good_info_runtime_allocate(40));
+        head[0]=reinterpret_cast<u32>(head);head[1]=reinterpret_cast<u32>(head);
+        word(d,o+4)=reinterpret_cast<u32>(head);word(d,o+8)=0;
+        assign_list(d,s,o);
+    }
+    word(d,184)=word(s,184);word(d,188)=word(s,188);
+    word(d,0)=good_info_runtime_vtable(true);return d;
+}

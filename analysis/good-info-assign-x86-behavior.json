@@ -3,8 +3,8 @@
   "differential_calls": 1000,
   "storage_extent": 192,
   "source_hashes": {
-    "src/good_info_assign.cpp": "d81587c8d822ee412859753efda694ea91bad97dae673f84d59f551e4c9103e7",
-    "tests/fixtures/good_info_assign_runtime.cpp": "6fc5d47f83f7ffe2f36041533bcdf4420e43cc1491c068004e5ca02626b36fab",
+    "src/good_info_assign.cpp": "ded0aa335de060e4b67042d270d219b1080d9f6db890045d59b47f2cad2da39b",
+    "tests/fixtures/good_info_assign_runtime.cpp": "2ef2511f0ab73a1f3db161fec369d6ffd8fea3a093b3d0843f6ad5052562d289",
     "tests/verify_good_info_assign_x86.py": "5f422f2ccb83df182ee4cc9167c9512544eaef214145dae32eed93752c40288b"
   },
   "not_verified": [

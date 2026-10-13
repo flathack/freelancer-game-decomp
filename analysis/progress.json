@@ -343,6 +343,11 @@
     "calls": 1000,
     "native_runtime_verified": false
   },
+  "good_info_copy_construction": {
+    "calls": 1000,
+    "destructor_calls": 1000,
+    "native_runtime_verified": false
+  },
   "complete_game_verified": false,
   "modules": [
     {
