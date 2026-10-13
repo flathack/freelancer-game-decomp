@@ -269,6 +269,12 @@
     "opaque_byte_pairs": 65536,
     "native_heap_verified": false
   },
+  "loadout_tree_integration": {
+    "calls": 7323,
+    "sequences": 60,
+    "native_heap_verified": false,
+    "full_loadout_loading_verified": false
+  },
   "complete_game_verified": false,
   "modules": [
     {
