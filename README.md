@@ -17,4 +17,4 @@ Zuletzt: Die **Preiszweige** des Goods-Blockreaders bestehen **10.704 Originalve
 - [Rekonstruktionsnotizen](docs/reconstruction-notes.md)
 - [decomp.dev-Anbindung und Messumfang](docs/decomp-dev.md)
 
-Codex-Decompilierung pausiert; Übergabe an Paperclip auf `hermes-srv`. [Übergabe und nächste Schritte](docs/PAPERCLIP-HANDOFF.md). Nach jedem Fortschritt committen und auf `origin/main` pushen.
+Codex-Decompilierung pausiert; Übergabe an Paperclip auf `hermes-srv`. [Übergabe und nächste Schritte](docs/PAPERCLIP-HANDOFF.md). Nach jedem Fortschritt committen und auf `origin/main` pushen. Für sämtliche Freelancer-Arbeit gilt die [Quotengrenze](docs/PAPERCLIP-QUOTA.md): nur bei nachweislich mehr als 30 % verbleibendem Codex-Wochenlimit, sonst stoppen.
