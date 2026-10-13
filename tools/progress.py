@@ -97,6 +97,7 @@ def main():
     loadout_erase=json.loads((A/'loadout-erase-x86-behavior.json').read_text())
     loadout_recovery=json.loads((A/'loadout-free-recovery-x86-behavior.json').read_text())
     loadout_insert=json.loads((A/'loadout-insert-x86-behavior.json').read_text())
+    loadout_emplace=json.loads((A/'loadout-emplace-x86-behavior.json').read_text())
     report=dict(code_modules=len(rows),raw_exported_modules=sum(r['status']=='raw_exported' for r in rows),
                 raw_decompiled_functions=sum(r.get('raw_decompiled',0) for r in rows),
                 raw_failed_functions=sum(r.get('failed',0) for r in rows),
@@ -141,7 +142,8 @@ def main():
                 loadout_free=dict(calls=loadout_free['differential_calls'],valid_tree_release_verified=True,inconsistent_size_recovery_verified=True),
                 loadout_iterator=dict(calls=loadout_iterator['differential_calls'],trees=300,erase_integration_verified=False),
                 loadout_erase=dict(calls=loadout_erase['differential_calls'],recovery_calls=loadout_recovery['differential_calls'],native_heap_verified=False),
-                loadout_insert=dict(calls=loadout_insert['differential_calls'],trees=150,top_level_selection_verified=False),
+                loadout_insert=dict(calls=loadout_insert['differential_calls'],trees=150,top_level_selection_verified=True),
+                loadout_emplace=dict(calls=loadout_emplace['differential_calls'],trees=150,unique_multi_modes_verified=True,native_heap_verified=False),
                 complete_game_verified=False,modules=rows)
     (A/'coverage-summary.json').write_text(json.dumps({r['module']:r['coverage_audit'] for r in rows if 'coverage_audit' in r},indent=2)+'\n')
     (A/'progress.json').write_text(json.dumps(report,indent=2)+'\n')
@@ -186,7 +188,8 @@ def main():
            f"Loadout bulk Free: {loadout_free['differential_calls']} complete state/free-order comparisons; zero-size recovery separately verified.",
            f"Loadout iterator: {loadout_iterator['differential_calls']} successor comparisons; erase/rebalancing integration open.",
            f"Loadout RB erase: {loadout_erase['differential_calls']} calls; Free zero-size recovery: {loadout_recovery['differential_calls']} complete-state comparisons.",
-           f"Loadout node insertion: {loadout_insert['differential_calls']} complete heap/tree comparisons; top-level duplicate/hint selection open.",
+           f"Loadout node insertion: {loadout_insert['differential_calls']} complete heap/tree comparisons; unique/multi selection separately verified, hinted API open.",
+           f"Loadout emplace/duplicates: {loadout_emplace['differential_calls']} complete heap/tree/result comparisons; native heap and full loading open.",
            'The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.',
            '', '| Module | Raw export status | Raw functions | Failed |','|---|---|---:|---:|']
     for row in rows: lines.append(f"| {pathlib.Path(row['module']).name} | {row['status']} | {row.get('raw_decompiled','—')} | {row.get('failed','—')} |")
