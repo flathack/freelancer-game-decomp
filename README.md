@@ -11,7 +11,7 @@ Stand: **13.10.2026**. Ziel ist rekonstruierter, überprüfter Quellcode des vol
 
 Die Roh-Ausgaben sind kein fertiger Quellcode. Für die gesamte verhaltensgeprüfte Rekonstruktion gibt es noch keinen belastbaren Prozentwert. Zusätzlich ist der 3-Byte-No-op `INI_Reader::log_link` separat byteidentisch bestätigt.
 
-Zuletzt: Loadout-ID-Suche mit **28.354 Vergleichen** geprüft. Reader, Loadout-Parser und echte rekonstruierte ID-Erzeugung bestehen Vergleiche über **17.130 Einträge** aus allen vier mitgelieferten Loadout-Dateien. Native Windows-Ausführung bleibt offen.
+Zuletzt: Equipment-, Kollisionsgruppen- und Schild-ID-Zähler mit **66.414 Vergleichen** geprüft, einschließlich aller 16-Bit-Equipment-Zählerstände. Reader, Loadout-Parser und echte rekonstruierte ID-Erzeugung bestehen Vergleiche über **17.130 Einträge** aus allen vier mitgelieferten Loadout-Dateien. Native Windows-Ausführung bleibt offen.
 
 - [Detaillierter Fortschritt](analysis/progress.md)
 - [Rekonstruktionsnotizen](docs/reconstruction-notes.md)

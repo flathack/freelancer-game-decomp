@@ -213,6 +213,12 @@
     "trees": 300,
     "tree_lifecycle_verified": false
   },
+  "subobject_ids": {
+    "calls": 66414,
+    "exports": 12,
+    "equipment_input_states": 65536,
+    "loadout_integration_verified": false
+  },
   "complete_game_verified": false,
   "modules": [
     {

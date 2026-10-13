@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "differential_calls": 66414,
+  "export_count": 12,
+  "exports": [
+    "??0EquipIdMaker@SubObjectID@@QAE@XZ",
+    "?Reset@EquipIdMaker@SubObjectID@@QAEXXZ",
+    "?CreateEquipID@EquipIdMaker@SubObjectID@@QAEGXZ",
+    "??4EquipIdMaker@SubObjectID@@QAEAAV01@ABV01@@Z",
+    "??0CollGroupIdMaker@SubObjectID@@QAE@XZ",
+    "?Reset@CollGroupIdMaker@SubObjectID@@QAEXXZ",
+    "?CreateGroupID@CollGroupIdMaker@SubObjectID@@QAEGXZ",
+    "??4CollGroupIdMaker@SubObjectID@@QAEAAV01@ABV01@@Z",
+    "??0ShieldIdMaker@SubObjectID@@QAE@XZ",
+    "?Reset@ShieldIdMaker@SubObjectID@@QAEXXZ",
+    "?CreateShieldID@ShieldIdMaker@SubObjectID@@QAEGXZ",
+    "??4ShieldIdMaker@SubObjectID@@QAEAAV01@ABV01@@Z"
+  ],
+  "exhaustive_equipment_counter_inputs": 65536,
+  "source_hashes": {
+    "src/subobject_id.cpp": "5438d756b815818659e44184b457fd6dcf8e5b7238830ebc9919a7599ce1db53",
+    "src/subobject_id.hpp": "e7e377aff478f1354448eaff299ccc7434e480ff556ff2fc2df9aa065f8495fd",
+    "tests/verify_subobject_id_x86.py": "af2936672e5ef22ccc2d382b4c9cbd7baf0dab33604dec6f372671b01bdf553b"
+  },
+  "not_verified": [
+    "Integration into Loadout::Map and world objects",
+    "Native execution",
+    "Exact instruction matching"
+  ]
+}
