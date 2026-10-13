@@ -359,6 +359,12 @@
     "goods_file_loading_verified": false,
     "native_runtime_verified": false
   },
+  "good_info_list_lookup": {
+    "calls": 96000,
+    "insertion_calls": 8000,
+    "expected_first_duplicate_verified": true,
+    "native_runtime_verified": false
+  },
   "complete_game_verified": false,
   "modules": [
     {
