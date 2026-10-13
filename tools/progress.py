@@ -92,6 +92,7 @@ def main():
     loadout_cache=json.loads((A/'loadout-cache-x86-behavior.json').read_text())
     loadout_map=json.loads((A/'loadout-map-x86-behavior.json').read_text())
     loadout_ctor=json.loads((A/'loadout-map-constructor-x86-behavior.json').read_text())
+    loadout_free=json.loads((A/'loadout-free-x86-behavior.json').read_text())
     report=dict(code_modules=len(rows),raw_exported_modules=sum(r['status']=='raw_exported' for r in rows),
                 raw_decompiled_functions=sum(r.get('raw_decompiled',0) for r in rows),
                 raw_failed_functions=sum(r.get('failed',0) for r in rows),
@@ -133,6 +134,7 @@ def main():
                 loadout_cache_integration=dict(line_calls=loadout_cache['corpus_loadout_calls'],navigation_calls=loadout_cache['navigation_calls'],hash_reconstructed=True,cache_reconstructed=True,cargo_bay_initialization_reconstructed=loadout_cache.get('cargo_bay_initialization_reconstructed',False),native_runtime_verified=False),
                 loadout_map=dict(calls=loadout_map['differential_calls'],exports=3,default_constructor_verified=False,native_heap_verified=False),
                 loadout_map_constructor=dict(calls=loadout_ctor['differential_calls'],temporary_assembly_boundary=True,native_runtime_verified=False),
+                loadout_free=dict(calls=loadout_free['differential_calls'],valid_tree_release_verified=True,inconsistent_size_recovery_verified=False),
                 complete_game_verified=False,modules=rows)
     (A/'coverage-summary.json').write_text(json.dumps({r['module']:r['coverage_audit'] for r in rows if 'coverage_audit' in r},indent=2)+'\n')
     (A/'progress.json').write_text(json.dumps(report,indent=2)+'\n')
@@ -174,6 +176,7 @@ def main():
            f"Loadout/reader/hash/cache: {loadout_cache['corpus_loadout_calls']} real lines passed; cargo-bay initialization reconstructed, native runtime open.",
            f"Loadout Map ownership: {loadout_map['differential_calls']} copy/assignment/destruction comparisons; default construction and full list loading remain open.",
            f"Loadout Map default construction: {loadout_ctor['differential_calls']} complete guarded-object comparisons; temporary stack-byte ABI boundary.",
+           f"Loadout bulk Free: {loadout_free['differential_calls']} complete state/free-order comparisons; inconsistent zero-size recovery open.",
            'The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.',
            '', '| Module | Raw export status | Raw functions | Failed |','|---|---|---:|---:|']
     for row in rows: lines.append(f"| {pathlib.Path(row['module']).name} | {row['status']} | {row.get('raw_decompiled','—')} | {row.get('failed','—')} |")

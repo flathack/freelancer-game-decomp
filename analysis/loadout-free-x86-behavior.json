@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "differential_calls": 300,
+  "trees": 300,
+  "source_hashes": {
+    "src/loadout_lookup.cpp": "f50655abff797880b8010fae1057ee4c598a2b84ad0d5129d5a2f07961ef6ddd",
+    "src/loadout_free.cpp": "49f58aa1998cbe51b6f63c7a0e68e51e115eae476d715c7fe61b9b4c36f212b2",
+    "src/loadout_map.cpp": "cb29ca6114ba6460d16c9936f4d989a9b12eb83b343317b57197be6e84ac0c49",
+    "src/subobject_id.cpp": "5438d756b815818659e44184b457fd6dcf8e5b7238830ebc9919a7599ce1db53",
+    "tests/fixtures/loadout_map_runtime.cpp": "61bb39fb673e337faa64e44336ead413b5486ce05dd698defac7a11d4b252820",
+    "src/loadout_tree.hpp": "54416b8810881277b934696f68738a089a20828948d314548a9bbf3b79963cf2",
+    "src/loadout_map.hpp": "df57f8656e668d9e90300b0a06f00c465c92ebcb42e2a690e532ec3411298c3c",
+    "tests/verify_loadout_free_x86.py": "de60fc2ab4e92efba8a090b9a7e12854242111928472a11825f1de61184b8fd0"
+  },
+  "not_verified": [
+    "Inconsistent zero-size/nonempty iterator-erase fallback",
+    "Original tree initialization/insertion integration",
+    "Native runtime",
+    "Exact instruction matching"
+  ]
+}

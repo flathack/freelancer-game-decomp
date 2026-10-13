@@ -3,8 +3,9 @@
   "differential_calls": 28354,
   "trees": 300,
   "source_hashes": {
-    "src/loadout_lookup.cpp": "a7d503c4681f119316e92170e4033619efa9e5b557389c9c66beccb351cef79a",
-    "tests/verify_loadout_lookup_x86.py": "ea4e9c823d4a8cd455ccdf0e98922cdb4186235543a083bcb44140d5312ba8db"
+    "src/loadout_lookup.cpp": "f50655abff797880b8010fae1057ee4c598a2b84ad0d5129d5a2f07961ef6ddd",
+    "src/loadout_tree.hpp": "54416b8810881277b934696f68738a089a20828948d314548a9bbf3b79963cf2",
+    "tests/verify_loadout_lookup_x86.py": "d3b1ba220ffb391ef9f8accb60d5cb9e3cb870985185964c2867aea8fd2f5d15"
   },
   "not_verified": [
     "Original tree initialization/insertion/deletion integration",

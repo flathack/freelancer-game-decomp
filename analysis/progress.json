@@ -238,6 +238,11 @@
     "temporary_assembly_boundary": true,
     "native_runtime_verified": false
   },
+  "loadout_free": {
+    "calls": 300,
+    "valid_tree_release_verified": true,
+    "inconsistent_size_recovery_verified": false
+  },
   "complete_game_verified": false,
   "modules": [
     {

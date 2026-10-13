@@ -1,8 +1,4 @@
-namespace Loadout {
-struct Map;
-struct LookupNode {LookupNode *left,*parent,*right;unsigned int key;};
-struct LookupTree {unsigned char allocator[4];LookupNode *head,*nil;};
-}
+#include "loadout_tree.hpp"
 extern "C" { Loadout::LookupTree LoadoutLookupTree; }
 namespace Loadout {
 const Map* Get(unsigned int id) {

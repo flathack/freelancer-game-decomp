@@ -27,6 +27,6 @@ def main():
    a=h.invoke(orig[symbol],(query,));b=h.invoke(new[symbol],(query,));expected=nodes[query]+16 if query in nodes else 0
    assert a==b==expected,(iteration,query,a,b,expected);count+=1
   assert bytes(uc.mem_read(heap,0x10000))==before
- report=dict(status='passed',differential_calls=count,trees=300,source_hashes={p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in ['src/loadout_lookup.cpp','tests/verify_loadout_lookup_x86.py']},not_verified=['Original tree initialization/insertion/deletion integration','Native runtime','Exact instruction matching'])
+ report=dict(status='passed',differential_calls=count,trees=300,source_hashes={p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in ['src/loadout_lookup.cpp','src/loadout_tree.hpp','tests/verify_loadout_lookup_x86.py']},not_verified=['Original tree initialization/insertion/deletion integration','Native runtime','Exact instruction matching'])
  (ROOT/'analysis/loadout-lookup-x86-behavior.json').write_text(json.dumps(report,indent=2)+'\n');print(f'PASS: {count} Loadout tree lookups across 300 shapes, exact payload pointers and unchanged tree')
 if __name__=='__main__':main()
