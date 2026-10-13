@@ -202,6 +202,12 @@
     "navigation_calls": 38544,
     "hash_cache_modeled": true
   },
+  "loadout_hash_integration": {
+    "line_calls": 17130,
+    "navigation_calls": 38544,
+    "hash_reconstructed": true,
+    "cache_modeled": true
+  },
   "complete_game_verified": false,
   "modules": [
     {

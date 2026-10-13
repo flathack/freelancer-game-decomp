@@ -86,6 +86,7 @@ def main():
     loadout_lines_current=all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest for p,digest in loadout_lines['source_hashes'].items())
     loadout_reader=json.loads((A/'loadout-reader-x86-behavior.json').read_text())
     loadout_corpus=json.loads((A/'loadout-corpus-x86-behavior.json').read_text())
+    loadout_hash=json.loads((A/'loadout-hash-x86-behavior.json').read_text())
     report=dict(code_modules=len(rows),raw_exported_modules=sum(r['status']=='raw_exported' for r in rows),
                 raw_decompiled_functions=sum(r.get('raw_decompiled',0) for r in rows),
                 raw_failed_functions=sum(r.get('failed',0) for r in rows),
@@ -121,6 +122,7 @@ def main():
                 loadout_lines=dict(source_current=loadout_lines_current,calls=loadout_lines['differential_calls'],reader_dependency_modeled=True),
                 loadout_reader_integration=dict(calls=loadout_reader['differential_calls'],reader_reconstructed=True,hash_cache_modeled=True),
                 loadout_corpus=dict(files=len(loadout_corpus['corpus_files']),line_calls=loadout_corpus['corpus_loadout_calls'],navigation_calls=loadout_corpus['navigation_calls'],hash_cache_modeled=True),
+                loadout_hash_integration=dict(line_calls=loadout_hash['corpus_loadout_calls'],navigation_calls=loadout_hash['navigation_calls'],hash_reconstructed=True,cache_modeled=True),
                 complete_game_verified=False,modules=rows)
     (A/'coverage-summary.json').write_text(json.dumps({r['module']:r['coverage_audit'] for r in rows if 'coverage_audit' in r},indent=2)+'\n')
     (A/'progress.json').write_text(json.dumps(report,indent=2)+'\n')
@@ -156,6 +158,7 @@ def main():
            f"Loadout equipment/cargo lines: {loadout_lines['differential_calls']} descriptor/call-order comparisons; reader/hash/cache integration pending.",
            f"Loadout/reader integration: {loadout_reader['differential_calls']} cases; hash/cache and CRT modeled.",
            f"Loadout corpus: {len(loadout_corpus['corpus_files'])} files, {loadout_corpus['corpus_loadout_calls']} lines, {loadout_corpus['navigation_calls']} navigation/name comparisons; hash/cache and CRT modeled.",
+           f"Loadout/reader/CreateID: {loadout_hash['corpus_loadout_calls']} real lines passed with actual reconstructed hashes; cache/CRT modeled.",
            'The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.',
            '', '| Module | Raw export status | Raw functions | Failed |','|---|---|---:|---:|']
     for row in rows: lines.append(f"| {pathlib.Path(row['module']).name} | {row['status']} | {row.get('raw_decompiled','—')} | {row.get('failed','—')} |")

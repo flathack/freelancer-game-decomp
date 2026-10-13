@@ -32,6 +32,7 @@ Shared INI DLL: 17 differential suites passed; native runtime remains unverified
 Loadout equipment/cargo lines: 960 descriptor/call-order comparisons; reader/hash/cache integration pending.
 Loadout/reader integration: 618 cases; hash/cache and CRT modeled.
 Loadout corpus: 4 files, 17130 lines, 38544 navigation/name comparisons; hash/cache and CRT modeled.
+Loadout/reader/CreateID: 17130 real lines passed with actual reconstructed hashes; cache/CRT modeled.
 The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.
 
 | Module | Raw export status | Raw functions | Failed |

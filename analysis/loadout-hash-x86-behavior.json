@@ -1,0 +1,63 @@
+{
+  "status": "passed",
+  "differential_calls": 17748,
+  "corpus_loadout_calls": 17130,
+  "navigation_calls": 38544,
+  "corpus_files": [
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/SHIPS/loadouts.ini",
+      "sha256": "d4ac7b254294f3da3f4659dcfc10299953c456c030d67b06ddef752a304ee505",
+      "bytes": 120663,
+      "sections": 358,
+      "entries": 8696,
+      "equipment": 7098,
+      "cargo": 882
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/SHIPS/loadouts_special.ini",
+      "sha256": "d7f41c9aa87ddbd191144acc38aa44869c2c88a25731acb5bf0fca610843cffb",
+      "bytes": 25951,
+      "sections": 75,
+      "entries": 1702,
+      "equipment": 1534,
+      "cargo": 18
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/SHIPS/loadouts_utility.ini",
+      "sha256": "1f927b141bf919f71532cd543d91a59d41ef5b625d302bb9fd1bd6212b2b9131",
+      "bytes": 18289,
+      "sections": 61,
+      "entries": 1217,
+      "equipment": 1050,
+      "cargo": 45
+    },
+    {
+      "path": "original/_FL Fresh Install-deutsch/DATA/SOLAR/loadouts.ini",
+      "sha256": "783a78a6395b4ecf704861f1e4b08bbc891419df47785e40bb551ffc6cd4d5bf",
+      "bytes": 99300,
+      "sections": 309,
+      "entries": 6852,
+      "equipment": 6405,
+      "cargo": 98
+    }
+  ],
+  "text_inputs": 9,
+  "binary_inputs": 300,
+  "source_hashes": {
+    "tests/verify_loadout_hash_x86.py": "99064478d0a375584d2c2dbcddc5426bf27e8475e8fef02b1f093f682955be33",
+    "src/loadout_lines.cpp": "1e5f6075ba6aea381979b4f027444f78f6b65836c078e6e15a417b15cc5a70a0",
+    "tests/fixtures/loadout_reader_hash_runtime.cpp": "a162b0c08190a1d38ca0778b669dd715df84db7915747eaf5bca017d5b76a1ba",
+    "tests/fixtures/loadout_reader_runtime.cpp": "896de99edbc0c29ddf84a8d99d6916395d7ad56f8d64f9a769dc5ddc67e5a0ae",
+    "src/create_id.cpp": "2e8f11d2cbcc06d45c8784c21c750250431b7c52c15c4e372063e9897baec426"
+  },
+  "fixture_sha256": "980e4da74a12d9abbd48b87dd7116366cd4eaf0a8cc4765c0a14cec63177dc7c",
+  "fixture_build_sha256": "dd3ffec7d1a5c71803f2e4a9def2ef3372e2869726c304648aa8be28d7656cfd",
+  "reader_reconstructed": true,
+  "hash_reconstructed": true,
+  "interning_modeled": true,
+  "not_verified": [
+    "Reconstructed cache integration",
+    "Native CRT/OS",
+    "Exact instruction matching"
+  ]
+}

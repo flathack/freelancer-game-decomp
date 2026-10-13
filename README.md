@@ -261,3 +261,8 @@ and line handlers: 803 sections, 18467 entries, 17130 equipment/cargo handler
 comparisons and 38544 navigation/name comparisons. Per-file hashes/counts are
 recorded in `analysis/loadout-corpus-x86-behavior.json`. Hash/cache and CRT remain
 controlled models; native file acquisition and complete list loading are open.
+
+Loadout corpus comparisons now also execute reconstructed CreateID directly.
+All 17130 real lines, 38544 navigation/name calls and 618 synthetic cases pass
+with actual original/rebuilt archetype hash values. String interning and CRT
+remain modeled. The fixture/report are recorded under `analysis/loadout-hash-*`.
