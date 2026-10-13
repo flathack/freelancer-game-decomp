@@ -5,13 +5,14 @@
   "source_hashes": {
     "src/loadout_free.cpp": "523d6298585dfcda43a79de495cc0ad1383c9887b5a3994e11b3cf7faaade3d9",
     "src/loadout_lookup.cpp": "f50655abff797880b8010fae1057ee4c598a2b84ad0d5129d5a2f07961ef6ddd",
-    "src/loadout_erase.cpp": "70b8a4aab48eb0d3dd7827bc9bab0b3b42108c11c22421a288f7bc3ec8dcd3a8",
+    "src/loadout_erase.cpp": "9d3e6e600a4eba7e92b26e2e8f2833f645c4ddbd049cf169714eaa825836acec",
     "src/loadout_iterator.cpp": "f1d123ac904c02734254a17be7c5056aefc19747415d761091a4b57337ccaf2c",
     "src/loadout_map.cpp": "cb29ca6114ba6460d16c9936f4d989a9b12eb83b343317b57197be6e84ac0c49",
     "src/subobject_id.cpp": "5438d756b815818659e44184b457fd6dcf8e5b7238830ebc9919a7599ce1db53",
     "tests/fixtures/loadout_map_runtime.cpp": "61bb39fb673e337faa64e44336ead413b5486ce05dd698defac7a11d4b252820",
+    "src/loadout_rb.hpp": "3ca4b942a1946e84e26e7c0f60a20e1d597dd37aedf1344c8aaa1cda490fc9a9",
     "src/loadout_tree.hpp": "54416b8810881277b934696f68738a089a20828948d314548a9bbf3b79963cf2",
-    "tests/verify_loadout_free_recovery_x86.py": "8160aa813677ea88f87b1fec1c3506b9e01b303ef91ff92fb0cddcd42fbeb458"
+    "tests/verify_loadout_free_recovery_x86.py": "54f9c4849dd738b2bbc156708e984b5ed362ba3c606a05297af8e23f74be314d"
   },
   "not_verified": [
     "Insertion-generated arbitrary RB color distributions",

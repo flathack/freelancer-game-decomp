@@ -32,6 +32,6 @@ def main():
    assert results[0]==results[1],(depth,trial)
    assert struct.unpack_from('<I',results[0][1],16)[0]==(-length)&0xffffffff
    assert len(results[0][2])==length*2;count+=1
- report=dict(status='passed',differential_calls=count,initial_trees=180,source_hashes={f:hashlib.sha256((ROOT/f).read_bytes()).hexdigest() for f in files+['src/loadout_tree.hpp','tests/verify_loadout_free_recovery_x86.py']},not_verified=['Insertion-generated arbitrary RB color distributions','Arbitrary corrupted tree recovery','Native heap/exception failure','Exact instruction matching'])
+ report=dict(status='passed',differential_calls=count,initial_trees=180,source_hashes={f:hashlib.sha256((ROOT/f).read_bytes()).hexdigest() for f in files+['src/loadout_rb.hpp','src/loadout_tree.hpp','tests/verify_loadout_free_recovery_x86.py']},not_verified=['Insertion-generated arbitrary RB color distributions','Arbitrary corrupted tree recovery','Native heap/exception failure','Exact instruction matching'])
  (ROOT/'analysis/loadout-free-recovery-x86-behavior.json').write_text(json.dumps(report,indent=2)+'\n');print(f'PASS: {count} Free recovery calls, exact tree/payload memory, size underflow and release order')
 if __name__=='__main__':main()

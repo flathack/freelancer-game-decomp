@@ -34,6 +34,6 @@ def main():
      uc.mem_write(heap,seed);uc.mem_write(tree,tree_seed);h.write_word(out,0xa5a5a5a5);events.clear();h.invoke(address,(out,node),tree)
      results.append((bytes(uc.mem_read(heap,0x10000)),bytes(uc.mem_read(tree,20)),h.word(out),list(events)))
     assert results[0]==results[1],(depth,trial,node,[(r[1].hex(),r[2],r[3]) for r in results]);count+=1
- report=dict(status='passed',differential_calls=count,initial_trees=180,source_hashes={f:hashlib.sha256((ROOT/f).read_bytes()).hexdigest() for f in files+['src/loadout_tree.hpp','tests/verify_loadout_erase_x86.py']},not_verified=['Insertion-generated arbitrary RB color distributions','Free recovery integration','Native heap/exception failure','Exact instruction matching'])
+ report=dict(status='passed',differential_calls=count,initial_trees=180,source_hashes={f:hashlib.sha256((ROOT/f).read_bytes()).hexdigest() for f in files+['src/loadout_rb.hpp','src/loadout_tree.hpp','tests/verify_loadout_erase_x86.py']},not_verified=['Insertion-generated arbitrary RB color distributions','Free recovery integration','Native heap/exception failure','Exact instruction matching'])
  (ROOT/'analysis/loadout-erase-x86-behavior.json').write_text(json.dumps(report,indent=2)+'\n');print(f'PASS: {count} RB erases, complete tree/payload memory, successor and release sequence')
 if __name__=='__main__':main()

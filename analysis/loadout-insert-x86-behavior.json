@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "differential_calls": 5687,
+  "trees": 150,
+  "source_hashes": {
+    "src/loadout_insert.cpp": "5b4868c286ebb8de34ffd9ed1c2120d22454d2f298eeee66d6dca43838f4785d",
+    "src/loadout_map.cpp": "cb29ca6114ba6460d16c9936f4d989a9b12eb83b343317b57197be6e84ac0c49",
+    "src/subobject_id.cpp": "5438d756b815818659e44184b457fd6dcf8e5b7238830ebc9919a7599ce1db53",
+    "tests/fixtures/loadout_map_runtime.cpp": "61bb39fb673e337faa64e44336ead413b5486ce05dd698defac7a11d4b252820",
+    "src/loadout_rb.hpp": "3ca4b942a1946e84e26e7c0f60a20e1d597dd37aedf1344c8aaa1cda490fc9a9",
+    "src/loadout_tree.hpp": "54416b8810881277b934696f68738a089a20828948d314548a9bbf3b79963cf2",
+    "src/loadout_map.hpp": "df57f8656e668d9e90300b0a06f00c465c92ebcb42e2a690e532ec3411298c3c",
+    "tests/verify_loadout_insert_x86.py": "c8d5849705427de5f0682b7a553810e386917d188bb91b4ae8b0f440ec130edf"
+  },
+  "not_verified": [
+    "Top-level duplicate detection/hinted insertion",
+    "Allocation failure and exception unwinding",
+    "Native heap",
+    "Exact instruction matching"
+  ]
+}

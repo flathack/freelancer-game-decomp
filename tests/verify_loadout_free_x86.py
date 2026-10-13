@@ -39,6 +39,6 @@ def main():
   assert snapshots[0]==snapshots[1],iteration
   assert len(snapshots[0][2])==len(keys)*2
   count+=1
- report=dict(status='passed',differential_calls=count,trees=300,source_hashes={p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in files+['src/loadout_tree.hpp','src/loadout_map.hpp','tests/verify_loadout_free_x86.py']},not_verified=['Inconsistent zero-size/nonempty iterator-erase fallback','Original tree initialization/insertion integration','Native runtime','Exact instruction matching'])
+ report=dict(status='passed',differential_calls=count,trees=300,source_hashes={p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in files+['src/loadout_rb.hpp','src/loadout_tree.hpp','src/loadout_map.hpp','tests/verify_loadout_free_x86.py']},not_verified=['Inconsistent zero-size/nonempty iterator-erase fallback','Original tree initialization/insertion integration','Native runtime','Exact instruction matching'])
  (ROOT/'analysis/loadout-free-x86-behavior.json').write_text(json.dumps(report,indent=2)+'\n');print(f'PASS: {count} Loadout Free calls across 300 shapes, exact release order and full tree/payload memory')
 if __name__=='__main__':main()

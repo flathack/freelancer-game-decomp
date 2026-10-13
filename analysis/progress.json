@@ -253,6 +253,11 @@
     "recovery_calls": 180,
     "native_heap_verified": false
   },
+  "loadout_insert": {
+    "calls": 5687,
+    "trees": 150,
+    "top_level_selection_verified": false
+  },
   "complete_game_verified": false,
   "modules": [
     {
