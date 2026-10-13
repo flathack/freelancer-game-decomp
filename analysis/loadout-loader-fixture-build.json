@@ -57,11 +57,18 @@
     "?INIWideValueBuffer@@3PAGA",
     "?INITextLineBuffer@@3PADA",
     "?INIBinaryLineBuffer@@3PADA",
+    "LoadoutLookupTree",
+    "GoodArchetypeTree",
+    "?StringCacheIndex@@3PAUStringCacheTree@@A",
+    "?m_pTheMaker@CFLIDMaker@@2PAV1@A",
     "?StringCacheArena@@3PADA",
     "?StringCacheFront@@3IA",
     "?StringCacheBack@@3IA",
     "?StringCacheInternedCount@@3IA",
     "?StringCachePrivateCount@@3IA"
+  ],
+  "test_function_exports": [
+    "loadout_tree_initialize"
   ],
   "source_hashes": {
     "src/ini_legacy_bool.cpp": "b05019702b9f646376059aa0e0c3e97e0143b4a4aeb905f3e63ca8cc77062ea6",
@@ -120,9 +127,9 @@
     "tests/fixtures/loadout_map_runtime.cpp": "61bb39fb673e337faa64e44336ead413b5486ce05dd698defac7a11d4b252820",
     "tests/fixtures/loadout_loader_runtime.cpp": "10e8593530223a178e1871c3328173adc2a612e54880b6a75ee068d00cde6ccd",
     "src/ini_reader.hpp": "b8365008a3e20e0a37d2805d236b4139cde4d388a1cb90dc7be38a3d424a364a",
-    "tools/build_ini_fixture.py": "d6a24de1ea81f60417d58125e4c2d39c54621e10cd07bdd0e1bb9221689ec149"
+    "tools/build_ini_fixture.py": "202af9f0c3416c86397734b2ccc4bfa08a87dc7a4fdd405766e390557d739eb2"
   },
-  "dll_sha256": "a14616bcacaef8b34874a26bdca1481cbd7f7b9c551dbbacb693f15d8998d6e1",
+  "dll_sha256": "5d59b9fdc7700d380d09aa5d7479421233e3787ee158caac38e519abc59e9314",
   "commands": [
     [
       "clang++",
@@ -1004,11 +1011,16 @@
       "/export:??0Map@Loadout@@QAE@ABU01@@Z",
       "/export:??4Map@Loadout@@QAEAAU01@ABU01@@Z",
       "/export:??1Map@Loadout@@QAE@XZ",
+      "/export:loadout_tree_initialize",
       "/export:?INIValuesStringBuffer@@3PADA,DATA",
       "/export:?StringIndexBuffer@@3PADA,DATA",
       "/export:?INIWideValueBuffer@@3PAGA,DATA",
       "/export:?INITextLineBuffer@@3PADA,DATA",
       "/export:?INIBinaryLineBuffer@@3PADA,DATA",
+      "/export:LoadoutLookupTree,DATA",
+      "/export:GoodArchetypeTree,DATA",
+      "/export:?StringCacheIndex@@3PAUStringCacheTree@@A,DATA",
+      "/export:?m_pTheMaker@CFLIDMaker@@2PAV1@A,DATA",
       "/export:?StringCacheArena@@3PADA,DATA",
       "/export:?StringCacheFront@@3IA,DATA",
       "/export:?StringCacheBack@@3IA,DATA",

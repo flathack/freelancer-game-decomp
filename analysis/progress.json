@@ -301,6 +301,12 @@
     "populated_loader_verified": false,
     "native_runtime_verified": false
   },
+  "loadout_populated": {
+    "calls": 16,
+    "semantic_map_comparison": true,
+    "real_corpus_verified": false,
+    "raw_heap_comparison": false
+  },
   "complete_game_verified": false,
   "modules": [
     {

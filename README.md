@@ -11,7 +11,7 @@ Stand: **13.10.2026**. Ziel ist rekonstruierter, überprüfter Quellcode des vol
 
 Die Roh-Ausgaben sind kein fertiger Quellcode. Für die gesamte verhaltensgeprüfte Rekonstruktion gibt es noch keinen belastbaren Prozentwert. Zusätzlich ist der 3-Byte-No-op `INI_Reader::log_link` separat byteidentisch bestätigt.
 
-Zuletzt: Erste Loadout-Dateilader-Implementierung gebaut; **64 Vergleiche** für leere Dateien, fremde Abschnitte und Fehler bestanden. Befüllte Loader-Abschnitte sind noch ungeprüft. Reader, Loadout-Parser, ID-Erzeugung und String-Cache gemeinsam geprüft: **17.130 echte Loadout-Einträge**, 38.544 Reader-Aufrufe und 618 synthetische Fälle bestanden. Auch die Cargo-Bay-Initialisierung läuft jetzt über den Cache. Native Windows-Ausführung und vollständige Listenverwaltung bleiben offen.
+Zuletzt: Befüllte Loadout-Dateilader-Pfade mit **16 Vergleichen** geprüft, einschließlich IDs und Ersetzen vorhandener Nicknames. Echte Dateien und Goods-gesteuerte Kombination im gesamten Loader bleiben offen. Reader, Loadout-Parser, ID-Erzeugung und String-Cache gemeinsam geprüft: **17.130 echte Loadout-Einträge**, 38.544 Reader-Aufrufe und 618 synthetische Fälle bestanden. Auch die Cargo-Bay-Initialisierung läuft jetzt über den Cache. Native Windows-Ausführung und vollständige Listenverwaltung bleiben offen.
 
 - [Detaillierter Fortschritt](analysis/progress.md)
 - [Rekonstruktionsnotizen](docs/reconstruction-notes.md)
