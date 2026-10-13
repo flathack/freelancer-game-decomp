@@ -116,6 +116,11 @@ def main():
     good_info_assign=json.loads((A/'good-info-assign-x86-behavior.json').read_text())
     good_info_destroy=json.loads((A/'good-info-destroy-x86-behavior.json').read_text())
     good_info_init=json.loads((A/'good-info-initialize-x86-behavior.json').read_text())
+    good_price_path=A/'good-info-price-x86-behavior.json'
+    good_price=json.loads(good_price_path.read_text()) if good_price_path.exists() else {}
+    good_price_current=bool(good_price) and good_price.get('status')=='passed' and all(
+        hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest
+        for p,digest in good_price.get('source_hashes',{}).items())
     nickname_ids=json.loads((A/'nickname-id-x86-behavior.json').read_text())
     report=dict(code_modules=len(rows),raw_exported_modules=sum(r['status']=='raw_exported' for r in rows),
                 raw_decompiled_functions=sum(r.get('raw_decompiled',0) for r in rows),
@@ -182,6 +187,10 @@ def main():
                 good_info_list_initialization=dict(calls=good_list_init['differential_calls'],database_loading_verified=False,native_runtime_verified=False),
                 good_index_insertion=dict(calls=good_index_emplace['differential_calls'],actual_constructor_integrated=True,goods_file_loading_verified=False,native_runtime_verified=False),
                 good_info_list_lookup=dict(calls=good_index_lookup['differential_calls'],insertion_calls=good_index_lookup['insertion_calls'],expected_first_duplicate_verified=True,native_runtime_verified=False),
+                good_info_pricing=dict(source_current=good_price_current,blocks=good_price.get('differential_blocks',0),
+                    reconstruction_abi_calls=good_price.get('reconstruction_handler_abi_calls',0),
+                    x87_control_words=len(good_price.get('x87_controls',[])),temporary_x87_assembly_boundary=True,
+                    reader_dependencies_modeled=True,full_goods_loading_verified=False,native_runtime_verified=False),
                 complete_game_verified=False,modules=rows)
     (A/'coverage-summary.json').write_text(json.dumps({r['module']:r['coverage_audit'] for r in rows if 'coverage_audit' in r},indent=2)+'\n')
     (A/'progress.json').write_text(json.dumps(report,indent=2)+'\n')
@@ -247,6 +256,7 @@ def main():
            f"GoodInfoList initialization: {good_list_init['differential_calls']} guarded storage/heap/allocation comparisons; Goods loading and index population remain open.",
            f"Goods index insertion: {good_index_emplace['differential_calls']} full state/allocation comparisons across 100 actual construction sequences and both indexes; file loading/native runtime open.",
            f"Goods object lookup: {good_index_lookup['differential_calls']} pointer comparisons on {good_index_lookup['insertion_calls']} actual construction/insertion calls; earliest duplicates independently verified, file loading/native runtime open.",
+           f"Goods pricing branches: {good_price.get('differential_blocks',0)} original block comparisons / {len(good_price.get('x87_controls',[]))} x87 controls; temporary arithmetic boundary, reader dependencies modeled, full Goods loader open; source current: {good_price_current}.",
            'The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.',
            '', '| Module | Raw export status | Raw functions | Failed |','|---|---|---:|---:|']
     for row in rows: lines.append(f"| {pathlib.Path(row['module']).name} | {row['status']} | {row.get('raw_decompiled','—')} | {row.get('failed','—')} |")

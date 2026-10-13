@@ -365,6 +365,16 @@
     "expected_first_duplicate_verified": true,
     "native_runtime_verified": false
   },
+  "good_info_pricing": {
+    "source_current": true,
+    "blocks": 10704,
+    "reconstruction_abi_calls": 20340,
+    "x87_control_words": 12,
+    "temporary_x87_assembly_boundary": true,
+    "reader_dependencies_modeled": true,
+    "full_goods_loading_verified": false,
+    "native_runtime_verified": false
+  },
   "complete_game_verified": false,
   "modules": [
     {

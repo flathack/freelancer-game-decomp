@@ -1,23 +1,23 @@
 {
-  "compiler": "clang version 23.1.1",
+  "compiler": "Ubuntu clang version 21.1.8 (6ubuntu1)",
   "commands": [
     [
       "clang++",
       "--target=i686-pc-windows-msvc",
       "-O2",
       "-c",
-      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/src/archetype_id.cpp",
+      "/opt/data/projects/Freelancer-Decomp/src/archetype_id.cpp",
       "-o",
-      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/archetype_id-match.obj"
+      "/opt/data/projects/Freelancer-Decomp/build/archetype_id-match.obj"
     ],
     [
       "clang++",
       "--target=i686-pc-windows-msvc",
       "-O2",
       "-c",
-      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/src/csimple.cpp",
+      "/opt/data/projects/Freelancer-Decomp/src/csimple.cpp",
       "-o",
-      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/csimple-match.obj"
+      "/opt/data/projects/Freelancer-Decomp/build/csimple-match.obj"
     ]
   ],
   "results": [

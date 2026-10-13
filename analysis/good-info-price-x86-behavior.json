@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "original_sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
+  "original_entry": "0x62708c0",
+  "differential_blocks": 10704,
+  "cases_per_control": 892,
+  "x87_controls": [
+    "0x7f",
+    "0x47f",
+    "0x87f",
+    "0xc7f",
+    "0x27f",
+    "0x67f",
+    "0xa7f",
+    "0xe7f",
+    "0x37f",
+    "0x77f",
+    "0xb7f",
+    "0xf7f"
+  ],
+  "case_kinds": {
+    "default-mask": 3456,
+    "special-existing": 2160,
+    "multiplier80": 3648,
+    "sequence": 1440
+  },
+  "reconstruction_handler_abi_calls": 20340,
+  "negative_control_handler_abi_calls": {
+    "early_binary32": 576,
+    "getter_binary64_spill": 192
+  },
+  "negative_control_mismatches": 243,
+  "negative_control_storage_mismatches": 243,
+  "negative_control_x87_mismatches": 0,
+  "binary64_spill_negative_control": {
+    "cases": 96,
+    "storage_mismatches": 8,
+    "x87_mismatches": 0
+  },
+  "independent_expected_value_checks": 1744,
+  "full_guarded_object_compared": true,
+  "x87_control_status_tags_live80_compared": true,
+  "source_hashes": {
+    "src/good_info_price.cpp": "eea67afcd313ab7f50f468b688e5fdea0ac4fdd377229ea1325459351f85c78b",
+    "src/good_info_price.hpp": "28699be98e54f9253df1278b088329b689c633734ccc15aaa883202a506a96e5",
+    "tests/fixtures/good_info_price_runtime.cpp": "437b4dda75eb42bdd2faaf3fc37c3c26f6ddf3af200a9588ce45e05f73b3c25b",
+    "tests/verify_good_info_price_x86.py": "58d9e68d01bd6d7ac0adc2b1dc1a81379b9807cd0b3464ba7665375940b6e46c"
+  },
+  "not_verified": [
+    "Complete Goods block/file reader",
+    "Original Goods file corpus",
+    "Archetype database and metadata fallback",
+    "Native Windows/CRT",
+    "Unmasked x87 exceptions or stack exhaustion",
+    "Exact instruction matching"
+  ]
+}

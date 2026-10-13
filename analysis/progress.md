@@ -62,6 +62,7 @@ GoodInfo copying: 1000 full object/heap/allocation comparisons followed by destr
 GoodInfoList initialization: 768 guarded storage/heap/allocation comparisons; Goods loading and index population remain open.
 Goods index insertion: 8000 full state/allocation comparisons across 100 actual construction sequences and both indexes; file loading/native runtime open.
 Goods object lookup: 96000 pointer comparisons on 8000 actual construction/insertion calls; earliest duplicates independently verified, file loading/native runtime open.
+Goods pricing branches: 10704 original block comparisons / 12 x87 controls; temporary arithmetic boundary, reader dependencies modeled, full Goods loader open; source current: True.
 The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.
 
 | Module | Raw export status | Raw functions | Failed |
