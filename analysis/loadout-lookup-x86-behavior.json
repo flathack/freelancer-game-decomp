@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "differential_calls": 28354,
+  "trees": 300,
+  "source_hashes": {
+    "src/loadout_lookup.cpp": "a7d503c4681f119316e92170e4033619efa9e5b557389c9c66beccb351cef79a",
+    "tests/verify_loadout_lookup_x86.py": "ea4e9c823d4a8cd455ccdf0e98922cdb4186235543a083bcb44140d5312ba8db"
+  },
+  "not_verified": [
+    "Original tree initialization/insertion/deletion integration",
+    "Native runtime",
+    "Exact instruction matching"
+  ]
+}

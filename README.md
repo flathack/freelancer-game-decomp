@@ -271,3 +271,8 @@ remain modeled. The fixture/report are recorded under `analysis/loadout-hash-*`.
 
 GitHub Actions publishes conservative binary-match coverage for decomp.dev.
 See [integration and metric scope](docs/decomp-dev.md).
+
+`Loadout::Get` now reconstructs the original tree search and exact-ID payload
+selection. 28354 original/rebuilt lookups over 300 tree shapes pass, including
+unsigned ID boundaries, missing IDs and unchanged tree-memory checks. Tree/list
+construction and global initialization remain open.

@@ -208,6 +208,11 @@
     "hash_reconstructed": true,
     "cache_modeled": true
   },
+  "loadout_lookup": {
+    "calls": 28354,
+    "trees": 300,
+    "tree_lifecycle_verified": false
+  },
   "complete_game_verified": false,
   "modules": [
     {
