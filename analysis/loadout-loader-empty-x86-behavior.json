@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "original_sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
+  "compiled_dll_sha256": "a14616bcacaef8b34874a26bdca1481cbd7f7b9c551dbbacb693f15d8998d6e1",
+  "differential_calls": 64,
+  "real_files": [],
+  "methods": [
+    "?Load@Loadout@@YAHPBD_N@Z"
+  ],
+  "source_hashes": {
+    "src/loadout_load.cpp": "23b779e21c7a9941f67c6c1b6500c75122bca6a980189a3cd8444b83ef9f2850",
+    "tests/fixtures/loadout_loader_runtime.cpp": "10e8593530223a178e1871c3328173adc2a612e54880b6a75ee068d00cde6ccd",
+    "tools/build_ini_fixture.py": "d6a24de1ea81f60417d58125e4c2d39c54621e10cd07bdd0e1bb9221689ec149",
+    "tests/verify_loadout_loader_empty_x86.py": "24a93bf614643147b881cd180d9220028b4c7060356ff4d41f63e9eb14bdfab5"
+  },
+  "external_dependencies": "MSVCP60 COW, Win32 mapping, fatal handler and progress callback modeled",
+  "not_verified": [
+    "Native OS/CRT",
+    "Non-returning fatal handler",
+    "Allocation or exception failure",
+    "Exact instruction matching"
+  ]
+}

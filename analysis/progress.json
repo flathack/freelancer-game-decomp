@@ -296,6 +296,11 @@
     "raw_combination_flag_verified": true,
     "database_creation_verified": false
   },
+  "loadout_loader_entry": {
+    "calls": 64,
+    "populated_loader_verified": false,
+    "native_runtime_verified": false
+  },
   "complete_game_verified": false,
   "modules": [
     {

@@ -49,6 +49,7 @@ Equipment collection searches: 97416 pointer/ID comparisons across 5 exports; ca
 Equipment vector append/merge: 908 cases, including 3 original mismatch nonreturning paths; loader/native runtime open.
 Equipment vector append: 435 cases including 3 bounded self-append paths; full loader/native heap open.
 Goods archetype/Cargo flag: 57012 pointer/raw-AL comparisons; database creation and loader integration open.
+Loadout Load entry: 64 empty/other-header/error comparisons; populated loader flow remains provisional.
 The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.
 
 | Module | Raw export status | Raw functions | Failed |

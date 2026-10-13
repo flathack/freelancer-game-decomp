@@ -104,6 +104,7 @@ def main():
     equip_add=json.loads((A/'equip-vector-add-x86-behavior.json').read_text())
     equip_append=json.loads((A/'equip-vector-append-x86-behavior.json').read_text())
     good_lookup=json.loads((A/'good-archetype-x86-behavior.json').read_text())
+    loadout_loader=json.loads((A/'loadout-loader-empty-x86-behavior.json').read_text())
     report=dict(code_modules=len(rows),raw_exported_modules=sum(r['status']=='raw_exported' for r in rows),
                 raw_decompiled_functions=sum(r.get('raw_decompiled',0) for r in rows),
                 raw_failed_functions=sum(r.get('failed',0) for r in rows),
@@ -156,6 +157,7 @@ def main():
                 equip_vector_add=dict(calls=equip_add['differential_calls'],instruction_limit_cases=equip_add['nonreturning_cases'],full_loader_integration_verified=False),
                 equip_vector_append=dict(calls=equip_append['differential_calls'],bounded_self_append_cases=3,native_heap_verified=False),
                 good_archetype_lookup=dict(calls=good_lookup['differential_calls'],trees=300,raw_combination_flag_verified=True,database_creation_verified=False),
+                loadout_loader_entry=dict(calls=loadout_loader['differential_calls'],populated_loader_verified=False,native_runtime_verified=False),
                 complete_game_verified=False,modules=rows)
     (A/'coverage-summary.json').write_text(json.dumps({r['module']:r['coverage_audit'] for r in rows if 'coverage_audit' in r},indent=2)+'\n')
     (A/'progress.json').write_text(json.dumps(report,indent=2)+'\n')
@@ -208,6 +210,7 @@ def main():
            f"Equipment vector append/merge: {equip_add['differential_calls']} cases, including 3 original mismatch nonreturning paths; loader/native runtime open.",
            f"Equipment vector append: {equip_append['differential_calls']} cases including 3 bounded self-append paths; full loader/native heap open.",
            f"Goods archetype/Cargo flag: {good_lookup['differential_calls']} pointer/raw-AL comparisons; database creation and loader integration open.",
+           f"Loadout Load entry: {loadout_loader['differential_calls']} empty/other-header/error comparisons; populated loader flow remains provisional.",
            'The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.',
            '', '| Module | Raw export status | Raw functions | Failed |','|---|---|---:|---:|']
     for row in rows: lines.append(f"| {pathlib.Path(row['module']).name} | {row['status']} | {row.get('raw_decompiled','—')} | {row.get('failed','—')} |")
