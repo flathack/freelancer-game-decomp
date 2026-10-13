@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "differential_calls": 97416,
+  "collection_shapes": 250,
+  "exports": [
+    "?traverse_equipment_type@EquipDescVector@@QAEPAUEquipDesc@@IPBU2@@Z",
+    "?traverse_equipment_type@EquipDescList@@QAEPAUEquipDesc@@IPBU2@@Z",
+    "?traverse_equipment_type@EquipDescList@@QBEPBUEquipDesc@@IPBU2@@Z",
+    "?find_equipment_item@EquipDescList@@QAEPAUEquipDesc@@G@Z",
+    "?find_equipment_item@EquipDescList@@QBEPBUEquipDesc@@G@Z"
+  ],
+  "source_hashes": {
+    "src/equip_desc_collection_search.cpp": "6fa9582c1d126a5056de91ca696df42119eeddafbcbb91f3d19dc222cc2a9245",
+    "src/equip_desc_collections.hpp": "416e45e960bb2e61e863296581db461b97ef511c429d7c0d8ed13d9b74ba7983",
+    "src/equip_desc.hpp": "a9153f187c54fea42820ea159ccaaf2b7ee9860ed904d686b2abc699e4c22edc",
+    "tests/verify_equip_collection_search_x86.py": "f394a3d623cf204a2204ddaac5d21cbbbe5804adad055e4e45e5acdf621bbfad"
+  },
+  "not_verified": [
+    "Cargo merge/list mutation integration",
+    "Malformed/cyclic collections",
+    "Native execution",
+    "Exact instruction matching"
+  ]
+}

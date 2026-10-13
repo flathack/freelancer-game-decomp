@@ -45,6 +45,7 @@ Loadout node insertion: 5687 complete heap/tree comparisons; unique/multi select
 Loadout emplace/duplicates: 11482 complete heap/tree/result comparisons; native heap and full loading open.
 Loadout tree initialization: 65536 guarded object/sentinel comparisons; startup/native heap integration open.
 Loadout tree integration: 7323 calls across 60 construction/insertion/lookup/erase/free sequences; full file loading open.
+Equipment collection searches: 97416 pointer/ID comparisons across 5 exports; cargo merge/mutation open.
 The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.
 
 | Module | Raw export status | Raw functions | Failed |

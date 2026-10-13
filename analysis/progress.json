@@ -275,6 +275,11 @@
     "native_heap_verified": false,
     "full_loadout_loading_verified": false
   },
+  "equip_collection_search": {
+    "calls": 97416,
+    "exports": 5,
+    "collection_mutation_verified": false
+  },
   "complete_game_verified": false,
   "modules": [
     {
