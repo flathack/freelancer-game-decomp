@@ -87,8 +87,11 @@ def main():
  uc.mem_write(atof,b'\xdd\x05'+struct.pack('<I',fp+32)+b'\xc3')
  lower=h.stop+0x3a0;h.write_word(0x63992f4,lower)
  strlower=h.stop+0x3c0;h.write_word(0x6399350,strlower);uc.mem_map(0x25000000,0x10000);heap_cursor=0x25000000
- h.write_word(0x63fbf0c,0x20507000)
  uc.hook_add(UC_HOOK_CODE,hook)
+ uc.mem_write(h.scratch+0x7000,b'BAY\0')
+ original_bay=h.invoke(orig['?StringAlloc@@YAPADPBD_N@Z'],(h.scratch+0x7000,0))
+ h.write_word(0x63fbf0c,original_bay)
+ crt_callbacks=h.initialize_crt(dll);assert crt_callbacks>=1
  rng=random.Random(2003);item=h.scratch+0x6000;calls=0;symbols=['?ReadEquipLine@Loadout@@YA_NAAVINI_Reader@@AAUEquipDesc@@@Z','?ReadCargoLine@Loadout@@YA_NAAVINI_Reader@@AAUEquipDesc@@@Z']
  original_arena=0x6409810;rebuilt_arena=new['?StringCacheArena@@3PADA']
  original_counters=[0x63ecb6c,0x63ecb70,0x63ecb74,0x6589810]
@@ -139,6 +142,6 @@ def main():
     if key==b'equip':pair(symbols[0]);equipment+=1
     elif key==b'cargo':pair(symbols[1]);cargo+=1
   corpus_files.append(dict(path=str(path.relative_to(ROOT)),sha256=digest(path),bytes=len(blob),sections=sections,entries=entries,equipment=equipment,cargo=cargo))
- report=dict(status='passed',differential_calls=calls,corpus_loadout_calls=calls-corpus_start,navigation_calls=navigation_calls,corpus_files=corpus_files,text_inputs=len(text_inputs),binary_inputs=300,source_hashes={p:digest(ROOT/p) for p in ['tests/verify_loadout_cache_x86.py','src/loadout_lines.cpp','tests/fixtures/loadout_reader_hash_runtime.cpp','tests/fixtures/loadout_reader_runtime.cpp','src/create_id.cpp','src/string_cache.cpp','tests/fixtures/loadout_reader_cache_runtime.cpp']},fixture_sha256=digest(dll),fixture_build_sha256=digest(ROOT/'analysis/loadout-cache-fixture-build.json'),reader_reconstructed=True,hash_reconstructed=True,interning_reconstructed=True,cargo_bay_initialization_modeled=True,not_verified=['Cargo-bay global initialization and shutdown integration','Native CRT/OS','Exact instruction matching'])
+ report=dict(status='passed',differential_calls=calls,corpus_loadout_calls=calls-corpus_start,navigation_calls=navigation_calls,corpus_files=corpus_files,text_inputs=len(text_inputs),binary_inputs=300,source_hashes={p:digest(ROOT/p) for p in ['tests/verify_loadout_cache_x86.py','src/loadout_lines.cpp','tests/fixtures/loadout_reader_hash_runtime.cpp','tests/fixtures/loadout_reader_runtime.cpp','src/create_id.cpp','src/string_cache.cpp','tests/fixtures/loadout_reader_cache_runtime.cpp']},fixture_sha256=digest(dll),fixture_build_sha256=digest(ROOT/'analysis/loadout-cache-fixture-build.json'),reader_reconstructed=True,hash_reconstructed=True,interning_reconstructed=True,cargo_bay_initialization_reconstructed=True,crt_callbacks=crt_callbacks,not_verified=['Cache shutdown integration','Native CRT/OS','Exact instruction matching'])
  (ROOT/'analysis/loadout-cache-x86-behavior.json').write_text(json.dumps(report,indent=2)+'\n');print(f'PASS: {calls-corpus_start} real Loadout calls, {navigation_calls} navigation calls across {len(corpus_files)} files, plus {corpus_start} synthetic calls')
 if __name__=='__main__':main()

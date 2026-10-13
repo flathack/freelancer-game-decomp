@@ -44,22 +44,23 @@
   "text_inputs": 9,
   "binary_inputs": 300,
   "source_hashes": {
-    "tests/verify_loadout_cache_x86.py": "5aa895badf82841eba6cc2be7f837378b5d9bcdb192b7f096f2deb11ea71e7a6",
+    "tests/verify_loadout_cache_x86.py": "b853a8c3130d1c3aec21292c8a82782e954956ed2470c46ce539eab4c5265193",
     "src/loadout_lines.cpp": "1e5f6075ba6aea381979b4f027444f78f6b65836c078e6e15a417b15cc5a70a0",
     "tests/fixtures/loadout_reader_hash_runtime.cpp": "a162b0c08190a1d38ca0778b669dd715df84db7915747eaf5bca017d5b76a1ba",
-    "tests/fixtures/loadout_reader_runtime.cpp": "896de99edbc0c29ddf84a8d99d6916395d7ad56f8d64f9a769dc5ddc67e5a0ae",
+    "tests/fixtures/loadout_reader_runtime.cpp": "8cd7f90ca0934a54d6250e6710c03cee7944489fe12868c501bef72515d18c28",
     "src/create_id.cpp": "2e8f11d2cbcc06d45c8784c21c750250431b7c52c15c4e372063e9897baec426",
     "src/string_cache.cpp": "d31c13d0aefa4be5332b6d47d0e8f945a9fd3d29dddeb28bd204f1b59b2e3ced",
-    "tests/fixtures/loadout_reader_cache_runtime.cpp": "5a6212696c6a65be72df5e1c18d31ca7aac588b2b1c6e6a3e791c650d806f9c7"
+    "tests/fixtures/loadout_reader_cache_runtime.cpp": "4f4289bdbf64aebbd9cb254f60fee9bf88b7c4352e3726b21559759b7fb09c83"
   },
-  "fixture_sha256": "ea121c5d66dd0ab6e3b0d27f3a816ab267821cf0749f7dc2526a4a0b01a27328",
-  "fixture_build_sha256": "b55aa5601a24ba3e8734dd0016c19cc991499502d9083f798a5ead04b6398cc9",
+  "fixture_sha256": "c1be359dca107a102ea67cc0c93042ecf5fb43c044052d9df5315536ea84c249",
+  "fixture_build_sha256": "8d04a667be54680a317303fed8566b6e22d10431e6aea1f4a373018efb6459e8",
   "reader_reconstructed": true,
   "hash_reconstructed": true,
   "interning_reconstructed": true,
-  "cargo_bay_initialization_modeled": true,
+  "cargo_bay_initialization_reconstructed": true,
+  "crt_callbacks": 1,
   "not_verified": [
-    "Cargo-bay global initialization and shutdown integration",
+    "Cache shutdown integration",
     "Native CRT/OS",
     "Exact instruction matching"
   ]

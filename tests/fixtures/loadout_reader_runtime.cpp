@@ -1,6 +1,8 @@
 #include "../../src/ini_reader_strings.hpp"
 #include "../../src/equip_desc.hpp"
+#ifndef LOADOUT_REAL_BAY
 const CacheString EquipDesc::CARGO_BAY_HP_NAME={reinterpret_cast<const char*>(0x20507000)};
+#endif
 extern "C" const char* loadout_value_string(INI_Reader* r,unsigned int i){return ini_value_string(r,i);}
 extern "C" bool loadout_value_empty(INI_Reader* r,unsigned int i){return r->is_value_empty(i);}
 extern "C" double loadout_value_float(INI_Reader* r,unsigned int i){return ini_value_float(r,i);}

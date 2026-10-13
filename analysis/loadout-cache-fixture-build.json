@@ -94,13 +94,13 @@
     "src/loadout_lines.cpp": "1e5f6075ba6aea381979b4f027444f78f6b65836c078e6e15a417b15cc5a70a0",
     "src/create_id.cpp": "2e8f11d2cbcc06d45c8784c21c750250431b7c52c15c4e372063e9897baec426",
     "tests/fixtures/flid_x86_runtime.cpp": "80b7f9d7d13b908ca60044ac1ae331cb1e28f7ee2e0830feba5f356d3e7d0f63",
-    "tests/fixtures/loadout_reader_cache_runtime.cpp": "5a6212696c6a65be72df5e1c18d31ca7aac588b2b1c6e6a3e791c650d806f9c7",
+    "tests/fixtures/loadout_reader_cache_runtime.cpp": "4f4289bdbf64aebbd9cb254f60fee9bf88b7c4352e3726b21559759b7fb09c83",
     "src/string_cache.cpp": "d31c13d0aefa4be5332b6d47d0e8f945a9fd3d29dddeb28bd204f1b59b2e3ced",
     "tests/fixtures/string_cache_x86_runtime.cpp": "fe90bfece8324e9499978a29bc94651b62666a4b5f1ed153906438cecd6be3b7",
     "src/ini_reader.hpp": "b8365008a3e20e0a37d2805d236b4139cde4d388a1cb90dc7be38a3d424a364a",
     "tools/build_ini_fixture.py": "7e118d233b9a899cee050407026bd24afcb53a638a58fd9b8eea6b67a1ef2f5a"
   },
-  "dll_sha256": "ea121c5d66dd0ab6e3b0d27f3a816ab267821cf0749f7dc2526a4a0b01a27328",
+  "dll_sha256": "c1be359dca107a102ea67cc0c93042ecf5fb43c044052d9df5315536ea84c249",
   "commands": [
     [
       "clang++",

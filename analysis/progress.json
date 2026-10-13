@@ -224,6 +224,7 @@
     "navigation_calls": 38544,
     "hash_reconstructed": true,
     "cache_reconstructed": true,
+    "cargo_bay_initialization_reconstructed": true,
     "native_runtime_verified": false
   },
   "complete_game_verified": false,
