@@ -266,3 +266,8 @@ Loadout corpus comparisons now also execute reconstructed CreateID directly.
 All 17130 real lines, 38544 navigation/name calls and 618 synthetic cases pass
 with actual original/rebuilt archetype hash values. String interning and CRT
 remain modeled. The fixture/report are recorded under `analysis/loadout-hash-*`.
+
+## Progress dashboard
+
+GitHub Actions publishes conservative binary-match coverage for decomp.dev.
+See [integration and metric scope](docs/decomp-dev.md).
