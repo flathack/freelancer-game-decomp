@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "differential_calls": 512,
+  "export_count": 3,
+  "source_hashes": {
+    "src/loadout_map.cpp": "cb29ca6114ba6460d16c9936f4d989a9b12eb83b343317b57197be6e84ac0c49",
+    "src/subobject_id.cpp": "5438d756b815818659e44184b457fd6dcf8e5b7238830ebc9919a7599ce1db53",
+    "tests/fixtures/loadout_map_runtime.cpp": "61bb39fb673e337faa64e44336ead413b5486ce05dd698defac7a11d4b252820",
+    "src/loadout_map.hpp": "2457627f0ebf1c6870d6b0ece8a4593aafcc3dddd5faa8f9c301f5fabbba2f54",
+    "tests/verify_loadout_map_x86.py": "1d4f6019b0c677c5166a992bb9efe596badc716cf60f0172c030e138fd40ce49"
+  },
+  "not_verified": [
+    "Default constructor allocator indeterminacy",
+    "Allocation failure/exception unwinding",
+    "Partial object overlap",
+    "Native heap",
+    "Exact instruction matching"
+  ]
+}
