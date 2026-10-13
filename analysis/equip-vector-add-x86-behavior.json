@@ -6,7 +6,7 @@
     "src/equip_desc_vector_add.cpp": "1b5328fbe0a84930c5e00230c1ae64594095ab7abd99bd1229acb596aba5ffe9",
     "tests/fixtures/equip_collection_runtime.cpp": "6ecafbe3df081fa01f23c91bef961f3d1244eea5473ce6c860f1e48dd9f8571c",
     "tests/fixtures/loadout_map_runtime.cpp": "61bb39fb673e337faa64e44336ead413b5486ce05dd698defac7a11d4b252820",
-    "src/equip_desc_collections.hpp": "daf9553b3d1256d52726c89c597e1c0a3a5a581e42acf12b9d6cdd9f16d26522",
+    "src/equip_desc_collections.hpp": "8e6d849b86cf99614804c50a1b4f4e38e7a538d28fc0210b0581bf6288455a2c",
     "tests/verify_equip_vector_add_x86.py": "19874e5aab8fad175d31bbbb2fe1e6850566c66b5224f308ebd842d22c475179"
   },
   "not_verified": [

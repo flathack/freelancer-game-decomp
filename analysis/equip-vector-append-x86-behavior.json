@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "differential_calls": 435,
+  "nonreturning_cases": 3,
+  "source_hashes": {
+    "src/equip_desc_vector_append.cpp": "b54b338150532aaa5c985f2d1fc742653f30a44d5e26db1f31e3c9a0e5035065",
+    "src/equip_desc_vector_add.cpp": "1b5328fbe0a84930c5e00230c1ae64594095ab7abd99bd1229acb596aba5ffe9",
+    "tests/fixtures/equip_collection_runtime.cpp": "6ecafbe3df081fa01f23c91bef961f3d1244eea5473ce6c860f1e48dd9f8571c",
+    "tests/fixtures/loadout_map_runtime.cpp": "61bb39fb673e337faa64e44336ead413b5486ce05dd698defac7a11d4b252820",
+    "src/equip_desc_collections.hpp": "8e6d849b86cf99614804c50a1b4f4e38e7a538d28fc0210b0581bf6288455a2c",
+    "tests/verify_equip_vector_append_x86.py": "1507770d0b67b19605fcf7d7084551b9e3b888d94415df625ada500496747f83"
+  },
+  "not_verified": [
+    "Full self-append memory evolution beyond instruction budget",
+    "Partial vector/storage aliasing",
+    "Full Loadout loader integration",
+    "Native CRT/heap",
+    "Exact instruction matching"
+  ]
+}

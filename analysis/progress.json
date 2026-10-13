@@ -285,6 +285,11 @@
     "instruction_limit_cases": 3,
     "full_loader_integration_verified": false
   },
+  "equip_vector_append": {
+    "calls": 435,
+    "bounded_self_append_cases": 3,
+    "native_heap_verified": false
+  },
   "complete_game_verified": false,
   "modules": [
     {
