@@ -339,6 +339,10 @@
     "allocator_callback_state_compared": true,
     "native_runtime_verified": false
   },
+  "good_info_assignment": {
+    "calls": 1000,
+    "native_runtime_verified": false
+  },
   "complete_game_verified": false,
   "modules": [
     {

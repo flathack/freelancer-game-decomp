@@ -57,6 +57,7 @@ Goods ID/conversion plus lookup/flag: 138051 combined comparisons; real database
 Goods nickname/Loadout ID: 1017 actual hash/pointer comparisons; real database/native locale open.
 GoodInfo initialization: 768 guarded storage/heap/allocation comparisons; original-image vtable/cache bindings, native class/runtime open.
 GoodInfo destruction: 500 full object/heap/free-callback state comparisons; original-image vtable binding, native runtime open.
+GoodInfo assignment: 1000 full object/heap/allocation comparisons, including self-assignment and name truncation; native runtime open.
 The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.
 
 | Module | Raw export status | Raw functions | Failed |

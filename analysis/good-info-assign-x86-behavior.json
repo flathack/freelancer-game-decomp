@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "differential_calls": 1000,
+  "storage_extent": 192,
+  "source_hashes": {
+    "src/good_info_assign.cpp": "d81587c8d822ee412859753efda694ea91bad97dae673f84d59f551e4c9103e7",
+    "tests/fixtures/good_info_assign_runtime.cpp": "6fc5d47f83f7ffe2f36041533bcdf4420e43cc1491c068004e5ca02626b36fab",
+    "tests/verify_good_info_assign_x86.py": "5f422f2ccb83df182ee4cc9167c9512544eaef214145dae32eed93752c40288b"
+  },
+  "not_verified": [
+    "Native/reconstructed GoodInfo vtable dispatch",
+    "Full GoodInfo polymorphic class layout",
+    "Allocation/exception failure",
+    "Partially overlapping objects or shared lists",
+    "Native CRT",
+    "Exact instruction matching"
+  ]
+}
