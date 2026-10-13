@@ -353,6 +353,12 @@
     "database_loading_verified": false,
     "native_runtime_verified": false
   },
+  "good_index_insertion": {
+    "calls": 8000,
+    "actual_constructor_integrated": true,
+    "goods_file_loading_verified": false,
+    "native_runtime_verified": false
+  },
   "complete_game_verified": false,
   "modules": [
     {

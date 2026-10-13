@@ -109,6 +109,7 @@ def main():
     loadout_loader_corpus=json.loads((A/'loadout-loader-corpus-x86-behavior.json').read_text())
     loadout_goods=json.loads((A/'loadout-loader-goods-x86-behavior.json').read_text())
     good_ids=json.loads((A/'good-id-x86-behavior.json').read_text())
+    good_index_emplace=json.loads((A/'good-index-emplace-x86-behavior.json').read_text())
     good_list_init=json.loads((A/'good-info-list-initialize-x86-behavior.json').read_text())
     good_info_copy=json.loads((A/'good-info-copy-x86-behavior.json').read_text())
     good_info_assign=json.loads((A/'good-info-assign-x86-behavior.json').read_text())
@@ -178,6 +179,7 @@ def main():
                 good_info_assignment=dict(calls=good_info_assign['differential_calls'],native_runtime_verified=False),
                 good_info_copy_construction=dict(calls=good_info_copy['differential_calls'],destructor_calls=good_info_copy['destructor_calls'],native_runtime_verified=False),
                 good_info_list_initialization=dict(calls=good_list_init['differential_calls'],database_loading_verified=False,native_runtime_verified=False),
+                good_index_insertion=dict(calls=good_index_emplace['differential_calls'],actual_constructor_integrated=True,goods_file_loading_verified=False,native_runtime_verified=False),
                 complete_game_verified=False,modules=rows)
     (A/'coverage-summary.json').write_text(json.dumps({r['module']:r['coverage_audit'] for r in rows if 'coverage_audit' in r},indent=2)+'\n')
     (A/'progress.json').write_text(json.dumps(report,indent=2)+'\n')
@@ -241,6 +243,7 @@ def main():
            f"GoodInfo assignment: {good_info_assign['differential_calls']} full object/heap/allocation comparisons, including self-assignment and name truncation; native runtime open.",
            f"GoodInfo copying: {good_info_copy['differential_calls']} full object/heap/allocation comparisons followed by destruction; native runtime open.",
            f"GoodInfoList initialization: {good_list_init['differential_calls']} guarded storage/heap/allocation comparisons; Goods loading and index population remain open.",
+           f"Goods index insertion: {good_index_emplace['differential_calls']} full state/allocation comparisons across 100 actual construction sequences and both indexes; file loading/native runtime open.",
            'The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.',
            '', '| Module | Raw export status | Raw functions | Failed |','|---|---|---:|---:|']
     for row in rows: lines.append(f"| {pathlib.Path(row['module']).name} | {row['status']} | {row.get('raw_decompiled','—')} | {row.get('failed','—')} |")

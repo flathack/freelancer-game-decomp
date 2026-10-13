@@ -60,6 +60,7 @@ GoodInfo destruction: 500 full object/heap/free-callback state comparisons; orig
 GoodInfo assignment: 1000 full object/heap/allocation comparisons, including self-assignment and name truncation; native runtime open.
 GoodInfo copying: 1000 full object/heap/allocation comparisons followed by destruction; native runtime open.
 GoodInfoList initialization: 768 guarded storage/heap/allocation comparisons; Goods loading and index population remain open.
+Goods index insertion: 8000 full state/allocation comparisons across 100 actual construction sequences and both indexes; file loading/native runtime open.
 The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.
 
 | Module | Raw export status | Raw functions | Failed |

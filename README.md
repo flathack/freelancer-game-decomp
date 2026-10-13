@@ -11,7 +11,7 @@ Stand: **13.10.2026**. Ziel ist rekonstruierter, überprüfter Quellcode des vol
 
 Die Roh-Ausgaben sind kein fertiger Quellcode. Für die gesamte verhaltensgeprüfte Rekonstruktion gibt es noch keinen belastbaren Prozentwert. Zusätzlich ist der 3-Byte-No-op `INI_Reader::log_link` separat byteidentisch bestätigt.
 
-Zuletzt: `GoodInfoList`-Initialisierung mit **768 Vergleichen** gegen die Original-DLL geprüft; `GoodInfo`-Lebenszyklus ebenfalls rekonstruiert. Der Loadout-Dateilader besteht die vier Originaldateien (803 Maps / 17.130 Einträge). Echte Goods-Datenbank und native Windows-Ausführung bleiben offen.
+Zuletzt: Goods-Indexbefüllung mit **8.000 Vergleichen** gegen die Original-DLL geprüft, einschließlich beider Suchbäume und Duplikaten. Der Loadout-Dateilader besteht die vier Originaldateien (803 Maps / 17.130 Einträge). Vollständiges Goods-Laden und native Windows-Ausführung bleiben offen.
 
 - [Detaillierter Fortschritt](analysis/progress.md)
 - [Rekonstruktionsnotizen](docs/reconstruction-notes.md)
