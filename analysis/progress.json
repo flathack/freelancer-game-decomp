@@ -329,6 +329,11 @@
     "hash_and_lookup_reconstructed": true,
     "native_runtime_verified": false
   },
+  "good_info_initialization": {
+    "calls": 768,
+    "native_vtable_verified": false,
+    "native_runtime_verified": false
+  },
   "complete_game_verified": false,
   "modules": [
     {

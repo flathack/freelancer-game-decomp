@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "differential_calls": 768,
+  "opaque_values": 256,
+  "storage_extent": 192,
+  "source_hashes": {
+    "src/good_info_initialize.cpp": "5f3ce927a5a896cd024a00c1aecfd9488eca636a38988ba36b7b9bce904cabd0",
+    "src/create_id.cpp": "2e8f11d2cbcc06d45c8784c21c750250431b7c52c15c4e372063e9897baec426",
+    "tests/fixtures/good_info_initialize_runtime.cpp": "e2277473369df2c0e6f5801c5621e8833de6a21df631dad427297711044c142a",
+    "tests/fixtures/flid_x86_runtime.cpp": "80b7f9d7d13b908ca60044ac1ae331cb1e28f7ee2e0830feba5f356d3e7d0f63",
+    "tests/verify_good_info_initialize_x86.py": "461140eac8bbc95b1a0a60835f66db0ad28090cec60d25878057608f897b053c"
+  },
+  "not_verified": [
+    "Native/reconstructed GoodInfo vtable dispatch",
+    "Full GoodInfo polymorphic class layout",
+    "Allocation/exception failure",
+    "Storage/stack aliasing",
+    "Native CRT",
+    "Exact instruction matching"
+  ]
+}
