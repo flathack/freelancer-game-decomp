@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "differential_calls": 500,
+  "storage_extent": 192,
+  "source_hashes": {
+    "src/good_info_destroy.cpp": "0b11afb43ab5ecb2efbaa6ca7f85748d6280719fc6b190a85352081ec20d9ca6",
+    "tests/fixtures/good_info_destroy_runtime.cpp": "c541fc64bf29a3fc26e99f4a488c4325366f694b69fdcc98cf8bd26d6534c0ff",
+    "tests/verify_good_info_destroy_x86.py": "003a01711998db54cd5cf49cea9f13f8c40e6a759464cff396c0c20b20ae6417"
+  },
+  "not_verified": [
+    "Native/reconstructed GoodInfo vtable dispatch",
+    "Full GoodInfo polymorphic class layout",
+    "Allocation/exception failure",
+    "Storage/stack aliasing",
+    "Native CRT",
+    "Exact instruction matching"
+  ]
+}

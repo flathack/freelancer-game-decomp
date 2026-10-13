@@ -109,6 +109,7 @@ def main():
     loadout_loader_corpus=json.loads((A/'loadout-loader-corpus-x86-behavior.json').read_text())
     loadout_goods=json.loads((A/'loadout-loader-goods-x86-behavior.json').read_text())
     good_ids=json.loads((A/'good-id-x86-behavior.json').read_text())
+    good_info_destroy=json.loads((A/'good-info-destroy-x86-behavior.json').read_text())
     good_info_init=json.loads((A/'good-info-initialize-x86-behavior.json').read_text())
     nickname_ids=json.loads((A/'nickname-id-x86-behavior.json').read_text())
     report=dict(code_modules=len(rows),raw_exported_modules=sum(r['status']=='raw_exported' for r in rows),
@@ -170,6 +171,7 @@ def main():
                 goods_id_conversion=dict(combined_calls=good_ids['differential_calls'],trees=300,database_creation_verified=False),
                 nickname_id_access=dict(calls=nickname_ids['differential_calls'],hash_and_lookup_reconstructed=True,native_runtime_verified=False),
                 good_info_initialization=dict(calls=good_info_init['differential_calls'],native_vtable_verified=False,native_runtime_verified=False),
+                good_info_destruction=dict(calls=good_info_destroy['differential_calls'],allocator_callback_state_compared=True,native_runtime_verified=False),
                 complete_game_verified=False,modules=rows)
     (A/'coverage-summary.json').write_text(json.dumps({r['module']:r['coverage_audit'] for r in rows if 'coverage_audit' in r},indent=2)+'\n')
     (A/'progress.json').write_text(json.dumps(report,indent=2)+'\n')
@@ -229,6 +231,7 @@ def main():
            f"Goods ID/conversion plus lookup/flag: {good_ids['differential_calls']} combined comparisons; real database/index population open.",
            f"Goods nickname/Loadout ID: {nickname_ids['differential_calls']} actual hash/pointer comparisons; real database/native locale open.",
            f"GoodInfo initialization: {good_info_init['differential_calls']} guarded storage/heap/allocation comparisons; original-image vtable/cache bindings, native class/runtime open.",
+           f"GoodInfo destruction: {good_info_destroy['differential_calls']} full object/heap/free-callback state comparisons; original-image vtable binding, native runtime open.",
            'The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.',
            '', '| Module | Raw export status | Raw functions | Failed |','|---|---|---:|---:|']
     for row in rows: lines.append(f"| {pathlib.Path(row['module']).name} | {row['status']} | {row.get('raw_decompiled','—')} | {row.get('failed','—')} |")
