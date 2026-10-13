@@ -4,8 +4,8 @@
   "raw_decompiled_functions": 54832,
   "raw_failed_functions": 0,
   "last_machine_code_check": {
-    "functions": 2,
-    "bytes": 14
+    "functions": 3,
+    "bytes": 21
   },
   "createid_behavior": {
     "source_current": true,

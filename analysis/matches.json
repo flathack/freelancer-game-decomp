@@ -1,13 +1,24 @@
 {
   "compiler": "clang version 23.1.1",
-  "command": [
-    "clang++",
-    "--target=i686-pc-windows-msvc",
-    "-O2",
-    "-c",
-    "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/src/csimple.cpp",
-    "-o",
-    "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/analysis/csimple.obj"
+  "commands": [
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/src/archetype_id.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/archetype_id-match.obj"
+    ],
+    [
+      "clang++",
+      "--target=i686-pc-windows-msvc",
+      "-O2",
+      "-c",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/src/csimple.cpp",
+      "-o",
+      "/mnt/ai-models/PROJECTS/TASKS/Freelancer-Decomp/build/csimple-match.obj"
+    ]
   ],
   "results": [
     {
@@ -29,9 +40,20 @@
       "original_hex": "8b81e0000000c3",
       "compiled_hex": "8b81e0000000c3",
       "matched": true
+    },
+    {
+      "module": "original/_FL Fresh Install-deutsch/EXE/common.dll",
+      "sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
+      "symbol": "?GetAsteroidID@Archetype@@YAIABUID_String@@@Z",
+      "rva": 594384,
+      "code_size": 7,
+      "source": "src/archetype_id.cpp",
+      "original_hex": "8b4424048b00c3",
+      "compiled_hex": "8b4424048b00c3",
+      "matched": true
     }
   ],
-  "matched_functions": 2,
-  "verified_code_bytes": 14,
+  "matched_functions": 3,
+  "verified_code_bytes": 21,
   "scope": "Only listed function bodies; excludes alignment, linking, complete class layout, and runtime behavior."
 }

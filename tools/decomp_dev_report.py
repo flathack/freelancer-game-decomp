@@ -25,10 +25,12 @@ def generate():
     evidence = json.loads((ROOT/'analysis/matches.json').read_text())['results']
     discovery = {pathlib.Path(m['module']).name: m.get('raw_decompiled', 0) for m in json.loads((ROOT/'analysis/progress.json').read_text())['modules']}
     with tempfile.TemporaryDirectory() as directory:
-        obj = pathlib.Path(directory)/'csimple.obj'
-        subprocess.run(['clang++', '--target=i686-pc-windows-msvc', '-O2', '-c',
-                        str(ROOT/'src/csimple.cpp'), '-o', str(obj)], check=True)
-        compiled = coff_symbols(obj)
+        compiled = {}
+        for source in sorted({m.get('source','src/csimple.cpp') for m in evidence}):
+            obj = pathlib.Path(directory)/(pathlib.Path(source).stem+'.obj')
+            subprocess.run(['clang++', '--target=i686-pc-windows-msvc', '-O2', '-c',
+                            str(ROOT/source), '-o', str(obj)], check=True)
+            compiled.update(coff_symbols(obj))
     units, categories = [], []
     for module in inventory:
         path = module['path']
@@ -52,7 +54,7 @@ def generate():
                 raise ValueError('Invalid pinned match evidence')
             if not any(s['rva'] <= key and key+len(expected) <= s['rva']+s['virtual_size'] for s in sections):
                 raise ValueError('Match outside executable sections')
-            # Only this reconstruction has byte-match evidence so far.
+            # Rebuild every source associated with pinned match evidence.
             if match['symbol'] not in compiled:
                 raise ValueError('No compiled symbol for pinned evidence')
             if compiled[match['symbol']][:len(expected)] == expected:

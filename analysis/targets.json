@@ -12,5 +12,13 @@
     "symbol": "?get_type@CSimple@@QBEIXZ",
     "rva": 136624,
     "code_size": 7
+  },
+  {
+    "module": "original/_FL Fresh Install-deutsch/EXE/common.dll",
+    "sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
+    "symbol": "?GetAsteroidID@Archetype@@YAIABUID_String@@@Z",
+    "rva": 594384,
+    "code_size": 7,
+    "source": "src/archetype_id.cpp"
   }
 ]

@@ -31,10 +31,13 @@ def coff_symbols(path):
 
 def main():
     targets = json.loads((ROOT/'analysis/targets.json').read_text())
-    out = ROOT/'analysis/csimple.obj'
-    cmd = ['clang++', '--target=i686-pc-windows-msvc', '-O2', '-c', str(ROOT/'src/csimple.cpp'), '-o', str(out)]
-    subprocess.run(cmd, check=True)
-    compiled = coff_symbols(out)
+    compiled = {}; commands = []
+    for source in sorted({t.get('source','src/csimple.cpp') for t in targets}):
+        out = ROOT/'build'/(pathlib.Path(source).stem+'-match.obj')
+        out.parent.mkdir(exist_ok=True)
+        cmd = ['clang++', '--target=i686-pc-windows-msvc', '-O2', '-c', str(ROOT/source), '-o', str(out)]
+        subprocess.run(cmd, check=True)
+        compiled.update(coff_symbols(out));commands.append(cmd)
     results = []
     for t in targets:
         path = ROOT/t['module']
@@ -50,7 +53,7 @@ def main():
         print(('MATCH' if match else 'FAIL')+' '+t['symbol']+' '+actual.hex())
         pe.close()
     report = dict(compiler=subprocess.check_output(['clang++','--version'],text=True).splitlines()[0],
-        command=cmd, results=results, matched_functions=sum(r['matched'] for r in results),
+        commands=commands, results=results, matched_functions=sum(r['matched'] for r in results),
         verified_code_bytes=sum(r['code_size'] for r in results if r['matched']),
         scope='Only listed function bodies; excludes alignment, linking, complete class layout, and runtime behavior.')
     (ROOT/'analysis/matches.json').write_text(json.dumps(report,indent=2)+'\n')

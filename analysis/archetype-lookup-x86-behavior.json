@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "differential_calls": 96000,
+  "id_accessor_calls": 48000,
+  "insertion_calls": 8000,
+  "sequences": 100,
+  "indexes_per_sequence": 2,
+  "source_hashes": {
+    "src/archetype_id.cpp": "a2921be82f9314ab430444b6bcf3b3fa17fa8b0fca46c5b19078d68acd85512a",
+    "src/archetype_equipment_lookup.cpp": "1ff2356e39402364dfefd8ec9566ce0f3404dcc9714eb47c2bd241ad4cb7b7b9",
+    "tests/fixtures/archetype_lookup_runtime.cpp": "c6892dcdda0d075322f4e38705f952dd949c74fdc5b3ec76b3ba9459ec60b2e2",
+    "src/good_info_list_initialize.cpp": "20bcf487817e6eae29974ae335b7b2a2a01ea70eb72e832329dc1ffb5ee9bd9b",
+    "src/good_index_insert.cpp": "8ffc910ec862c97b755d2f8b05e81cfbd9a3cd70880fccd5fbd7e3ceb3ab01a1",
+    "src/good_index_emplace.cpp": "e54b389a5c3c1816403ca139b4e12dff1753149e403ee6137d6003fa74b7ed11",
+    "tests/fixtures/good_info_list_initialize_runtime.cpp": "2f71dfe12b245cf17ab2dc50b0e055ea957bc937cf040e48d3f70dfea8f87b46",
+    "src/good_index_rb.hpp": "29e1f2b2fe8a07c39eeafbc3d23a606a2dc9f2f843b465db43c6f9bb758615af",
+    "tests/verify_archetype_lookup_x86.py": "81ccb134130c143597dc582148424679919c7715c5f6ce10207d03c6bb67fefd"
+  },
+  "not_verified": [
+    "Goods file loading",
+    "Native heap/CRT",
+    "Allocation failures",
+    "Aliased input/tree/result",
+    "Exact instruction matching"
+  ]
+}
