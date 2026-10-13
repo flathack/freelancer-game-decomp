@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "differential_calls": 57012,
+  "trees": 300,
+  "source_hashes": {
+    "src/good_archetype_lookup.cpp": "add84d0a16df4a5b3170df0ba7c5129e985a1a62997267cd49294977f9b03371",
+    "src/loadout_tree.hpp": "54416b8810881277b934696f68738a089a20828948d314548a9bbf3b79963cf2",
+    "tests/verify_good_archetype_x86.py": "deba582ccf961948c2992b0b7901cea053019ab3ef38863e316f9a24f0eeeeb3"
+  },
+  "not_verified": [
+    "GoodList database creation and Loadout loader integration",
+    "Native runtime",
+    "Exact instruction matching"
+  ]
+}
