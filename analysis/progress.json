@@ -219,6 +219,13 @@
     "equipment_input_states": 65536,
     "loadout_integration_verified": false
   },
+  "loadout_cache_integration": {
+    "line_calls": 17130,
+    "navigation_calls": 38544,
+    "hash_reconstructed": true,
+    "cache_reconstructed": true,
+    "native_runtime_verified": false
+  },
   "complete_game_verified": false,
   "modules": [
     {

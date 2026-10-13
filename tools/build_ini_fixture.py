@@ -4,7 +4,7 @@ import hashlib,json,pathlib,subprocess
 import pefile
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-def main(include_loadout=False,include_hash=False):
+def main(include_loadout=False,include_hash=False,include_cache=False):
  original=ROOT/'original/_FL Fresh Install-deutsch/EXE/common.dll';assert digest(original)=='e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483'
  exports=[]
  for s in pefile.PE(str(original)).DIRECTORY_ENTRY_EXPORT.symbols:
@@ -21,11 +21,16 @@ def main(include_loadout=False,include_hash=False):
   assert include_loadout
   sources.remove('tests/fixtures/loadout_reader_runtime.cpp')
   sources+=['tests/fixtures/loadout_reader_hash_runtime.cpp','src/create_id.cpp','tests/fixtures/flid_x86_runtime.cpp']
- build=ROOT/('build/loadout-hash-fixture' if include_hash else 'build/loadout-reader-fixture' if include_loadout else 'build/ini-fixture');build.mkdir(parents=True,exist_ok=True);objects=[];commands=[]
+ if include_cache:
+  assert include_hash
+  sources.remove('tests/fixtures/loadout_reader_hash_runtime.cpp')
+  sources+=['tests/fixtures/loadout_reader_cache_runtime.cpp','src/string_cache.cpp','tests/fixtures/string_cache_x86_runtime.cpp']
+ build=ROOT/('build/loadout-cache-fixture' if include_cache else 'build/loadout-hash-fixture' if include_hash else 'build/loadout-reader-fixture' if include_loadout else 'build/ini-fixture');build.mkdir(parents=True,exist_ok=True);objects=[];commands=[]
  for source in sources:
   obj=build/(pathlib.Path(source).stem+'.obj');objects.append(str(obj))
   cmd=['clang++','--target=i686-pc-windows-msvc','-O2','-fno-exceptions','-fno-rtti','-fno-builtin','-mno-sse','-mno-sse2','-c',str(ROOT/source),'-o',str(obj)];subprocess.run(cmd,check=True);commands.append(cmd)
  data_exports=['?INIValuesStringBuffer@@3PADA','?StringIndexBuffer@@3PADA','?INIWideValueBuffer@@3PAGA','?INITextLineBuffer@@3PADA','?INIBinaryLineBuffer@@3PADA']
+ if include_cache:data_exports+=['?StringCacheArena@@3PADA','?StringCacheFront@@3IA','?StringCacheBack@@3IA','?StringCacheInternedCount@@3IA','?StringCachePrivateCount@@3IA']
  dll=build/'freelancer-ini-fixture.dll';cmd=['lld-link','/dll','/noentry','/nodefaultlib','/base:0x19000000',f'/out:{dll}']+objects+['/export:'+n for n in exports]+['/export:'+n+',DATA' for n in data_exports];subprocess.run(cmd,check=True);commands.append(cmd)
  pe=pefile.PE(str(dll));actual=sorted(s.name.decode() for s in pe.DIRECTORY_ENTRY_EXPORT.symbols if s.name)
  assert actual==sorted(exports+data_exports)
@@ -40,5 +45,5 @@ def main(include_loadout=False,include_hash=False):
    h.invoke(original_exports[symbol],(text,),obj)
    h.invoke(fixture_exports[symbol],(text,),obj)
  report=dict(status='all_ini_reader_exports_linked',export_count=len(exports),exports=sorted(exports),test_data_exports=data_exports,source_hashes={p:digest(ROOT/p) for p in sources+['src/ini_reader.hpp','tools/build_ini_fixture.py']},dll_sha256=digest(dll),commands=commands,log_link_abi_cases=16,log_link_code_match=dict(original_va='0x0634c430',bytes_hex=code.hex()),runtime_binding='test adapters use original image addresses; not standalone Windows runtime',complete_reader_runtime_verified=False,complete_game_verified=False)
- (ROOT/('analysis/loadout-hash-fixture-build.json' if include_hash else 'analysis/loadout-reader-fixture-build.json' if include_loadout else 'analysis/ini-fixture-build.json')).write_text(json.dumps(report,indent=2)+'\n');print(f'PASS: {len(exports)} original exports linked (39 INI_Reader methods); log_link matches 3 original bytes')
+ (ROOT/('analysis/loadout-cache-fixture-build.json' if include_cache else 'analysis/loadout-hash-fixture-build.json' if include_hash else 'analysis/loadout-reader-fixture-build.json' if include_loadout else 'analysis/ini-fixture-build.json')).write_text(json.dumps(report,indent=2)+'\n');print(f'PASS: {len(exports)} original exports linked (39 INI_Reader methods); log_link matches 3 original bytes')
 if __name__=='__main__':main()

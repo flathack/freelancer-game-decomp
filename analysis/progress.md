@@ -35,6 +35,7 @@ Loadout corpus: 4 files, 17130 lines, 38544 navigation/name comparisons; hash/ca
 Loadout/reader/CreateID: 17130 real lines passed with actual reconstructed hashes; cache/CRT modeled.
 Loadout lookup: 28354 calls over 300 tree shapes; tree lifecycle remains open.
 SubObjectID counters: 66414 calls / 12 exports, all 65536 equipment counter states; world/Loadout integration open.
+Loadout/reader/hash/cache: 17130 real lines passed; cargo-bay initialization/native runtime open.
 The full game is not reconstructed or verified. Raw outputs are not buildable source; function discovery may be incomplete.
 
 | Module | Raw export status | Raw functions | Failed |
