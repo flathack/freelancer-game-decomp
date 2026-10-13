@@ -1,0 +1,10 @@
+[Unit]
+Description=Paperclip Freelancer quota relay for NASA-Conan
+After=network-online.target
+[Service]
+ExecStart=/usr/bin/python3 /opt/data/paperclip-guards/gateway_quota.py
+Environment=HERMES_HOME=/opt/data
+Restart=on-failure
+RestartSec=5
+[Install]
+WantedBy=default.target

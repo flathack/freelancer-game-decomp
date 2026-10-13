@@ -9,3 +9,5 @@ Before launching a Freelancer model, require a numeric valid Weekly window with 
 The routine remains enabled every 15 minutes, so later ticks retry without consuming a model call when quota is insufficient. Work can resume when the weekly limit resets or remaining exceeds 30. No reset credits are redeemed and no paid credits are purchased. Usage polling and network latency mean an in-flight request may finish before the next check; this is a sampled stop threshold, not a reservation of exactly 30% capacity.
 
 Tests cover strict threshold, missing/invalid data, worst weekly window, unrelated-task isolation, blocked startup without launching a model, and active-run stopping. Current Hermes account observation on 2026-10-13: 10% used / 90% remaining.
+
+Die Firmenausfuehrung ist inzwischen auch fuer Apollo und NASA-Conan geschuetzt. Details in PAPERCLIP-COMPANY.md. Gateway-Relay-Service: tools/paperclip/systemd/freelancer-quota-gateway.service.

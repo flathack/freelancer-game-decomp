@@ -45,7 +45,8 @@ def decision(document):
 def probe():
     try:
         p = subprocess.run([HERMES, 'usage', '--provider', 'openai-codex', '--json'],
-                           capture_output=True, text=True, timeout=25)
+                           capture_output=True, text=True, timeout=25,
+                           env={**os.environ, 'HERMES_HOME': '/opt/data'})
         if p.returncode:
             return False, None
         return decision(json.loads(p.stdout))
