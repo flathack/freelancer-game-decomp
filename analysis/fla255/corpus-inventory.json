@@ -1,0 +1,508 @@
+{
+  "schema": 1,
+  "corpora": [
+    {
+      "label": "German original reference; pinned common.dll",
+      "available": true,
+      "root": "/opt/data/projects/Freelancer-Decomp/original/_FL Fresh Install-deutsch",
+      "configuration": {
+        "relative_path": "EXE/freelancer.ini",
+        "sha256": "7dbff9a891f2f7e68bb39c86a942ab814417bf20073e3e8c535dedcdaab95468",
+        "bytes": 12379
+      },
+      "active_relevant_entries_in_configuration_order": [
+        {
+          "configuration_order": 1,
+          "kind": "solar",
+          "relative_path": "DATA/solar/solararch.ini",
+          "exists": true,
+          "bytes": 91810,
+          "sha256": "6a6fdfdd16eebac9ed4a3fb631d4bb5c378c63bbd368f2b8cf3ed559750bcfc6",
+          "format": "BINI-v1",
+          "section_count": 559,
+          "header_counts": {
+            "CollisionGroup": 238,
+            "Solar": 321
+          },
+          "inherit_entry_count": 0
+        },
+        {
+          "configuration_order": 2,
+          "kind": "equipment",
+          "relative_path": "DATA/equipment/light_equip.ini",
+          "exists": true,
+          "bytes": 5252,
+          "sha256": "e7f4c9dab2bce61dbe667fe245e9a7720d8ed1d44075afee2d904e8dfb31dc7f",
+          "format": "BINI-v1",
+          "section_count": 74,
+          "header_counts": {
+            "Light": 74
+          },
+          "inherit_entry_count": 58
+        },
+        {
+          "configuration_order": 3,
+          "kind": "equipment",
+          "relative_path": "DATA/equipment/select_equip.ini",
+          "exists": true,
+          "bytes": 27457,
+          "sha256": "fe7394ff8ed44504c27d0f328fbfb1924dce04371da4c30629c859e9cce0a992",
+          "format": "BINI-v1",
+          "section_count": 296,
+          "header_counts": {
+            "Armor": 24,
+            "AttachedFX": 52,
+            "CargoPod": 15,
+            "Commodity": 105,
+            "InternalFX": 37,
+            "LootCrate": 23,
+            "Shield": 36,
+            "ShieldGenerator": 3,
+            "TradeLane": 1
+          },
+          "inherit_entry_count": 0
+        },
+        {
+          "configuration_order": 4,
+          "kind": "equipment",
+          "relative_path": "DATA/equipment/misc_equip.ini",
+          "exists": true,
+          "bytes": 7103,
+          "sha256": "5c17dc313cb65880f35ba4cb8ecad7932c5eb2bd67e0cff924894bce2dd8969b",
+          "format": "BINI-v1",
+          "section_count": 48,
+          "header_counts": {
+            "CounterMeasure": 3,
+            "CounterMeasureDropper": 3,
+            "LootCrate": 5,
+            "Power": 32,
+            "RepairKit": 1,
+            "Scanner": 2,
+            "ShieldBattery": 1,
+            "Tractor": 1
+          },
+          "inherit_entry_count": 0
+        },
+        {
+          "configuration_order": 5,
+          "kind": "equipment",
+          "relative_path": "DATA/equipment/engine_equip.ini",
+          "exists": true,
+          "bytes": 18460,
+          "sha256": "139a2f14a2b061cc6f66694f5843282e53c04507c4fcfd5dc5b02aea1a038cc9",
+          "format": "BINI-v1",
+          "section_count": 60,
+          "header_counts": {
+            "Engine": 60
+          },
+          "inherit_entry_count": 0
+        },
+        {
+          "configuration_order": 6,
+          "kind": "equipment",
+          "relative_path": "DATA/equipment/ST_equip.ini",
+          "exists": true,
+          "bytes": 37864,
+          "sha256": "3ee4f18192eb8592dfce43bde221538c740e5d994fd4b9479ff5f6f22b34e007",
+          "format": "BINI-v1",
+          "section_count": 129,
+          "header_counts": {
+            "ShieldGenerator": 123,
+            "Thruster": 6
+          },
+          "inherit_entry_count": 0
+        },
+        {
+          "configuration_order": 7,
+          "kind": "equipment",
+          "relative_path": "DATA/equipment/weapon_equip.ini",
+          "exists": true,
+          "bytes": 247957,
+          "sha256": "136b6eb7d6d9cc6877a56f7ea539849bb4954b9ec06398836e60ad55f3ad09c5",
+          "format": "BINI-v1",
+          "section_count": 1606,
+          "header_counts": {
+            "CloakingDevice": 9,
+            "Explosion": 86,
+            "Gun": 513,
+            "LOD": 388,
+            "LootCrate": 1,
+            "Mine": 10,
+            "MineDropper": 10,
+            "Motor": 76,
+            "Munition": 513
+          },
+          "inherit_entry_count": 0
+        },
+        {
+          "configuration_order": 8,
+          "kind": "equipment",
+          "relative_path": "DATA/equipment/prop_equip.ini",
+          "exists": true,
+          "bytes": 16130,
+          "sha256": "258af5e6051fed2a824070d89cab3e0e28e2780436cb359658e68f322a16068e",
+          "format": "BINI-v1",
+          "section_count": 132,
+          "header_counts": {
+            "Power": 132
+          },
+          "inherit_entry_count": 0
+        },
+        {
+          "configuration_order": 9,
+          "kind": "ships",
+          "relative_path": "DATA/ships/shiparch.ini",
+          "exists": true,
+          "bytes": 105904,
+          "sha256": "777a59d2d6ec6c6e45fed8bd14c19d95bc5394d6eade045d675ecda975ee918f",
+          "format": "BINI-v1",
+          "section_count": 472,
+          "header_counts": {
+            "CollisionGroup": 246,
+            "Ship": 69,
+            "Simple": 157
+          },
+          "inherit_entry_count": 0
+        },
+        {
+          "configuration_order": 10,
+          "kind": "ships",
+          "relative_path": "DATA/ships/rtc_shiparch.ini",
+          "exists": true,
+          "bytes": 6297,
+          "sha256": "240fb4acf3e1688ffed0c473e011f1bf6a95ff7969f708a5b847e007b3c386dd",
+          "format": "BINI-v1",
+          "section_count": 46,
+          "header_counts": {
+            "Ship": 46
+          },
+          "inherit_entry_count": 0
+        },
+        {
+          "configuration_order": 11,
+          "kind": "goods",
+          "relative_path": "DATA/equipment/goods.ini",
+          "exists": true,
+          "bytes": 29867,
+          "sha256": "ac3c39a957405dfccee0ae484d3169380137b5495e1c9e11022ae52c34f3c2fc",
+          "format": "BINI-v1",
+          "section_count": 168,
+          "header_counts": {
+            "Good": 168
+          },
+          "inherit_entry_count": 0
+        },
+        {
+          "configuration_order": 12,
+          "kind": "goods",
+          "relative_path": "DATA/equipment/engine_good.ini",
+          "exists": true,
+          "bytes": 12,
+          "sha256": "be01d47a51c3197c619f3747c28748b763468e02d99300fc19391d26ccf4a17d",
+          "format": "BINI-v1",
+          "section_count": 0,
+          "header_counts": {},
+          "inherit_entry_count": 0
+        },
+        {
+          "configuration_order": 13,
+          "kind": "goods",
+          "relative_path": "DATA/equipment/misc_good.ini",
+          "exists": true,
+          "bytes": 1464,
+          "sha256": "760367e1cba941b554ffa068de41bc1467091214c1874ebe43cd92c16c87c4b8",
+          "format": "BINI-v1",
+          "section_count": 8,
+          "header_counts": {
+            "Good": 8
+          },
+          "inherit_entry_count": 0
+        },
+        {
+          "configuration_order": 14,
+          "kind": "goods",
+          "relative_path": "DATA/equipment/st_good.ini",
+          "exists": true,
+          "bytes": 13505,
+          "sha256": "52cca518aa9a8e2686b080623ffc86310f8b00973a9d6db2272a8d332eb7fa12",
+          "format": "BINI-v1",
+          "section_count": 127,
+          "header_counts": {
+            "Good": 127
+          },
+          "inherit_entry_count": 0
+        },
+        {
+          "configuration_order": 15,
+          "kind": "goods",
+          "relative_path": "DATA/equipment/weapon_good.ini",
+          "exists": true,
+          "bytes": 61468,
+          "sha256": "5f2cf535a85134ddc0da80015bb1888b54c9e5e0fc14476322cb4f4af08f042a",
+          "format": "BINI-v1",
+          "section_count": 552,
+          "header_counts": {
+            "Good": 552
+          },
+          "inherit_entry_count": 0
+        }
+      ],
+      "file_count": 15,
+      "missing_files": 0,
+      "real_loader_cases_executed": 0,
+      "contents_exported": false
+    },
+    {
+      "label": "HD mod corpus; distinct, not automatically the pinned original binary oracle",
+      "available": true,
+      "root": "/opt/data/projects/Freelancer/Installations/Freelancer-HD",
+      "configuration": {
+        "relative_path": "EXE/freelancer.ini",
+        "sha256": "d15e9b211eb6a306608b62e8de27b75301cbb4adf608795d91387e375ee9b70f",
+        "bytes": 11980
+      },
+      "active_relevant_entries_in_configuration_order": [
+        {
+          "configuration_order": 1,
+          "kind": "solar",
+          "relative_path": "DATA/solar/solararch.ini",
+          "exists": true,
+          "bytes": 194638,
+          "sha256": "81ad983ab837bfddd4ca061f4d037dce7694063bbb5302ac4e8fe67a64e8e150",
+          "format": "TEXT-cp1252",
+          "section_count": 559,
+          "header_counts": {
+            "CollisionGroup": 238,
+            "Solar": 321
+          },
+          "inherit_entry_count": 0
+        },
+        {
+          "configuration_order": 2,
+          "kind": "equipment",
+          "relative_path": "DATA/equipment/light_equip.ini",
+          "exists": true,
+          "bytes": 8797,
+          "sha256": "b9055f9d2ae961a17cd6323b373cef065da1f8ee48096d0dfcc19e904b047620",
+          "format": "TEXT-cp1252",
+          "section_count": 74,
+          "header_counts": {
+            "Light": 74
+          },
+          "inherit_entry_count": 58
+        },
+        {
+          "configuration_order": 3,
+          "kind": "equipment",
+          "relative_path": "DATA/equipment/select_equip.ini",
+          "exists": true,
+          "bytes": 49493,
+          "sha256": "ec8665a7e905301b00b276212957abed441e27c6d97aed1e5e38115c790d4d62",
+          "format": "TEXT-cp1252",
+          "section_count": 296,
+          "header_counts": {
+            "Armor": 24,
+            "AttachedFX": 52,
+            "CargoPod": 15,
+            "Commodity": 105,
+            "InternalFX": 37,
+            "LootCrate": 23,
+            "Shield": 36,
+            "ShieldGenerator": 3,
+            "TradeLane": 1
+          },
+          "inherit_entry_count": 0
+        },
+        {
+          "configuration_order": 4,
+          "kind": "equipment",
+          "relative_path": "DATA/equipment/misc_equip.ini",
+          "exists": true,
+          "bytes": 15698,
+          "sha256": "7c1602fb890c81388551375ce39dbcac6817a0976a5e158c8c770c83b2bbb009",
+          "format": "TEXT-cp1252",
+          "section_count": 48,
+          "header_counts": {
+            "CounterMeasure": 3,
+            "CounterMeasureDropper": 3,
+            "LootCrate": 5,
+            "Power": 32,
+            "RepairKit": 1,
+            "Scanner": 2,
+            "ShieldBattery": 1,
+            "Tractor": 1
+          },
+          "inherit_entry_count": 0
+        },
+        {
+          "configuration_order": 5,
+          "kind": "equipment",
+          "relative_path": "DATA/equipment/engine_equip.ini",
+          "exists": true,
+          "bytes": 47768,
+          "sha256": "cd200c604caaff4ec2a6b9b4d8ebfb59c703b991f46e8fe18922c5d1ff9442f0",
+          "format": "TEXT-cp1252",
+          "section_count": 60,
+          "header_counts": {
+            "Engine": 60
+          },
+          "inherit_entry_count": 0
+        },
+        {
+          "configuration_order": 6,
+          "kind": "equipment",
+          "relative_path": "DATA/equipment/ST_equip.ini",
+          "exists": true,
+          "bytes": 109951,
+          "sha256": "c3567417ee2c40611486a8ff57d7a228e2501ec9f7f7353f49d4c1c01e062626",
+          "format": "TEXT-cp1252",
+          "section_count": 129,
+          "header_counts": {
+            "ShieldGenerator": 123,
+            "Thruster": 6
+          },
+          "inherit_entry_count": 0
+        },
+        {
+          "configuration_order": 7,
+          "kind": "equipment",
+          "relative_path": "DATA/equipment/weapon_equip.ini",
+          "exists": true,
+          "bytes": 618692,
+          "sha256": "46c5e9d97f5c008ae2f7bfd70da1a72d072dabbd75e9fe1413f3d49258606b9d",
+          "format": "TEXT-cp1252",
+          "section_count": 1606,
+          "header_counts": {
+            "CloakingDevice": 9,
+            "Explosion": 86,
+            "Gun": 513,
+            "LOD": 388,
+            "LootCrate": 1,
+            "Mine": 10,
+            "MineDropper": 10,
+            "Motor": 76,
+            "Munition": 513
+          },
+          "inherit_entry_count": 0
+        },
+        {
+          "configuration_order": 8,
+          "kind": "equipment",
+          "relative_path": "DATA/equipment/prop_equip.ini",
+          "exists": true,
+          "bytes": 27188,
+          "sha256": "ca5ae7df9a43427f69ed07d8703e9372d28cad74fd04fb1fe92db10d169554ed",
+          "format": "TEXT-cp1252",
+          "section_count": 132,
+          "header_counts": {
+            "Power": 132
+          },
+          "inherit_entry_count": 0
+        },
+        {
+          "configuration_order": 9,
+          "kind": "ships",
+          "relative_path": "DATA/ships/shiparch.ini",
+          "exists": true,
+          "bytes": 246188,
+          "sha256": "e4dfbb631e3d856b84d34032f9b35cc4af33e605a68d27f0fa7f2004484032e3",
+          "format": "TEXT-cp1252",
+          "section_count": 472,
+          "header_counts": {
+            "CollisionGroup": 246,
+            "Ship": 69,
+            "Simple": 157
+          },
+          "inherit_entry_count": 0
+        },
+        {
+          "configuration_order": 10,
+          "kind": "ships",
+          "relative_path": "DATA/ships/rtc_shiparch.ini",
+          "exists": true,
+          "bytes": 9292,
+          "sha256": "379f734860ffeae1ecd595e01723bb888196bfcd45c5ae2ac33f5842859d21cc",
+          "format": "TEXT-cp1252",
+          "section_count": 46,
+          "header_counts": {
+            "Ship": 46
+          },
+          "inherit_entry_count": 0
+        },
+        {
+          "configuration_order": 11,
+          "kind": "goods",
+          "relative_path": "DATA/equipment/goods.ini",
+          "exists": true,
+          "bytes": 55948,
+          "sha256": "6cf62adbc926c28dfccd8288c750ddaf155784507151c68c18a7a20c2fe81856",
+          "format": "TEXT-cp1252",
+          "section_count": 168,
+          "header_counts": {
+            "Good": 168
+          },
+          "inherit_entry_count": 0
+        },
+        {
+          "configuration_order": 12,
+          "kind": "goods",
+          "relative_path": "DATA/equipment/engine_good.ini",
+          "exists": true,
+          "bytes": 66,
+          "sha256": "8d4178766ad3f2ca81f682e46a4e053fc1ed1f24325efaedb5515ad89971d4cc",
+          "format": "TEXT-cp1252",
+          "section_count": 0,
+          "header_counts": {},
+          "inherit_entry_count": 0
+        },
+        {
+          "configuration_order": 13,
+          "kind": "goods",
+          "relative_path": "DATA/equipment/misc_good.ini",
+          "exists": true,
+          "bytes": 2678,
+          "sha256": "012751d03f8dcbb4c1fa21cc8c3c651031c06f14d7ebaeef80830bb474183113",
+          "format": "TEXT-cp1252",
+          "section_count": 8,
+          "header_counts": {
+            "Good": 8
+          },
+          "inherit_entry_count": 0
+        },
+        {
+          "configuration_order": 14,
+          "kind": "goods",
+          "relative_path": "DATA/equipment/st_good.ini",
+          "exists": true,
+          "bytes": 44882,
+          "sha256": "dabd94729fba73adf35a58849e6fc984e9f6a447ca6c010dedf50363d9d0b841",
+          "format": "TEXT-cp1252",
+          "section_count": 127,
+          "header_counts": {
+            "Good": 127
+          },
+          "inherit_entry_count": 0
+        },
+        {
+          "configuration_order": 15,
+          "kind": "goods",
+          "relative_path": "DATA/equipment/weapon_good.ini",
+          "exists": true,
+          "bytes": 195441,
+          "sha256": "50e68f65620c719e6dab6a8b5d34d1c545252ee754561c6ffc9aab057c9381db",
+          "format": "TEXT-cp1252",
+          "section_count": 552,
+          "header_counts": {
+            "Good": 552
+          },
+          "inherit_entry_count": 0
+        }
+      ],
+      "file_count": 15,
+      "missing_files": 0,
+      "real_loader_cases_executed": 0,
+      "contents_exported": false
+    }
+  ],
+  "contents_uploaded": false
+}

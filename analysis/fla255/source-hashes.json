@@ -1,0 +1,142 @@
+{
+  "schema": 1,
+  "reference_commit": "bf555cdc5e177cb3a2485d98e6bca18ffabe5db2",
+  "files": [
+    {
+      "path": "analysis/archetype-metadata-integration.md",
+      "bytes": 7946,
+      "sha256": "efbd555768508d560cd01db03864eb75573f4f899ca6a35312a3e7132d0f9036"
+    },
+    {
+      "path": "analysis/archetype-metadata-tests.md",
+      "bytes": 8805,
+      "sha256": "7e3b143390ca0c52f6572129025a348c2c690c6a702c5d770963667942c743c0"
+    },
+    {
+      "path": "analysis/fla255/acceptance-matrix.json",
+      "bytes": 24001,
+      "sha256": "a1d3e56a0971609168fe62eb1759bac843e63ef2a1905a4d655db4ce9d893044"
+    },
+    {
+      "path": "analysis/fla255/corpus-inventory.json",
+      "bytes": 16279,
+      "sha256": "95edb3e657db37652af21eaaf4869e394e7c62a4afce1456046e49f1e090a269"
+    },
+    {
+      "path": "analysis/fla255/original-evidence.json",
+      "bytes": 296063,
+      "sha256": "3a78f9df50668220ffb7e449d8a975ce9e03bf80c6df1a6831886316c54f8553"
+    },
+    {
+      "path": "analysis/fla255/original-spans.md",
+      "bytes": 11241,
+      "sha256": "b115c9e06586f17f9469ba6408edb28ae46e109115af13963b62b8a11d799be5"
+    },
+    {
+      "path": "analysis/fla255/scope-verification.json",
+      "bytes": 10152,
+      "sha256": "c78d19781dbebdbd599e70d741ff47a452d164d66e187b364a2f7a56423a792f"
+    },
+    {
+      "path": "analysis/fla255/scope.md",
+      "bytes": 24792,
+      "sha256": "76cdba653e6a253c4ae05ce0348d59a0e5c24b5c5faaa82562803a922dd96f53"
+    },
+    {
+      "path": "analysis/good-blockreader-notes.md",
+      "bytes": 8007,
+      "sha256": "c09b403f68848e21aa4c72c8d52d042646c9bebd373a42fe0452f9153c668006"
+    },
+    {
+      "path": "src/archetype_equipment_lookup.cpp",
+      "bytes": 665,
+      "sha256": "1ff2356e39402364dfefd8ec9566ce0f3404dcc9714eb47c2bd241ad4cb7b7b9"
+    },
+    {
+      "path": "src/archetype_metadata.cpp",
+      "bytes": 6512,
+      "sha256": "0bdfcc4e6721aeb0fb2ecae2a332ccde483bf2bff61078cae361d5f311ad11da"
+    },
+    {
+      "path": "src/archetype_metadata.hpp",
+      "bytes": 2971,
+      "sha256": "54a04caf2969a6f0156fed1f1046765249e2c48edac7677169b7aa048bc22bf4"
+    },
+    {
+      "path": "src/create_id.cpp",
+      "bytes": 4612,
+      "sha256": "2e8f11d2cbcc06d45c8784c21c750250431b7c52c15c4e372063e9897baec426"
+    },
+    {
+      "path": "src/good_block_reader.cpp",
+      "bytes": 8772,
+      "sha256": "1f962c179422d212819958a70f05a2cbaa1a73e081eab14cc3f91d3203b6b878"
+    },
+    {
+      "path": "src/good_block_reader.hpp",
+      "bytes": 1840,
+      "sha256": "d6138c04b36a5d1a6ea5ec097e5cce02fb889ee46e8c0d5aa92f56e89d1ce2ca"
+    },
+    {
+      "path": "src/good_index_emplace.cpp",
+      "bytes": 1260,
+      "sha256": "e54b389a5c3c1816403ca139b4e12dff1753149e403ee6137d6003fa74b7ed11"
+    },
+    {
+      "path": "src/good_index_insert.cpp",
+      "bytes": 1629,
+      "sha256": "8ffc910ec862c97b755d2f8b05e81cfbd9a3cd70880fccd5fbd7e3ceb3ab01a1"
+    },
+    {
+      "path": "src/good_info_destroy.cpp",
+      "bytes": 1306,
+      "sha256": "0b11afb43ab5ecb2efbaa6ca7f85748d6280719fc6b190a85352081ec20d9ca6"
+    },
+    {
+      "path": "src/good_info_initialize.cpp",
+      "bytes": 1689,
+      "sha256": "5f3ce927a5a896cd024a00c1aecfd9488eca636a38988ba36b7b9bce904cabd0"
+    },
+    {
+      "path": "src/good_info_list_initialize.cpp",
+      "bytes": 1703,
+      "sha256": "20bcf487817e6eae29974ae335b7b2a2a01ea70eb72e832329dc1ffb5ee9bd9b"
+    },
+    {
+      "path": "src/string_cache.cpp",
+      "bytes": 5298,
+      "sha256": "d31c13d0aefa4be5332b6d47d0e8f945a9fd3d29dddeb28bd204f1b59b2e3ced"
+    },
+    {
+      "path": "tests/test_scope_fla255.py",
+      "bytes": 4748,
+      "sha256": "c78cc1006df3f5d636a91e7724d03157f58e5c6f03f5f2600a95ebbaa460d1a9"
+    },
+    {
+      "path": "tests/verify_archetype_lookup_x86.py",
+      "bytes": 4754,
+      "sha256": "81ccb134130c143597dc582148424679919c7715c5f6ce10207d03c6bb67fefd"
+    },
+    {
+      "path": "tests/verify_archetype_metadata_coupled_x86.py",
+      "bytes": 13183,
+      "sha256": "4bbfd7e01d1b20f1f93450bbcb6907730682aa5b97bbdd4297116dcf5005f09a"
+    },
+    {
+      "path": "tests/verify_archetype_metadata_x86.py",
+      "bytes": 30416,
+      "sha256": "6e2d061db0a3da98e7b63eb0e2aebeda5ee0e5aa27552b13a6e5a16444a9e2e4"
+    },
+    {
+      "path": "tests/verify_good_block_reader_x86.py",
+      "bytes": 35509,
+      "sha256": "fde8466773cdfc17659ef799df512693e4ec6870958e47b5e5427a40743d8a5c"
+    },
+    {
+      "path": "tools/scope_fla255.py",
+      "bytes": 14240,
+      "sha256": "bbab530145ff48d15c1d64bed88e516ca1c4d1fdd3e3e1ea4df5c4d3a6ea2b1f"
+    }
+  ],
+  "self_hash_omitted_to_avoid_recursion": true
+}

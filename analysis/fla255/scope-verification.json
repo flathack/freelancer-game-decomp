@@ -1,0 +1,214 @@
+{
+  "schema": 1,
+  "issue": "FLA-255",
+  "reference_commit": "bf555cdc5e177cb3a2485d98e6bca18ffabe5db2",
+  "verified_at": "2026-10-14T13:13:54.801479+00:00",
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "/opt/data/paperclip-guards/freelancer_quota.py",
+        "--quota-check"
+      ],
+      "cwd": "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-255-scope",
+      "started_at": "2026-10-14T13:10:56.830847+00:00",
+      "exit_code": 0,
+      "stdout": "[freelancer-quota] weekly remaining=39%; allowed; requires >30%\n",
+      "stderr": "",
+      "local_log": "/opt/data/cache/scratch/fla255-preflight/check-1.log"
+    },
+    {
+      "argv": [
+        "/opt/data/projects/Freelancer-Decomp/.venv/bin/python",
+        "tools/scope_fla255.py",
+        "--project-root",
+        "/opt/data/projects/Freelancer-Decomp",
+        "--output",
+        "analysis/fla255"
+      ],
+      "cwd": "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-255-scope",
+      "started_at": "2026-10-14T13:10:58.739212+00:00",
+      "exit_code": 0,
+      "stdout": "[freelancer-quota] weekly remaining=39%; allowed; requires >30%\n{\n  \"functions\": 80,\n  \"verified_instructions\": 8347,\n  \"tables\": 5,\n  \"corpora\": [\n    {\n      \"label\": \"German original reference; pinned common.dll\",\n      \"available\": true,\n      \"file_count\": 15,\n      \"missing_files\": 0\n    },\n    {\n      \"label\": \"HD mod corpus; distinct, not automatically the pinned original binary oracle\",\n      \"available\": true,\n      \"file_count\": 15,\n      \"missing_files\": 0\n    }\n  ],\n  \"real_loader_cases_executed\": 0\n}\n",
+      "stderr": "",
+      "local_log": "/opt/data/cache/scratch/fla255-preflight/check-2.log"
+    },
+    {
+      "argv": [
+        "python3",
+        "/opt/data/cache/scratch/fla255-preflight/assemble.py"
+      ],
+      "cwd": "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-255-scope",
+      "started_at": "2026-10-14T13:11:03.100234+00:00",
+      "exit_code": 0,
+      "stdout": "{\n  \"acceptance_cases_planned\": 24,\n  \"next_kernel_cases\": 15,\n  \"deferred_P3_cases\": 8,\n  \"deferred_native_cases\": 1,\n  \"game_tests_executed\": 0,\n  \"function_rows\": 80\n}\n",
+      "stderr": "",
+      "local_log": "/opt/data/cache/scratch/fla255-preflight/check-3.log"
+    },
+    {
+      "argv": [
+        "/opt/data/projects/Freelancer-Decomp/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_scope_fla255.py",
+        "-v"
+      ],
+      "cwd": "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-255-scope",
+      "started_at": "2026-10-14T13:11:03.133293+00:00",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_all_class_switch_entries_and_separate_table_hash (test_scope_fla255.EvidenceChecks.test_all_class_switch_entries_and_separate_table_hash) ... ok\ntest_every_acceptance_row_has_oracles_and_is_only_planned (test_scope_fla255.EvidenceChecks.test_every_acceptance_row_has_oracles_and_is_only_planned) ... ok\ntest_fixed_base_and_anchor_hash (test_scope_fla255.EvidenceChecks.test_fixed_base_and_anchor_hash) ... ok\ntest_inventory_is_metadata_only_and_complete_for_config_entries (test_scope_fla255.EvidenceChecks.test_inventory_is_metadata_only_and_complete_for_config_entries) ... ok\ntest_binary_sections_and_zero_values (test_scope_fla255.InventoryChecks.test_binary_sections_and_zero_values) ... ok\ntest_empty_real_binary_file_shape (test_scope_fla255.InventoryChecks.test_empty_real_binary_file_shape) ... ok\ntest_invalid_binary_version_is_not_accepted (test_scope_fla255.InventoryChecks.test_invalid_binary_version_is_not_accepted) ... ok\ntest_nonadjacent_instruction_ranges_stay_separate (test_scope_fla255.InventoryChecks.test_nonadjacent_instruction_ranges_stay_separate) ... ok\ntest_text_order_and_repeated_keys_are_retained (test_scope_fla255.InventoryChecks.test_text_order_and_repeated_keys_are_retained) ... ok\ntest_truncated_binary_is_not_counted (test_scope_fla255.InventoryChecks.test_truncated_binary_is_not_counted) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.003s\n\nOK\n",
+      "local_log": "/opt/data/cache/scratch/fla255-preflight/check-4.log"
+    },
+    {
+      "argv": [
+        "/opt/data/projects/Freelancer-Decomp/.venv/bin/python",
+        "tools/scope_fla255.py",
+        "--project-root",
+        "/opt/data/projects/Freelancer-Decomp",
+        "--output",
+        "/opt/data/cache/scratch/fla255-preflight/reproduced-evidence"
+      ],
+      "cwd": "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-255-scope",
+      "started_at": "2026-10-14T13:11:03.191262+00:00",
+      "exit_code": 0,
+      "stdout": "[freelancer-quota] weekly remaining=39%; allowed; requires >30%\n{\n  \"functions\": 80,\n  \"verified_instructions\": 8347,\n  \"tables\": 5,\n  \"corpora\": [\n    {\n      \"label\": \"German original reference; pinned common.dll\",\n      \"available\": true,\n      \"file_count\": 15,\n      \"missing_files\": 0\n    },\n    {\n      \"label\": \"HD mod corpus; distinct, not automatically the pinned original binary oracle\",\n      \"available\": true,\n      \"file_count\": 15,\n      \"missing_files\": 0\n    }\n  ],\n  \"real_loader_cases_executed\": 0\n}\n",
+      "stderr": "",
+      "local_log": "/opt/data/cache/scratch/fla255-preflight/check-5.log"
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "cwd": "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-255-scope",
+      "started_at": "2026-10-14T13:11:07.250707+00:00",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "local_log": "/opt/data/cache/scratch/fla255-preflight/check-6.log"
+    }
+  ],
+  "checks": {
+    "evidence_reproduced_byte_identically": true,
+    "original_functions": 80,
+    "byte_verified_original_instructions": 8347,
+    "original_tables": 5,
+    "proposed_kernel_indexed_direct_closure_bodies": 38,
+    "corpora_inventoried": 2,
+    "relevant_files_per_corpus": [
+      15,
+      15
+    ],
+    "acceptance_cases_planned_not_executed": 24,
+    "scope_unit_checks_passed": 10,
+    "real_db_loader_cases_executed": 0,
+    "new_game_implementation_tests_executed": 0,
+    "native_windows_crt_runs": 0,
+    "all_inherited_versioned_files_byte_identical": 390,
+    "main_checkout_head_index_status_and_six_setup_files_preserved": true,
+    "main_checkout_head": "05a983b19d9a83363bf41d6657ae4eb10d0268c8",
+    "main_pushed": false,
+    "game_source_changed": false
+  },
+  "previous_failed_diagnostics": [
+    {
+      "command": "git pull --rebase in Obsidian vault",
+      "exit_code": 1,
+      "result": "HTTPS authentication unavailable; local pages read; no sync claimed"
+    },
+    {
+      "command": "project .venv python import pefile,capstone",
+      "exit_code": 1,
+      "result": "capstone unavailable; no install needed; pefile/objdump/original-byte verification used"
+    },
+    {
+      "command": "ssh steven@nasa-cachy.tail2b5c2.ts.net test project directory",
+      "exit_code": 255,
+      "result": "Port22 connection timeout; remote corpus not verified"
+    },
+    {
+      "command": "scope collector first attempt",
+      "exit_code": 1,
+      "result": "unassigned instruction function column empty; fixed. Surrounding multi-command shell ended0, NOT a successful collector."
+    },
+    {
+      "command": "scope collector direct-call closure first attempt",
+      "exit_code": 1,
+      "result": "EXTERNAL callee column; fixed explicit PE import boundary"
+    }
+  ],
+  "preservation": {
+    "head": "05a983b19d9a83363bf41d6657ae4eb10d0268c8",
+    "status": " M docs/PAPERCLIP-QUOTA.md\u0000 M tools/paperclip/freelancer_quota.py\u0000?? docs/PAPERCLIP-COMPANY.md\u0000?? tests/test_company_quota.py\u0000?? tools/paperclip/codex_quota.py\u0000?? tools/paperclip/gateway_quota.py\u0000",
+    "index_sha256": "d0dea1f49bb4742127a6f16e123e44caa3df6830e4fc8632472c642f488e407d",
+    "files": [
+      {
+        "path": "docs/PAPERCLIP-QUOTA.md",
+        "sha256": "1fd46c5db8301bc0eb599fbc7d695a0c2970f0e9b1b1317a737a94d559956e64",
+        "bytes": 2050,
+        "mode": 33188
+      },
+      {
+        "path": "tools/paperclip/freelancer_quota.py",
+        "sha256": "d89192a313d35b95039e38b10da3f8e79dc2c8aad5ce3dc6f9dcf7fd7f831588",
+        "bytes": 5038,
+        "mode": 33188
+      },
+      {
+        "path": "docs/PAPERCLIP-COMPANY.md",
+        "sha256": "7985f8f59acf1b42ccef9f11b9c7ce07fb38f843af6d9c850ba9bf812a01508e",
+        "bytes": 3529,
+        "mode": 33188
+      },
+      {
+        "path": "tests/test_company_quota.py",
+        "sha256": "e175c4a72e6e47822de130c5834b86f727b5acf4240cf9df5559de4da0293095",
+        "bytes": 3810,
+        "mode": 33188
+      },
+      {
+        "path": "tools/paperclip/codex_quota.py",
+        "sha256": "bb0a7f87deda0ca073b266eeb97c62ae1e4c4f576342a8b41b62a692d75388d7",
+        "bytes": 1415,
+        "mode": 33188
+      },
+      {
+        "path": "tools/paperclip/gateway_quota.py",
+        "sha256": "373cf368b9485d910ce2ed72541d55fea915fc54ce29cebd5409f6a91b7bd9b6",
+        "bytes": 4330,
+        "mode": 33188
+      }
+    ],
+    "write_fds": [],
+    "unreadable_process_fd_directories": 394
+  },
+  "guard": {
+    "launcher": "/opt/data/paperclip-guards/freelancer_quota.py",
+    "verified_launcher_pid": 2515437,
+    "hermes_child_pid": 2515476,
+    "interval_seconds": 60,
+    "observed_weekly_remaining_percent": 39,
+    "requires_strictly_more_than_percent": 30,
+    "unknown_is_stop": true,
+    "credits_or_reset_used": false
+  },
+  "daily_tasks": {
+    "task_id": null,
+    "context_and_openapi_read": true,
+    "matching_title_search_empty": true,
+    "mutation": false
+  },
+  "limits": [
+    "No new game reconstruction performed.",
+    "All acceptance-matrix game cases are planned, not executed.",
+    "Indirect client/CRT/native engine bindings are not a closed dynamic implementation.",
+    "nasa-cachy live original directory could not be verified.",
+    "Full system-exclusive write-FD visibility unavailable."
+  ]
+}
