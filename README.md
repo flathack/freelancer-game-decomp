@@ -5,13 +5,13 @@ Stand: **14.10.2026**. Ziel ist rekonstruierter, überprüfter Quellcode des vol
 | Fortschritt | Stand |
 |---|---|
 | Roh-Decompilierung | **34/34 Code-Module**, 54.832 erkannte Funktionen ausgegeben |
-| Kompilierbarer, verhaltensgeprüfter Code | Teilbereiche: INI-Reader (39 Exporte), FileMap, IDs, String-Cache, EquipDesc und Teile von Loadout |
+| Kompilierbarer, verhaltensgeprüfter Code | Teilbereiche: INI-Reader (39 Exporte), FileMap, IDs, String-Cache, EquipDesc, Teile von Loadout und P2 Archetype-Metadatenreader |
 | Byteidentische Treffer im Dashboard | **21 von 8.021.343 Code-Bytes ≈ 0,00026 %** |
 | Vollständig rekonstruiertes, spielbares Spiel | **Noch nicht erreicht** |
 
 Die Roh-Ausgaben sind kein fertiger Quellcode. Für die gesamte verhaltensgeprüfte Rekonstruktion gibt es noch keinen belastbaren Prozentwert. Zusätzlich ist der 3-Byte-No-op `INI_Reader::log_link` separat byteidentisch bestätigt.
 
-Zuletzt: Der **P1 Goods-Blockreader** ist nach Athena-Review und Apollo-Freigabe unverändert integriert. Der bereits geprüfte Nachweis umfasst **6.696 Original/Rekonstruktionspaare**, je 13.296 ABI-/Destruktoraufrufe (beide Seiten zusammen), sechs erkannte Defektvarianten und 48 separat gezählte Originalfaults. Das sind frühere Abnahmenachweise, keine neuen Integrationstests. Kontrollierte Dienste ersetzen Reader/Hash/Cache/Index/Archetype-Abhängigkeiten; drei malformed-Sentinel-Pfade bleiben ungeprüft. Kein realer Goods-Korpus, vollständiger Dateilader oder nativer Windows/CRT-Nachweis. [Umfang und Grenzen](analysis/good-blockreader-notes.md). Preiszweige, Goods-Indexsuche und Loadout-Dateilader behalten ihre bisherigen Nachweise; Archetype-Datenbank und das Gesamtspiel bleiben offen. P2 bleibt bis zur Prüfung der Veröffentlichung durch Athena und Apollo inaktiv.
+Zuletzt: Die **P2 Archetype-Metadatenreader** (Root/Equipment/AttachedEquipment und is_attached-Bindung) sind aus dem von Athena geprüften und von Apollo freigegebenen Candidate `cafce1406d75785e9069f2dcb5102c732701e8f8` ohne Quell-/Teständerung integriert. Frische Integrationsregression: **6.506 Readerpaare / 13.012 unabhängige Oracles**, zehn erkannte kompilierte Defektkategorien, gekoppelte Suite sowie vollständige unveränderte P1-/Lookup-Suiten. Athenas zusätzliche 104 Grenzpaare sind wiederverwendete Reviewevidenz, keine neuen Integrationstests. Reale DB-/Loaderfälle: **0**. inherit-Kopierkörper, native Windows/CRT, GoodInfo-Callback, malformed-Sentinel und Gesamtspiel bleiben offen. [Integrationsbericht und Grenzen](analysis/archetype-metadata-integration.md). Die separate Publikationsprüfung durch Athena und Apollo steht noch aus; kein nächster Meilenstein vor deren Abschluss. P1-, Preis-, Index- und Loadout-Nachweise sowie die bisherige Historie bleiben erhalten.
 
 - [Detaillierter Fortschritt](analysis/progress.md)
 - [Rekonstruktionsnotizen](docs/reconstruction-notes.md)
