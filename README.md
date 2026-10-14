@@ -1,6 +1,6 @@
 # Freelancer (2003) – Decompilierung
 
-Stand: **13.10.2026**. Ziel ist rekonstruierter, überprüfter Quellcode des vollständigen Spiels.
+Stand: **14.10.2026**. Ziel ist rekonstruierter, überprüfter Quellcode des vollständigen Spiels.
 
 | Fortschritt | Stand |
 |---|---|
@@ -11,7 +11,7 @@ Stand: **13.10.2026**. Ziel ist rekonstruierter, überprüfter Quellcode des vol
 
 Die Roh-Ausgaben sind kein fertiger Quellcode. Für die gesamte verhaltensgeprüfte Rekonstruktion gibt es noch keinen belastbaren Prozentwert. Zusätzlich ist der 3-Byte-No-op `INI_Reader::log_link` separat byteidentisch bestätigt.
 
-Zuletzt: Die **Preiszweige** des Goods-Blockreaders bestehen **10.704 Originalvergleiche** mit zwölf x87-Kontrollwörtern; zwei absichtlich falsche Rundungsvarianten werden erkannt. Das ist noch kein vollständiger Goods-Dateilader. Goods-Indexsuche (96.000 Vergleiche) und Loadout-Dateilader (vier Originaldateien, 803 Maps / 17.130 Einträge) bleiben verifiziert. Archetype-Datenbank und native Windows-Ausführung sind offen.
+Zuletzt: Die **Preiszweige** des Goods-Blockreaders bestehen **10.704 Originalvergleiche** mit zwölf x87-Kontrollwörtern; zwei absichtlich falsche Rundungsvarianten werden erkannt. Athena hat den festen Stand `05a983b` unabhängig geprüft, Apollo hat diesen Meilenstein freigegeben. Der [Integrationsbericht](analysis/goods-pricing-integration.md) trennt diesen Nachweis vom noch gesondert freizugebenden Setup-Delta und main-Push. Das ist noch kein vollständiger Goods-Dateilader. Goods-Indexsuche (96.000 Vergleiche) und Loadout-Dateilader (vier Originaldateien, 803 Maps / 17.130 Einträge) bleiben verifiziert. Archetype-Datenbank und native Windows-Ausführung sind offen.
 
 - [Detaillierter Fortschritt](analysis/progress.md)
 - [Rekonstruktionsnotizen](docs/reconstruction-notes.md)
