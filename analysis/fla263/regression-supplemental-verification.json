@@ -1,0 +1,91 @@
+{
+  "issue": "FLA-263",
+  "full_suites": [
+    {
+      "suite": "verify_create_id.py",
+      "argv": [
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/.venv/bin/python",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/tests/verify_create_id.py"
+      ],
+      "exit_code": 0,
+      "seconds": 6.278,
+      "output_file": "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-regression-supplemental/verify_create_id.py.log"
+    },
+    {
+      "suite": "verify_flid_x86.py",
+      "argv": [
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/.venv/bin/python",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/tests/verify_flid_x86.py"
+      ],
+      "exit_code": 0,
+      "seconds": 10.737,
+      "output_file": "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-regression-supplemental/verify_flid_x86.py.log"
+    },
+    {
+      "suite": "verify_good_archetype_x86.py",
+      "argv": [
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/.venv/bin/python",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/tests/verify_good_archetype_x86.py"
+      ],
+      "exit_code": 0,
+      "seconds": 1.92,
+      "output_file": "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-regression-supplemental/verify_good_archetype_x86.py.log"
+    },
+    {
+      "suite": "verify_good_index_emplace_x86.py",
+      "argv": [
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/.venv/bin/python",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/tests/verify_good_index_emplace_x86.py"
+      ],
+      "exit_code": 0,
+      "seconds": 2.621,
+      "output_file": "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-regression-supplemental/verify_good_index_emplace_x86.py.log"
+    },
+    {
+      "suite": "verify_string_cache_x86.py",
+      "argv": [
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/.venv/bin/python",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/tests/verify_string_cache_x86.py"
+      ],
+      "exit_code": 0,
+      "seconds": 3.673,
+      "output_file": "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-regression-supplemental/verify_string_cache_x86.py.log"
+    },
+    {
+      "suite": "verify_string_index_x86.py",
+      "argv": [
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/.venv/bin/python",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/tests/verify_string_index_x86.py"
+      ],
+      "exit_code": 0,
+      "seconds": 2.219,
+      "output_file": "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-regression-supplemental/verify_string_index_x86.py.log"
+    },
+    {
+      "suite": "verify_subobject_id_x86.py",
+      "argv": [
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/.venv/bin/python",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/tests/verify_subobject_id_x86.py"
+      ],
+      "exit_code": 0,
+      "seconds": 2.771,
+      "output_file": "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-regression-supplemental/verify_subobject_id_x86.py.log"
+    }
+  ],
+  "quick_runs": 0,
+  "all_commands_exit_zero": true,
+  "published_reports_preserved": true,
+  "test_hashes": {
+    "verify_good_archetype_x86.py": "deba582ccf961948c2992b0b7901cea053019ab3ef38863e316f9a24f0eeeeb3",
+    "verify_good_index_emplace_x86.py": "2f1dddab9a37574dd07acadc5caf72324dceb4e69480cd29bf2d91c15652e721",
+    "verify_flid_x86.py": "6015610787496ae22f8dfc375f345b43ea8ac08eddedb7b8123bb73175e058fa",
+    "verify_create_id.py": "9b01f1e5b424d368cf8de3ea203e472db73bdaae995ac5174f6aaedb155197b6",
+    "verify_string_cache_x86.py": "2fde0bab1a6a96af5b60a6a49bf6d3c47aba473874418cbeac277af247917fbd",
+    "verify_string_index_x86.py": "edf9b07d1a5b1cab71738e7b0433123c7d8ec10208df405f1cafb71aa8ace9a5",
+    "verify_subobject_id_x86.py": "af2936672e5ef22ccc2d382b4c9cbd7baf0dab33604dec6f372671b01bdf553b"
+  },
+  "limits": [
+    "Published baseline suites retain their own explicitly modeled services.",
+    "New ownership/callback acceptance is separately tested, not inferred from these baselines."
+  ]
+}

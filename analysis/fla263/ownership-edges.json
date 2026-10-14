@@ -1,0 +1,776 @@
+{
+  "issue": "FLA-263",
+  "original_sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
+  "counts": {
+    "subtype_vector_populated_root_pairs": 240,
+    "unsigned_real_query_boundary_pairs": 21,
+    "copy_allocator_fault_pairs": 18,
+    "copy_null_allocation_return_pairs": 6,
+    "inherit_destroy_client_fault_pairs": 12
+  },
+  "fault_details": [
+    {
+      "kind": "root",
+      "copy_null_allocation": 1,
+      "fault": [
+        20,
+        4,
+        4
+      ],
+      "actual_return": false
+    },
+    {
+      "kind": "root",
+      "copy_null_allocation": 2,
+      "fault": [
+        20,
+        4,
+        4
+      ],
+      "actual_return": false
+    },
+    {
+      "kind": "root",
+      "copy_null_allocation": 3,
+      "fault": [
+        20,
+        4,
+        4
+      ],
+      "actual_return": false
+    },
+    {
+      "kind": "root",
+      "copy_null_allocation": 4,
+      "fault": null,
+      "actual_return": true
+    },
+    {
+      "kind": "root",
+      "copy_null_allocation": 5,
+      "fault": [
+        20,
+        4,
+        4
+      ],
+      "actual_return": false
+    },
+    {
+      "kind": "root",
+      "copy_null_allocation": 6,
+      "fault": null,
+      "actual_return": true
+    },
+    {
+      "kind": "root",
+      "copy_null_allocation": 7,
+      "fault": [
+        20,
+        4,
+        4
+      ],
+      "actual_return": false
+    },
+    {
+      "kind": "root",
+      "copy_null_allocation": 8,
+      "fault": [
+        20,
+        4,
+        4
+      ],
+      "actual_return": false
+    },
+    {
+      "kind": "equipment",
+      "copy_null_allocation": 1,
+      "fault": [
+        20,
+        4,
+        4
+      ],
+      "actual_return": false
+    },
+    {
+      "kind": "equipment",
+      "copy_null_allocation": 2,
+      "fault": [
+        20,
+        4,
+        4
+      ],
+      "actual_return": false
+    },
+    {
+      "kind": "equipment",
+      "copy_null_allocation": 3,
+      "fault": [
+        20,
+        4,
+        4
+      ],
+      "actual_return": false
+    },
+    {
+      "kind": "equipment",
+      "copy_null_allocation": 4,
+      "fault": null,
+      "actual_return": true
+    },
+    {
+      "kind": "equipment",
+      "copy_null_allocation": 5,
+      "fault": [
+        20,
+        4,
+        4
+      ],
+      "actual_return": false
+    },
+    {
+      "kind": "equipment",
+      "copy_null_allocation": 6,
+      "fault": null,
+      "actual_return": true
+    },
+    {
+      "kind": "equipment",
+      "copy_null_allocation": 7,
+      "fault": [
+        20,
+        4,
+        4
+      ],
+      "actual_return": false
+    },
+    {
+      "kind": "equipment",
+      "copy_null_allocation": 8,
+      "fault": [
+        20,
+        4,
+        4
+      ],
+      "actual_return": false
+    },
+    {
+      "kind": "attached",
+      "copy_null_allocation": 1,
+      "fault": [
+        20,
+        4,
+        4
+      ],
+      "actual_return": false
+    },
+    {
+      "kind": "attached",
+      "copy_null_allocation": 2,
+      "fault": [
+        20,
+        4,
+        4
+      ],
+      "actual_return": false
+    },
+    {
+      "kind": "attached",
+      "copy_null_allocation": 3,
+      "fault": [
+        20,
+        4,
+        4
+      ],
+      "actual_return": false
+    },
+    {
+      "kind": "attached",
+      "copy_null_allocation": 4,
+      "fault": null,
+      "actual_return": true
+    },
+    {
+      "kind": "attached",
+      "copy_null_allocation": 5,
+      "fault": [
+        20,
+        4,
+        4
+      ],
+      "actual_return": false
+    },
+    {
+      "kind": "attached",
+      "copy_null_allocation": 6,
+      "fault": null,
+      "actual_return": true
+    },
+    {
+      "kind": "attached",
+      "copy_null_allocation": 7,
+      "fault": [
+        20,
+        4,
+        4
+      ],
+      "actual_return": false
+    },
+    {
+      "kind": "attached",
+      "copy_null_allocation": 8,
+      "fault": [
+        20,
+        4,
+        4
+      ],
+      "actual_return": false
+    },
+    {
+      "seed": 17,
+      "client_slot": 0,
+      "operation": "inherit",
+      "fault": [
+        19,
+        620756992,
+        4
+      ]
+    },
+    {
+      "seed": 17,
+      "client_slot": 4,
+      "operation": "inherit",
+      "fault": [
+        19,
+        620756992,
+        4
+      ]
+    },
+    {
+      "seed": 17,
+      "client_slot": 4,
+      "operation": "destroy",
+      "fault": [
+        19,
+        620756992,
+        4
+      ]
+    },
+    {
+      "seed": 17,
+      "client_slot": 28,
+      "operation": "inherit",
+      "fault": [
+        19,
+        620756992,
+        4
+      ]
+    },
+    {
+      "seed": 91,
+      "client_slot": 0,
+      "operation": "inherit",
+      "fault": [
+        19,
+        620756992,
+        4
+      ]
+    },
+    {
+      "seed": 91,
+      "client_slot": 4,
+      "operation": "inherit",
+      "fault": [
+        19,
+        620756992,
+        4
+      ]
+    },
+    {
+      "seed": 91,
+      "client_slot": 4,
+      "operation": "destroy",
+      "fault": [
+        19,
+        620756992,
+        4
+      ]
+    },
+    {
+      "seed": 91,
+      "client_slot": 28,
+      "operation": "inherit",
+      "fault": [
+        19,
+        620756992,
+        4
+      ]
+    },
+    {
+      "seed": 451,
+      "client_slot": 0,
+      "operation": "inherit",
+      "fault": [
+        19,
+        620756992,
+        4
+      ]
+    },
+    {
+      "seed": 451,
+      "client_slot": 4,
+      "operation": "inherit",
+      "fault": [
+        19,
+        620756992,
+        4
+      ]
+    },
+    {
+      "seed": 451,
+      "client_slot": 4,
+      "operation": "destroy",
+      "fault": [
+        19,
+        620756992,
+        4
+      ]
+    },
+    {
+      "seed": 451,
+      "client_slot": 28,
+      "operation": "inherit",
+      "fault": [
+        19,
+        620756992,
+        4
+      ]
+    }
+  ],
+  "faults_counted_as_returns": 0,
+  "commands": [
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src",
+        "-c",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src/archetype_ownership.cpp",
+        "-o",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/archetype_ownership-edges.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src",
+        "-c",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src/archetype_metadata.cpp",
+        "-o",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/archetype_metadata-edges.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src",
+        "-c",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src/good_info_comm.cpp",
+        "-o",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/good_info_comm-edges.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src",
+        "-c",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src/good_info_initialize.cpp",
+        "-o",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/good_info_initialize-edges.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src",
+        "-c",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/metadata-runtime-real-inherit.cpp",
+        "-o",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/metadata-runtime-real-inherit-edges.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src",
+        "-c",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/good-block-runtime-real-comm.cpp",
+        "-o",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/good-block-runtime-real-comm-edges.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src",
+        "-c",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/tests/fixtures/archetype_ownership_runtime.cpp",
+        "-o",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/archetype_ownership_runtime-edges.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src",
+        "-c",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src/create_id.cpp",
+        "-o",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/create_id-edges.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src",
+        "-c",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src/string_cache.cpp",
+        "-o",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/string_cache-edges.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src",
+        "-c",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src/archetype_id.cpp",
+        "-o",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/archetype_id-edges.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src",
+        "-c",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src/archetype_equipment_lookup.cpp",
+        "-o",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/archetype_equipment_lookup-edges.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src",
+        "-c",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src/good_block_reader.cpp",
+        "-o",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/good_block_reader-edges.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src",
+        "-c",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src/good_info_price.cpp",
+        "-o",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/good_info_price-edges.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src",
+        "-c",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src/good_info_destroy.cpp",
+        "-o",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/good_info_destroy-edges.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src",
+        "-c",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/tests/fixtures/flid_x86_runtime.cpp",
+        "-o",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/flid_x86_runtime-edges.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src",
+        "-c",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/tests/fixtures/string_cache_x86_runtime.cpp",
+        "-o",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/string_cache_x86_runtime-edges.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src",
+        "-c",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/tests/fixtures/archetype_lookup_runtime.cpp",
+        "-o",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/archetype_lookup_runtime-edges.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "lld-link",
+        "/dll",
+        "/noentry",
+        "/nodefaultlib",
+        "/base:0x15000000",
+        "/out:/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/edges.dll",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/archetype_ownership-edges.obj",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/archetype_metadata-edges.obj",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/good_info_comm-edges.obj",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/good_info_initialize-edges.obj",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/metadata-runtime-real-inherit-edges.obj",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/good-block-runtime-real-comm-edges.obj",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/archetype_ownership_runtime-edges.obj",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/create_id-edges.obj",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/string_cache-edges.obj",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/archetype_id-edges.obj",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/archetype_equipment_lookup-edges.obj",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/good_block_reader-edges.obj",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/good_info_price-edges.obj",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/good_info_destroy-edges.obj",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/flid_x86_runtime-edges.obj",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/string_cache_x86_runtime-edges.obj",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/archetype_lookup_runtime-edges.obj",
+        "/export:archetype_root_read",
+        "/export:archetype_equipment_read",
+        "/export:archetype_attached_read",
+        "/export:archetype_equipment_is_attached",
+        "/export:archetype_attached_is_attached",
+        "/export:arch_virtual_read",
+        "/export:arch_virtual_attached",
+        "/export:arch_diagnostic",
+        "/export:arch_hash",
+        "/export:arch_cache_clear",
+        "/export:arch_string_alloc",
+        "/export:create_id_reconstructed",
+        "/export:?CreateID@@YAIPBD@Z",
+        "/export:?GetEquipment@Archetype@@YAPAUEquipment@1@I@Z",
+        "/export:?GetEquipmentID@Archetype@@YAIABUID_String@@@Z",
+        "/export:good_info_read_block",
+        "/export:good_block_find_good",
+        "/export:good_block_find_hull",
+        "/export:good_block_unknown_category",
+        "/export:??1GoodInfo@@QAE@XZ",
+        "/export:?StringAlloc@@YAPADPBD_N@Z",
+        "/export:?clear@CacheString@@QAEXXZ",
+        "/export:archetype_root_assign",
+        "/export:archetype_equipment_assign",
+        "/export:archetype_attached_assign",
+        "/export:archetype_assign_0626eaf0",
+        "/export:archetype_assign_0626dbb0",
+        "/export:archetype_assign_0626e2c0",
+        "/export:archetype_assign_0626f660",
+        "/export:archetype_assign_0626f870",
+        "/export:archetype_assign_0626fa10",
+        "/export:archetype_root_default",
+        "/export:archetype_root_copy",
+        "/export:archetype_root_deleting",
+        "/export:archetype_equipment_default",
+        "/export:archetype_equipment_copy",
+        "/export:archetype_equipment_deleting",
+        "/export:archetype_attached_default",
+        "/export:archetype_attached_copy",
+        "/export:archetype_attached_deleting",
+        "/export:archetype_root_destroy",
+        "/export:archetype_pointer_vector_assign",
+        "/export:arch_inherit_dispatch",
+        "/export:arch_inherit_node",
+        "/export:arch_inherit_sentinel",
+        "/export:arch_runtime_allocate",
+        "/export:arch_runtime_free",
+        "/export:arch_runtime_payload_heap_free",
+        "/export:arch_runtime_array_destroy",
+        "/export:good_info_read_comm",
+        "/export:??0GoodInfo@@QAE@XZ",
+        "/export:good_info_runtime_vtable",
+        "/export:archetype_root_slots,DATA",
+        "/export:archetype_equipment_slots,DATA",
+        "/export:archetype_attached_slots,DATA",
+        "/export:archetype_lifetime_root_slots,DATA",
+        "/export:archetype_lifetime_equipment_slots,DATA",
+        "/export:archetype_lifetime_attached_slots,DATA",
+        "/export:?StringCacheArena@@3PADA,DATA",
+        "/export:?StringCacheFront@@3IA,DATA",
+        "/export:?StringCacheBack@@3IA,DATA",
+        "/export:?StringCacheInternedCount@@3IA,DATA",
+        "/export:?StringCachePrivateCount@@3IA,DATA",
+        "/export:?StringCacheIndex@@3PAUStringCacheTree@@A,DATA",
+        "/export:EquipmentArchetypeTree,DATA",
+        "/export:good_info_comm_slots,DATA",
+        "/export:good_info_comm_base_slots,DATA"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "source_sha256": "638ddb21e3aba145148a4d702f532cf4c973d2196d4c03cdcdb934de2880b3c7",
+  "native_runs": 0,
+  "limits": [
+    "External allocator/client faults are modeled service failures, not native SEH throws.",
+    "Synthetic unsigned lookup tree is not a real file-loaded DB."
+  ]
+}

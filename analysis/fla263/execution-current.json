@@ -1,0 +1,46 @@
+{
+  "issue": "FLA-263",
+  "date_utc": "2026-10-14T15:54:56.263586+00:00",
+  "runs": [
+    {
+      "argv": [
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/.venv/bin/python",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/tests/verify_archetype_lifecycle_x86.py"
+      ],
+      "exit_code": 0,
+      "seconds": 20.668,
+      "log": "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/verify_archetype_lifecycle_x86.py.final.log",
+      "test_sha256": "c7dcae2b8a4dcfee598cbc4a55aed8a6508666a275a01cb4ba42a29f598d7987"
+    },
+    {
+      "argv": [
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/.venv/bin/python",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/tests/verify_archetype_ownership_x86.py"
+      ],
+      "exit_code": 0,
+      "seconds": 77.328,
+      "log": "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/verify_archetype_ownership_x86.py.final.log",
+      "test_sha256": "48fb424e9be2b68a5b35a02752bb7917520388e0295c5d1cd176d137f2fcd340"
+    },
+    {
+      "argv": [
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/.venv/bin/python",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/tests/verify_archetype_ownership_defects_x86.py"
+      ],
+      "exit_code": 0,
+      "seconds": 77.296,
+      "log": "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/verify_archetype_ownership_defects_x86.py.final.log",
+      "test_sha256": "262a149dc68607e71d2a3293afbf572017b836c273d25367e991abd82eb1435f"
+    },
+    {
+      "argv": [
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/.venv/bin/python",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/tests/verify_archetype_ownership_edges_x86.py"
+      ],
+      "exit_code": 0,
+      "seconds": 10.177,
+      "log": "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-ownership/verify_archetype_ownership_edges_x86.py.final.log",
+      "test_sha256": "f909d815270650c2c5084acd8dfe2aae19bfa3b3c60680a937c464f11461554e"
+    }
+  ]
+}

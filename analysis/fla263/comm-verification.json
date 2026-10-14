@@ -1,0 +1,108 @@
+{
+  "issue": "FLA-263",
+  "scope_commit": "c93583dcdca63e257d9a18dd9d51aa62905f5042",
+  "original_sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
+  "callback_span": [
+    "0x632e6a0",
+    "0x632e71a"
+  ],
+  "normal_pairs": 384,
+  "normal_thiscall_ret4_pairs": 384,
+  "fault_pairs": 24,
+  "faults_counted_as_returns": 0,
+  "modeled_services": [
+    "INI_Reader::is_value",
+    "INI_Reader::get_value_string"
+  ],
+  "compiled_defects": [
+    {
+      "name": "bounded_scan",
+      "compiled": true,
+      "rejected": true,
+      "discriminator": ""
+    },
+    {
+      "name": "wrong_limit",
+      "compiled": true,
+      "rejected": true,
+      "discriminator": "independent exact guarded write set"
+    },
+    {
+      "name": "wrong_length_offset",
+      "compiled": true,
+      "rejected": true,
+      "discriminator": "independent exact guarded write set"
+    },
+    {
+      "name": "unknown_true",
+      "compiled": true,
+      "rejected": true,
+      "discriminator": ""
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-builtin",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-c",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/tests/fixtures/good_info_comm_runtime.cpp",
+        "-o",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-comm/good_info_comm-runtime.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-builtin",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src",
+        "-c",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/src/good_info_comm.cpp",
+        "-o",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-comm/good_info_comm.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "lld-link",
+        "/dll",
+        "/noentry",
+        "/nodefaultlib",
+        "/base:0x15000000",
+        "/out:/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-comm/good_info_comm.dll",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-comm/good_info_comm.obj",
+        "/opt/data/projects/Freelancer-Decomp/build/worktrees/fla-263-equipment-ownership/build/fla263-comm/good_info_comm-runtime.obj",
+        "/export:good_info_read_comm",
+        "/export:good_info_has_voice",
+        "/export:good_info_prefix_ref",
+        "/export:good_info_comm_slots,DATA"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "native_runs": 0,
+  "milestone_complete": false,
+  "limits": [
+    "Only N09/N10 callback probes; other N01-N15 gates not closed by this report.",
+    "No real file reader/DB or native CRT/Windows execution.",
+    "Unmasked native x87 and aliasing source/destination are not claimed."
+  ],
+  "source_sha256": "d63770aa1c5dd10be3df06ed90443789602a8b1c8230c980108ee0fbe585d22c",
+  "test_sha256": "4a9b20a4ccb23bf69140efe94351494457866e552b3f3cc94428db596d6c4c23"
+}
