@@ -1,0 +1,306 @@
+{
+  "base_commit": "8f44ff91f1086f33fd81ca1c4f65f637a9733bf2",
+  "source_hashes": {
+    "src/archetype_metadata.cpp": "0bdfcc4e6721aeb0fb2ecae2a332ccde483bf2bff61078cae361d5f311ad11da",
+    "src/archetype_metadata.hpp": "54a04caf2969a6f0156fed1f1046765249e2c48edac7677169b7aa048bc22bf4",
+    "tests/fixtures/archetype_metadata_runtime.cpp": "8502715c5f0b1948361d0b7059f7e1deca54da294c9fdfd456b1cdd39c48a405",
+    "tests/verify_archetype_metadata_x86.py": "6e2d061db0a3da98e7b63eb0e2aebeda5ee0e5aa27552b13a6e5a16444a9e2e4",
+    "src/create_id.cpp": "2e8f11d2cbcc06d45c8784c21c750250431b7c52c15c4e372063e9897baec426",
+    "src/cfl_id_maker.hpp": "292eb15b62827ec6e14f2c3209cb2c2bd613ea9630a75fac912438cabf94a192",
+    "src/string_cache.cpp": "d31c13d0aefa4be5332b6d47d0e8f945a9fd3d29dddeb28bd204f1b59b2e3ced",
+    "src/string_cache.hpp": "b2eeb86ceaf8971587041d7a7fe68ed4547ebe8a4dbdaeb98803e3177cfde85b",
+    "src/archetype_id.cpp": "a2921be82f9314ab430444b6bcf3b3fa17fa8b0fca46c5b19078d68acd85512a",
+    "src/archetype_equipment_lookup.cpp": "1ff2356e39402364dfefd8ec9566ce0f3404dcc9714eb47c2bd241ad4cb7b7b9",
+    "src/good_block_reader.cpp": "1f962c179422d212819958a70f05a2cbaa1a73e081eab14cc3f91d3203b6b878",
+    "src/good_block_reader.hpp": "d6138c04b36a5d1a6ea5ec097e5cce02fb889ee46e8c0d5aa92f56e89d1ce2ca",
+    "src/good_info_price.cpp": "eea67afcd313ab7f50f468b688e5fdea0ac4fdd377229ea1325459351f85c78b",
+    "src/good_info_price.hpp": "28699be98e54f9253df1278b088329b689c633734ccc15aaa883202a506a96e5",
+    "src/good_info_destroy.cpp": "0b11afb43ab5ecb2efbaa6ca7f85748d6280719fc6b190a85352081ec20d9ca6",
+    "tests/fixtures/good_block_reader_runtime.cpp": "5421e95e39e3e90a8c7598a16a5ac8db58d4c6e4c698120200906ddf22e70fba",
+    "tests/fixtures/flid_x86_runtime.cpp": "80b7f9d7d13b908ca60044ac1ae331cb1e28f7ee2e0830feba5f356d3e7d0f63",
+    "tests/fixtures/string_cache_x86_runtime.cpp": "fe90bfece8324e9499978a29bc94651b62666a4b5f1ed153906438cecd6be3b7",
+    "tests/fixtures/archetype_lookup_runtime.cpp": "c6892dcdda0d075322f4e38705f952dd949c74fdc5b3ec76b3ba9459ec60b2e2",
+    "tests/x86_harness.py": "f701d10d2f4d3469afa69f7ac76566f3480bc257f214cacf8c73419391c6bf1a",
+    "tests/verify_good_info_price_x86.py": "58d9e68d01bd6d7ac0adc2b1dc1a81379b9807cd0b3464ba7665375940b6e46c",
+    "analysis/createid-behavior.json": "1f39227e962eda73a7444de7d57751822abbe3d82ebc350eb8d29142c6679c73"
+  },
+  "additional_test_hash": "4bbfd7e01d1b20f1f93450bbcb6907730682aa5b97bbdd4297116dcf5005f09a",
+  "immutable_existing_source_hashes": {
+    "src/create_id.cpp": "2e8f11d2cbcc06d45c8784c21c750250431b7c52c15c4e372063e9897baec426",
+    "src/cfl_id_maker.hpp": "292eb15b62827ec6e14f2c3209cb2c2bd613ea9630a75fac912438cabf94a192",
+    "src/string_cache.cpp": "d31c13d0aefa4be5332b6d47d0e8f945a9fd3d29dddeb28bd204f1b59b2e3ced",
+    "src/string_cache.hpp": "b2eeb86ceaf8971587041d7a7fe68ed4547ebe8a4dbdaeb98803e3177cfde85b",
+    "src/archetype_id.cpp": "a2921be82f9314ab430444b6bcf3b3fa17fa8b0fca46c5b19078d68acd85512a",
+    "src/archetype_equipment_lookup.cpp": "1ff2356e39402364dfefd8ec9566ce0f3404dcc9714eb47c2bd241ad4cb7b7b9",
+    "src/good_block_reader.cpp": "1f962c179422d212819958a70f05a2cbaa1a73e081eab14cc3f91d3203b6b878",
+    "src/good_block_reader.hpp": "d6138c04b36a5d1a6ea5ec097e5cce02fb889ee46e8c0d5aa92f56e89d1ce2ca",
+    "src/good_info_price.cpp": "eea67afcd313ab7f50f468b688e5fdea0ac4fdd377229ea1325459351f85c78b",
+    "src/good_info_price.hpp": "28699be98e54f9253df1278b088329b689c633734ccc15aaa883202a506a96e5",
+    "src/good_info_destroy.cpp": "0b11afb43ab5ecb2efbaa6ca7f85748d6280719fc6b190a85352081ec20d9ca6",
+    "tests/fixtures/good_block_reader_runtime.cpp": "5421e95e39e3e90a8c7598a16a5ac8db58d4c6e4c698120200906ddf22e70fba",
+    "tests/fixtures/flid_x86_runtime.cpp": "80b7f9d7d13b908ca60044ac1ae331cb1e28f7ee2e0830feba5f356d3e7d0f63",
+    "tests/fixtures/string_cache_x86_runtime.cpp": "fe90bfece8324e9499978a29bc94651b62666a4b5f1ed153906438cecd6be3b7",
+    "tests/fixtures/archetype_lookup_runtime.cpp": "c6892dcdda0d075322f4e38705f952dd949c74fdc5b3ec76b3ba9459ec60b2e2",
+    "tests/x86_harness.py": "f701d10d2f4d3469afa69f7ac76566f3480bc257f214cacf8c73419391c6bf1a",
+    "tests/verify_good_info_price_x86.py": "58d9e68d01bd6d7ac0adc2b1dc1a81379b9807cd0b3464ba7665375940b6e46c",
+    "analysis/createid-behavior.json": "1f39227e962eda73a7444de7d57751822abbe3d82ebc350eb8d29142c6679c73",
+    "tests/verify_good_block_reader_x86.py": "fde8466773cdfc17659ef799df512693e4ec6870958e47b5e5427a40743d8a5c",
+    "src/good_info_list_initialize.cpp": "20bcf487817e6eae29974ae335b7b2a2a01ea70eb72e832329dc1ffb5ee9bd9b",
+    "src/good_index_insert.cpp": "8ffc910ec862c97b755d2f8b05e81cfbd9a3cd70880fccd5fbd7e3ceb3ab01a1",
+    "src/good_index_emplace.cpp": "e54b389a5c3c1816403ca139b4e12dff1753149e403ee6137d6003fa74b7ed11",
+    "tests/fixtures/good_info_list_initialize_runtime.cpp": "2f71dfe12b245cf17ab2dc50b0e055ea957bc937cf040e48d3f70dfea8f87b46",
+    "src/good_index_rb.hpp": "29e1f2b2fe8a07c39eeafbc3d23a606a2dc9f2f843b465db43c6f9bb758615af",
+    "tests/verify_archetype_lookup_x86.py": "81ccb134130c143597dc582148424679919c7715c5f6ce10207d03c6bb67fefd"
+  },
+  "setup_unchanged": {
+    "head": "05a983b19d9a83363bf41d6657ae4eb10d0268c8",
+    "status": " M docs/PAPERCLIP-QUOTA.md\n M tools/paperclip/freelancer_quota.py\n?? docs/PAPERCLIP-COMPANY.md\n?? tests/test_company_quota.py\n?? tools/paperclip/codex_quota.py\n?? tools/paperclip/gateway_quota.py\n",
+    "files": {
+      "docs/PAPERCLIP-QUOTA.md": {
+        "sha256": "1fd46c5db8301bc0eb599fbc7d695a0c2970f0e9b1b1317a737a94d559956e64",
+        "size": 2050,
+        "mode": "0o644"
+      },
+      "tools/paperclip/freelancer_quota.py": {
+        "sha256": "d89192a313d35b95039e38b10da3f8e79dc2c8aad5ce3dc6f9dcf7fd7f831588",
+        "size": 5038,
+        "mode": "0o644"
+      },
+      "docs/PAPERCLIP-COMPANY.md": {
+        "sha256": "7985f8f59acf1b42ccef9f11b9c7ce07fb38f843af6d9c850ba9bf812a01508e",
+        "size": 3529,
+        "mode": "0o644"
+      },
+      "tests/test_company_quota.py": {
+        "sha256": "e175c4a72e6e47822de130c5834b86f727b5acf4240cf9df5559de4da0293095",
+        "size": 3810,
+        "mode": "0o644"
+      },
+      "tools/paperclip/codex_quota.py": {
+        "sha256": "bb0a7f87deda0ca073b266eeb97c62ae1e4c4f576342a8b41b62a692d75388d7",
+        "size": 1415,
+        "mode": "0o644"
+      },
+      "tools/paperclip/gateway_quota.py": {
+        "sha256": "373cf368b9485d910ce2ed72541d55fea915fc54ce29cebd5409f6a91b7bd9b6",
+        "size": 4330,
+        "mode": "0o644"
+      }
+    }
+  },
+  "build_hashes": {
+    "p2_defect_merge_inherit_missing_null.lib": {
+      "sha256": "f338d5be4ccb867cb407a3761b28b226e63eb78b465abae1dcd74bb3ca16e953",
+      "bytes": 9788
+    },
+    "p2_defect_normalize_root_callback_al.dll": {
+      "sha256": "6b75a2759ef9cacc07a077b22a8c87ba68f924c595708c4f125175e78e732fca",
+      "bytes": 12800
+    },
+    "p2_defect_free_old_cache_handle.dll": {
+      "sha256": "51efda6390752b632f3beee6a0dbfbef85be060650c5909882b83399d8b20050",
+      "bytes": 12800
+    },
+    "p2_defect_swap_dispatch_arguments.dll": {
+      "sha256": "a9a8ddf62bd497ec5cbb2da5b60b3bf070093fcc744e25f3a1c240fb49d4b25f",
+      "bytes": 12800
+    },
+    "p2_defect_merge_inherit_missing_null.dll": {
+      "sha256": "ac25b52f7a694975421c1abb6f157e53a8ccb0664a87c9060a9c646128624f73",
+      "bytes": 12800
+    },
+    "p2_defect_early_binary64_spill.lib": {
+      "sha256": "1a77cfa00e4bdff7fdf4827501d727bf5cd0bfd8e073b35b3265d4e32181ed2a",
+      "bytes": 9542
+    },
+    "p2_defect_normalize_raw_field_bool.dll": {
+      "sha256": "b48d82624ac5353de61a3cfc28b6504e3f398a5db91200719179296d2e9353bf",
+      "bytes": 12800
+    },
+    "p2_defect_skip_root_base_hit.dll": {
+      "sha256": "77b406b1a2725c910b75d2c19bf6a9c9e299b9a07043464bc6333a99383904a8",
+      "bytes": 12800
+    },
+    "p2_defect_constant_true_is_attached.lib": {
+      "sha256": "771ae7c8152ed05d100f42774def9cad35024c2a7effd6be746962f56455fd45",
+      "bytes": 9748
+    },
+    "archetype_metadata_runtime-archetype_metadata_coupled.obj": {
+      "sha256": "24f8fec4da587246b8461e0186af1908b4e05d2a5cf1c60b99f0a537af7099b5",
+      "bytes": 1620
+    },
+    "archetype_metadata_runtime-p2_defect_normalize_root_callback_al.obj": {
+      "sha256": "6799bf3800660a0cdd8123f788b41ce97a0ecb7049ad0b4c5e2ae8da360a63d8",
+      "bytes": 1620
+    },
+    "p2_defect_early_binary64_spill.dll": {
+      "sha256": "9a498b439e83532995d67223dc5e54069377bfac747ab726851b23d5e7408526",
+      "bytes": 12800
+    },
+    "archetype_metadata_runtime-p2_defect_swap_dispatch_arguments.obj": {
+      "sha256": "bc71497b259bee7d777d6189e6074757801d593fd6cde4050daf583d735eeca6",
+      "bytes": 1620
+    },
+    "archetype_metadata_runtime-p2_defect_wrong_ids_name_offset.obj": {
+      "sha256": "84f60dfb594ac5c7388cdb2eadca4c2c8167d8380779254f090379c38b4920b9",
+      "bytes": 1620
+    },
+    "archetype_metadata_runtime-p2_defect_root_string_flag_zero.obj": {
+      "sha256": "1d87008549bec47ed06be0ad3e978dc193ad94dabe18e99cc0a4304965393e60",
+      "bytes": 1620
+    },
+    "p2_defect_free_old_cache_handle.lib": {
+      "sha256": "c6c8d5bb8bb1cef7dc25e87b8212f1283b2707c17be6cc9bc6675757418aaf9d",
+      "bytes": 9584
+    },
+    "p2_defect_root_string_flag_zero.lib": {
+      "sha256": "b7485c50dd72877553e3b036d476fe046a4a4af660afe05a4cecef8ee98c5c2c",
+      "bytes": 9584
+    },
+    "p2_defect_normalize_root_callback_al.lib": {
+      "sha256": "f35240bf2549bed727f3b6fad204a772e3e52056974a81669b0d03b672e2a839",
+      "bytes": 9788
+    },
+    "archetype_metadata_runtime-p2_defect_normalize_raw_field_bool.obj": {
+      "sha256": "818606f5cadaff7727bbda3a32a999cae9dd69380540c377c6dd45e742e62eca",
+      "bytes": 1620
+    },
+    "archetype_metadata_runtime-p2_defect_constant_true_is_attached.obj": {
+      "sha256": "a71052c150624f978b93de774e87a5f685e9f620ff66aea9a0421380cffda942",
+      "bytes": 1620
+    },
+    "archetype_metadata_runtime-p2_defect_skip_root_base_hit.obj": {
+      "sha256": "1cfa7a2a3e299173369a71aa36088d003c4a874fe9ae233ad547bec400efa459",
+      "bytes": 1620
+    },
+    "archetype_metadata_runtime-p2_defect_early_binary64_spill.obj": {
+      "sha256": "9ca59368f4d0d9c7e29a1873da5c5473e461d49513561baaf951eab4ecf3d889",
+      "bytes": 1620
+    },
+    "archetype_metadata_coupled.dll": {
+      "sha256": "1346caf478d2dc3eb30b0ddd1b1b951bb3d5394ed59dfd93d292c8a99dea88ad",
+      "bytes": 12800
+    },
+    "archetype_metadata-archetype_metadata_coupled.obj": {
+      "sha256": "c1728a3a8529c7ac6f30bb108b237cf87b3a708f6776ee23d69efde93c79d8c5",
+      "bytes": 11928
+    },
+    "archetype_metadata.lib": {
+      "sha256": "7b930d386abeaffe7056526a48a9c2fc5601b36eb2a74bd452e57255c1f764f3",
+      "bytes": 9050
+    },
+    "archetype_metadata_runtime-p2_defect_merge_inherit_missing_null.obj": {
+      "sha256": "7bd94dfbef3041ea5108189c8b69e87e1657e9840d6dec5434643b10e7ef45f1",
+      "bytes": 1620
+    },
+    "p2_defect_wrong_ids_name_offset.lib": {
+      "sha256": "1fff0d34bc431bdf42b07290d9b30c8ca5853dc9a65eee41028dc813f6ad4670",
+      "bytes": 9584
+    },
+    "p2_defect_constant_true_is_attached.dll": {
+      "sha256": "2110c4073e9372bf50685be5006c245fe5e8e36ccdf0f08ddff801cfd01f47c3",
+      "bytes": 12800
+    },
+    "archetype_metadata_runtime-archetype_metadata.obj": {
+      "sha256": "92590319c9d840740b5305ddc90e917e676dd2b9b24fdf23b7b1260e7c7b90eb",
+      "bytes": 1620
+    },
+    "p2_defect_swap_dispatch_arguments.lib": {
+      "sha256": "e5c30068b0add959bd6ae523be0ec0054283e67a491deede400e478be7707978",
+      "bytes": 9666
+    },
+    "archetype_metadata_coupled.lib": {
+      "sha256": "864ae472bcb12bc6901aa7b1f284f59a157d265a1603c363cacae97b9417cff2",
+      "bytes": 9378
+    },
+    "p2_defect_wrong_ids_name_offset.dll": {
+      "sha256": "2e8b6fa717ec8301eeca58b57653a993cedbd119456ddb5e40a56ad150534eef",
+      "bytes": 12800
+    },
+    "archetype_metadata.dll": {
+      "sha256": "6a6ae38bc3f674ee9e196978d62781a30229f259d3030d523aa763a557a9f85c",
+      "bytes": 12800
+    },
+    "p2_defect_normalize_raw_field_bool.lib": {
+      "sha256": "855bc907149bdcbc80bea96c8fff8553b5e93797b7a0d606f46192f9cbdf16c6",
+      "bytes": 9706
+    },
+    "p2_defect_skip_root_base_hit.lib": {
+      "sha256": "dc267c84a30ca0ff827ad517143e7e5e12c6c4c302c10be35b100bdfaabaac37",
+      "bytes": 9460
+    },
+    "archetype_metadata_runtime-p2_defect_free_old_cache_handle.obj": {
+      "sha256": "bcbf17f2393cd9ec4c090cfc3527d274de704f029883b349b1612d69bc4a0039",
+      "bytes": 1620
+    },
+    "p2_defect_root_string_flag_zero.dll": {
+      "sha256": "79a9b7e2d2d7e2e70f5d56c6884f13e7d931f4f7241a09f43ac21e8c1efb2dd8",
+      "bytes": 12800
+    },
+    "archetype_metadata-archetype_metadata.obj": {
+      "sha256": "c42e2adef4ac1d18035527514bdb2c98c6bd26c49ab453bfce05d2aad46296a3",
+      "bytes": 11928
+    }
+  },
+  "helper_hashes": {
+    "run.py": "4ae5e540bb5c44a8d4aa53ece9b4e02ad6dcaf309a9ac5b36f0b020726e839a7",
+    "finalize.py": "53b26d561d7ad3a0ac32791707e9ed46e6b34e0dcafc5a6c54aac530853c62b9",
+    "/opt/data/paperclip-guards/freelancer_quota.py": "d89192a313d35b95039e38b10da3f8e79dc2c8aad5ce3dc6f9dcf7fd7f831588",
+    "/opt/data/projects/Freelancer-Decomp/.tools/bin/clang++": "6099ee9ddb7ca4c97f7e6900c578a359b6e3567e28d0e595ec3e3ea616ea5bfe",
+    "/opt/data/projects/Freelancer-Decomp/.tools/bin/lld-link": "8ace1b31ebf92a87f990be0b8690d5c542ce472d5577fe5b760cdc433747b880"
+  },
+  "matrix_rows": 18,
+  "approval_gate": "Athena then Apollo exact candidate; no integration",
+  "original_span_hashes": {
+    "Root_read": "15d96a951e5c8a3137828fc8c0845392690522bf64ab666de1aff10e36ab97fd",
+    "Equipment_read": "6fcc7efb740a38e0100fa69aef95a990996cb5d5d88fdd7edc3487d5f9966a40",
+    "Attached_read": "d65cdea176cf033a12d100aa1c29323092658f7035f2bddc5937caedb041d3f3",
+    "Equipment_is_attached": "01cb47d078b4841b8408ec4fe278efa83115c6f6e101972987507d2b2b57dcf0",
+    "Attached_is_attached": "e18aacce29affcdddaa5f641ac1ec12552e0fe9d066e6408941b1792818b8619"
+  },
+  "scope": {
+    "issue": "FLA-244",
+    "revision": "80fd52f4-adfd-4368-aa6b-160b41cddfe7",
+    "body_sha256": "ccfa7f72b4104eec69917073b582d11227c7870e9848396504b85c94276252e7",
+    "verified_again_on": "2026-10-14"
+  },
+  "report_hashes": {
+    "analysis/archetype-metadata-x86-behavior.json": "a2a4981bc45fa9172be0d8622f2dd6c3239dbe9927d3d482db95a21d07abaac4",
+    "analysis/archetype-metadata-coupled-x86-behavior.json": "cb1d40b360a588f7c2f0306c19f56edce4b25d4b544d412f58b698920871f800",
+    "analysis/fla246-p1-regression.json": "24002a42256f81f94adb46178f0ef72362e5d13bff0f8f0fe9d91db375b2616c",
+    "analysis/archetype-lookup-x86-behavior.json": "82f542f35806d33f50069e5159bfa15b5a5fe4ee24c3eb7d14e28db35a8f445c",
+    "analysis/fla246-audit-commands.jsonl": "2d1adebc581194d2f50ae73f57e49a427c06309a74532ebe9ee7a2cd16d02da7",
+    "analysis/archetype-metadata-implementation.md": "0b3aae975c862f7154ca99347af930db81c5be38d307ad3cde1a1c858a37be5f",
+    "analysis/archetype-metadata-tests.md": "7e3b143390ca0c52f6572129025a348c2c690c6a702c5d770963667942c743c0"
+  },
+  "defect_source_hashes": {
+    "wrong_ids_name_offset": "668beb8ab357cc6aad30ba2053b5210f6fa7f56c14e0758f2fa392140171946d",
+    "normalize_raw_field_bool": "5f852164dec46a123e7afd5891ad1340a70617c577909b127c493e6c26829af7",
+    "constant_true_is_attached": "542f8b101ea7bcd26a3c1bce00510a9cdbb9c312834cc4070a072f6fb6f2b2f5",
+    "skip_root_base_hit": "37477286869128325e759fb9e7822eb246defd768f4b0932e7796df759b03f8c",
+    "normalize_root_callback_al": "abbfe5a197d7d8eacd74be171fe4aede184e7a706a39874322a793f378231a0c",
+    "root_string_flag_zero": "b6796ccf784c8be5c064f9406d468f3dba6696cb7a91d84a563384b9c82920fe",
+    "free_old_cache_handle": "368fabd970ae16688153df1d32e5703553ce77d850347af6e370d5d0a69b24db",
+    "merge_inherit_missing_null": "af4de04f3af39fdc2db67c116bf10b3ef9447dc79516975cf2dae872b56c4b2a",
+    "swap_dispatch_arguments": "a792e0cfcc61018f2353dd1e3b47c14563bcf673088fe1f39cd17f0183c6c96f",
+    "early_binary64_spill": "fb8c039efa601e7edd335a93187cec9b89aae9a36ba49ecb15daeeb0164d7c36"
+  },
+  "regression_build_hashes": {
+    "good_block_reader.dll": "c2248c029f888563528700a8b2c7921df01f550a6b42473619a6f406e27af5cc",
+    "archetype_lookup.dll": "f37e03a91722838ba618d95feb6106e9512b3f8d4108c69f846f6fb50b928b5f",
+    "good_block_wrong_addon_list.dll": "a5d2a3eec78a96ecf4808219f4276e79bea934bd882b282f642127a843c836ee",
+    "good_block_zero_node_padding.dll": "ba6f56f7490de6ca835f1c92b5f7f15d417287220514dcf1756443ac1d52e462",
+    "good_block_skip_duplicate_stop.dll": "f2df2442628651bb2254bf78820fc3df9c9d02c5e1466823ed108b8e8335922c",
+    "good_block_normalize_raw_bool.dll": "0fa6b6c3a86f9849ed5de126d7d8d0d0100d0f28b3e05c917c0b5c2d78aaf411",
+    "good_block_safe_missing_hull.dll": "7bfb0b66d48a0d7bc749b1778609a017344d2db1b51391155c4daeeebf255b75",
+    "good_block_bounded_level_scan.dll": "3f4628d96bafda4235c9d213169dbbd206aa9f08a57798fe6b7a66ee915c03be"
+  },
+  "toolchain": {
+    "clang": "21.1.8 (Ubuntu 6ubuntu1)",
+    "lld": "21.1.8",
+    "python": "3.14.4",
+    "unicorn": "2.1.4",
+    "pefile": "2024.8.26",
+    "target": "i686-pc-windows-msvc"
+  }
+}

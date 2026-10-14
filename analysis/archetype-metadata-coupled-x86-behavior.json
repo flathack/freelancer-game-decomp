@@ -1,0 +1,1494 @@
+{
+  "status": "passed",
+  "base_commit": "8f44ff91f1086f33fd81ca1c4f65f637a9733bf2",
+  "original_sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
+  "mixed_sequences": 30,
+  "lookup_boundary_pairs": 12,
+  "lookup_boundary_cases": [
+    {
+      "key": "0x0",
+      "null_payload": false,
+      "missing": false
+    },
+    {
+      "key": "0x0",
+      "null_payload": false,
+      "missing": true
+    },
+    {
+      "key": "0x0",
+      "null_payload": true,
+      "missing": false
+    },
+    {
+      "key": "0x0",
+      "null_payload": true,
+      "missing": true
+    },
+    {
+      "key": "0x80000000",
+      "null_payload": false,
+      "missing": false
+    },
+    {
+      "key": "0x80000000",
+      "null_payload": false,
+      "missing": true
+    },
+    {
+      "key": "0x80000000",
+      "null_payload": true,
+      "missing": false
+    },
+    {
+      "key": "0x80000000",
+      "null_payload": true,
+      "missing": true
+    },
+    {
+      "key": "0xffffffff",
+      "null_payload": false,
+      "missing": false
+    },
+    {
+      "key": "0xffffffff",
+      "null_payload": false,
+      "missing": true
+    },
+    {
+      "key": "0xffffffff",
+      "null_payload": true,
+      "missing": false
+    },
+    {
+      "key": "0xffffffff",
+      "null_payload": true,
+      "missing": true
+    }
+  ],
+  "matched_fault_pairs": 5,
+  "matched_fault_cases": [
+    {
+      "name": 0,
+      "info": 0,
+      "hull_missing": false,
+      "low_address": "0x14"
+    },
+    {
+      "name": 0,
+      "info": 43,
+      "hull_missing": false,
+      "low_address": "0x14"
+    },
+    {
+      "name": 42,
+      "info": 0,
+      "hull_missing": false,
+      "low_address": "0x18"
+    },
+    {
+      "name": 42,
+      "info": 43,
+      "hull_missing": false,
+      "low_address": "0x0"
+    },
+    {
+      "name": 0,
+      "info": 0,
+      "hull_missing": true,
+      "low_address": "0x48"
+    }
+  ],
+  "sequence_reader_pairs": 600,
+  "coupled_pairs": 128,
+  "coupled_abi_calls": 256,
+  "coupled_destructor_calls": 256,
+  "fallback_entries_actually_denied": [
+    "0x62f05e0",
+    "0x62f41e0",
+    "0x62f5330",
+    "0x62c0370",
+    "0x62db060"
+  ],
+  "coupled_cases": [
+    {
+      "kind": 1,
+      "category": 0,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 0,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 0,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 0,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 0,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 0,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 0,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 0,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 0,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 0,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 0,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 0,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 0,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 0,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 0,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 0,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 1,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 1,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 1,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 1,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 1,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 1,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 1,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 1,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 1,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 1,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 1,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 1,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 1,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 1,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 1,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 1,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 2,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 2,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 2,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 2,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 2,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 2,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 2,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 2,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 2,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 2,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 2,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 2,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 2,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 2,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 2,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 2,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 3,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 3,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 3,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 3,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 3,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 3,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 3,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 3,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 3,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 3,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 3,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 3,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 3,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 3,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 1,
+      "category": 3,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 1,
+      "category": 3,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 0,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 0,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 0,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 0,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 0,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 0,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 0,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 0,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 0,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 0,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 0,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 0,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 0,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 0,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 0,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 0,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 1,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 1,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 1,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 1,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 1,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 1,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 1,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 1,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 1,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 1,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 1,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 1,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 1,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 1,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 1,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 1,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 2,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 2,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 2,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 2,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 2,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 2,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 2,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 2,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 2,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 2,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 2,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 2,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 2,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 2,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 2,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 2,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 3,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 3,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 3,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 3,
+      "own_name": false,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 3,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 3,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 3,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 3,
+      "own_name": false,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 3,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 3,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 3,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 3,
+      "own_name": true,
+      "own_info": false,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 3,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 3,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": false,
+      "empty_metadata_strings": true
+    },
+    {
+      "kind": 2,
+      "category": 3,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": false
+    },
+    {
+      "kind": 2,
+      "category": 3,
+      "own_name": true,
+      "own_info": true,
+      "own_strings": true,
+      "empty_metadata_strings": true
+    }
+  ],
+  "source_hashes": {
+    "src/archetype_metadata.cpp": "0bdfcc4e6721aeb0fb2ecae2a332ccde483bf2bff61078cae361d5f311ad11da",
+    "src/archetype_metadata.hpp": "54a04caf2969a6f0156fed1f1046765249e2c48edac7677169b7aa048bc22bf4",
+    "tests/fixtures/archetype_metadata_runtime.cpp": "8502715c5f0b1948361d0b7059f7e1deca54da294c9fdfd456b1cdd39c48a405",
+    "tests/verify_archetype_metadata_x86.py": "6e2d061db0a3da98e7b63eb0e2aebeda5ee0e5aa27552b13a6e5a16444a9e2e4",
+    "src/create_id.cpp": "2e8f11d2cbcc06d45c8784c21c750250431b7c52c15c4e372063e9897baec426",
+    "src/cfl_id_maker.hpp": "292eb15b62827ec6e14f2c3209cb2c2bd613ea9630a75fac912438cabf94a192",
+    "src/string_cache.cpp": "d31c13d0aefa4be5332b6d47d0e8f945a9fd3d29dddeb28bd204f1b59b2e3ced",
+    "src/string_cache.hpp": "b2eeb86ceaf8971587041d7a7fe68ed4547ebe8a4dbdaeb98803e3177cfde85b",
+    "src/archetype_id.cpp": "a2921be82f9314ab430444b6bcf3b3fa17fa8b0fca46c5b19078d68acd85512a",
+    "src/archetype_equipment_lookup.cpp": "1ff2356e39402364dfefd8ec9566ce0f3404dcc9714eb47c2bd241ad4cb7b7b9",
+    "src/good_block_reader.cpp": "1f962c179422d212819958a70f05a2cbaa1a73e081eab14cc3f91d3203b6b878",
+    "src/good_block_reader.hpp": "d6138c04b36a5d1a6ea5ec097e5cce02fb889ee46e8c0d5aa92f56e89d1ce2ca",
+    "src/good_info_price.cpp": "eea67afcd313ab7f50f468b688e5fdea0ac4fdd377229ea1325459351f85c78b",
+    "src/good_info_price.hpp": "28699be98e54f9253df1278b088329b689c633734ccc15aaa883202a506a96e5",
+    "src/good_info_destroy.cpp": "0b11afb43ab5ecb2efbaa6ca7f85748d6280719fc6b190a85352081ec20d9ca6",
+    "tests/fixtures/good_block_reader_runtime.cpp": "5421e95e39e3e90a8c7598a16a5ac8db58d4c6e4c698120200906ddf22e70fba",
+    "tests/fixtures/flid_x86_runtime.cpp": "80b7f9d7d13b908ca60044ac1ae331cb1e28f7ee2e0830feba5f356d3e7d0f63",
+    "tests/fixtures/string_cache_x86_runtime.cpp": "fe90bfece8324e9499978a29bc94651b62666a4b5f1ed153906438cecd6be3b7",
+    "tests/fixtures/archetype_lookup_runtime.cpp": "c6892dcdda0d075322f4e38705f952dd949c74fdc5b3ec76b3ba9459ec60b2e2",
+    "tests/x86_harness.py": "f701d10d2f4d3469afa69f7ac76566f3480bc257f214cacf8c73419391c6bf1a",
+    "tests/verify_good_info_price_x86.py": "58d9e68d01bd6d7ac0adc2b1dc1a81379b9807cd0b3464ba7665375940b6e46c",
+    "analysis/createid-behavior.json": "1f39227e962eda73a7444de7d57751822abbe3d82ebc350eb8d29142c6679c73",
+    "tests/verify_archetype_metadata_coupled_x86.py": "4bbfd7e01d1b20f1f93450bbcb6907730682aa5b97bbdd4297116dcf5005f09a"
+  },
+  "dll_sha256": "1346caf478d2dc3eb30b0ddd1b1b951bb3d5394ed59dfd93d292c8a99dea88ad",
+  "commands": [
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/work/fla246/repo/src",
+        "-c",
+        "/opt/data/work/fla246/repo/src/archetype_metadata.cpp",
+        "-o",
+        "/opt/data/work/fla246/repo/build/archetype_metadata-archetype_metadata_coupled.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/work/fla246/repo/src",
+        "-c",
+        "/opt/data/work/fla246/repo/tests/fixtures/archetype_metadata_runtime.cpp",
+        "-o",
+        "/opt/data/work/fla246/repo/build/archetype_metadata_runtime-archetype_metadata_coupled.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/work/fla246/repo/src",
+        "-c",
+        "/opt/data/work/fla246/repo/src/create_id.cpp",
+        "-o",
+        "/opt/data/work/fla246/repo/build/create_id-archetype_metadata_coupled.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/work/fla246/repo/src",
+        "-c",
+        "/opt/data/work/fla246/repo/src/string_cache.cpp",
+        "-o",
+        "/opt/data/work/fla246/repo/build/string_cache-archetype_metadata_coupled.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/work/fla246/repo/src",
+        "-c",
+        "/opt/data/work/fla246/repo/src/archetype_id.cpp",
+        "-o",
+        "/opt/data/work/fla246/repo/build/archetype_id-archetype_metadata_coupled.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/work/fla246/repo/src",
+        "-c",
+        "/opt/data/work/fla246/repo/src/archetype_equipment_lookup.cpp",
+        "-o",
+        "/opt/data/work/fla246/repo/build/archetype_equipment_lookup-archetype_metadata_coupled.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/work/fla246/repo/src",
+        "-c",
+        "/opt/data/work/fla246/repo/src/good_block_reader.cpp",
+        "-o",
+        "/opt/data/work/fla246/repo/build/good_block_reader-archetype_metadata_coupled.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/work/fla246/repo/src",
+        "-c",
+        "/opt/data/work/fla246/repo/src/good_info_price.cpp",
+        "-o",
+        "/opt/data/work/fla246/repo/build/good_info_price-archetype_metadata_coupled.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/work/fla246/repo/src",
+        "-c",
+        "/opt/data/work/fla246/repo/src/good_info_destroy.cpp",
+        "-o",
+        "/opt/data/work/fla246/repo/build/good_info_destroy-archetype_metadata_coupled.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/work/fla246/repo/src",
+        "-c",
+        "/opt/data/work/fla246/repo/tests/fixtures/good_block_reader_runtime.cpp",
+        "-o",
+        "/opt/data/work/fla246/repo/build/good_block_reader_runtime-archetype_metadata_coupled.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/work/fla246/repo/src",
+        "-c",
+        "/opt/data/work/fla246/repo/tests/fixtures/flid_x86_runtime.cpp",
+        "-o",
+        "/opt/data/work/fla246/repo/build/flid_x86_runtime-archetype_metadata_coupled.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/work/fla246/repo/src",
+        "-c",
+        "/opt/data/work/fla246/repo/tests/fixtures/string_cache_x86_runtime.cpp",
+        "-o",
+        "/opt/data/work/fla246/repo/build/string_cache_x86_runtime-archetype_metadata_coupled.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "clang++",
+        "--target=i686-pc-windows-msvc",
+        "-O2",
+        "-fno-exceptions",
+        "-fno-rtti",
+        "-fno-builtin",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I/opt/data/work/fla246/repo/src",
+        "-c",
+        "/opt/data/work/fla246/repo/tests/fixtures/archetype_lookup_runtime.cpp",
+        "-o",
+        "/opt/data/work/fla246/repo/build/archetype_lookup_runtime-archetype_metadata_coupled.obj"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "lld-link",
+        "/dll",
+        "/noentry",
+        "/nodefaultlib",
+        "/base:0x15000000",
+        "/out:/opt/data/work/fla246/repo/build/archetype_metadata_coupled.dll",
+        "/opt/data/work/fla246/repo/build/archetype_metadata-archetype_metadata_coupled.obj",
+        "/opt/data/work/fla246/repo/build/archetype_metadata_runtime-archetype_metadata_coupled.obj",
+        "/opt/data/work/fla246/repo/build/create_id-archetype_metadata_coupled.obj",
+        "/opt/data/work/fla246/repo/build/string_cache-archetype_metadata_coupled.obj",
+        "/opt/data/work/fla246/repo/build/archetype_id-archetype_metadata_coupled.obj",
+        "/opt/data/work/fla246/repo/build/archetype_equipment_lookup-archetype_metadata_coupled.obj",
+        "/opt/data/work/fla246/repo/build/good_block_reader-archetype_metadata_coupled.obj",
+        "/opt/data/work/fla246/repo/build/good_info_price-archetype_metadata_coupled.obj",
+        "/opt/data/work/fla246/repo/build/good_info_destroy-archetype_metadata_coupled.obj",
+        "/opt/data/work/fla246/repo/build/good_block_reader_runtime-archetype_metadata_coupled.obj",
+        "/opt/data/work/fla246/repo/build/flid_x86_runtime-archetype_metadata_coupled.obj",
+        "/opt/data/work/fla246/repo/build/string_cache_x86_runtime-archetype_metadata_coupled.obj",
+        "/opt/data/work/fla246/repo/build/archetype_lookup_runtime-archetype_metadata_coupled.obj",
+        "/export:archetype_root_read",
+        "/export:archetype_equipment_read",
+        "/export:archetype_attached_read",
+        "/export:archetype_equipment_is_attached",
+        "/export:archetype_attached_is_attached",
+        "/export:arch_virtual_read",
+        "/export:arch_virtual_attached",
+        "/export:arch_diagnostic",
+        "/export:arch_hash",
+        "/export:arch_cache_clear",
+        "/export:arch_string_alloc",
+        "/export:create_id_reconstructed",
+        "/export:?CreateID@@YAIPBD@Z",
+        "/export:?GetEquipment@Archetype@@YAPAUEquipment@1@I@Z",
+        "/export:?GetEquipmentID@Archetype@@YAIABUID_String@@@Z",
+        "/export:good_info_read_block",
+        "/export:good_block_find_good",
+        "/export:good_block_find_hull",
+        "/export:good_block_unknown_category",
+        "/export:??1GoodInfo@@QAE@XZ",
+        "/export:?StringAlloc@@YAPADPBD_N@Z",
+        "/export:?clear@CacheString@@QAEXXZ",
+        "/export:archetype_root_slots,DATA",
+        "/export:archetype_equipment_slots,DATA",
+        "/export:archetype_attached_slots,DATA",
+        "/export:?StringCacheArena@@3PADA,DATA",
+        "/export:?StringCacheFront@@3IA,DATA",
+        "/export:?StringCacheBack@@3IA,DATA",
+        "/export:?StringCacheInternedCount@@3IA,DATA",
+        "/export:?StringCachePrivateCount@@3IA,DATA",
+        "/export:?StringCacheIndex@@3PAUStringCacheTree@@A,DATA",
+        "/export:EquipmentArchetypeTree,DATA"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "real_loader_or_database_cases": 0,
+  "controls": [
+    "synthetic prepared storage/tree",
+    "INI current line/traversal",
+    "successful allocator",
+    "ASCII CRT",
+    "inherit dispatcher/client bodies"
+  ],
+  "implemented_services_exercised": [
+    "CreateID",
+    "StringCache clear/alloc/intern tree",
+    "ID accessor",
+    "unsigned Equipment lookup",
+    "new readers",
+    "new is_attached slots",
+    "unchanged P1 reader and destructor"
+  ],
+  "limitations": [
+    "no native Windows/CRT",
+    "no production DB/file loading",
+    "inherit remains controlled",
+    "GoodInfo callback remains open",
+    "malformed sentinel remains open"
+  ]
+}
