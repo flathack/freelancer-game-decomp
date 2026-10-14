@@ -1,0 +1,122 @@
+{
+  "status": "passed",
+  "scope": "P1 storage-level whole block control flow with controlled services",
+  "original_sha256": "e6c08a7cfdfc5cf8c5d00047cc0b5e361bcaf31cdd91fe89f384d5920dd8c483",
+  "original_start": "0x62708c0",
+  "original_end_exclusive": "0x62710ed",
+  "original_span_sha256": "60a5df6f1f88ef118899ffb5d472adcd53a2f3b7c2d525ad12b197ebb262c3f4",
+  "paired_block_calls": 6696,
+  "counts": {
+    "empty": 12,
+    "initial-category": 72,
+    "category": 84,
+    "integer": 240,
+    "bool-raw-al": 3072,
+    "id-reference": 144,
+    "free-ammo": 12,
+    "free-ammo-repeat": 12,
+    "cache": 180,
+    "addon": 1152,
+    "addon-null-nonempty": 12,
+    "addon-unterminated-level-fault": 12,
+    "addon-all-lists": 12,
+    "addon-size-wrap": 12,
+    "metadata-fallback": 288,
+    "metadata-empty": 12,
+    "unknown": 12,
+    "category-unknown-repeat": 12,
+    "duplicate-first": 12,
+    "duplicate-late": 12,
+    "duplicate-after-addon": 12,
+    "missing-hull-fault": 12,
+    "missing-equipment-fault": 12,
+    "missing-equipment-vtable-fault": 12,
+    "pricing-reuse": 72,
+    "sequence": 1200
+  },
+  "x87_controls": [
+    "0x7f",
+    "0x47f",
+    "0x87f",
+    "0xc7f",
+    "0x27f",
+    "0x67f",
+    "0xa7f",
+    "0xe7f",
+    "0x37f",
+    "0x77f",
+    "0xb7f",
+    "0xf7f"
+  ],
+  "real_abi_calls_before_mutations": 13296,
+  "destructor_calls_before_mutations": 13296,
+  "independent_oracle_cases": 6696,
+  "matched_faults": {
+    "(19, 542179328, 1)": 12,
+    "(19, 72, 4)": 12,
+    "(19, 20, 4)": 12,
+    "(19, 0, 4)": 12
+  },
+  "original_executed_instruction_addresses": 617,
+  "original_static_instruction_lines": 620,
+  "unexecuted_original_instruction_addresses": [
+    "0x6270e80",
+    "0x6270ef5",
+    "0x6270f51"
+  ],
+  "negative_controls": {
+    "normalize_raw_bool": {
+      "probe_pairs": 260,
+      "detected_mismatches": 254,
+      "dll_sha256": "0e375ce16bdf50a11405e4f0f0cbd1ebf8fdd3b5b6d89d6ca45f3b6086672276"
+    },
+    "wrong_addon_list": {
+      "probe_pairs": 260,
+      "detected_mismatches": 1,
+      "dll_sha256": "9ce57fb2289c74d188ec2cb00655c00f8554993c4bdf2da79dde3a0c7514b906"
+    },
+    "zero_node_padding": {
+      "probe_pairs": 260,
+      "detected_mismatches": 1,
+      "dll_sha256": "40d67dd159b7509c5452d7c1d8a2880ac3dd6c56250f2e844a6db655d887e94e"
+    },
+    "skip_duplicate_stop": {
+      "probe_pairs": 260,
+      "detected_mismatches": 1,
+      "dll_sha256": "3a9617bae1eeb24541b034e369b24e48917113248d3aa4b0f9a31c34bef05b15"
+    },
+    "safe_missing_hull": {
+      "probe_pairs": 260,
+      "detected_mismatches": 1,
+      "dll_sha256": "203e09a30852c1e69b83e0942749d63b278d32658b32e5299528bef2b4bc9583"
+    },
+    "bounded_level_scan": {
+      "probe_pairs": 260,
+      "detected_mismatches": 1,
+      "dll_sha256": "612e2ae9606a03ff2628cee3e8f2bc2938450a5059aca1145377dbcf4fcdc24d"
+    }
+  },
+  "build_sha256": "c396f4abedb4b360b0d568b9dfdcbfa62d764b23122ae47bb251bba5064375c4",
+  "source_hashes": {
+    "src/good_block_reader.cpp": "1f962c179422d212819958a70f05a2cbaa1a73e081eab14cc3f91d3203b6b878",
+    "src/good_block_reader.hpp": "d6138c04b36a5d1a6ea5ec097e5cce02fb889ee46e8c0d5aa92f56e89d1ce2ca",
+    "tests/fixtures/good_block_reader_runtime.cpp": "5421e95e39e3e90a8c7598a16a5ac8db58d4c6e4c698120200906ddf22e70fba",
+    "tests/verify_good_block_reader_x86.py": "fde8466773cdfc17659ef799df512693e4ec6870958e47b5e5427a40743d8a5c",
+    "src/good_info_price.cpp": "eea67afcd313ab7f50f468b688e5fdea0ac4fdd377229ea1325459351f85c78b",
+    "src/good_info_price.hpp": "28699be98e54f9253df1278b088329b689c633734ccc15aaa883202a506a96e5",
+    "src/good_info_destroy.cpp": "0b11afb43ab5ecb2efbaa6ca7f85748d6280719fc6b190a85352081ec20d9ca6",
+    "tests/verify_good_info_price_x86.py": "58d9e68d01bd6d7ac0adc2b1dc1a81379b9807cd0b3464ba7665375940b6e46c",
+    "tests/x86_harness.py": "f701d10d2f4d3469afa69f7ac76566f3480bc257f214cacf8c73419391c6bf1a"
+  },
+  "not_verified": [
+    "Real reader/file/Goods corpus",
+    "Real CreateID/hash service in this integration",
+    "Real cache allocation/index lookup and Archetype database creation",
+    "Native Windows/CRT/heap",
+    "Allocation failure/exception unwinding",
+    "Malformed lists and arbitrary storage/stack aliasing",
+    "Unmasked x87 exceptions/stack exhaustion",
+    "Whole-function byte identity",
+    "Full game"
+  ]
+}
